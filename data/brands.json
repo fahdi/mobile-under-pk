@@ -3,126 +3,70 @@
     "slug": "samsung",
     "name": "Samsung",
     "country": "South Korea",
-    "officialStoreUrl": null,
-    "warrantyNote": null
+    "officialStoreUrl": "https://www.samsung.com/pk/",
+    "warrantyNote": "Samsung Pakistan gives 12 months on the phone and 6 months on the battery, repaired at Samsung or authorised service centres, and only for units bought from an authorised Samsung dealer with the original invoice and warranty card."
   },
   {
     "slug": "xiaomi",
     "name": "Xiaomi",
     "country": "China",
-    "officialStoreUrl": null,
-    "warrantyNote": null
+    "officialStoreUrl": "https://www.mi.com/pk/",
+    "warrantyNote": "Xiaomi Pakistan gives a 1 year limited warranty on the phone and 6 months on the bundled battery, charger and accessories, valid in Pakistan only and serviced by Xiaomi or its authorised service centres."
   },
   {
     "slug": "oppo",
     "name": "OPPO",
     "country": "China",
-    "officialStoreUrl": null,
-    "warrantyNote": null
+    "officialStoreUrl": "https://www.oppo.com/pk/",
+    "warrantyNote": "OPPO Pakistan gives 12 months on the phone and 6 months on the charger, cable and other accessories, honoured at OPPO service centres with a valid warranty card and invoice."
   },
   {
     "slug": "vivo",
     "name": "vivo",
     "country": "China",
-    "officialStoreUrl": null,
-    "warrantyNote": null
+    "officialStoreUrl": "https://www.vivo.com/pk/",
+    "warrantyNote": "vivo Pakistan gives 12 months on the phone and 6 months on the charger, cable and earphones for units sold in Pakistan, honoured at any vivo authorised service centre with a valid proof of purchase."
   },
   {
     "slug": "realme",
     "name": "realme",
     "country": "China",
-    "officialStoreUrl": null,
-    "warrantyNote": null
+    "officialStoreUrl": "https://www.realme.com/pk/",
+    "warrantyNote": "realme Pakistan gives 12 months on the phone and 6 months on the battery, charger and other accessories, honoured at realme service centres with a valid warranty card and invoice."
   },
   {
     "slug": "infinix",
     "name": "Infinix",
     "country": "Hong Kong",
-    "officialStoreUrl": null,
-    "warrantyNote": null
+    "officialStoreUrl": "https://pk.infinixmobility.com/",
+    "warrantyNote": "Infinix after-sales service in Pakistan is handled by Carlcare, where you can check a unit's warranty status by IMEI, but we could not find an official Infinix Pakistan page stating the warranty length."
   },
   {
     "slug": "tecno",
     "name": "Tecno",
     "country": "China",
-    "officialStoreUrl": null,
-    "warrantyNote": null
+    "officialStoreUrl": "https://www.tecno-mobile.com/pak/",
+    "warrantyNote": "TECNO Pakistan routes warranty claims through Carlcare service centres and lets you check a unit's warranty status by IMEI, but its Pakistan site does not state the warranty length."
   },
   {
     "slug": "itel",
     "name": "itel",
     "country": "China",
     "officialStoreUrl": null,
-    "warrantyNote": null
+    "warrantyNote": "itel after-sales service in Pakistan is handled by Carlcare service centres, but we could not find an official itel Pakistan page stating the warranty length, so confirm the terms with the seller before buying."
   },
   {
     "slug": "honor",
     "name": "HONOR",
     "country": "China",
-    "officialStoreUrl": null,
-    "warrantyNote": null
-  },
-  {
-    "slug": "oneplus",
-    "name": "OnePlus",
-    "country": "China",
-    "officialStoreUrl": null,
-    "warrantyNote": null
-  },
-  {
-    "slug": "motorola",
-    "name": "Motorola",
-    "country": "United States",
-    "officialStoreUrl": null,
-    "warrantyNote": null
-  },
-  {
-    "slug": "nothing",
-    "name": "Nothing",
-    "country": "United Kingdom",
-    "officialStoreUrl": null,
-    "warrantyNote": null
-  },
-  {
-    "slug": "google",
-    "name": "Google",
-    "country": "United States",
-    "officialStoreUrl": null,
-    "warrantyNote": null
-  },
-  {
-    "slug": "apple",
-    "name": "Apple",
-    "country": "United States",
-    "officialStoreUrl": null,
-    "warrantyNote": null
-  },
-  {
-    "slug": "sparx",
-    "name": "Sparx",
-    "country": "Pakistan",
-    "officialStoreUrl": null,
-    "warrantyNote": null
+    "officialStoreUrl": "https://www.honor.com/pk/",
+    "warrantyNote": "HONOR Pakistan lists authorised service centres on its site, and HONOR says its warranty only covers phones bought through official HONOR channels, but we could not find a Pakistan page stating the warranty length."
   },
   {
     "slug": "zte",
     "name": "ZTE",
     "country": "China",
     "officialStoreUrl": null,
-    "warrantyNote": null
-  },
-  {
-    "slug": "hmd",
-    "name": "HMD",
-    "country": "Finland",
-    "officialStoreUrl": null,
-    "warrantyNote": null
-  },
-  {
-    "slug": "huawei",
-    "name": "Huawei",
-    "country": "China",
-    "officialStoreUrl": null,
-    "warrantyNote": null
+    "warrantyNote": "We could not find an official ZTE Pakistan website or published Pakistan warranty policy, so confirm the warranty length and who honours it with the seller before buying."
   }
 ]
