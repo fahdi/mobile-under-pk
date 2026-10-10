@@ -1,0 +1,52 @@
+[
+  {
+    "ceiling": 20000,
+    "intro": "Under 20,000 PKR you are buying a basic Android phone for calls, WhatsApp and light use. Expect 4 GB of RAM, a 5000 mAh battery and a 90Hz screen at best.",
+    "faq": []
+  },
+  {
+    "ceiling": 25000,
+    "intro": "Up to 25,000 PKR the jump is usually more storage and a bigger battery, not more speed. Look for 128 GB of storage and a PTA approved unit with a brand warranty.",
+    "faq": []
+  },
+  {
+    "ceiling": 30000,
+    "intro": "Up to 30,000 PKR you start to see 6 GB of RAM, 90Hz or 120Hz screens and faster charging. Cameras are still daylight-only.",
+    "faq": []
+  },
+  {
+    "ceiling": 40000,
+    "intro": "Up to 40,000 PKR is where phones stop feeling slow. Expect 8 GB of RAM, 33W or faster charging and a usable main camera.",
+    "faq": []
+  },
+  {
+    "ceiling": 50000,
+    "intro": "Up to 50,000 PKR buys AMOLED screens, 8 GB of RAM and decent gaming chips. This is the busiest bracket in Pakistan, so warranty and PTA status matter most here.",
+    "faq": []
+  },
+  {
+    "ceiling": 60000,
+    "intro": "Up to 60,000 PKR you can expect an AMOLED 120Hz display, fast charging and a main camera that holds up indoors.",
+    "faq": []
+  },
+  {
+    "ceiling": 80000,
+    "intro": "Up to 80,000 PKR brings better chips, optical image stabilisation and longer software support from the bigger brands.",
+    "faq": []
+  },
+  {
+    "ceiling": 100000,
+    "intro": "Up to 100,000 PKR you are in upper mid-range territory: strong cameras with OIS, IP ratings and 4 years or more of updates on some models.",
+    "faq": []
+  },
+  {
+    "ceiling": 120000,
+    "intro": "Up to 120,000 PKR mid-range flagships compete on camera quality, build and update promises. PTA tax makes official units the safer buy.",
+    "faq": []
+  },
+  {
+    "ceiling": 150000,
+    "intro": "Up to 150,000 PKR is the top of this site's range: near-flagship performance, telephoto cameras on some models and premium builds.",
+    "faq": []
+  }
+]

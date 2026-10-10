@@ -1,0 +1,14 @@
+[
+  { "slug": "balanced", "name": "Balanced", "description": "Good at everything, weighted toward value and local availability.",
+    "weights": { "camera": 1, "performance": 1, "battery": 1, "display": 1, "build": 1, "software": 1, "value": 1.25, "availability": 1.25 } },
+  { "slug": "camera-first", "name": "Camera first", "description": "Ranks photo and video quality above everything else.", "intent": "camera",
+    "weights": { "camera": 3, "display": 1, "performance": 0.5, "battery": 0.5, "value": 1, "availability": 1 } },
+  { "slug": "battery-first", "name": "Battery first", "description": "Longest battery life and fastest charging.", "intent": "battery",
+    "weights": { "battery": 3, "performance": 0.5, "display": 0.5, "value": 1, "availability": 1 } },
+  { "slug": "gaming", "name": "Gaming", "description": "Sustained performance and a fast, bright display.", "intent": "gaming",
+    "weights": { "performance": 3, "display": 2, "battery": 1, "value": 1, "availability": 1 } },
+  { "slug": "safe-buy", "name": "Safe buy", "description": "Official warranty only, long software support, solid build.", "requireOfficialWarranty": true,
+    "weights": { "availability": 3, "software": 2, "build": 2, "value": 1 } },
+  { "slug": "value", "name": "Best value", "description": "Most phone for the money; ties go to the cheaper phone.",
+    "weights": { "value": 3, "availability": 1, "performance": 0.5, "camera": 0.5, "battery": 0.5 } }
+]

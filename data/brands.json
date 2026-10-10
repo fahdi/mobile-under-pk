@@ -1,0 +1,128 @@
+[
+  {
+    "slug": "samsung",
+    "name": "Samsung",
+    "country": "South Korea",
+    "officialStoreUrl": null,
+    "warrantyNote": null
+  },
+  {
+    "slug": "xiaomi",
+    "name": "Xiaomi",
+    "country": "China",
+    "officialStoreUrl": null,
+    "warrantyNote": null
+  },
+  {
+    "slug": "oppo",
+    "name": "OPPO",
+    "country": "China",
+    "officialStoreUrl": null,
+    "warrantyNote": null
+  },
+  {
+    "slug": "vivo",
+    "name": "vivo",
+    "country": "China",
+    "officialStoreUrl": null,
+    "warrantyNote": null
+  },
+  {
+    "slug": "realme",
+    "name": "realme",
+    "country": "China",
+    "officialStoreUrl": null,
+    "warrantyNote": null
+  },
+  {
+    "slug": "infinix",
+    "name": "Infinix",
+    "country": "Hong Kong",
+    "officialStoreUrl": null,
+    "warrantyNote": null
+  },
+  {
+    "slug": "tecno",
+    "name": "Tecno",
+    "country": "China",
+    "officialStoreUrl": null,
+    "warrantyNote": null
+  },
+  {
+    "slug": "itel",
+    "name": "itel",
+    "country": "China",
+    "officialStoreUrl": null,
+    "warrantyNote": null
+  },
+  {
+    "slug": "honor",
+    "name": "HONOR",
+    "country": "China",
+    "officialStoreUrl": null,
+    "warrantyNote": null
+  },
+  {
+    "slug": "oneplus",
+    "name": "OnePlus",
+    "country": "China",
+    "officialStoreUrl": null,
+    "warrantyNote": null
+  },
+  {
+    "slug": "motorola",
+    "name": "Motorola",
+    "country": "United States",
+    "officialStoreUrl": null,
+    "warrantyNote": null
+  },
+  {
+    "slug": "nothing",
+    "name": "Nothing",
+    "country": "United Kingdom",
+    "officialStoreUrl": null,
+    "warrantyNote": null
+  },
+  {
+    "slug": "google",
+    "name": "Google",
+    "country": "United States",
+    "officialStoreUrl": null,
+    "warrantyNote": null
+  },
+  {
+    "slug": "apple",
+    "name": "Apple",
+    "country": "United States",
+    "officialStoreUrl": null,
+    "warrantyNote": null
+  },
+  {
+    "slug": "sparx",
+    "name": "Sparx",
+    "country": "Pakistan",
+    "officialStoreUrl": null,
+    "warrantyNote": null
+  },
+  {
+    "slug": "zte",
+    "name": "ZTE",
+    "country": "China",
+    "officialStoreUrl": null,
+    "warrantyNote": null
+  },
+  {
+    "slug": "hmd",
+    "name": "HMD",
+    "country": "Finland",
+    "officialStoreUrl": null,
+    "warrantyNote": null
+  },
+  {
+    "slug": "huawei",
+    "name": "Huawei",
+    "country": "China",
+    "officialStoreUrl": null,
+    "warrantyNote": null
+  }
+]
