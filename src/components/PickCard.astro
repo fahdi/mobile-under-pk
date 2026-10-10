@@ -1,0 +1,15 @@
+---
+import type { Brand } from '../schema/data';
+import type { Ranked } from '../lib/scoring';
+import { formatPkr, phoneName } from '../lib/format';
+import { withBase } from '../lib/paths';
+
+interface Props { ranked: Ranked; brands: Brand[]; rank: number; reason: string }
+const { ranked, brands, rank, reason } = Astro.props;
+---
+<li class="pick">
+  <p class="pick-rank">#{rank}</p>
+  <h3><a href={withBase(`/phones/${ranked.phone.slug}/`)}>{phoneName(ranked.phone, brands)}</a></h3>
+  <p><strong>{formatPkr(ranked.price)}</strong> PTA, score {ranked.overall.toFixed(1)}/10</p>
+  <p>{reason}</p>
+</li>

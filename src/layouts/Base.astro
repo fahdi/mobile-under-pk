@@ -1,0 +1,49 @@
+---
+import '../styles/global.css';
+import { withBase } from '../lib/paths';
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  jsonLd?: object[];
+  ogImage?: string;
+  noindex?: boolean;
+}
+
+const { title, description, path, jsonLd = [], ogImage, noindex = false } = Astro.props;
+const canonical = new URL(withBase(path), Astro.site).href;
+// Escape "<" so a value containing </script> cannot end the JSON-LD block.
+const ld = (o: object) => JSON.stringify(o).replace(/</g, '\\u003c');
+---
+<!doctype html>
+<html lang="en-PK">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href={withBase('/favicon.svg')} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_PK" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    {ogImage && <meta property="og:image" content={new URL(withBase(ogImage), Astro.site).href} />}
+    <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+    {jsonLd.map((o) => <script type="application/ld+json" set:html={ld(o)} />)}
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href={withBase('/')}>MobileUnder.pk</a>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <p>Prices are approximate PKR from official and PTA approved listings, with the date each was checked. Confirm with the seller before buying.</p>
+    </footer>
+  </body>
+</html>

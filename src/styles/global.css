@@ -1,0 +1,30 @@
+:root {
+  --bg: #ffffff; --fg: #1a1a1a; --muted: #555; --line: #e3e3e3; --accent: #01411c; --warn: #8a4b00; --warn-bg: #fff3e0;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #121212; --fg: #ececec; --muted: #aaa; --line: #333; --accent: #6fcf8f; --warn: #ffb74d; --warn-bg: #3a2a12; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+main, .site-header, .site-footer { max-width: 72rem; margin: 0 auto; padding: 0 16px; }
+.site-header { padding-top: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+.brand { font-weight: 700; color: var(--accent); text-decoration: none; font-size: 1.15rem; }
+.site-footer { margin-top: 48px; padding-top: 16px; padding-bottom: 32px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+a { color: var(--accent); }
+h1 { line-height: 1.2; }
+.price-checked { color: var(--muted); font-size: .9rem; }
+.table-wrap { overflow-x: auto; }
+.phone-table { width: 100%; border-collapse: collapse; }
+.phone-table th, .phone-table td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.badge { display: inline-block; margin-left: 8px; padding: 0 6px; border-radius: 4px; font-size: .75rem; background: var(--warn-bg); color: var(--warn); }
+.score-list { list-style: none; padding: 0; display: grid; gap: 12px; }
+.score-list li { display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; }
+.score-label { font-weight: 600; }
+.score-reason { grid-column: 1 / -1; color: var(--muted); font-size: .95rem; }
+.picks { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); padding: 0; list-style: none; }
+.pick { border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
+.notice { background: var(--warn-bg); color: var(--warn); padding: 12px 16px; border-radius: 6px; }
+.spec-table { border-collapse: collapse; width: 100%; }
+.spec-table th, .spec-table td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.spec-table th { width: 40%; font-weight: 600; }

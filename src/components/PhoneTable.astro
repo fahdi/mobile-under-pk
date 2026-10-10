@@ -1,0 +1,37 @@
+---
+import type { Brand } from '../schema/data';
+import type { Ranked } from '../lib/scoring';
+import { cheapestPtaVariant } from '../lib/brackets';
+import { formatPkr, phoneName } from '../lib/format';
+import { withBase } from '../lib/paths';
+
+interface Props { rows: Ranked[]; brands: Brand[] }
+const { rows, brands } = Astro.props;
+
+const WARRANTY = { official: 'Official warranty', 'local-shop': 'Shop warranty', none: 'No warranty' } as const;
+const STATUS = { available: '', limited: 'Limited stock', discontinued: 'Discontinued' } as const;
+---
+<div class="table-wrap">
+  <table class="phone-table">
+    <thead>
+      <tr><th scope="col">#</th><th scope="col">Phone</th><th scope="col">PTA price</th><th scope="col">Score</th><th scope="col">Warranty</th></tr>
+    </thead>
+    <tbody>
+      {rows.map((r, i) => {
+        const v = cheapestPtaVariant(r.phone);
+        return (
+          <tr data-slug={r.phone.slug}>
+            <td data-rank>{i + 1}</td>
+            <td>
+              <a href={withBase(`/phones/${r.phone.slug}/`)}>{phoneName(r.phone, brands)}</a>
+              {STATUS[r.phone.status] && <span class={`badge badge-${r.phone.status}`}>{STATUS[r.phone.status]}</span>}
+            </td>
+            <td>{formatPkr(r.price)}</td>
+            <td><span data-overall>{r.overall.toFixed(1)}</span></td>
+            <td>{v ? WARRANTY[v.warranty] : ''}</td>
+          </tr>
+        );
+      })}
+    </tbody>
+  </table>
+</div>

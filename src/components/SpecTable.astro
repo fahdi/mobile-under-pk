@@ -1,0 +1,30 @@
+---
+import type { Phone } from '../schema/phone';
+
+interface Props { specs: Phone['specs'] }
+const { specs: s } = Astro.props;
+const yn = (b: boolean) => (b ? 'Yes' : 'No');
+const charging = [`${s.battery.wiredW}W wired`, s.battery.wirelessW ? `${s.battery.wirelessW}W wireless` : ''].filter(Boolean).join(', ');
+const rows: Array<[string, string]> = [
+  ['Chipset', s.chipset],
+  ['Display', `${s.display.size} inch ${s.display.type}, ${s.display.refreshHz}Hz, ${s.display.resolution}${s.display.peakNits ? `, ${s.display.peakNits} nits peak` : ''}`],
+  ['Battery', `${s.battery.mah} mAh, ${charging}`],
+  ['Rear cameras', s.cameras.rear.map((c) => `${c.mp} MP ${c.type}${c.ois ? ' (OIS)' : ''}`).join(' + ')],
+  ['Front camera', `${s.cameras.front.mp} MP`],
+  ['Video', s.cameras.video],
+  ['Build', `${s.build.frame} frame, ${s.build.back} back${s.build.front ? `, ${s.build.front}` : ''}`],
+  ['IP rating', s.build.ip ?? 'None'],
+  ['Software', s.software.os],
+  ['Updates', `${s.software.osUpdates} OS updates, ${s.software.securityYears} years of security patches`],
+  ['5G', yn(s.connectivity.fiveG)],
+  ['NFC', yn(s.connectivity.nfc)],
+  ['3.5mm jack', yn(s.connectivity.jack35)],
+  ['eSIM', yn(s.connectivity.esim)],
+  ['Weight', `${s.weightG} g`],
+];
+---
+<table class="spec-table">
+  <tbody>
+    {rows.map(([k, v]) => <tr><th scope="row">{k}</th><td>{v}</td></tr>)}
+  </tbody>
+</table>
