@@ -13,6 +13,13 @@ describe('seed data files', () => {
     const b = BracketsFileSchema.parse(read('data/brackets.json'));
     expect(b.map((x) => x.ceiling)).toEqual([20000, 25000, 30000, 40000, 50000, 60000, 80000, 100000, 120000, 150000]);
   });
+  it('every bracket has 3 or 4 FAQs, with no em or en dashes', () => {
+    for (const b of BracketsFileSchema.parse(read('data/brackets.json'))) {
+      expect(b.faq.length, `bracket ${b.ceiling}`).toBeGreaterThanOrEqual(3);
+      expect(b.faq.length, `bracket ${b.ceiling}`).toBeLessThanOrEqual(4);
+      expect(JSON.stringify(b), `bracket ${b.ceiling}`).not.toMatch(/[\u2013\u2014]/);
+    }
+  });
   it('presets.json has the six spec presets with balanced first', () => {
     const p = z.array(PresetSchema).parse(read('data/presets.json'));
     expect(p.map((x) => x.slug)).toEqual(['balanced', 'camera-first', 'battery-first', 'gaming', 'safe-buy', 'value']);
