@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { absUrl, breadcrumbLd, faqLd, itemListLd, productLd } from '../src/lib/seo';
+import { absUrl, breadcrumbLd, faqLd, itemListLd, productLd, websiteLd } from '../src/lib/seo';
 import { makePhone, makeVariant } from './fixtures/phone';
 
 const site = 'https://fahdi.github.io';
@@ -52,5 +52,14 @@ describe('itemListLd and faqLd', () => {
     const ld = faqLd([{ q: 'Is it PTA?', a: 'Yes.' }]) as any;
     expect(ld['@type']).toBe('FAQPage');
     expect(ld.mainEntity[0]).toEqual({ '@type': 'Question', name: 'Is it PTA?', acceptedAnswer: { '@type': 'Answer', text: 'Yes.' } });
+  });
+});
+
+describe('websiteLd', () => {
+  it('names the site with its absolute home URL and Pakistani English', () => {
+    expect(websiteLd(site, base)).toEqual({
+      '@context': 'https://schema.org', '@type': 'WebSite', name: 'MobileUnder.pk',
+      url: 'https://fahdi.github.io/mobile-under-pk/', inLanguage: 'en-PK',
+    });
   });
 });

@@ -2,51 +2,221 @@
   {
     "ceiling": 20000,
     "intro": "Under 20,000 PKR you are buying a basic Android phone for calls, WhatsApp and light use. Expect 4 GB of RAM, a 5000 mAh battery and a 90Hz screen at best.",
-    "faq": []
+    "faq": [
+      {
+        "q": "What can I expect from a phone under 20,000 PKR?",
+        "a": "A basic Android phone for calls, WhatsApp, YouTube and light social media. Expect around 4 GB of RAM, a large battery and a slower chip, so heavy games and multitasking will lag."
+      },
+      {
+        "q": "Should I buy a PTA approved phone at this price?",
+        "a": "Yes. A phone that is not PTA approved works on a Pakistani SIM only for a limited time and is then blocked unless the PTA tax is paid, which can cost more than the price gap. Every headline price on this site is for a PTA approved unit."
+      },
+      {
+        "q": "What is the difference between official and shop warranty?",
+        "a": "Official warranty is honoured by the brand's own service centres across Pakistan. Shop warranty depends on the seller who sold you the phone and usually ends if the shop closes or refuses the claim. We mark which one each listing comes with."
+      },
+      {
+        "q": "How current are these prices?",
+        "a": "Every price is checked by hand on official brand stores and major Pakistani retailers, rounded to the nearest 500 PKR, and shown with the date it was checked. Prices move often, so confirm with the seller before you pay."
+      }
+    ]
   },
   {
     "ceiling": 25000,
     "intro": "Up to 25,000 PKR the jump is usually more storage and a bigger battery, not more speed. Look for 128 GB of storage and a PTA approved unit with a brand warranty.",
-    "faq": []
+    "faq": [
+      {
+        "q": "Is it worth stretching from 20,000 to 25,000 PKR?",
+        "a": "Often yes. The extra money usually buys 128 GB of storage instead of 64 GB and sometimes a smoother screen, which matters more over two or three years than most spec sheet differences."
+      },
+      {
+        "q": "Should I buy a PTA approved phone at this price?",
+        "a": "Yes. A phone that is not PTA approved works on a Pakistani SIM only for a limited time and is then blocked unless the PTA tax is paid, which can cost more than the price gap. Every headline price on this site is for a PTA approved unit."
+      },
+      {
+        "q": "What is the difference between official and shop warranty?",
+        "a": "Official warranty is honoured by the brand's own service centres across Pakistan. Shop warranty depends on the seller who sold you the phone and usually ends if the shop closes or refuses the claim. We mark which one each listing comes with."
+      },
+      {
+        "q": "How current are these prices?",
+        "a": "Every price is checked by hand on official brand stores and major Pakistani retailers, rounded to the nearest 500 PKR, and shown with the date it was checked. Prices move often, so confirm with the seller before you pay."
+      }
+    ]
   },
   {
     "ceiling": 30000,
     "intro": "Up to 30,000 PKR you start to see 6 GB of RAM, 90Hz or 120Hz screens and faster charging. Cameras are still daylight-only.",
-    "faq": []
+    "faq": [
+      {
+        "q": "Can a phone under 30,000 PKR play games?",
+        "a": "Light and casual games run fine. Popular titles like PUBG Mobile will run at low settings; for smoother gaming look at the 40,000 and 50,000 brackets."
+      },
+      {
+        "q": "Should I buy a PTA approved phone at this price?",
+        "a": "Yes. A phone that is not PTA approved works on a Pakistani SIM only for a limited time and is then blocked unless the PTA tax is paid, which can cost more than the price gap. Every headline price on this site is for a PTA approved unit."
+      },
+      {
+        "q": "What is the difference between official and shop warranty?",
+        "a": "Official warranty is honoured by the brand's own service centres across Pakistan. Shop warranty depends on the seller who sold you the phone and usually ends if the shop closes or refuses the claim. We mark which one each listing comes with."
+      },
+      {
+        "q": "How current are these prices?",
+        "a": "Every price is checked by hand on official brand stores and major Pakistani retailers, rounded to the nearest 500 PKR, and shown with the date it was checked. Prices move often, so confirm with the seller before you pay."
+      }
+    ]
   },
   {
     "ceiling": 40000,
     "intro": "Up to 40,000 PKR is where phones stop feeling slow. Expect 8 GB of RAM, 33W or faster charging and a usable main camera.",
-    "faq": []
+    "faq": [
+      {
+        "q": "What improves at 40,000 PKR compared to cheaper phones?",
+        "a": "This is where phones stop feeling slow: more RAM, faster charging and noticeably better main cameras in daylight. Check the score reasons on each phone for the specific trade offs."
+      },
+      {
+        "q": "Should I buy a PTA approved phone at this price?",
+        "a": "Yes. A phone that is not PTA approved works on a Pakistani SIM only for a limited time and is then blocked unless the PTA tax is paid, which can cost more than the price gap. Every headline price on this site is for a PTA approved unit."
+      },
+      {
+        "q": "What is the difference between official and shop warranty?",
+        "a": "Official warranty is honoured by the brand's own service centres across Pakistan. Shop warranty depends on the seller who sold you the phone and usually ends if the shop closes or refuses the claim. We mark which one each listing comes with."
+      },
+      {
+        "q": "How current are these prices?",
+        "a": "Every price is checked by hand on official brand stores and major Pakistani retailers, rounded to the nearest 500 PKR, and shown with the date it was checked. Prices move often, so confirm with the seller before you pay."
+      }
+    ]
   },
   {
     "ceiling": 50000,
     "intro": "Up to 50,000 PKR buys AMOLED screens, 8 GB of RAM and decent gaming chips. This is the busiest bracket in Pakistan, so warranty and PTA status matter most here.",
-    "faq": []
+    "faq": [
+      {
+        "q": "Why are there so many similar phones under 50,000 PKR?",
+        "a": "It is the busiest price range in Pakistan, so every brand competes here with near identical specs. Warranty, software update support and real availability are what separate them, which is why those count in our scores."
+      },
+      {
+        "q": "Should I buy a PTA approved phone at this price?",
+        "a": "Yes. A phone that is not PTA approved works on a Pakistani SIM only for a limited time and is then blocked unless the PTA tax is paid, which can cost more than the price gap. Every headline price on this site is for a PTA approved unit."
+      },
+      {
+        "q": "What is the difference between official and shop warranty?",
+        "a": "Official warranty is honoured by the brand's own service centres across Pakistan. Shop warranty depends on the seller who sold you the phone and usually ends if the shop closes or refuses the claim. We mark which one each listing comes with."
+      },
+      {
+        "q": "How current are these prices?",
+        "a": "Every price is checked by hand on official brand stores and major Pakistani retailers, rounded to the nearest 500 PKR, and shown with the date it was checked. Prices move often, so confirm with the seller before you pay."
+      }
+    ]
   },
   {
     "ceiling": 60000,
     "intro": "Up to 60,000 PKR you can expect an AMOLED 120Hz display, fast charging and a main camera that holds up indoors.",
-    "faq": []
+    "faq": [
+      {
+        "q": "Do phones under 60,000 PKR get software updates?",
+        "a": "Some do, some barely do. Update promises vary by brand from one Android version to four. Each phone page lists its update promise and the software score explains it."
+      },
+      {
+        "q": "Should I buy a PTA approved phone at this price?",
+        "a": "Yes. A phone that is not PTA approved works on a Pakistani SIM only for a limited time and is then blocked unless the PTA tax is paid, which can cost more than the price gap. Every headline price on this site is for a PTA approved unit."
+      },
+      {
+        "q": "What is the difference between official and shop warranty?",
+        "a": "Official warranty is honoured by the brand's own service centres across Pakistan. Shop warranty depends on the seller who sold you the phone and usually ends if the shop closes or refuses the claim. We mark which one each listing comes with."
+      },
+      {
+        "q": "How current are these prices?",
+        "a": "Every price is checked by hand on official brand stores and major Pakistani retailers, rounded to the nearest 500 PKR, and shown with the date it was checked. Prices move often, so confirm with the seller before you pay."
+      }
+    ]
   },
   {
     "ceiling": 80000,
     "intro": "Up to 80,000 PKR brings better chips, optical image stabilisation and longer software support from the bigger brands.",
-    "faq": []
+    "faq": [
+      {
+        "q": "Is optical image stabilisation (OIS) worth paying for at 80,000 PKR?",
+        "a": "For photos indoors and at night, and for steadier video, yes. OIS becomes common around this price; the camera score reason on each phone says whether it has it."
+      },
+      {
+        "q": "Should I buy a PTA approved phone at this price?",
+        "a": "Yes. A phone that is not PTA approved works on a Pakistani SIM only for a limited time and is then blocked unless the PTA tax is paid, which can cost more than the price gap. Every headline price on this site is for a PTA approved unit."
+      },
+      {
+        "q": "What is the difference between official and shop warranty?",
+        "a": "Official warranty is honoured by the brand's own service centres across Pakistan. Shop warranty depends on the seller who sold you the phone and usually ends if the shop closes or refuses the claim. We mark which one each listing comes with."
+      },
+      {
+        "q": "How current are these prices?",
+        "a": "Every price is checked by hand on official brand stores and major Pakistani retailers, rounded to the nearest 500 PKR, and shown with the date it was checked. Prices move often, so confirm with the seller before you pay."
+      }
+    ]
   },
   {
     "ceiling": 100000,
     "intro": "Up to 100,000 PKR you are in upper mid-range territory: strong cameras with OIS, IP ratings and 4 years or more of updates on some models.",
-    "faq": []
+    "faq": [
+      {
+        "q": "Should I buy a new mid range phone or an older flagship for 100,000 PKR?",
+        "a": "This site only lists phones released from 2024 onward, sold new with a PTA approved price. An older flagship can have a better camera but often has fewer updates left and may only come with shop warranty."
+      },
+      {
+        "q": "Should I buy a PTA approved phone at this price?",
+        "a": "Yes. A phone that is not PTA approved works on a Pakistani SIM only for a limited time and is then blocked unless the PTA tax is paid, which can cost more than the price gap. Every headline price on this site is for a PTA approved unit."
+      },
+      {
+        "q": "What is the difference between official and shop warranty?",
+        "a": "Official warranty is honoured by the brand's own service centres across Pakistan. Shop warranty depends on the seller who sold you the phone and usually ends if the shop closes or refuses the claim. We mark which one each listing comes with."
+      },
+      {
+        "q": "How current are these prices?",
+        "a": "Every price is checked by hand on official brand stores and major Pakistani retailers, rounded to the nearest 500 PKR, and shown with the date it was checked. Prices move often, so confirm with the seller before you pay."
+      }
+    ]
   },
   {
     "ceiling": 120000,
     "intro": "Up to 120,000 PKR mid-range flagships compete on camera quality, build and update promises. PTA tax makes official units the safer buy.",
-    "faq": []
+    "faq": [
+      {
+        "q": "Are phones under 120,000 PKR water resistant?",
+        "a": "Many are rated IP54 to IP68 at this price, but not all. The specs table on each phone page lists the exact IP rating, or None if the phone has no official rating."
+      },
+      {
+        "q": "Should I buy a PTA approved phone at this price?",
+        "a": "Yes. A phone that is not PTA approved works on a Pakistani SIM only for a limited time and is then blocked unless the PTA tax is paid, which can cost more than the price gap. Every headline price on this site is for a PTA approved unit."
+      },
+      {
+        "q": "What is the difference between official and shop warranty?",
+        "a": "Official warranty is honoured by the brand's own service centres across Pakistan. Shop warranty depends on the seller who sold you the phone and usually ends if the shop closes or refuses the claim. We mark which one each listing comes with."
+      },
+      {
+        "q": "How current are these prices?",
+        "a": "Every price is checked by hand on official brand stores and major Pakistani retailers, rounded to the nearest 500 PKR, and shown with the date it was checked. Prices move often, so confirm with the seller before you pay."
+      }
+    ]
   },
   {
     "ceiling": 150000,
     "intro": "Up to 150,000 PKR is the top of this site's range: near-flagship performance, telephoto cameras on some models and premium builds.",
-    "faq": []
+    "faq": [
+      {
+        "q": "Is it worth spending up to 150,000 PKR on a phone?",
+        "a": "If you keep phones for three years or more, often yes: you get longer software support, better cameras and stronger builds. If you mainly use social media and WhatsApp, the 50,000 to 80,000 brackets give most of the experience for far less."
+      },
+      {
+        "q": "Should I buy a PTA approved phone at this price?",
+        "a": "Yes. A phone that is not PTA approved works on a Pakistani SIM only for a limited time and is then blocked unless the PTA tax is paid, which can cost more than the price gap. Every headline price on this site is for a PTA approved unit."
+      },
+      {
+        "q": "What is the difference between official and shop warranty?",
+        "a": "Official warranty is honoured by the brand's own service centres across Pakistan. Shop warranty depends on the seller who sold you the phone and usually ends if the shop closes or refuses the claim. We mark which one each listing comes with."
+      },
+      {
+        "q": "How current are these prices?",
+        "a": "Every price is checked by hand on official brand stores and major Pakistani retailers, rounded to the nearest 500 PKR, and shown with the date it was checked. Prices move often, so confirm with the seller before you pay."
+      }
+    ]
   }
 ]

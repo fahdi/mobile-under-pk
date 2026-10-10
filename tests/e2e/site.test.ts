@@ -159,6 +159,20 @@ describe('year page', () => {
 });
 
 describe('hub page', () => {
+  it('shows the top phones overall, excluding discontinued ones', () => {
+    const html = page('');
+    const top = html.split('id="top-phones"')[1].split('</table>')[0];
+    expect((top.match(/<tr data-slug=/g) ?? []).length).toBe(3);
+    expect(top).not.toContain('samsung-galaxy-a15');
+  });
+
+  it('links every brand with phones and carries WebSite JSON-LD', () => {
+    const html = page('');
+    expect(html).toContain(`href="${BASE}brands/samsung/"`);
+    expect(html).toContain(`href="${BASE}brands/xiaomi/"`);
+    expect(jsonLd(html).map((o) => o['@type']).sort()).toEqual(['WebSite']);
+  });
+
   it('links to every non-empty bracket', () => {
     const html = page('');
     expect(html).toContain(`href="${BASE}mobile-under-50000-in-pakistan/"`);
