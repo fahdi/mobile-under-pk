@@ -1,31 +1,56 @@
 ---
 import Base from '../layouts/Base.astro';
+import PhoneTable from '../components/PhoneTable.astro';
 import PriceChecked from '../components/PriceChecked.astro';
 import { getData } from '../lib/data';
 import { bracketSlug } from '../lib/brackets';
 import { latestCheck } from '../lib/format';
 import { landingPaths, phonesInBracket } from '../lib/landing';
+import { brandPaths } from '../lib/listing';
+import { topPicks } from '../lib/scoring';
+import { websiteLd } from '../lib/seo';
 import { withBase } from '../lib/paths';
 
 const data = getData();
 const brackets = landingPaths(data).map((p) => p.props.ceiling);
 const checked = latestCheck(data.phones);
+const balanced = data.presets.find((p) => p.slug === 'balanced')!;
+const top = topPicks(data.phones, balanced, 5);
+const brands = brandPaths(data).map((p) => data.brands.find((b) => b.slug === p.params.brand)!);
 ---
 <Base
   title="MobileUnder.pk: best mobile phones by budget in Pakistan"
   description="Pick a budget and compare phones actually available in Pakistan, with PTA status, warranty and checked PKR prices."
   path="/"
+  jsonLd={[websiteLd(Astro.site!)]}
 >
   <h1>Best mobile phones in Pakistan by budget</h1>
   <p>Phones released in 2024, 2025 and 2026, up to 150,000 PKR, with PTA status, warranty and checked prices.</p>
   {checked && <PriceChecked date={checked} />}
-  {brackets.length > 0 && <p><a href={withBase('/finder/')}>Help me decide: filter and rank every phone</a></p>}
+
   {brackets.length > 0 ? (
-    <ul class="bracket-chips">
-      {brackets.map((c) => (
-        <li><a href={withBase(`/${bracketSlug(c)}/`)}>Under {c.toLocaleString('en-US')}</a> ({phonesInBracket(data, c).length} phones)</li>
-      ))}
-    </ul>
+    <>
+      <h2>Pick your budget</h2>
+      <ul class="bracket-chips">
+        {brackets.map((c) => (
+          <li><a href={withBase(`/${bracketSlug(c)}/`)}>Under {c.toLocaleString('en-US')}</a> ({phonesInBracket(data, c).length} phones)</li>
+        ))}
+      </ul>
+      <p><a href={withBase('/finder/')}>Help me decide: filter and rank every phone</a></p>
+
+      <section id="top-phones">
+        <h2>Top phones right now</h2>
+        <p>Best overall scores across every budget, weighted toward value and local availability. Discontinued phones are left out.</p>
+        <PhoneTable rows={top} brands={data.brands} />
+      </section>
+
+      <section>
+        <h2>Browse by brand</h2>
+        <ul class="bracket-chips">
+          {brands.map((b) => <li><a href={withBase(`/brands/${b.slug}/`)}>{b.name}</a></li>)}
+        </ul>
+      </section>
+    </>
   ) : (
     <p>Phone data is being researched. Check back soon.</p>
   )}

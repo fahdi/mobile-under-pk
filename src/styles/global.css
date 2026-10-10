@@ -44,3 +44,5 @@ img { max-width: 100%; height: auto; }
 .finder input[type=number] { width: 7rem; }
 .finder details { width: 100%; }
 tr[hidden] { display: none; }
+.bracket-chips { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.bracket-chips li { border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; }

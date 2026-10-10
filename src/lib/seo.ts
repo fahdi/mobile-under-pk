@@ -58,3 +58,7 @@ export function faqLd(faq: Array<{ q: string; a: string }>): Ld {
     mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
   };
 }
+
+export function websiteLd(site: string | URL, base?: string): Ld {
+  return { '@context': CONTEXT, '@type': 'WebSite', name: 'MobileUnder.pk', url: absUrl('/', site, base), inLanguage: 'en-PK' };
+}
