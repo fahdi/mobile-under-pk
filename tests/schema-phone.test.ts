@@ -61,4 +61,14 @@ describe('PhoneSchema', () => {
     expect(parse(makePhone({ image: '/images/phones/x.png' })).success).toBe(false);
     expect(parse(makePhone({ imageCredit: { name: '', url: 'https://www.samsung.com/pk/' } })).success).toBe(false);
   });
+
+  it('accepts real IP ratings, including IP69K and combined ratings, and rejects junk', () => {
+    const withIp = (ip: string | null) => { const p = makePhone(); return { ...p, specs: { ...p.specs, build: { ...p.specs.build, ip } } }; };
+    for (const ip of ['IP54', 'IP5X', 'IP68', 'IP69', 'IP69K', 'IP68/IP69', 'IP66/IP68/IP69K', null]) {
+      expect(parse(withIp(ip)).success, String(ip)).toBe(true);
+    }
+    for (const ip of ['IP6', 'water resistant', 'IP68/', 'ip68', 'IP68 IP69']) {
+      expect(parse(withIp(ip)).success, ip).toBe(false);
+    }
+  });
 });
