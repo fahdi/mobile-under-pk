@@ -1,0 +1,128 @@
+{
+  "slug": "realme-note-60x",
+  "brand": "realme",
+  "model": "Note 60x",
+  "releaseDate": "2024-12-09",
+  "status": "available",
+  "image": "/images/phones/realme-note-60x.webp",
+  "imageCredit": {
+    "name": "realme Pakistan",
+    "url": "https://www.realme.com/pk/realme-note-60x"
+  },
+  "variants": [
+    {
+      "ram": 3,
+      "storage": 64,
+      "pricePkr": 29500,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/realme/realme-note-60x"
+        }
+      ]
+    },
+    {
+      "ram": 4,
+      "storage": 64,
+      "pricePkr": 33000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/realme/realme-note-60x"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Unisoc T612",
+    "display": {
+      "size": 6.74,
+      "type": "IPS LCD",
+      "refreshHz": 90,
+      "resolution": "720x1600",
+      "peakNits": 560
+    },
+    "battery": {
+      "mah": 5000,
+      "wiredW": 10,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 8,
+          "type": "wide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 5
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "aluminium",
+      "back": "plastic",
+      "front": "glass",
+      "ip": "IP54"
+    },
+    "software": {
+      "os": "Android 14, realme UI",
+      "osUpdates": 1,
+      "securityYears": 2
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 187
+  },
+  "scores": {
+    "camera": {
+      "value": 2,
+      "reason": "Single 8MP rear camera and 5MP selfie camera, weak indoors."
+    },
+    "performance": {
+      "value": 3,
+      "reason": "Unisoc T612 with 3GB RAM is adequate for calls and social apps only."
+    },
+    "battery": {
+      "value": 4,
+      "reason": "5,000mAh lasts a full day, with slow 10W charging."
+    },
+    "display": {
+      "value": 4,
+      "reason": "6.74 inch HD+ LCD at 90Hz with 560 nits peak."
+    },
+    "build": {
+      "value": 6,
+      "reason": "Die-cast aluminium chassis with IP54 splash resistance, unusual at this price."
+    },
+    "software": {
+      "value": 3,
+      "reason": "Ships with Android 14; realme budget phones typically get only 1 Android upgrade."
+    },
+    "value": {
+      "value": 5,
+      "reason": "Sturdier IP54 metal-frame build than rivals, but the 3GB RAM and 8MP camera are the weakest here at 29,500."
+    },
+    "availability": {
+      "value": 8,
+      "reason": "In stock at PriceOye and sold by realme's official Daraz store, with official warranty."
+    }
+  },
+  "tags": [],
+  "rivals": [
+    "itel-a100c",
+    "zte-nubia-a36"
+  ],
+  "notes": "PriceOye lists the 3GB 64GB at 29,499 and 4GB 64GB at 32,999, both in stock on 2026-10-10; a second 3GB 64GB listing at 32,999 and the 4GB 128GB at 38,699 are out of stock. realme's official Daraz stores charge more (4GB 64GB from 35,399). Update policy is not published; the 1 upgrade figure is an assumption."
+}
