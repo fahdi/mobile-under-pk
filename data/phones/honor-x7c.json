@@ -4,6 +4,11 @@
   "model": "X7c",
   "releaseDate": "2024-10-18",
   "status": "limited",
+  "image": "/images/phones/honor-x7c.webp",
+  "imageCredit": {
+    "name": "HONOR Pakistan",
+    "url": "https://www.honor.com/pk/phones/honor-x7c/"
+  },
   "variants": [
     {
       "ram": 8,

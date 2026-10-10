@@ -4,6 +4,11 @@
   "model": "Redmi 15C",
   "releaseDate": "2025-08-01",
   "status": "available",
+  "image": "/images/phones/xiaomi-redmi-15c.webp",
+  "imageCredit": {
+    "name": "Xiaomi Pakistan",
+    "url": "https://www.mi.com/pk/product/redmi-15c/"
+  },
   "variants": [
     {
       "ram": 4,

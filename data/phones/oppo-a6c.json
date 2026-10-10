@@ -4,6 +4,11 @@
   "model": "A6c",
   "releaseDate": "2026-04-07",
   "status": "available",
+  "image": "/images/phones/oppo-a6c.webp",
+  "imageCredit": {
+    "name": "OPPO Pakistan",
+    "url": "https://www.oppo.com/pk/smartphones/series-a/a6c/"
+  },
   "variants": [
     {
       "ram": 4,

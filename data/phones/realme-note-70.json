@@ -4,6 +4,11 @@
   "model": "Note 70",
   "releaseDate": "2025-08-28",
   "status": "available",
+  "image": "/images/phones/realme-note-70.webp",
+  "imageCredit": {
+    "name": "realme Pakistan",
+    "url": "https://www.realme.com/pk/realme-note-70/specs"
+  },
   "variants": [
     {
       "ram": 4,

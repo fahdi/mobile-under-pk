@@ -4,6 +4,11 @@
   "model": "Spark 40",
   "releaseDate": "2025-07-02",
   "status": "limited",
+  "image": "/images/phones/tecno-spark-40.webp",
+  "imageCredit": {
+    "name": "TECNO Pakistan",
+    "url": "https://www.tecno-mobile.com/pak/phones/tech-specs/techspecs/spark-40/"
+  },
   "variants": [
     {
       "ram": 6,
