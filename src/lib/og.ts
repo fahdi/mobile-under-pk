@@ -2,7 +2,7 @@ import type { DataSet } from './load';
 import { bracketSlug, cheapestPtaVariant } from './brackets';
 import { comparePaths } from './compare';
 import { formatDate, formatPkr, latestCheck, phoneName } from './format';
-import { phonesInBracket } from './landing';
+import { landingPaths, phonesInBracket } from './landing';
 import { phonesByBrand, phonesByYear } from './listing';
 import { topPicks } from './scoring';
 
@@ -24,6 +24,16 @@ export function ogContent(data: DataSet, path: string): OgContent {
   }
   if (path === '/finder/') {
     return { title: 'Find your phone', subtitle: 'Filter and rank every phone by what matters to you', images: [] };
+  }
+  const intentPage = landingPaths(data).find((p) => p.props.kind === 'intent' && path === `/${p.params.landing}/`);
+  if (intentPage && intentPage.props.kind === 'intent') {
+    const { ceiling, preset: presetSlug } = intentPage.props;
+    const preset = data.presets.find((p) => p.slug === presetSlug)!;
+    return {
+      title: `Best ${preset.intent} phone under ${ceiling.toLocaleString('en-US')} in Pakistan`,
+      subtitle: `Ranked by ${preset.name.toLowerCase()}, PTA prices checked by hand`,
+      images: topPicks(phonesInBracket(data, ceiling), preset, 3).map((r) => r.phone.image),
+    };
   }
   const bracket = data.brackets.find((b) => path === `/${bracketSlug(b.ceiling)}/`);
   if (bracket) {

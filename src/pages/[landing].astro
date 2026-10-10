@@ -6,7 +6,7 @@ import PriceChecked from '../components/PriceChecked.astro';
 import { getData } from '../lib/data';
 import { bracketSlug } from '../lib/brackets';
 import { latestCheck, phoneName } from '../lib/format';
-import { bracketDescription, bracketTitle, landingPaths, neighbours, phonesInBracket, pickReason, type LandingProps } from '../lib/landing';
+import { bracketDescription, bracketTitle, intentSlug, intentTitle, landingPaths, neighbours, phonesInBracket, pickReason, type LandingProps } from '../lib/landing';
 import { rankPhones, topPicks } from '../lib/scoring';
 import { absUrl, breadcrumbLd, faqLd, itemListLd } from '../lib/seo';
 import { withBase } from '../lib/paths';
@@ -15,9 +15,13 @@ export function getStaticPaths() {
   return landingPaths(getData());
 }
 
-const { ceiling } = Astro.props as LandingProps;
+const props = Astro.props as LandingProps;
+const { ceiling } = props;
 const data = getData();
-const preset = data.presets.find((p) => p.slug === 'balanced')!;
+const preset = data.presets.find((p) => p.slug === (props.kind === 'intent' ? props.preset : 'balanced'))!;
+const intent = props.kind === 'intent' ? preset.intent! : undefined;
+const intentLinks = landingPaths(data).filter((p) => p.props.kind === 'intent' && p.props.ceiling === ceiling)
+  .map((p) => ({ slug: p.params.landing, name: data.presets.find((x) => p.props.kind === 'intent' && x.slug === p.props.preset)!.intent! }));
 const bracket = data.brackets.find((b) => b.ceiling === ceiling)!;
 const phones = phonesInBracket(data, ceiling);
 const ranked = rankPhones(phones, preset);
@@ -25,19 +29,34 @@ const picks = topPicks(phones, preset);
 const checked = latestCheck(phones)!;
 const { prev, next } = neighbours(data, ceiling);
 const money = ceiling.toLocaleString('en-US');
-const path = `/${bracketSlug(ceiling)}/`;
+const bracketPath = `/${bracketSlug(ceiling)}/`;
+const path = intent ? `/${intentSlug(intent, ceiling)}/` : bracketPath;
 const name = (r: { phone: (typeof phones)[number] }) => phoneName(r.phone, data.brands);
 
 const jsonLd = [
   itemListLd(ranked.map((r) => ({ name: name(r), url: absUrl(`/phones/${r.phone.slug}/`, Astro.site!) }))),
-  breadcrumbLd([{ name: 'Home', path: '/' }, { name: `Under ${money}`, path }], Astro.site!),
-  ...(bracket.faq.length ? [faqLd(bracket.faq)] : []),
+  breadcrumbLd([{ name: 'Home', path: '/' }, { name: `Under ${money}`, path: bracketPath }, ...(intent ? [{ name: `Best ${intent}`, path }] : [])], Astro.site!),
+  ...(!intent && bracket.faq.length ? [faqLd(bracket.faq)] : []),
 ];
+const title = intent ? intentTitle(intent, ceiling, checked) : bracketTitle(ceiling, checked);
+const description = intent
+  ? `The best ${intent} phones under Rs ${money} in Pakistan, ranked by ${preset.name.toLowerCase()}: ${picks.map(name).join(', ')}. PTA prices checked by hand.`
+  : bracketDescription(ceiling, ranked.length, checked, picks.map(name));
 ---
-<Base title={bracketTitle(ceiling, checked)} description={bracketDescription(ceiling, ranked.length, checked, picks.map(name))} path={path} jsonLd={jsonLd}>
-  <nav aria-label="Breadcrumb"><a href={withBase('/')}>Home</a> / Under {money}</nav>
-  <h1>Best mobile under {money} in Pakistan</h1>
-  <p>{bracket.intro}</p>
+<Base title={title} description={description} path={path} jsonLd={jsonLd}>
+  <nav aria-label="Breadcrumb"><a href={withBase('/')}>Home</a> / <a href={withBase(bracketPath)}>Under {money}</a>{intent && ` / Best ${intent}`}</nav>
+  {intent ? (
+    <>
+      <h1>Best {intent} phone under {money} in Pakistan</h1>
+      <p>{preset.description} Ranked with the {preset.name} weights; see <a href={withBase(bracketPath)}>all phones under {money}</a> for the balanced ranking.</p>
+    </>
+  ) : (
+    <>
+      <h1>Best mobile under {money} in Pakistan</h1>
+      <p>{bracket.intro}</p>
+      {intentLinks.length > 0 && <p>Looking for something specific? {intentLinks.map((l, i) => <>{i > 0 && ', '}<a href={withBase(`/${l.slug}/`)}>best {l.name} phone under {money}</a></>)}.</p>}
+    </>
+  )}
   <PriceChecked date={checked} />
 
   {picks.length > 0 && (
@@ -54,7 +73,7 @@ const jsonLd = [
     <PhoneTable rows={ranked} brands={data.brands} />
   </section>
 
-  {bracket.faq.length > 0 && (
+  {!intent && bracket.faq.length > 0 && (
     <section>
       <h2>Questions about phones under {money}</h2>
       {bracket.faq.map((f) => (<><h3>{f.q}</h3><p>{f.a}</p></>))}

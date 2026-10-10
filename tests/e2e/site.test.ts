@@ -33,14 +33,14 @@ describe('bracket page', () => {
   });
 
   it('ranks every phone in the bracket and only those', () => {
-    expect(count(html(), /<tr data-slug=/g)).toBe(3);
+    expect(count(html(), /<tr data-slug=/g)).toBe(4);
     expect(html()).not.toContain('data-slug="samsung-galaxy-a26"');
   });
 
   it('shows a photo on each top pick, lazily loaded below the first', () => {
     const picks = html().split('class="picks"')[1].split('</ul>')[0];
     const imgs = picks.match(/<img [^>]*>/g) ?? [];
-    expect(imgs).toHaveLength(2);
+    expect(imgs).toHaveLength(3);
     expect(imgs.every((i) => /src="\/mobile-under-pk\/images\/phones\/[a-z0-9-]+\.webp"/.test(i))).toBe(true);
     expect(imgs[0]).toContain('fetchpriority="high"');
     expect(imgs[1]).toContain('loading="lazy"');
@@ -48,7 +48,7 @@ describe('bracket page', () => {
 
   it('keeps discontinued phones out of the top picks but in the table', () => {
     const picks = html().split('class="picks"')[1].split('</ul>')[0];
-    expect(count(picks, /class="pick"/g)).toBe(2);
+    expect(count(picks, /class="pick"/g)).toBe(3);
     expect(picks).not.toContain('Galaxy A15');
     expect(html()).toContain('data-slug="samsung-galaxy-a15"');
   });
@@ -63,6 +63,32 @@ describe('bracket page', () => {
 
   it('builds no page for an empty bracket', () => {
     expect(existsSync(join(out, 'mobile-under-20000-in-pakistan'))).toBe(false);
+  });
+});
+
+describe('intent landing pages', () => {
+  const html = () => page('best-camera-phone-under-50000');
+
+  it('exist only where the preset changes the top 3', () => {
+    expect(existsSync(join(out, 'best-camera-phone-under-50000/index.html'))).toBe(true);
+    expect(existsSync(join(out, 'best-battery-phone-under-50000/index.html'))).toBe(true);
+    expect(existsSync(join(out, 'best-camera-phone-under-60000'))).toBe(false);
+  });
+
+  it('rank by the preset with its own title, H1 and JSON-LD', () => {
+    expect(html()).toContain('<title>Best camera phone under 50,000 in Pakistan (Oct 2026)</title>');
+    expect(html()).toMatch(/<h1>Best camera phone under 50,000 in Pakistan<\/h1>/);
+    const picks = html().split('class="picks"')[1].split('</ul>')[0];
+    expect([...picks.matchAll(/phones\/([a-z0-9-]+)\/"/g)].map((m) => m[1]).filter((v, i, a) => a.indexOf(v) === i))
+      .toEqual(['xiaomi-redmi-note-14', 'samsung-galaxy-a16', 'xiaomi-poco-c75']);
+    const table = [...html().split('class="phone-table"')[1].matchAll(/<tr data-slug="([^"]+)"/g)].map((m) => m[1]);
+    expect(table[0]).toBe('samsung-galaxy-a15'); // discontinued stays in the table, flagged, but never a pick
+    expect(jsonLd(html()).map((o) => o['@type']).sort()).toEqual(['BreadcrumbList', 'ItemList']);
+  });
+
+  it('link to and from the bracket page', () => {
+    expect(html()).toContain(`href="${BASE}mobile-under-50000-in-pakistan/"`);
+    expect(page('mobile-under-50000-in-pakistan')).toContain(`href="${BASE}best-camera-phone-under-50000/"`);
   });
 });
 
@@ -155,7 +181,7 @@ describe('year page', () => {
   it('lists phones released that year', () => {
     const html = page('year/2024');
     expect(html).toContain('<title>Mobile phones released in 2024: Pakistan prices and scores</title>');
-    expect((html.match(/<tr data-slug=/g) ?? []).length).toBe(4);
+    expect((html.match(/<tr data-slug=/g) ?? []).length).toBe(5);
     expect(existsSync(join(out, 'year/2026'))).toBe(false);
   });
 });
@@ -164,7 +190,7 @@ describe('hub page', () => {
   it('shows the top phones overall, excluding discontinued ones', () => {
     const html = page('');
     const top = html.split('id="top-phones"')[1].split('</table>')[0];
-    expect((top.match(/<tr data-slug=/g) ?? []).length).toBe(3);
+    expect((top.match(/<tr data-slug=/g) ?? []).length).toBe(4);
     expect(top).not.toContain('samsung-galaxy-a15');
   });
 
@@ -188,7 +214,7 @@ describe('finder page', () => {
 
   it('server-renders every phone under the default preset, so it works without JavaScript', () => {
     expect(html()).toContain('<title>Phone finder: filter and rank phones in Pakistan by budget</title>');
-    expect(count(html(), /<tr data-slug=/g)).toBe(4);
+    expect(count(html(), /<tr data-slug=/g)).toBe(5);
     expect(html()).toContain('id="finder-count"');
   });
 
@@ -216,7 +242,7 @@ describe('finder index', () => {
     const raw = readFileSync(join(out, 'phones.index.json'), 'utf8');
     const entries = JSON.parse(raw);
     expect(entries.map((e: { slug: string }) => e.slug).sort()).toEqual([
-      'samsung-galaxy-a15', 'samsung-galaxy-a16', 'samsung-galaxy-a26', 'xiaomi-redmi-note-14',
+      'samsung-galaxy-a15', 'samsung-galaxy-a16', 'samsung-galaxy-a26', 'xiaomi-poco-c75', 'xiaomi-redmi-note-14',
     ]);
     expect(entries.find((e: { slug: string }) => e.slug === 'xiaomi-redmi-note-14')).toMatchObject({
       name: 'Xiaomi Redmi Note 14', ptaPrice: 49000, officialWarranty: false,

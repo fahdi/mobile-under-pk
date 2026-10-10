@@ -59,3 +59,38 @@ describe('bracketTitle and bracketDescription', () => {
     );
   });
 });
+
+import { intentSlug } from '../src/lib/landing';
+
+describe('intent pages', () => {
+  const s = (v: number) => ({ value: v, reason: 'reason text here' });
+  const scored = (slug: string, price: number, camera: number, battery: number) =>
+    makePhone({ slug, variants: [makeVariant({ pricePkr: price })], scores: { ...makePhone().scores, camera: s(camera), battery: s(battery) } });
+  const presets = [
+    balanced,
+    { slug: 'camera-first', name: 'Camera', description: 'd', intent: 'camera', weights: { camera: 3 } },
+    { slug: 'battery-first', name: 'Battery', description: 'd', intent: 'battery', weights: { battery: 3 } },
+    { slug: 'gaming', name: 'Gaming', description: 'd', weights: { performance: 3 } },
+  ];
+  // Four phones in the 50,000 bracket; camera-first reorders the top 3, battery-first does not.
+  const intentData: DataSet = {
+    ...data,
+    phones: [scored('p1', 41000, 5, 9), scored('p2', 42000, 6, 8), scored('p3', 43000, 7, 7), scored('p4', 44000, 10, 1), at('c', 18000)],
+    presets,
+  };
+
+  it('builds the slug from the preset intent and the ceiling', () => {
+    expect(intentSlug('camera', 60000)).toBe('best-camera-phone-under-60000');
+  });
+
+  it('emits an intent page only where the preset changes the top 3, and only for presets with an intent', () => {
+    const intents = landingPaths(intentData).filter((p) => p.props.kind === 'intent');
+    expect(intents).toEqual([
+      { params: { landing: 'best-camera-phone-under-50000' }, props: { kind: 'intent', ceiling: 50000, preset: 'camera-first' } },
+    ]);
+  });
+
+  it('never emits intent pages for brackets with fewer than 3 phones', () => {
+    expect(landingPaths(intentData).some((p) => p.params.landing.endsWith('-under-20000'))).toBe(false);
+  });
+});

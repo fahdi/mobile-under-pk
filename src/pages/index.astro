@@ -12,7 +12,7 @@ import { websiteLd } from '../lib/seo';
 import { withBase } from '../lib/paths';
 
 const data = getData();
-const brackets = landingPaths(data).map((p) => p.props.ceiling);
+const brackets = landingPaths(data).filter((p) => p.props.kind === 'bracket').map((p) => p.props.ceiling);
 const checked = latestCheck(data.phones);
 const balanced = data.presets.find((p) => p.slug === 'balanced')!;
 const top = topPicks(data.phones, balanced, 5);

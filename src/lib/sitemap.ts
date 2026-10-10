@@ -1,5 +1,4 @@
 import type { DataSet } from './load';
-import { bracketSlug } from './brackets';
 import { comparePaths } from './compare';
 import { landingPaths } from './landing';
 import { brandPaths, yearPaths } from './listing';
@@ -10,7 +9,7 @@ export function sitemapPaths(data: DataSet): string[] {
   return [
     '/',
     '/finder/',
-    ...landingPaths(data).map((p) => `/${bracketSlug(p.props.ceiling)}/`),
+    ...landingPaths(data).map((p) => `/${p.params.landing}/`),
     ...data.phones.map((p) => `/phones/${p.slug}/`),
     ...brandPaths(data).map((p) => `/brands/${p.params.brand}/`),
     ...yearPaths(data).map((p) => `/year/${p.params.year}/`),
