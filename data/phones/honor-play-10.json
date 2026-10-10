@@ -1,0 +1,114 @@
+{
+  "slug": "honor-play-10",
+  "brand": "honor",
+  "model": "Play10",
+  "releaseDate": "2025-09-08",
+  "status": "limited",
+  "image": "/images/phones/honor-play-10.webp",
+  "imageCredit": {
+    "name": "HONOR Sri Lanka",
+    "url": "https://www.honor.com/lk/phones/honor-play10/"
+  },
+  "variants": [
+    {
+      "ram": 3,
+      "storage": 64,
+      "pricePkr": 21000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/Honor_Play-10"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "MediaTek Helio G81",
+    "display": {
+      "size": 6.74,
+      "type": "TFT LCD",
+      "refreshHz": 90,
+      "resolution": "720x1600"
+    },
+    "battery": {
+      "mah": 5000,
+      "wiredW": 10,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 13,
+          "type": "wide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 5
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": "IP52"
+    },
+    "software": {
+      "os": "Android 15 (Go edition)",
+      "osUpdates": 0,
+      "securityYears": 0
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 189
+  },
+  "scores": {
+    "camera": {
+      "value": 3,
+      "reason": "Single 13MP f/2.2 main camera with no ultrawide and no OIS."
+    },
+    "performance": {
+      "value": 4,
+      "reason": "Helio G81 handles daily apps and light games, but 3GB RAM limits multitasking."
+    },
+    "battery": {
+      "value": 4,
+      "reason": "5,000mAh lasts a full day, but 10W charging is slow to refill."
+    },
+    "display": {
+      "value": 4,
+      "reason": "6.74 inch HD+ LCD at 90Hz, smooth scrolling but low resolution."
+    },
+    "build": {
+      "value": 4,
+      "reason": "Plastic body with an IP52 splash rating."
+    },
+    "software": {
+      "value": 2,
+      "reason": "Android 15 Go edition with no published OS update commitment."
+    },
+    "value": {
+      "value": 7,
+      "reason": "Cheapest phone in the bracket at 21,000 with a Helio G81 and IP52."
+    },
+    "availability": {
+      "value": 4,
+      "reason": "Out of stock at PriceOye today and not listed on HONOR Pakistan's site; official warranty where sold."
+    }
+  },
+  "tags": [],
+  "rivals": [
+    "tecno-spark-go-1",
+    "infinix-smart-9-hd",
+    "realme-note-60"
+  ],
+  "notes": "Price is the WhatMobile official price (20,999). PriceOye lists the 3GB 64GB at 21,499 but out of stock on 2026-10-10. HONOR Pakistan's website does not list the Play10, so specs and photo come from HONOR Sri Lanka. GSMArena also lists a 4GB 128GB version not priced in Pakistan. No published update policy, so osUpdates and securityYears are 0."
+}

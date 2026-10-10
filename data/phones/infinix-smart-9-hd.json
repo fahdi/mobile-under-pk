@@ -1,0 +1,115 @@
+{
+  "slug": "infinix-smart-9-hd",
+  "brand": "infinix",
+  "model": "Smart 9 HD",
+  "releaseDate": "2024-11-01",
+  "status": "limited",
+  "image": "/images/phones/infinix-smart-9-hd.webp",
+  "imageCredit": {
+    "name": "Infinix Bangladesh",
+    "url": "https://bd.infinixmobility.com/specs/smart-9-hd"
+  },
+  "variants": [
+    {
+      "ram": 4,
+      "storage": 64,
+      "pricePkr": 23000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/Infinix_Smart-9-HD"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "MediaTek Helio G50",
+    "display": {
+      "size": 6.7,
+      "type": "IPS LCD",
+      "refreshHz": 90,
+      "resolution": "720x1600",
+      "peakNits": 500
+    },
+    "battery": {
+      "mah": 5000,
+      "wiredW": 10,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 13,
+          "type": "wide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 8
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": "IP54"
+    },
+    "software": {
+      "os": "Android 14 (Go edition), XOS 14",
+      "osUpdates": 0,
+      "securityYears": 0
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 188
+  },
+  "scores": {
+    "camera": {
+      "value": 3,
+      "reason": "13MP f/1.85 autofocus main camera, no OIS or ultrawide."
+    },
+    "performance": {
+      "value": 3,
+      "reason": "Helio G50 with 4GB RAM is usable for calls and social apps but slows under load."
+    },
+    "battery": {
+      "value": 4,
+      "reason": "5,000mAh lasts a full day, but 10W charging is slow to refill."
+    },
+    "display": {
+      "value": 4,
+      "reason": "6.7 inch HD+ LCD at 90Hz with 500 nits."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Plastic body with IP54 and a drop resistance certification."
+    },
+    "software": {
+      "value": 1,
+      "reason": "Android 14 Go edition with no published OS update commitment."
+    },
+    "value": {
+      "value": 7,
+      "reason": "4GB RAM, IP54 and dual speakers at 23,000 beat the pricier Smart 10 HD."
+    },
+    "availability": {
+      "value": 4,
+      "reason": "Out of stock at PriceOye today and not listed on Infinix Pakistan's site; official warranty where sold."
+    }
+  },
+  "tags": [],
+  "rivals": [
+    "tecno-spark-go-1",
+    "honor-play-10",
+    "infinix-smart-10-hd"
+  ],
+  "notes": "Price is the WhatMobile official price (22,999). PriceOye lists the 4GB 64GB at 21,999 but out of stock on 2026-10-10. GSMArena gives the announcement as November 2024 without a day, so the release day is approximate. Specs from Infinix Bangladesh's spec sheet; some listings name the GPU as PowerVR GE8320 instead of Mali-G57. No published update policy."
+}

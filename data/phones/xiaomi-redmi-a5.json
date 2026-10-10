@@ -1,0 +1,134 @@
+{
+  "slug": "xiaomi-redmi-a5",
+  "brand": "xiaomi",
+  "model": "Redmi A5",
+  "releaseDate": "2025-03-21",
+  "status": "available",
+  "image": "/images/phones/xiaomi-redmi-a5.webp",
+  "imageCredit": {
+    "name": "Xiaomi Global",
+    "url": "https://www.mi.com/global/product/redmi-a5/"
+  },
+  "variants": [
+    {
+      "ram": 4,
+      "storage": 64,
+      "pricePkr": 33000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "Daraz Xiaomi Flagship Store",
+          "url": "https://www.daraz.pk/products/redmi-a5-4-gb-ram-rom-64-non-scanned-non-active-pta-approved-i801532292.html"
+        },
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/xiaomi/xiaomi-redmi-a5"
+        }
+      ]
+    },
+    {
+      "ram": 4,
+      "storage": 128,
+      "pricePkr": 39000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "Mega.pk",
+          "url": "https://www.mega.pk/mobiles_products/26840/Xiaomi-Redmi-A5-4GB-Ram-128GB-Storage-PTA-Approved.html"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Unisoc T7250",
+    "display": {
+      "size": 6.88,
+      "type": "IPS LCD",
+      "refreshHz": 120,
+      "resolution": "720x1640"
+    },
+    "battery": {
+      "mah": 5200,
+      "wiredW": 15,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 32,
+          "type": "wide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 8
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": null
+    },
+    "software": {
+      "os": "Android 15 (Go edition), HyperOS",
+      "osUpdates": 2,
+      "securityYears": 4
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 193
+  },
+  "scores": {
+    "camera": {
+      "value": 4,
+      "reason": "Single 32MP f/2.0 main camera plus an auxiliary lens, no OIS."
+    },
+    "performance": {
+      "value": 4,
+      "reason": "Unisoc T7250 with eMMC storage and Android Go is fine for calls and social apps only."
+    },
+    "battery": {
+      "value": 5,
+      "reason": "5,200mAh lasts a full day but 15W charging is slow."
+    },
+    "display": {
+      "value": 4,
+      "reason": "Large 6.88 inch HD+ LCD at 120Hz, only 450 nits typical."
+    },
+    "build": {
+      "value": 3,
+      "reason": "Plastic body that Xiaomi calls dust and splash resistant, with no IP rating."
+    },
+    "software": {
+      "value": 5,
+      "reason": "GSMArena lists 2 major Android upgrades; Android 15 Go edition."
+    },
+    "value": {
+      "value": 7,
+      "reason": "At 33,000 it is the cheapest phone in the bracket with a 120Hz screen and 2 OS updates."
+    },
+    "availability": {
+      "value": 8,
+      "reason": "In stock at the Xiaomi Flagship Store on Daraz and PriceOye with official Xiaomi warranty."
+    }
+  },
+  "tags": [
+    "budget"
+  ],
+  "rivals": [
+    "samsung-galaxy-a07",
+    "honor-x5c-plus",
+    "realme-c100i"
+  ],
+  "notes": "Daraz Xiaomi Flagship lists the 4GB 64GB at 32,999 and PriceOye at 34,999 on 2026-10-10. WhatMobile shows 30,999 but that is a list price, not a stock listing. PriceOye lists the 4GB 128GB at 34,499 but out of stock, so the 128GB price comes from Mega.pk (38,999, in stock), which is not on the primary source list. Rear auxiliary lens is unspecified by Xiaomi so it is not listed."
+}

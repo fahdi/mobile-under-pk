@@ -1,0 +1,138 @@
+{
+  "slug": "tecno-spark-go-3",
+  "brand": "tecno",
+  "model": "Spark Go 3",
+  "releaseDate": "2026-01-16",
+  "status": "available",
+  "image": "/images/phones/tecno-spark-go-3.webp",
+  "imageCredit": {
+    "name": "TECNO Pakistan",
+    "url": "https://www.tecno-mobile.com/pak/phones/tech-specs/techspecs/spark-go-3/"
+  },
+  "variants": [
+    {
+      "ram": 4,
+      "storage": 64,
+      "pricePkr": 39000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/tecno/tecno-spark-go-3"
+        },
+        {
+          "name": "Daraz Tecno Flagship Store",
+          "url": "https://www.daraz.pk/products/tecno-spark-go-3-464-i1948224278.html"
+        }
+      ]
+    },
+    {
+      "ram": 4,
+      "storage": 128,
+      "pricePkr": 45500,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/tecno/tecno-spark-go-3"
+        },
+        {
+          "name": "Daraz Tecno Flagship Store",
+          "url": "https://www.daraz.pk/products/tecno-spark-go-3-4128-i1948065372.html"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Unisoc T7250",
+    "display": {
+      "size": 6.75,
+      "type": "IPS LCD",
+      "refreshHz": 120,
+      "resolution": "720x1600"
+    },
+    "battery": {
+      "mah": 5000,
+      "wiredW": 15,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 13,
+          "type": "wide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 8
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": "IP64"
+    },
+    "software": {
+      "os": "Android 15, HiOS 15",
+      "osUpdates": 1,
+      "securityYears": 2
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 186
+  },
+  "scores": {
+    "camera": {
+      "value": 4,
+      "reason": "Single 13MP f/1.8 main camera with PDAF and dual flash, no OIS."
+    },
+    "performance": {
+      "value": 4,
+      "reason": "Unisoc T7250 handles calls, chat and video but not demanding games."
+    },
+    "battery": {
+      "value": 5,
+      "reason": "5,000mAh lasts a full day with slow 15W charging."
+    },
+    "display": {
+      "value": 4,
+      "reason": "6.75 inch HD+ LCD at 120Hz."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Plastic body with IP64 splash protection and 1.2m drop resistance."
+    },
+    "software": {
+      "value": 3,
+      "reason": "Tecno offers about 2 years of patches and at most 1 Android upgrade."
+    },
+    "value": {
+      "value": 5,
+      "reason": "At 39,000 its 13MP camera and 5,000mAh battery trail cheaper rivals."
+    },
+    "availability": {
+      "value": 8,
+      "reason": "In stock at PriceOye and the Tecno Flagship Store on Daraz with official Tecno warranty."
+    }
+  },
+  "tags": [
+    "budget"
+  ],
+  "rivals": [
+    "infinix-smart-20",
+    "vivo-y05",
+    "honor-x5c-plus"
+  ],
+  "notes": "Daraz Tecno Flagship Store lists the 4GB 64GB at 39,399 and the 4GB 128GB at 46,999; WhatMobile shows 41,999 on 2026-10-10. Weight is not published by Tecno or GSMArena; 186g is from retail listings (other listings say 168g to 198g). Update policy is assumed."
+}

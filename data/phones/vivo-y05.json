@@ -1,0 +1,131 @@
+{
+  "slug": "vivo-y05",
+  "brand": "vivo",
+  "model": "Y05",
+  "releaseDate": "2026-02-24",
+  "status": "available",
+  "image": "/images/phones/vivo-y05.webp",
+  "imageCredit": {
+    "name": "vivo Pakistan",
+    "url": "https://www.vivo.com/pk/products/picture/y05"
+  },
+  "variants": [
+    {
+      "ram": 4,
+      "storage": 64,
+      "pricePkr": 39500,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/vivo/vivo-y05"
+        }
+      ]
+    },
+    {
+      "ram": 4,
+      "storage": 128,
+      "pricePkr": 45500,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/vivo/vivo-y05"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Unisoc T7225",
+    "display": {
+      "size": 6.74,
+      "type": "IPS LCD",
+      "refreshHz": 120,
+      "resolution": "720x1600",
+      "peakNits": 1200
+    },
+    "battery": {
+      "mah": 6500,
+      "wiredW": 15,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 8,
+          "type": "wide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 5
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": "IP65"
+    },
+    "software": {
+      "os": "Android 16, OriginOS 6",
+      "osUpdates": 1,
+      "securityYears": 2
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 209
+  },
+  "scores": {
+    "camera": {
+      "value": 3,
+      "reason": "Single 8MP f/2.0 rear camera and 5MP selfie, no OIS."
+    },
+    "performance": {
+      "value": 3,
+      "reason": "Unisoc T7225 is the weakest chip in the bracket; expect lag with heavy apps."
+    },
+    "battery": {
+      "value": 6,
+      "reason": "6,500mAh lasts well over a day, held back by 15W charging."
+    },
+    "display": {
+      "value": 5,
+      "reason": "6.74 inch HD+ LCD at 120Hz with 1,200 nits high brightness mode."
+    },
+    "build": {
+      "value": 6,
+      "reason": "Plastic body with IP65 and MIL-STD-810H drop testing."
+    },
+    "software": {
+      "value": 3,
+      "reason": "vivo has published no upgrade promise for the Y05; expect about 1."
+    },
+    "value": {
+      "value": 5,
+      "reason": "Big battery and IP65 at 39,500, but the chip and 8MP camera lag rivals."
+    },
+    "availability": {
+      "value": 8,
+      "reason": "In stock at PriceOye and the vivo store on Daraz with official vivo warranty."
+    }
+  },
+  "tags": [
+    "big-battery"
+  ],
+  "rivals": [
+    "realme-c100i",
+    "infinix-smart-20",
+    "tecno-spark-go-3"
+  ],
+  "notes": "PriceOye price is 39,699 for the 4GB 64GB on 2026-10-10. vivo Pakistan lists 44,999 and 50,999, the vivo store on Daraz 44,099 and Daraz Retail 41,699. A Daraz listing claims a 13MP rear camera, but vivo Pakistan's own spec page says 8MP. Update policy is assumed."
+}

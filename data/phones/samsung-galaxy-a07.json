@@ -1,0 +1,161 @@
+{
+  "slug": "samsung-galaxy-a07",
+  "brand": "samsung",
+  "model": "Galaxy A07",
+  "releaseDate": "2025-08-25",
+  "status": "available",
+  "image": "/images/phones/samsung-galaxy-a07.webp",
+  "imageCredit": {
+    "name": "Samsung Pakistan",
+    "url": "https://www.samsung.com/pk/smartphones/galaxy-a/galaxy-a07-black-64gb-sm-a075fzkdpkd/"
+  },
+  "variants": [
+    {
+      "ram": 4,
+      "storage": 64,
+      "pricePkr": 37000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "Daraz Samsung Flagship Store",
+          "url": "https://www.daraz.pk/products/samsung-galaxy-a07-4gb64gb-pta-approved-i924758885.html"
+        },
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/samsung/samsung-galaxy-a07"
+        }
+      ]
+    },
+    {
+      "ram": 4,
+      "storage": 128,
+      "pricePkr": 44000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "Daraz Samsung Flagship Store",
+          "url": "https://www.daraz.pk/products/samsung-galaxy-a07-4gb128gb-pta-approved-i924759919.html"
+        },
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/samsung/samsung-galaxy-a07"
+        }
+      ]
+    },
+    {
+      "ram": 6,
+      "storage": 128,
+      "pricePkr": 52000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "Daraz Samsung Flagship Store",
+          "url": "https://www.daraz.pk/products/samsung-galaxy-a07-6gb128gb-pta-approved-i924786211.html"
+        },
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/samsung/samsung-galaxy-a07"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "MediaTek Helio G99",
+    "display": {
+      "size": 6.7,
+      "type": "PLS LCD",
+      "refreshHz": 90,
+      "resolution": "720x1600"
+    },
+    "battery": {
+      "mah": 5000,
+      "wiredW": 25,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": false
+        },
+        {
+          "mp": 2,
+          "type": "depth",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 8
+      },
+      "video": "1080p@60fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": "IP54"
+    },
+    "software": {
+      "os": "Android 15, One UI",
+      "osUpdates": 6,
+      "securityYears": 6
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 184
+  },
+  "scores": {
+    "camera": {
+      "value": 5,
+      "reason": "50MP f/1.8 main camera with PDAF is decent in daylight, no OIS."
+    },
+    "performance": {
+      "value": 6,
+      "reason": "Helio G99 on 6nm is the fastest chip in this bracket and handles light gaming."
+    },
+    "battery": {
+      "value": 6,
+      "reason": "5,000mAh lasts a full day and 25W charging is quicker than the 15W rivals."
+    },
+    "display": {
+      "value": 4,
+      "reason": "6.7 inch HD+ PLS LCD at 90Hz, no high brightness figure published."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Plastic frame and back with IP54 splash and dust protection."
+    },
+    "software": {
+      "value": 10,
+      "reason": "Samsung promises 6 Android upgrades and 6 years of security updates."
+    },
+    "value": {
+      "value": 9,
+      "reason": "At 37,000 it pairs the strongest chip with 6 years of updates, unmatched in this bracket."
+    },
+    "availability": {
+      "value": 9,
+      "reason": "In stock at the Samsung Flagship Store on Daraz, PriceOye and Mega.pk with official Samsung warranty."
+    }
+  },
+  "tags": [
+    "long-updates"
+  ],
+  "rivals": [
+    "xiaomi-redmi-a5",
+    "realme-c100i",
+    "honor-x5c-plus"
+  ],
+  "notes": "Cheapest in-stock price is the Samsung Flagship Store on Daraz at 36,999; PriceOye lists the 4GB 64GB at 37,295 and WhatMobile shows a 45,999 list price on 2026-10-10. Pakistan model is the 4G Helio G99 version."
+}

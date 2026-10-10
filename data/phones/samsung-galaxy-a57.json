@@ -1,0 +1,143 @@
+{
+  "slug": "samsung-galaxy-a57",
+  "brand": "samsung",
+  "model": "Galaxy A57 5G",
+  "releaseDate": "2026-03-25",
+  "status": "available",
+  "image": "/images/phones/samsung-galaxy-a57.webp",
+  "imageCredit": {
+    "name": "Samsung Pakistan",
+    "url": "https://www.samsung.com/pk/smartphones/galaxy-a/galaxy-a57-5g/buy/"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 256,
+      "pricePkr": 148500,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/samsung/samsung-galaxy-a57-5g"
+        }
+      ]
+    },
+    {
+      "ram": 12,
+      "storage": 256,
+      "pricePkr": 164500,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/samsung/samsung-galaxy-a57-5g"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Exynos 1680",
+    "display": {
+      "size": 6.7,
+      "type": "Super AMOLED Plus",
+      "refreshHz": 120,
+      "resolution": "1080x2340",
+      "peakNits": 1900
+    },
+    "battery": {
+      "mah": 5000,
+      "wiredW": 45,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 12,
+          "type": "ultrawide",
+          "ois": false
+        },
+        {
+          "mp": 5,
+          "type": "macro",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 12
+      },
+      "video": "4K@30fps"
+    },
+    "build": {
+      "frame": "aluminium",
+      "back": "Gorilla Glass Victus+",
+      "front": "Gorilla Glass Victus+",
+      "ip": "IP68"
+    },
+    "software": {
+      "os": "Android 16, One UI 8.5",
+      "osUpdates": 6,
+      "securityYears": 6
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": true
+    },
+    "weightG": 179
+  },
+  "scores": {
+    "camera": {
+      "value": 7,
+      "reason": "50MP OIS main and a 12MP ultrawide shoot reliable photos, with no telephoto."
+    },
+    "performance": {
+      "value": 8,
+      "reason": "Exynos 1680 with Cortex-A720 cores runs most games at high settings."
+    },
+    "battery": {
+      "value": 7,
+      "reason": "5,000mAh gives a full day plus, held back by 45W charging."
+    },
+    "display": {
+      "value": 8,
+      "reason": "6.7 inch FHD+ Super AMOLED Plus at 120Hz with HDR10+ and 1,900 nits peak."
+    },
+    "build": {
+      "value": 9,
+      "reason": "Aluminium frame with Gorilla Glass Victus+ on both sides and IP68, at only 179g and 6.9mm."
+    },
+    "software": {
+      "value": 10,
+      "reason": "Samsung promises 6 Android upgrades and 6 years of security patches."
+    },
+    "value": {
+      "value": 6,
+      "reason": "The best built phone here, but at 148,500 it has the smallest battery and slowest charging in the bracket."
+    },
+    "availability": {
+      "value": 8,
+      "reason": "In stock at PriceOye and Samsung Pakistan with official Samsung service centres."
+    }
+  },
+  "tags": [
+    "amoled",
+    "nfc",
+    "long-updates"
+  ],
+  "rivals": [
+    "samsung-galaxy-a37",
+    "realme-15-pro",
+    "vivo-v60"
+  ],
+  "notes": "PriceOye lists the 8GB 256GB at 148,495 and the 12GB 256GB at 164,495, both in stock on 2026-10-10. Samsung Pakistan lists the Awesome Navy 256GB at 182,999 in stock. EEZEPC only lists 12GB variants (from 169,990). eSIM support is from WhatMobile and was not confirmed on a Pakistan unit."
+}

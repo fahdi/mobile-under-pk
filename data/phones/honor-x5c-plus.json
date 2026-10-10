@@ -1,0 +1,116 @@
+{
+  "slug": "honor-x5c-plus",
+  "brand": "honor",
+  "model": "X5c Plus",
+  "releaseDate": "2025-09-24",
+  "status": "available",
+  "image": "/images/phones/honor-x5c-plus.webp",
+  "imageCredit": {
+    "name": "HONOR Pakistan",
+    "url": "https://www.honor.com/pk/phones/honor-x5c-plus/"
+  },
+  "variants": [
+    {
+      "ram": 4,
+      "storage": 128,
+      "pricePkr": 35000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/honor/honor-x5c-plus"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "MediaTek Helio G81",
+    "display": {
+      "size": 6.74,
+      "type": "TFT LCD",
+      "refreshHz": 90,
+      "resolution": "720x1600"
+    },
+    "battery": {
+      "mah": 5260,
+      "wiredW": 15,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 5
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": null
+    },
+    "software": {
+      "os": "Android 15, MagicOS 9",
+      "osUpdates": 1,
+      "securityYears": 2
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 186
+  },
+  "scores": {
+    "camera": {
+      "value": 5,
+      "reason": "50MP f/1.8 main camera with PDAF, the only other lens is an auxiliary sensor, no OIS."
+    },
+    "performance": {
+      "value": 4,
+      "reason": "Helio G81 is smooth for daily apps but struggles with games."
+    },
+    "battery": {
+      "value": 5,
+      "reason": "5,260mAh gives a full day; 15W charging is slow."
+    },
+    "display": {
+      "value": 4,
+      "reason": "6.74 inch HD+ TFT LCD at 90Hz."
+    },
+    "build": {
+      "value": 3,
+      "reason": "Plastic body with no IP rating listed."
+    },
+    "software": {
+      "value": 3,
+      "reason": "Honor has published no update promise; expect about 1 Android upgrade and 2 years of patches."
+    },
+    "value": {
+      "value": 7,
+      "reason": "At 35,000 it is the cheapest way to get 128GB storage and a 50MP camera in this bracket."
+    },
+    "availability": {
+      "value": 6,
+      "reason": "In stock at PriceOye with official warranty; the HONOR PK store on Daraz is out of stock."
+    }
+  },
+  "tags": [
+    "budget"
+  ],
+  "rivals": [
+    "xiaomi-redmi-a5",
+    "samsung-galaxy-a07",
+    "tecno-spark-go-3"
+  ],
+  "notes": "Only the 4GB 128GB is sold in Pakistan. The HONOR PK Daraz store lists it at 29,999 but out of stock on 2026-10-10, so it was ignored. Daraz marketplace sellers have it in stock at 38,999 and WhatMobile shows 39,999. Update policy is assumed, Honor has not published one."
+}
