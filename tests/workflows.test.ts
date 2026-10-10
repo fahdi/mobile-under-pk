@@ -55,3 +55,21 @@ describe('CI and deploy workflow', () => {
     expect(ci.on).toHaveProperty('workflow_dispatch');
   });
 });
+
+describe('Lighthouse config', () => {
+  const lhci = JSON.parse(readFileSync('lighthouserc.json', 'utf8')).ci;
+
+  it('takes the median of at least 3 runs so one noisy run cannot fail or pass the gate', () => {
+    expect(lhci.collect.numberOfRuns).toBeGreaterThanOrEqual(3);
+    for (const [, [, opts]] of Object.entries(lhci.assert.assertions) as Array<[string, [string, { aggregationMethod?: string }]]>) {
+      expect(opts.aggregationMethod).toBe('median-run');
+    }
+  });
+
+  it('keeps the spec thresholds on the mobile preset', () => {
+    expect(lhci.collect.settings?.preset).toBeUndefined();
+    expect(lhci.assert.assertions['categories:seo'][1].minScore).toBe(1);
+    expect(lhci.assert.assertions['categories:performance'][1].minScore).toBe(0.95);
+    expect(lhci.assert.assertions['categories:accessibility'][1].minScore).toBe(0.95);
+  });
+});
