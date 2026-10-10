@@ -3,7 +3,7 @@ import { loadData, type DataSet } from './load';
 
 const cache = new Map<string, DataSet>();
 
-export function getData(root: string = process.cwd()): DataSet {
+export function getData(root: string = process.env.DATA_ROOT ?? process.cwd()): DataSet {
   const hit = cache.get(root);
   if (hit) return hit;
   const { data, issues } = loadData(root);

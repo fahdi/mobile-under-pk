@@ -1,0 +1,68 @@
+---
+import Base from '../layouts/Base.astro';
+import PhoneTable from '../components/PhoneTable.astro';
+import PickCard from '../components/PickCard.astro';
+import PriceChecked from '../components/PriceChecked.astro';
+import { getData } from '../lib/data';
+import { bracketSlug } from '../lib/brackets';
+import { latestCheck, phoneName } from '../lib/format';
+import { bracketDescription, bracketTitle, landingPaths, neighbours, phonesInBracket, pickReason, type LandingProps } from '../lib/landing';
+import { rankPhones, topPicks } from '../lib/scoring';
+import { absUrl, breadcrumbLd, faqLd, itemListLd } from '../lib/seo';
+import { withBase } from '../lib/paths';
+
+export function getStaticPaths() {
+  return landingPaths(getData());
+}
+
+const { ceiling } = Astro.props as LandingProps;
+const data = getData();
+const preset = data.presets.find((p) => p.slug === 'balanced')!;
+const bracket = data.brackets.find((b) => b.ceiling === ceiling)!;
+const phones = phonesInBracket(data, ceiling);
+const ranked = rankPhones(phones, preset);
+const picks = topPicks(phones, preset);
+const checked = latestCheck(phones)!;
+const { prev, next } = neighbours(data, ceiling);
+const money = ceiling.toLocaleString('en-US');
+const path = `/${bracketSlug(ceiling)}/`;
+const name = (r: { phone: (typeof phones)[number] }) => phoneName(r.phone, data.brands);
+
+const jsonLd = [
+  itemListLd(ranked.map((r) => ({ name: name(r), url: absUrl(`/phones/${r.phone.slug}/`, Astro.site!) }))),
+  breadcrumbLd([{ name: 'Home', path: '/' }, { name: `Under ${money}`, path }], Astro.site!),
+  ...(bracket.faq.length ? [faqLd(bracket.faq)] : []),
+];
+---
+<Base title={bracketTitle(ceiling, checked)} description={bracketDescription(ceiling, ranked.length, checked, picks.map(name))} path={path} jsonLd={jsonLd}>
+  <nav aria-label="Breadcrumb"><a href={withBase('/')}>Home</a> / Under {money}</nav>
+  <h1>Best mobile under {money} in Pakistan</h1>
+  <p>{bracket.intro}</p>
+  <PriceChecked date={checked} />
+
+  {picks.length > 0 && (
+    <section>
+      <h2>Top picks</h2>
+      <ul class="picks">
+        {picks.map((r, i) => <PickCard ranked={r} brands={data.brands} rank={i + 1} reason={pickReason(r.phone, preset)} />)}
+      </ul>
+    </section>
+  )}
+
+  <section>
+    <h2>All {ranked.length} phones under {money}, ranked</h2>
+    <PhoneTable rows={ranked} brands={data.brands} />
+  </section>
+
+  {bracket.faq.length > 0 && (
+    <section>
+      <h2>Questions about phones under {money}</h2>
+      {bracket.faq.map((f) => (<><h3>{f.q}</h3><p>{f.a}</p></>))}
+    </section>
+  )}
+
+  <nav class="bracket-nav" aria-label="Other budgets">
+    {prev && <a href={withBase(`/${bracketSlug(prev)}/`)}>Phones under {prev.toLocaleString('en-US')}</a>}
+    {next && <a href={withBase(`/${bracketSlug(next)}/`)}>Phones under {next.toLocaleString('en-US')}</a>}
+  </nav>
+</Base>

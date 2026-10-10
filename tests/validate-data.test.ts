@@ -26,3 +26,15 @@ describe('getData', () => {
     expect(() => getData('tests/fixtures/data-bad')).toThrow(/Invalid data/);
   });
 });
+
+describe('DATA_ROOT', () => {
+  it('points getData at another data tree when no root is passed', () => {
+    const prev = process.env.DATA_ROOT;
+    process.env.DATA_ROOT = 'tests/fixtures/data-bad';
+    try {
+      expect(() => getData()).toThrow(/broken\.json/);
+    } finally {
+      if (prev === undefined) delete process.env.DATA_ROOT; else process.env.DATA_ROOT = prev;
+    }
+  });
+});

@@ -2,7 +2,7 @@ import type { AstroIntegration } from 'astro';
 import { getData } from '../lib/data';
 
 // Fail `astro build` on invalid data, independent of the separate validate step.
-export function validateData({ root = process.cwd() }: { root?: string } = {}): AstroIntegration {
+export function validateData({ root = process.env.DATA_ROOT ?? process.cwd() }: { root?: string } = {}): AstroIntegration {
   return {
     name: 'validate-data',
     hooks: {
