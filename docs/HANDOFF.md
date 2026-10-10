@@ -1,6 +1,6 @@
 # Handoff - MobileUnder.pk
 
-Last updated: 2026-10-10 11:41 PKT
+Last updated: 2026-10-10 11:50 PKT
 
 ## State
 
@@ -10,6 +10,7 @@ Last updated: 2026-10-10 11:41 PKT
 - Plan written: `docs/superpowers/plans/2026-10-10-mobile-under-pk.md` (33 tasks, six milestones, plus a table of implementation choices it made).
 - Issues #1 to #33 created, issue number = plan task number, labelled by milestone and area.
 - Milestone 1 done (#1 to #6 closed): Astro 7 + TS 6 scaffold, Zod schemas, loader, cross-checks, `npm run validate`, Vitest (29 tests), CI (`verify` job, proven red on bad data via PR #34), Pages deploy. Live at https://fahdi.github.io/mobile-under-pk/ with a placeholder, no console errors.
+- Pipeline hardened (PR #35): one workflow `ci.yml`, `deploy` job `needs: verify` and runs on main only, runners pinned to `ubuntu-24.04`, and `astro build` itself fails on invalid data. `tests/workflows.test.ts` pins these rules. Work TDD: failing test first, every time (Fahad, 2026-10-10).
 - `data/phones/` is empty; validate passes with warnings only (empty brackets, null brand store URLs and warranty notes).
 
 ## Read first
