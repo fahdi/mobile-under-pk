@@ -1,0 +1,23 @@
+---
+import type { Brand } from '../schema/data';
+import type { Ranked } from '../lib/scoring';
+import { formatPkr, phoneName } from '../lib/format';
+import { withBase } from '../lib/paths';
+import { thumbSrc, thumbSrcset } from '../lib/thumbs';
+
+interface Props { ranked: Ranked; brands: Brand[] }
+const { ranked, brands } = Astro.props;
+const name = phoneName(ranked.phone, brands);
+---
+<li class="phone-card">
+  <a href={withBase(`/phones/${ranked.phone.slug}/`)}>
+    <!-- Decorative: the phone name is already in this link. -->
+    <img
+      src={withBase(thumbSrc(ranked.phone.image, 160))}
+      srcset={thumbSrcset(ranked.phone.image)}
+      sizes="160px" width="160" height="213" loading="lazy" decoding="async" alt=""
+    />
+    <span class="card-name">{name}</span>
+  </a>
+  <span class="card-meta"><strong>{formatPkr(ranked.price)}</strong> <span class="card-score">{ranked.overall.toFixed(1)}/10</span></span>
+</li>

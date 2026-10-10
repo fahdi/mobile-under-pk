@@ -20,7 +20,9 @@ export function checkSite(outDir: string, base: string): SiteCheck {
       jsonLd++;
       try { JSON.parse(body); } catch { problems.push(`${page}: invalid JSON-LD`); }
     }
-    for (const [, url] of html.matchAll(/(?:href|src)="(\/[^"]*)"/g)) {
+    const srcsetUrls = [...html.matchAll(/srcset="([^"]*)"/g)].flatMap((m) => m[1].split(',').map((c) => c.trim().split(/\s+/)[0]));
+    const urls = [...[...html.matchAll(/(?:href|src)="(\/[^"]*)"/g)].map((m) => m[1]), ...srcsetUrls.filter((u) => u.startsWith('/'))];
+    for (const url of urls) {
       const path = url.replace(/[?#].*$/, '');
       if (!path.startsWith(base)) { problems.push(`${page}: link without base path ${path}`); continue; }
       const rel = path.slice(base.length);

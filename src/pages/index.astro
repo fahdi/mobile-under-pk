@@ -1,13 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
-import PhoneTable from '../components/PhoneTable.astro';
+import PhoneCard from '../components/PhoneCard.astro';
 import PriceChecked from '../components/PriceChecked.astro';
 import { getData } from '../lib/data';
 import { bracketSlug } from '../lib/brackets';
 import { latestCheck } from '../lib/format';
 import { landingPaths, phonesInBracket } from '../lib/landing';
 import { brandPaths } from '../lib/listing';
-import { topPicks } from '../lib/scoring';
+import { rankPhones, topPicks } from '../lib/scoring';
 import { websiteLd } from '../lib/seo';
 import { withBase } from '../lib/paths';
 
@@ -15,7 +15,11 @@ const data = getData();
 const brackets = landingPaths(data).filter((p) => p.props.kind === 'bracket').map((p) => p.props.ceiling);
 const checked = latestCheck(data.phones);
 const balanced = data.presets.find((p) => p.slug === 'balanced')!;
-const top = topPicks(data.phones, balanced, 5);
+const top = topPicks(data.phones, balanced, 6);
+// One gallery per budget: buyable phones only, best ranked first.
+const galleries = brackets
+  .map((c) => ({ ceiling: c, rows: rankPhones(phonesInBracket(data, c).filter((p) => p.status !== 'discontinued'), balanced) }))
+  .filter((g) => g.rows.length > 0);
 const brands = brandPaths(data).map((p) => data.brands.find((b) => b.slug === p.params.brand)!);
 ---
 <Base
@@ -50,8 +54,22 @@ const brands = brandPaths(data).map((p) => data.brands.find((b) => b.slug === p.
       <section id="top-phones">
         <h2>Top phones right now</h2>
         <p>Best overall scores across every budget, weighted toward value and local availability. Discontinued phones are left out.</p>
-        <PhoneTable rows={top} brands={data.brands} />
+        <ul class="card-grid">
+          {top.map((r) => <PhoneCard ranked={r} brands={data.brands} />)}
+        </ul>
       </section>
+
+      {galleries.map((g) => (
+        <section class="gallery" data-ceiling={g.ceiling}>
+          <div class="gallery-head">
+            <h2>Best under {g.ceiling.toLocaleString('en-US')}</h2>
+            <a href={withBase(`/${bracketSlug(g.ceiling)}/`)}>See all {g.rows.length}</a>
+          </div>
+          <ul class="card-row">
+            {g.rows.map((r) => <PhoneCard ranked={r} brands={data.brands} />)}
+          </ul>
+        </section>
+      ))}
 
       <section id="brands">
         <h2>Browse by brand</h2>
