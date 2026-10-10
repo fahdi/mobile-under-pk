@@ -5,3 +5,4 @@ dist-ci/
 public/phones.index.json
 .lighthouseci/
 .DS_Store
+.playwright-mcp/
