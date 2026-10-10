@@ -1,0 +1,118 @@
+{
+  "slug": "tecno-spark-50-pro",
+  "brand": "tecno",
+  "model": "Spark 50 Pro",
+  "releaseDate": "2026-06-15",
+  "status": "available",
+  "image": "/images/phones/tecno-spark-50-pro.webp",
+  "imageCredit": {
+    "name": "TECNO Pakistan",
+    "url": "https://www.tecno-mobile.com/pak/phones/product-detail/product/spark-50-pro/"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 128,
+      "pricePkr": 68500,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/tecno/tecno-spark-50-pro"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "MediaTek Helio G100 Ultimate",
+    "display": {
+      "size": 6.78,
+      "type": "IPS LCD",
+      "refreshHz": 120,
+      "resolution": "720x1576"
+    },
+    "battery": {
+      "mah": 6000,
+      "wiredW": 60,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 8
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": "IP68/IP69"
+    },
+    "software": {
+      "os": "Android 16, HiOS 16",
+      "osUpdates": 1,
+      "securityYears": 2
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": true,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 207
+  },
+  "scores": {
+    "camera": {
+      "value": 5,
+      "reason": "50MP main camera on a large 1/1.95 inch sensor, but no OIS and no ultrawide."
+    },
+    "performance": {
+      "value": 6,
+      "reason": "Helio G100 Ultimate is smooth in daily use and light gaming."
+    },
+    "battery": {
+      "value": 8,
+      "reason": "6,000mAh with 60W charging fills in about 55 minutes, the fastest in the bracket."
+    },
+    "display": {
+      "value": 4,
+      "reason": "HD+ IPS LCD at 120Hz, a step down from the AMOLED on the Spark 40 Pro."
+    },
+    "build": {
+      "value": 6,
+      "reason": "Plastic body but rated IP68 and IP69 with a 1.5m drop rating."
+    },
+    "software": {
+      "value": 3,
+      "reason": "Tecno has not published an update policy; Spark phones have historically had 2 years of patches and few OS upgrades."
+    },
+    "value": {
+      "value": 5,
+      "reason": "IP69 and 60W charging are strong, but an HD+ LCD at 68,500 trails the AMOLED phones at the same price."
+    },
+    "availability": {
+      "value": 7,
+      "reason": "In stock in four colours at PriceOye, launched in Pakistan in September 2026 with official Tecno warranty."
+    }
+  },
+  "tags": [
+    "big-battery",
+    "fast-charging",
+    "nfc"
+  ],
+  "rivals": [
+    "infinix-hot-70",
+    "infinix-hot-60-pro",
+    "vivo-y31d"
+  ],
+  "notes": "Pakistan model is the 8GB 128GB 4G version with a 720x1576 screen per TECNO Pakistan. Only PriceOye was checked for stock. Update policy and weight (207g) are from third party listings, not Tecno."
+}

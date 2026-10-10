@@ -1,0 +1,142 @@
+{
+  "slug": "samsung-galaxy-a17",
+  "brand": "samsung",
+  "model": "Galaxy A17",
+  "releaseDate": "2025-09-18",
+  "status": "available",
+  "image": "/images/phones/samsung-galaxy-a17.webp",
+  "imageCredit": {
+    "name": "Samsung Pakistan",
+    "url": "https://www.samsung.com/pk/smartphones/galaxy-a/galaxy-a17-light-blue-256gb-sm-a175flbopkd/"
+  },
+  "variants": [
+    {
+      "ram": 6,
+      "storage": 128,
+      "pricePkr": 65500,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/samsung/samsung-galaxy-a17"
+        }
+      ]
+    },
+    {
+      "ram": 8,
+      "storage": 256,
+      "pricePkr": 75000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/samsung/samsung-galaxy-a17"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "MediaTek Helio G99",
+    "display": {
+      "size": 6.7,
+      "type": "Super AMOLED",
+      "refreshHz": 90,
+      "resolution": "1080x2340"
+    },
+    "battery": {
+      "mah": 5000,
+      "wiredW": 25,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 5,
+          "type": "ultrawide",
+          "ois": false
+        },
+        {
+          "mp": 2,
+          "type": "macro",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 13
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "Gorilla Glass Victus+",
+      "ip": "IP54"
+    },
+    "software": {
+      "os": "Android 15, One UI 7",
+      "osUpdates": 6,
+      "securityYears": 6
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": true,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 190
+  },
+  "scores": {
+    "camera": {
+      "value": 7,
+      "reason": "50MP main camera with OIS plus a 5MP ultrawide, the only OIS camera in this bracket besides the HONOR X8d."
+    },
+    "performance": {
+      "value": 5,
+      "reason": "Helio G99 is smooth in daily use and light gaming but is the slowest chip among its rivals here."
+    },
+    "battery": {
+      "value": 6,
+      "reason": "5,000mAh lasts a full day, but 25W charging is the slowest in the bracket."
+    },
+    "display": {
+      "value": 6,
+      "reason": "6.7 inch FHD+ Super AMOLED, held back by a 90Hz refresh rate."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Gorilla Glass Victus+ front on a plastic body with only IP54 splash resistance."
+    },
+    "software": {
+      "value": 10,
+      "reason": "Samsung promises 6 major Android upgrades and 6 years of security updates."
+    },
+    "value": {
+      "value": 7,
+      "reason": "Six years of updates and an OIS camera at 65,500 outweigh the older G99 chip and 25W charging."
+    },
+    "availability": {
+      "value": 8,
+      "reason": "In stock in all three colours at PriceOye and Mega.pk, with Samsung warranty and service centres nationwide."
+    }
+  },
+  "tags": [
+    "amoled",
+    "long-updates",
+    "nfc"
+  ],
+  "rivals": [
+    "xiaomi-redmi-note-15",
+    "infinix-hot-60-pro",
+    "honor-x8d"
+  ],
+  "notes": "Pakistan model is the 4G Helio G99 version (SM-A175F), not the Exynos 1330 Galaxy A17 5G. PriceOye sells the 6GB 128GB at 65,695 against an official price of 72,999; Mega.pk lists it at 71,999. NFC is market dependent; WhatMobile lists it for Pakistan."
+}
