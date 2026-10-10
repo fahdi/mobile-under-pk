@@ -23,14 +23,27 @@ jobs:
       - run: npm test
       - run: npm run check
       - run: npm run build
+      - run: npm run check:site
       - uses: actions/upload-pages-artifact@v5
         if: github.ref == 'refs/heads/main'
         with:
           path: dist
 
+  lighthouse:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm run ci:lhci
+
   # Ships only what verify built and tested; PR refs never match main.
   deploy:
-    needs: verify
+    needs: [verify, lighthouse]
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
     permissions:

@@ -3,6 +3,7 @@ import { execFileSync } from 'node:child_process';
 import { existsSync, mkdtempSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
+import { checkSite } from '../../scripts/lib/check-site';
 
 // Builds the real site against tests/fixtures/site-data and inspects the HTML.
 const out = mkdtempSync(join(tmpdir(), 'mupk-site-'));
@@ -242,20 +243,7 @@ describe('sitemap and robots', () => {
 });
 
 describe('whole site', () => {
-  it('every JSON-LD block parses', () => {
-    for (const f of all()) expect(() => jsonLd(readFileSync(f, 'utf8'))).not.toThrow();
-  });
-
-  it('every internal link and image resolves to a built file', () => {
-    const broken: string[] = [];
-    for (const f of all()) {
-      for (const [, href] of readFileSync(f, 'utf8').matchAll(/(?:href|src)="(\/[^"#?]*)/g)) {
-        expect(href.startsWith(BASE), `${href} in ${f} lacks the base path`).toBe(true);
-        const rel = href.slice(BASE.length);
-        const target = rel === '' || rel.endsWith('/') ? join(out, rel, 'index.html') : join(out, rel);
-        if (!existsSync(target)) broken.push(`${href} (in ${f.slice(out.length)})`);
-      }
-    }
-    expect(broken).toEqual([]);
+  it('has no broken links or images, no links without the base path, and valid JSON-LD', () => {
+    expect(checkSite(out, BASE).problems).toEqual([]);
   });
 });
