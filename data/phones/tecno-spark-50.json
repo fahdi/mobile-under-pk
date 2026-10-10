@@ -1,0 +1,116 @@
+{
+  "slug": "tecno-spark-50",
+  "brand": "tecno",
+  "model": "Spark 50",
+  "releaseDate": "2026-04-14",
+  "status": "available",
+  "image": "/images/phones/tecno-spark-50.webp",
+  "imageCredit": {
+    "name": "TECNO Pakistan",
+    "url": "https://www.tecno-mobile.com/pak/phones/tech-specs/techspecs/spark-50/"
+  },
+  "variants": [
+    {
+      "ram": 6,
+      "storage": 128,
+      "pricePkr": 59000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/tecno/tecno-spark-50"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Helio G81",
+    "display": {
+      "size": 6.78,
+      "type": "IPS LCD",
+      "refreshHz": 120,
+      "resolution": "720x1600"
+    },
+    "battery": {
+      "mah": 7000,
+      "wiredW": 18,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 8
+      },
+      "video": "1440p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": "IP64"
+    },
+    "software": {
+      "os": "Android 16, HiOS 16",
+      "osUpdates": 1,
+      "securityYears": 2
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 210
+  },
+  "scores": {
+    "camera": {
+      "value": 4,
+      "reason": "Single 50MP f/1.9 main camera, no OIS and no ultrawide."
+    },
+    "performance": {
+      "value": 4,
+      "reason": "Helio G81 is an entry chip, fine for daily apps but weak for gaming."
+    },
+    "battery": {
+      "value": 7,
+      "reason": "7,000mAh lasts well past a day, but 18W charging takes hours to refill."
+    },
+    "display": {
+      "value": 4,
+      "reason": "HD+ 720p LCD at 120Hz."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Plastic body with IP64 splash resistance and a 1.5m drop rating."
+    },
+    "software": {
+      "value": 3,
+      "reason": "Ships with Android 16, but Tecno publishes no update commitment for the Spark 50."
+    },
+    "value": {
+      "value": 4,
+      "reason": "At 59,000 it costs 6,500 more than the Hot 60i with the same chip class and slower 18W charging."
+    },
+    "availability": {
+      "value": 8,
+      "reason": "In stock at PriceOye and Shophive with official Tecno warranty."
+    }
+  },
+  "tags": [
+    "big-battery"
+  ],
+  "rivals": [
+    "infinix-hot-60i",
+    "xiaomi-redmi-15",
+    "vivo-y11d"
+  ],
+  "notes": "Pakistan sells a 6GB 128GB 4G model. WhatMobile lists 64,999 and Shophive sells it at 64,999 in stock. Update policy is assumed (1 OS update, 2 years of patches), not confirmed by Tecno."
+}

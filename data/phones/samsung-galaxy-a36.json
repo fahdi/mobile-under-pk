@@ -1,0 +1,130 @@
+{
+  "slug": "samsung-galaxy-a36",
+  "brand": "samsung",
+  "model": "Galaxy A36 5G",
+  "releaseDate": "2025-03-10",
+  "status": "limited",
+  "image": "/images/phones/samsung-galaxy-a36.webp",
+  "imageCredit": {
+    "name": "Samsung US",
+    "url": "https://www.samsung.com/us/smartphones/galaxy-a36/buy/galaxy-a36-5g-128gb-unlocked-sm-a366uzkaxaa/"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 256,
+      "pricePkr": 120000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/samsung/samsung-galaxy-a36-5g"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Snapdragon 6 Gen 3",
+    "display": {
+      "size": 6.7,
+      "type": "Super AMOLED",
+      "refreshHz": 120,
+      "resolution": "1080x2340",
+      "peakNits": 1900
+    },
+    "battery": {
+      "mah": 5000,
+      "wiredW": 45,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 8,
+          "type": "ultrawide",
+          "ois": false
+        },
+        {
+          "mp": 5,
+          "type": "macro",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 12
+      },
+      "video": "4K@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "Gorilla Glass Victus+",
+      "front": "Gorilla Glass Victus+",
+      "ip": "IP67"
+    },
+    "software": {
+      "os": "Android 15, One UI 7",
+      "osUpdates": 6,
+      "securityYears": 6
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 195
+  },
+  "scores": {
+    "camera": {
+      "value": 7,
+      "reason": "50MP main camera with OIS, 8MP ultrawide and 4K video."
+    },
+    "performance": {
+      "value": 7,
+      "reason": "Snapdragon 6 Gen 3 handles most games at medium to high settings."
+    },
+    "battery": {
+      "value": 7,
+      "reason": "5,000mAh with 45W charging lasts a full day."
+    },
+    "display": {
+      "value": 9,
+      "reason": "FHD+ 120Hz Super AMOLED reaching 1,900 nits peak."
+    },
+    "build": {
+      "value": 8,
+      "reason": "Gorilla Glass Victus+ front and back with IP67, though the frame is plastic."
+    },
+    "software": {
+      "value": 10,
+      "reason": "Samsung promises 6 major Android upgrades and 6 years of security patches."
+    },
+    "value": {
+      "value": 7,
+      "reason": "Best build, updates and camera in the 100k bracket, but at 120,000 it costs the most."
+    },
+    "availability": {
+      "value": 6,
+      "reason": "In stock at PriceOye, but Samsung Pakistan no longer sells it after the Galaxy A37 launch."
+    }
+  },
+  "tags": [
+    "amoled",
+    "fast-charging",
+    "nfc",
+    "long-updates"
+  ],
+  "rivals": [
+    "vivo-v80-lite-5g",
+    "infinix-note-60",
+    "realme-16-5g"
+  ],
+  "notes": "Samsung Pakistan no longer lists the A36 on 2026-10-10; it now sells the Galaxy A37 5G. PriceOye still has the 8GB 256GB in stock at 119,999 with official warranty. eSIM support in the Pakistan model is unconfirmed."
+}

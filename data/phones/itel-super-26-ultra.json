@@ -1,0 +1,121 @@
+{
+  "slug": "itel-super-26-ultra",
+  "brand": "itel",
+  "model": "Super 26 Ultra",
+  "releaseDate": "2025-09-05",
+  "status": "available",
+  "image": "/images/phones/itel-super-26-ultra.webp",
+  "imageCredit": {
+    "name": "itel",
+    "url": "https://www.itel-life.com/products/phone/s-series/super-26-ultra"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 256,
+      "pricePkr": 59500,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/itel/itel-super-s26-ultra"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Unisoc T7300",
+    "display": {
+      "size": 6.78,
+      "type": "AMOLED",
+      "refreshHz": 144,
+      "resolution": "1080x2436",
+      "peakNits": 4500
+    },
+    "battery": {
+      "mah": 6000,
+      "wiredW": 18,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": false
+        },
+        {
+          "mp": 2,
+          "type": "depth",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 32
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "Gorilla Glass 7i",
+      "ip": "IP65"
+    },
+    "software": {
+      "os": "Android 15, itel OS 15",
+      "osUpdates": 1,
+      "securityYears": 2
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 168
+  },
+  "scores": {
+    "camera": {
+      "value": 4,
+      "reason": "50MP main with a 2MP auxiliary lens, no OIS and no ultrawide."
+    },
+    "performance": {
+      "value": 5,
+      "reason": "6nm Unisoc T7300 with Cortex-A78 cores is smooth in daily use and light gaming."
+    },
+    "battery": {
+      "value": 6,
+      "reason": "6,000mAh lasts a full day, but 18W charging is slow."
+    },
+    "display": {
+      "value": 8,
+      "reason": "FHD+ curved AMOLED at 144Hz with Gorilla Glass 7i; the 4,500 nits peak is itel's claim."
+    },
+    "build": {
+      "value": 6,
+      "reason": "Plastic body with IP65 dust and water jet resistance."
+    },
+    "software": {
+      "value": 3,
+      "reason": "No official itel update commitment found for this phone."
+    },
+    "value": {
+      "value": 7,
+      "reason": "Only curved 144Hz AMOLED in the bracket at about 52,000."
+    },
+    "availability": {
+      "value": 7,
+      "reason": "In stock at PriceOye and on itel's official Daraz store, with official itel warranty."
+    }
+  },
+  "tags": [
+    "amoled"
+  ],
+  "rivals": [
+    "samsung-galaxy-a16",
+    "infinix-hot-60i"
+  ],
+  "notes": "Price is PriceOye's in-stock 8GB 256GB listing (59,499, official brand warranty, only 1 left on 2026-10-10). WhatMobile's official figure of 51,999 and launch quotes of 49,999 are list prices no retailer was found selling at. itel Official on Daraz lists 61,999. Weight (168g), IP65 and no headphone jack follow GSMArena; some listings disagree. Update policy is assumed."
+}

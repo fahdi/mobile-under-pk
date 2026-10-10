@@ -1,0 +1,128 @@
+{
+  "slug": "samsung-galaxy-a16",
+  "brand": "samsung",
+  "model": "Galaxy A16",
+  "releaseDate": "2024-10-18",
+  "status": "limited",
+  "image": "/images/phones/samsung-galaxy-a16.webp",
+  "imageCredit": {
+    "name": "Samsung Newsroom Philippines",
+    "url": "https://news.samsung.com/ph/see-things-differently-these-holidays-with-the-galaxy-a16-5g-lte"
+  },
+  "variants": [
+    {
+      "ram": 6,
+      "storage": 128,
+      "pricePkr": 55000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/Samsung_Galaxy-A16"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Helio G99",
+    "display": {
+      "size": 6.7,
+      "type": "Super AMOLED",
+      "refreshHz": 90,
+      "resolution": "1080x2340",
+      "peakNits": 800
+    },
+    "battery": {
+      "mah": 5000,
+      "wiredW": 25,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": false
+        },
+        {
+          "mp": 5,
+          "type": "ultrawide",
+          "ois": false
+        },
+        {
+          "mp": 2,
+          "type": "macro",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 13
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": "IP54"
+    },
+    "software": {
+      "os": "Android 14, One UI 6.1",
+      "osUpdates": 6,
+      "securityYears": 6
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": true,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 200
+  },
+  "scores": {
+    "camera": {
+      "value": 6,
+      "reason": "50MP main with autofocus plus a 5MP ultrawide, no OIS."
+    },
+    "performance": {
+      "value": 6,
+      "reason": "Helio G99 is smooth in daily use and handles light to medium gaming."
+    },
+    "battery": {
+      "value": 5,
+      "reason": "5,000mAh with 25W charging lasts a full day."
+    },
+    "display": {
+      "value": 6,
+      "reason": "FHD+ Super AMOLED, but only 90Hz and about 800 nits."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Glass front, plastic back and frame, IP54 splash resistance."
+    },
+    "software": {
+      "value": 10,
+      "reason": "Samsung promises 6 Android upgrades and 6 years of security patches."
+    },
+    "value": {
+      "value": 6,
+      "reason": "Six years of updates is unmatched here, but 90Hz and 25W trail the Redmi Note 14."
+    },
+    "availability": {
+      "value": 4,
+      "reason": "Out of stock at PriceOye and gone from Samsung Pakistan's site; only a third-party Daraz seller lists it."
+    }
+  },
+  "tags": [
+    "amoled",
+    "long-updates",
+    "nfc"
+  ],
+  "rivals": [
+    "xiaomi-redmi-15",
+    "itel-super-26-ultra"
+  ],
+  "notes": "Pakistan model is the 4G SM-A165F. Price is the WhatMobile official 6GB 128GB figure. PriceOye lists the 6GB 128GB at 46,999 and the 8GB 256GB at 56,499, both out of stock on 2026-10-10. A non-official Daraz seller lists the 8GB 256GB at 61,999. Samsung Pakistan's Galaxy A page now shows the A17 instead. Release date is the mid-October 2024 announcement; exact day unverified."
+}

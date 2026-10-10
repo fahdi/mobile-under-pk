@@ -1,0 +1,140 @@
+{
+  "slug": "xiaomi-redmi-note-15-pro",
+  "brand": "xiaomi",
+  "model": "Redmi Note 15 Pro",
+  "releaseDate": "2026-01-06",
+  "status": "available",
+  "image": "/images/phones/xiaomi-redmi-note-15-pro.webp",
+  "imageCredit": {
+    "name": "Xiaomi Global",
+    "url": "https://www.mi.com/global/product-list/phone/redmi/"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 256,
+      "pricePkr": 92000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/xiaomi/xiaomi-redmi-note-15-pro"
+        }
+      ]
+    },
+    {
+      "ram": 12,
+      "storage": 512,
+      "pricePkr": 111000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/xiaomi/xiaomi-redmi-note-15-pro"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Helio G200 Ultra",
+    "display": {
+      "size": 6.77,
+      "type": "AMOLED",
+      "refreshHz": 120,
+      "resolution": "1080x2392",
+      "peakNits": 3200
+    },
+    "battery": {
+      "mah": 6500,
+      "wiredW": 45,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 200,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 8,
+          "type": "ultrawide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 32
+      },
+      "video": "1080p@60fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "Gorilla Glass Victus 2",
+      "ip": "IP65"
+    },
+    "software": {
+      "os": "Android 15, HyperOS 2",
+      "osUpdates": 4,
+      "securityYears": 6
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": true,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 195
+  },
+  "scores": {
+    "camera": {
+      "value": 7,
+      "reason": "200MP 1/1.4 inch main camera with OIS plus a usable 8MP ultrawide."
+    },
+    "performance": {
+      "value": 5,
+      "reason": "Helio G200 Ultra is smooth for daily use but only suits light gaming."
+    },
+    "battery": {
+      "value": 8,
+      "reason": "6,500mAh with 45W charging lasts a full day plus."
+    },
+    "display": {
+      "value": 9,
+      "reason": "120Hz AMOLED rated at 3,200 nits peak with 3840Hz PWM dimming."
+    },
+    "build": {
+      "value": 6,
+      "reason": "Gorilla Glass Victus 2 front, but plastic frame and back with IP65."
+    },
+    "software": {
+      "value": 9,
+      "reason": "GSMArena lists up to 4 major Android upgrades."
+    },
+    "value": {
+      "value": 8,
+      "reason": "Brightest screen, biggest main sensor and a 6,500mAh battery for 92,000, ahead of most 80k rivals."
+    },
+    "availability": {
+      "value": 7,
+      "reason": "In stock at PriceOye with official warranty, though not listed on the Xiaomi Pakistan site."
+    }
+  },
+  "tags": [
+    "amoled",
+    "big-battery",
+    "fast-charging",
+    "nfc",
+    "long-updates"
+  ],
+  "rivals": [
+    "tecno-camon-50",
+    "samsung-galaxy-a17-5g",
+    "infinix-note-edge"
+  ],
+  "notes": "Pakistan model is the 4G Helio G200 Ultra version, not the Redmi Note 15 Pro 5G. Xiaomi global lists IP65 for this model. WhatMobile shows 100,999. Only PriceOye was checked for stock. Security patch years assumed from the Note 15 series announcement."
+}

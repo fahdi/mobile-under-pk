@@ -1,0 +1,124 @@
+{
+  "slug": "oppo-a6s",
+  "brand": "oppo",
+  "model": "A6s",
+  "releaseDate": "2026-01-09",
+  "status": "available",
+  "image": "/images/phones/oppo-a6s.webp",
+  "imageCredit": {
+    "name": "OPPO Pakistan",
+    "url": "https://www.oppo.com/pk/smartphones/series-a/a6s/specs/"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 256,
+      "pricePkr": 93500,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/oppo/oppo-a6s"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Snapdragon 685",
+    "display": {
+      "size": 6.75,
+      "type": "IPS LCD",
+      "refreshHz": 120,
+      "resolution": "720x1570",
+      "peakNits": 1125
+    },
+    "battery": {
+      "mah": 7000,
+      "wiredW": 80,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": false
+        },
+        {
+          "mp": 2,
+          "type": "mono",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 16
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": "IP68/IP69"
+    },
+    "software": {
+      "os": "Android 15, ColorOS 15",
+      "osUpdates": 2,
+      "securityYears": 3
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": true,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 215
+  },
+  "scores": {
+    "camera": {
+      "value": 4,
+      "reason": "50MP main camera without OIS and only a 2MP mono helper."
+    },
+    "performance": {
+      "value": 4,
+      "reason": "Snapdragon 685 handles daily apps but stutters in demanding games."
+    },
+    "battery": {
+      "value": 9,
+      "reason": "7,000mAh with 80W SUPERVOOC charging."
+    },
+    "display": {
+      "value": 3,
+      "reason": "HD+ 720p LCD, though it runs at 120Hz and 1,125 nits."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Plastic body, but rated IP68 and IP69."
+    },
+    "software": {
+      "value": 5,
+      "reason": "OPPO publishes no update promise for this model; 2 OS upgrades assumed."
+    },
+    "value": {
+      "value": 4,
+      "reason": "Biggest battery and fastest charging in the 80k bracket, but an HD+ LCD and Snapdragon 685 at 93,500 trail every rival."
+    },
+    "availability": {
+      "value": 7,
+      "reason": "In stock at PriceOye with official OPPO warranty and service centres."
+    }
+  },
+  "tags": [
+    "big-battery",
+    "fast-charging",
+    "nfc"
+  ],
+  "rivals": [
+    "tecno-camon-50",
+    "samsung-galaxy-a17-5g",
+    "xiaomi-redmi-note-15-pro"
+  ],
+  "notes": "Pakistan model is the 4G Snapdragon 685 version, not the A6s 5G. IP rating from WhatMobile; the OPPO Pakistan spec page does not list it. Update policy is an assumption. Only PriceOye was checked for stock."
+}

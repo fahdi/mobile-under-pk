@@ -1,0 +1,125 @@
+{
+  "slug": "infinix-note-60",
+  "brand": "infinix",
+  "model": "NOTE 60",
+  "releaseDate": "2026-02-18",
+  "status": "available",
+  "image": "/images/phones/infinix-note-60.webp",
+  "imageCredit": {
+    "name": "Infinix Bangladesh",
+    "url": "https://bd.infinixmobility.com/NOTE-60"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 256,
+      "pricePkr": 103000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/infinix/infinix-note-60"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Dimensity 7400 Ultimate",
+    "display": {
+      "size": 6.78,
+      "type": "AMOLED",
+      "refreshHz": 144,
+      "resolution": "1208x2644",
+      "peakNits": 4500
+    },
+    "battery": {
+      "mah": 6500,
+      "wiredW": 45,
+      "wirelessW": 30
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 8,
+          "type": "ultrawide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 13
+      },
+      "video": "4K@30fps"
+    },
+    "build": {
+      "frame": "aluminum",
+      "back": "aluminum",
+      "front": "Gorilla Glass 7i",
+      "ip": "IP64"
+    },
+    "software": {
+      "os": "Android 16, XOS 16",
+      "osUpdates": 3,
+      "securityYears": 5
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 199
+  },
+  "scores": {
+    "camera": {
+      "value": 7,
+      "reason": "50MP main camera with OIS and an 8MP ultrawide, 4K video."
+    },
+    "performance": {
+      "value": 7,
+      "reason": "Dimensity 7400 Ultimate handles most games at medium to high settings."
+    },
+    "battery": {
+      "value": 8,
+      "reason": "6,500mAh with 45W wired and 30W wireless charging."
+    },
+    "display": {
+      "value": 9,
+      "reason": "1.5K 144Hz AMOLED with 1,600 nits HBM and 4,500 nits peak."
+    },
+    "build": {
+      "value": 6,
+      "reason": "Aluminium frame and back with Gorilla Glass 7i, but only IP64."
+    },
+    "software": {
+      "value": 8,
+      "reason": "GSMArena lists up to 3 major Android upgrades."
+    },
+    "value": {
+      "value": 9,
+      "reason": "Cheapest phone in the 100k bracket yet the only one with OIS, wireless charging and a metal body."
+    },
+    "availability": {
+      "value": 6,
+      "reason": "In stock at PriceOye with official warranty, but not listed on the Infinix Pakistan site."
+    }
+  },
+  "tags": [
+    "amoled",
+    "big-battery",
+    "fast-charging",
+    "nfc"
+  ],
+  "rivals": [
+    "realme-16-5g",
+    "vivo-v80-lite-5g",
+    "samsung-galaxy-a36"
+  ],
+  "notes": "GSMArena lists 6,150 or 6,500mAh by region; WhatMobile Pakistan lists 6,500mAh. Security patch years assumed to match the Infinix NOTE Edge promise. WhatMobile shows 109,999. Only PriceOye was checked for stock."
+}

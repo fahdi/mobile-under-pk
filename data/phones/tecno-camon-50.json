@@ -1,0 +1,124 @@
+{
+  "slug": "tecno-camon-50",
+  "brand": "tecno",
+  "model": "Camon 50",
+  "releaseDate": "2026-02-17",
+  "status": "available",
+  "image": "/images/phones/tecno-camon-50.webp",
+  "imageCredit": {
+    "name": "TECNO Pakistan",
+    "url": "https://www.tecno-mobile.com/pak/phones/product-detail/product/camon-50/"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 256,
+      "pricePkr": 89500,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/tecno/tecno-camon-50"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Helio G200 Ultimate",
+    "display": {
+      "size": 6.78,
+      "type": "AMOLED",
+      "refreshHz": 144,
+      "resolution": "1208x2644"
+    },
+    "battery": {
+      "mah": 6500,
+      "wiredW": 45,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 8,
+          "type": "ultrawide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 32
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": "IP68/IP69"
+    },
+    "software": {
+      "os": "Android 16, HiOS 16",
+      "osUpdates": 3,
+      "securityYears": 5
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": true,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 197
+  },
+  "scores": {
+    "camera": {
+      "value": 7,
+      "reason": "50MP Sony LYTIA 700C main camera with OIS plus an 8MP ultrawide."
+    },
+    "performance": {
+      "value": 5,
+      "reason": "Helio G200 Ultimate is smooth day to day but limited for heavy games."
+    },
+    "battery": {
+      "value": 8,
+      "reason": "6,500mAh with 45W charging lasts a full day plus."
+    },
+    "display": {
+      "value": 7,
+      "reason": "1.5K AMOLED at 144Hz; TECNO does not publish a peak brightness figure."
+    },
+    "build": {
+      "value": 6,
+      "reason": "IP68 and IP69 rated, but the frame and back are plastic."
+    },
+    "software": {
+      "value": 8,
+      "reason": "TECNO Pakistan promises 3 Android OS upgrades over 5 years."
+    },
+    "value": {
+      "value": 8,
+      "reason": "Cheapest phone in the 80k bracket with OIS, a 144Hz AMOLED and IP69."
+    },
+    "availability": {
+      "value": 7,
+      "reason": "In stock at PriceOye with official warranty and Carlcare service."
+    }
+  },
+  "tags": [
+    "amoled",
+    "big-battery",
+    "fast-charging",
+    "nfc"
+  ],
+  "rivals": [
+    "xiaomi-redmi-note-15-pro",
+    "infinix-note-edge",
+    "oppo-a6s"
+  ],
+  "notes": "Pakistan launch materials list a 6,500mAh battery; GSMArena lists 6,150mAh for the global unit. Weight comes from one listing only. WhatMobile shows 99,999. Only PriceOye was checked for stock."
+}

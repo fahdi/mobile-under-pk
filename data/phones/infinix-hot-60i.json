@@ -1,0 +1,117 @@
+{
+  "slug": "infinix-hot-60i",
+  "brand": "infinix",
+  "model": "Hot 60i",
+  "releaseDate": "2025-07-02",
+  "status": "available",
+  "image": "/images/phones/infinix-hot-60i.webp",
+  "imageCredit": {
+    "name": "Infinix Nigeria",
+    "url": "https://ng.infinixmobility.com/HOT-60i"
+  },
+  "variants": [
+    {
+      "ram": 6,
+      "storage": 128,
+      "pricePkr": 52500,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/infinix/infinix-hot-60i"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Helio G81 Ultimate",
+    "display": {
+      "size": 6.7,
+      "type": "IPS LCD",
+      "refreshHz": 120,
+      "resolution": "720x1600",
+      "peakNits": 700
+    },
+    "battery": {
+      "mah": 5160,
+      "wiredW": 45,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 8
+      },
+      "video": "1440p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": "IP64"
+    },
+    "software": {
+      "os": "Android 15, XOS 15.1",
+      "osUpdates": 1,
+      "securityYears": 2
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 188
+  },
+  "scores": {
+    "camera": {
+      "value": 4,
+      "reason": "Single 50MP main camera with an auxiliary lens, no OIS and no ultrawide."
+    },
+    "performance": {
+      "value": 4,
+      "reason": "Helio G81 Ultimate is a 12nm entry chip, fine for daily apps but weak for gaming."
+    },
+    "battery": {
+      "value": 7,
+      "reason": "5,160mAh with 45W charging gets through a full day and refills quickly."
+    },
+    "display": {
+      "value": 4,
+      "reason": "HD+ 720p LCD at 120Hz with only 700 nits in high brightness mode."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Plastic frame and back with IP64 splash resistance and a 1.5m drop rating."
+    },
+    "software": {
+      "value": 3,
+      "reason": "Infinix publishes no update policy for the Hot 60i and owners report it is still on Android 15."
+    },
+    "value": {
+      "value": 7,
+      "reason": "Cheapest phone in the bracket today and the only one here with 45W charging at this price."
+    },
+    "availability": {
+      "value": 8,
+      "reason": "In stock at PriceOye and Shophive with official Infinix warranty."
+    }
+  },
+  "tags": [
+    "fast-charging"
+  ],
+  "rivals": [
+    "tecno-spark-50",
+    "xiaomi-redmi-15",
+    "vivo-y11d"
+  ],
+  "notes": "PriceOye lists the 8GB 256GB at 61,999 but out of stock on 2026-10-10. WhatMobile lists the 6GB 128GB at 58,999 and Shophive sells it at 57,499 in stock. NFC is listed by WhatMobile but not by PriceOye, so it is recorded as absent. Update policy is assumed (1 OS update, 2 years of patches), not confirmed by Infinix."
+}
