@@ -1,0 +1,127 @@
+{
+  "slug": "itel-a50",
+  "brand": "itel",
+  "model": "A50",
+  "releaseDate": "2024-05-01",
+  "status": "limited",
+  "image": "/images/phones/itel-a50.webp",
+  "imageCredit": {
+    "name": "itel",
+    "url": "https://www.itel-life.com/products/phone/a-series/a50/spec"
+  },
+  "variants": [
+    {
+      "ram": 2,
+      "storage": 64,
+      "pricePkr": 17000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/itel_A50"
+        }
+      ]
+    },
+    {
+      "ram": 4,
+      "storage": 64,
+      "pricePkr": 19000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/itel_A50-8GB"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Unisoc T603",
+    "display": {
+      "size": 6.6,
+      "type": "IPS LCD",
+      "refreshHz": 60,
+      "resolution": "720x1612"
+    },
+    "battery": {
+      "mah": 5000,
+      "wiredW": 10,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 8,
+          "type": "wide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 5
+      },
+      "video": "Video recording, resolution not published by itel"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": null,
+      "ip": null
+    },
+    "software": {
+      "os": "Android 14 (Go edition)",
+      "osUpdates": 0,
+      "securityYears": 0
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 186
+  },
+  "scores": {
+    "camera": {
+      "value": 2,
+      "reason": "Single 8MP rear camera with no OIS, weak beyond daylight."
+    },
+    "performance": {
+      "value": 2,
+      "reason": "Unisoc T603 with 2GB RAM on Android Go lags in everyday use."
+    },
+    "battery": {
+      "value": 4,
+      "reason": "5,000mAh lasts a full day, but 10W charging takes about three hours."
+    },
+    "display": {
+      "value": 2,
+      "reason": "6.6 inch HD+ LCD at 60Hz."
+    },
+    "build": {
+      "value": 2,
+      "reason": "Plastic body with no IP rating."
+    },
+    "software": {
+      "value": 2,
+      "reason": "Android 14 Go edition and itel publishes no Android upgrade or security patch commitment."
+    },
+    "value": {
+      "value": 6,
+      "reason": "Cheapest PTA smartphone here at 17,000, but 2GB RAM and 60Hz make the A90 worth the extra 3,000."
+    },
+    "availability": {
+      "value": 4,
+      "reason": "Out of stock at PriceOye; only third-party Daraz sellers had stock on 2026-10-10."
+    }
+  },
+  "tags": [],
+  "rivals": [
+    "itel-a90",
+    "xiaomi-redmi-a3x"
+  ],
+  "notes": "Prices are WhatMobile's official listings (2GB 64GB at 16,999; 4GB 64GB listed as A50 8GB, meaning 4GB plus 4GB extended, at 18,999). PriceOye lists 2GB 64GB at 15,599 and 17,999 and 4GB 64GB at 17,299, all out of stock, so ignored. Third-party Daraz sellers (not official stores) list 2GB 64GB at 17,999. Release month from GSMArena search snippet (May 2024, day unknown, recorded as the 1st). Weight 186 g from 91mobiles and MySmartPrice; GSMArena lists none. 60Hz and 3.5mm jack are not confirmed on an official spec sheet."
+}

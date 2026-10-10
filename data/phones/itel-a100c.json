@@ -1,0 +1,128 @@
+{
+  "slug": "itel-a100c",
+  "brand": "itel",
+  "model": "A100C",
+  "releaseDate": "2025-10-06",
+  "status": "available",
+  "image": "/images/phones/itel-a100c.webp",
+  "imageCredit": {
+    "name": "itel",
+    "url": "https://www.itel-life.com/products/phone/a-series/a100c"
+  },
+  "variants": [
+    {
+      "ram": 4,
+      "storage": 64,
+      "pricePkr": 29000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/itel/itel-a100c"
+        }
+      ]
+    },
+    {
+      "ram": 3,
+      "storage": 128,
+      "pricePkr": 30000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/itel_A100C"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Unisoc T7100",
+    "display": {
+      "size": 6.6,
+      "type": "IPS LCD",
+      "refreshHz": 90,
+      "resolution": "720x1612",
+      "peakNits": 400
+    },
+    "battery": {
+      "mah": 5000,
+      "wiredW": 10,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 8,
+          "type": "wide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 5
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": null
+    },
+    "software": {
+      "os": "Android 15 (Go edition), itel OS 15",
+      "osUpdates": 0,
+      "securityYears": 1
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 200
+  },
+  "scores": {
+    "camera": {
+      "value": 2,
+      "reason": "Single 8MP rear camera with no OIS and a 5MP selfie camera."
+    },
+    "performance": {
+      "value": 2,
+      "reason": "Unisoc T7100 on Android Go handles calls and WhatsApp but lags in heavier apps."
+    },
+    "battery": {
+      "value": 4,
+      "reason": "5,000mAh lasts a full day, but 10W charging is slow."
+    },
+    "display": {
+      "value": 4,
+      "reason": "6.6 inch HD+ LCD at 90Hz, rated 400 nits."
+    },
+    "build": {
+      "value": 3,
+      "reason": "Plastic body; itel claims MIL-STD-810H drop testing but lists no IP rating."
+    },
+    "software": {
+      "value": 1,
+      "reason": "Android 15 Go edition with no published OS update promise."
+    },
+    "value": {
+      "value": 4,
+      "reason": "At 29,000 it costs about the same as the 13MP nubia A36 and 6,000mAh Spark 40C while offering less."
+    },
+    "availability": {
+      "value": 7,
+      "reason": "In stock at PriceOye and listed by several Daraz sellers, with official itel warranty via Carlcare."
+    }
+  },
+  "tags": [],
+  "rivals": [
+    "zte-nubia-a36",
+    "realme-note-60x"
+  ],
+  "notes": "Pakistan listings mix variant labels: PriceOye sells the 4GB 64GB at 28,999 (in stock) and lists a 2GB 64GB at 23,499 but out of stock on 2026-10-10. A separate A100C Special Edition 3GB 128GB is in stock at PriceOye for 25,999. Weight is from third-party sites (itel does not publish it)."
+}
