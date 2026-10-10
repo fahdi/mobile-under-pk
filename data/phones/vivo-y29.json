@@ -1,0 +1,122 @@
+{
+  "slug": "vivo-y29",
+  "brand": "vivo",
+  "model": "Y29",
+  "releaseDate": "2025-02-19",
+  "status": "limited",
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 128,
+      "pricePkr": 50000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/Vivo_Y29"
+        },
+        {
+          "name": "vivo Pakistan",
+          "url": "https://www.vivo.com/pk/about-vivo/news/vivo-y29-launch"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Snapdragon 685",
+    "display": {
+      "size": 6.68,
+      "type": "IPS LCD",
+      "refreshHz": 120,
+      "resolution": "720x1608",
+      "peakNits": 1000
+    },
+    "battery": {
+      "mah": 6500,
+      "wiredW": 44,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": false
+        },
+        {
+          "mp": 2,
+          "type": "depth",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 8
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "Schott Glass",
+      "ip": "IP64"
+    },
+    "software": {
+      "os": "Android 15, Funtouch OS 15",
+      "osUpdates": 1,
+      "securityYears": 2
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 204
+  },
+  "scores": {
+    "camera": {
+      "value": 5,
+      "reason": "50MP f/1.8 main camera, fine in daylight, no OIS."
+    },
+    "performance": {
+      "value": 5,
+      "reason": "Snapdragon 685 is smooth in daily use and light gaming."
+    },
+    "battery": {
+      "value": 8,
+      "reason": "6,500mAh with 44W charging lasts a full day plus and refills fast."
+    },
+    "display": {
+      "value": 5,
+      "reason": "HD+ 120Hz LCD with 1,000 nits high brightness mode."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Plastic body with IP64 and MIL-STD-810H drop rating."
+    },
+    "software": {
+      "value": 3,
+      "reason": "GSMArena lists only 1 major Android upgrade."
+    },
+    "value": {
+      "value": 6,
+      "reason": "Best battery in the bracket, but at 50,000 it sits at the top of the range with no NFC or jack."
+    },
+    "availability": {
+      "value": 5,
+      "reason": "Out of stock at PriceOye today; official vivo warranty where sold."
+    }
+  },
+  "tags": [
+    "big-battery",
+    "fast-charging"
+  ],
+  "rivals": [
+    "honor-x7c",
+    "xiaomi-redmi-15c",
+    "honor-x6c"
+  ],
+  "notes": "Pakistan model is the 4G Snapdragon 685 version. PriceOye lists the 8GB 128GB at 44,799 but out of stock on 2026-10-10."
+}

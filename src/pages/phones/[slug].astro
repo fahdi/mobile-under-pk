@@ -1,0 +1,92 @@
+---
+import Base from '../../layouts/Base.astro';
+import PriceChecked from '../../components/PriceChecked.astro';
+import ScoreList from '../../components/ScoreList.astro';
+import SpecTable from '../../components/SpecTable.astro';
+import { getData } from '../../lib/data';
+import { assignBracket, bracketSlug, cheapestPtaVariant } from '../../lib/brackets';
+import { formatDate, formatPkr, latestCheck, phoneName } from '../../lib/format';
+import { overallScore } from '../../lib/scoring';
+import { absUrl, breadcrumbLd, productLd } from '../../lib/seo';
+import { withBase } from '../../lib/paths';
+import type { Phone } from '../../schema/phone';
+
+export function getStaticPaths() {
+  return getData().phones.map((phone) => ({ params: { slug: phone.slug }, props: { phone } }));
+}
+
+const { phone } = Astro.props as { phone: Phone };
+const data = getData();
+const name = phoneName(phone, data.brands);
+const brandName = data.brands.find((b) => b.slug === phone.brand)?.name ?? phone.brand;
+const bracket = assignBracket(phone, data.brackets)!;
+const cheapest = cheapestPtaVariant(phone)!;
+const balanced = data.presets.find((p) => p.slug === 'balanced')!;
+const overall = overallScore(phone.scores, balanced.weights);
+const checked = latestCheck([phone])!;
+const [, month, year] = formatDate(checked).split(' ');
+const path = `/phones/${phone.slug}/`;
+const bracketPath = `/${bracketSlug(bracket.ceiling)}/`;
+const money = bracket.ceiling.toLocaleString('en-US');
+const rivals = phone.rivals.map((s) => data.phones.find((p) => p.slug === s)!).filter(Boolean);
+const WARRANTY = { official: 'Official warranty', 'local-shop': 'Shop warranty', none: 'No warranty' } as const;
+const STATUS_NOTE = {
+  limited: 'Limited stock: only some retailers or grey market sellers carry this phone right now.',
+  discontinued: 'Discontinued: this phone is no longer sold new by the brand in Pakistan. Stock may be old or refurbished.',
+} as const;
+
+const jsonLd = [
+  productLd(phone, { name, brandName, url: absUrl(path, Astro.site!) }),
+  breadcrumbLd([{ name: 'Home', path: '/' }, { name: `Under ${money}`, path: bracketPath }, { name, path }], Astro.site!),
+];
+const description = `${name} price in Pakistan from ${formatPkr(cheapest.pricePkr)} (PTA approved, checked ${formatDate(checked)}). Specs, scores out of 10 and the best alternatives under ${money}.`;
+---
+<Base title={`${name} price in Pakistan (${month} ${year})`} description={description} path={path} jsonLd={jsonLd}>
+  <nav aria-label="Breadcrumb"><a href={withBase('/')}>Home</a> / <a href={withBase(bracketPath)}>Under {money}</a> / {name}</nav>
+  <h1>{name} price in Pakistan</h1>
+  {phone.status !== 'available' && <p class="notice">{STATUS_NOTE[phone.status]}</p>}
+  <p>From <strong>{formatPkr(cheapest.pricePkr)}</strong> PTA approved. Overall score <strong>{overall.toFixed(1)}/10</strong>.</p>
+  <PriceChecked date={checked} />
+
+  <section>
+    <h2>Prices and variants</h2>
+    <div class="table-wrap">
+      <table class="phone-table">
+        <thead><tr><th scope="col">Variant</th><th scope="col">Price</th><th scope="col">PTA</th><th scope="col">Warranty</th><th scope="col">Checked</th><th scope="col">Sources</th></tr></thead>
+        <tbody>
+          {phone.variants.map((v) => (
+            <tr>
+              <td>{v.ram} GB / {v.storage} GB</td>
+              <td>{formatPkr(v.pricePkr)}</td>
+              <td>{v.pta ? 'Yes' : 'No'}</td>
+              <td>{WARRANTY[v.warranty]}</td>
+              <td><time datetime={v.priceCheckedAt}>{formatDate(v.priceCheckedAt)}</time></td>
+              <td>{v.sources.map((s, i) => (<>{i > 0 && ', '}<a href={s.url} rel="nofollow noopener">{s.name}</a></>))}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Scores</h2>
+    <ScoreList scores={phone.scores} />
+  </section>
+
+  <section>
+    <h2>Specifications</h2>
+    <SpecTable specs={phone.specs} />
+  </section>
+
+  {phone.notes && <p>{phone.notes}</p>}
+
+  {rivals.length > 0 && (
+    <section>
+      <h2>Alternatives to consider</h2>
+      <ul>{rivals.map((r) => <li><a href={withBase(`/phones/${r.slug}/`)}>{phoneName(r, data.brands)}</a></li>)}</ul>
+    </section>
+  )}
+
+  <p><a href={withBase(bracketPath)}>All phones under {money}</a></p>
+</Base>

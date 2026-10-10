@@ -1,20 +1,31 @@
 ---
-const title = 'MobileUnder.pk: best mobile phones by budget in Pakistan';
+import Base from '../layouts/Base.astro';
+import PriceChecked from '../components/PriceChecked.astro';
+import { getData } from '../lib/data';
+import { bracketSlug } from '../lib/brackets';
+import { latestCheck } from '../lib/format';
+import { landingPaths, phonesInBracket } from '../lib/landing';
+import { withBase } from '../lib/paths';
+
+const data = getData();
+const brackets = landingPaths(data).map((p) => p.props.ceiling);
+const checked = latestCheck(data.phones);
 ---
-<!doctype html>
-<html lang="en-PK">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
-    <meta name="description" content="Pick a budget and compare phones actually available in Pakistan, with PTA status, warranty and checked PKR prices. Coming soon." />
-    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
-    <link rel="canonical" href={new URL(import.meta.env.BASE_URL, Astro.site)} />
-  </head>
-  <body>
-    <main>
-      <h1>MobileUnder.pk</h1>
-      <p>Phones released in 2024, 2025 and 2026, up to 150,000 PKR, with PTA status and checked prices. Coming soon.</p>
-    </main>
-  </body>
-</html>
+<Base
+  title="MobileUnder.pk: best mobile phones by budget in Pakistan"
+  description="Pick a budget and compare phones actually available in Pakistan, with PTA status, warranty and checked PKR prices."
+  path="/"
+>
+  <h1>Best mobile phones in Pakistan by budget</h1>
+  <p>Phones released in 2024, 2025 and 2026, up to 150,000 PKR, with PTA status, warranty and checked prices.</p>
+  {checked && <PriceChecked date={checked} />}
+  {brackets.length > 0 ? (
+    <ul class="bracket-chips">
+      {brackets.map((c) => (
+        <li><a href={withBase(`/${bracketSlug(c)}/`)}>Under {c.toLocaleString('en-US')}</a> ({phonesInBracket(data, c).length} phones)</li>
+      ))}
+    </ul>
+  ) : (
+    <p>Phone data is being researched. Check back soon.</p>
+  )}
+</Base>

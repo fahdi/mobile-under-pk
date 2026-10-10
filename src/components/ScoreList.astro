@@ -1,0 +1,16 @@
+---
+import { SCORE_KEYS, type Scores } from '../schema/phone';
+
+interface Props { scores: Scores }
+const { scores } = Astro.props;
+const LABEL = { camera: 'Camera', performance: 'Performance', battery: 'Battery', display: 'Display', build: 'Build', software: 'Software updates', value: 'Value for money', availability: 'Availability in Pakistan' } as const;
+---
+<ul class="score-list">
+  {SCORE_KEYS.map((k) => (
+    <li>
+      <span class="score-label">{LABEL[k]}</span>
+      <span class="score-value">{scores[k].value}/10</span>
+      <span class="score-reason">{scores[k].reason}</span>
+    </li>
+  ))}
+</ul>

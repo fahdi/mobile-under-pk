@@ -1,0 +1,112 @@
+import { beforeAll, describe, expect, it } from 'vitest';
+import { execFileSync } from 'node:child_process';
+import { existsSync, mkdtempSync, readFileSync, readdirSync, statSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+
+// Builds the real site against tests/fixtures/site-data and inspects the HTML.
+const out = mkdtempSync(join(tmpdir(), 'mupk-site-'));
+const BASE = '/mobile-under-pk/';
+const page = (p: string) => readFileSync(join(out, p, 'index.html'), 'utf8');
+const all = (dir = out): string[] => readdirSync(dir).flatMap((f) => {
+  const p = join(dir, f);
+  return statSync(p).isDirectory() ? all(p) : p.endsWith('.html') ? [p] : [];
+});
+const jsonLd = (html: string) => [...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs)].map((m) => JSON.parse(m[1]));
+const count = (html: string, re: RegExp) => (html.match(re) ?? []).length;
+
+beforeAll(() => {
+  execFileSync('npx', ['astro', 'build', '--outDir', out], {
+    env: { ...process.env, DATA_ROOT: 'tests/fixtures/site-data' }, stdio: 'pipe',
+  });
+}, 120_000);
+
+describe('bracket page', () => {
+  const html = () => page('mobile-under-50000-in-pakistan');
+
+  it('has the SEO title, H1 and price check date', () => {
+    expect(html()).toContain('<title>Mobile under 50,000 in Pakistan: best phones (Oct 2026)</title>');
+    expect(html()).toMatch(/<h1>Best mobile under 50,000 in Pakistan<\/h1>/);
+    expect(html()).toContain('<time datetime="2026-10-10">10 Oct 2026</time>');
+  });
+
+  it('ranks every phone in the bracket and only those', () => {
+    expect(count(html(), /<tr data-slug=/g)).toBe(3);
+    expect(html()).not.toContain('data-slug="samsung-galaxy-a26"');
+  });
+
+  it('keeps discontinued phones out of the top picks but in the table', () => {
+    const picks = html().split('class="picks"')[1].split('</ul>')[0];
+    expect(count(picks, /class="pick"/g)).toBe(2);
+    expect(picks).not.toContain('Galaxy A15');
+    expect(html()).toContain('data-slug="samsung-galaxy-a15"');
+  });
+
+  it('carries ItemList, FAQPage and BreadcrumbList JSON-LD', () => {
+    expect(jsonLd(html()).map((o) => o['@type']).sort()).toEqual(['BreadcrumbList', 'FAQPage', 'ItemList']);
+  });
+
+  it('links to the next non-empty bracket', () => {
+    expect(html()).toContain(`href="${BASE}mobile-under-60000-in-pakistan/"`);
+  });
+
+  it('builds no page for an empty bracket', () => {
+    expect(existsSync(join(out, 'mobile-under-20000-in-pakistan'))).toBe(false);
+  });
+});
+
+describe('phone page', () => {
+  const html = () => page('phones/xiaomi-redmi-note-14');
+
+  it('has the price-intent title and Product JSON-LD in PKR', () => {
+    expect(html()).toContain('<title>Xiaomi Redmi Note 14 price in Pakistan (Oct 2026)</title>');
+    const product = jsonLd(html()).find((o) => o['@type'] === 'Product');
+    expect(product.offers).toMatchObject({ priceCurrency: 'PKR', lowPrice: 49000 });
+  });
+
+  it('lists variants with PTA, warranty, nofollow sources and check date', () => {
+    expect(html()).toContain('Rs 49,000');
+    expect(html()).toContain('Shop warranty');
+    expect(html()).toMatch(/<a [^>]*href="https:\/\/priceoye\.pk[^"]*"[^>]*rel="nofollow noopener"/);
+    expect(html()).toContain('<time datetime="2026-10-10">10 Oct 2026</time>');
+  });
+
+  it('shows all eight scores, the specs and links back to its bracket', () => {
+    expect(count(html(), /class="score-label"/g)).toBe(8);
+    expect(html()).toContain('Exynos 1480');
+    expect(html()).toContain(`href="${BASE}mobile-under-50000-in-pakistan/"`);
+  });
+
+  it('warns on a discontinued phone', () => {
+    expect(page('phones/samsung-galaxy-a15')).toContain('class="notice"');
+    expect(html()).not.toContain('class="notice"');
+  });
+});
+
+describe('hub page', () => {
+  it('links to every non-empty bracket', () => {
+    const html = page('');
+    expect(html).toContain(`href="${BASE}mobile-under-50000-in-pakistan/"`);
+    expect(html).toContain(`href="${BASE}mobile-under-60000-in-pakistan/"`);
+    expect(html).not.toContain('mobile-under-20000-in-pakistan');
+  });
+});
+
+describe('whole site', () => {
+  it('every JSON-LD block parses', () => {
+    for (const f of all()) expect(() => jsonLd(readFileSync(f, 'utf8'))).not.toThrow();
+  });
+
+  it('every internal link resolves to a built file', () => {
+    const broken: string[] = [];
+    for (const f of all()) {
+      for (const [, href] of readFileSync(f, 'utf8').matchAll(/href="(\/[^"#?]*)/g)) {
+        expect(href.startsWith(BASE), `${href} in ${f} lacks the base path`).toBe(true);
+        const rel = href.slice(BASE.length);
+        const target = rel === '' || rel.endsWith('/') ? join(out, rel, 'index.html') : join(out, rel);
+        if (!existsSync(target)) broken.push(`${href} (in ${f.slice(out.length)})`);
+      }
+    }
+    expect(broken).toEqual([]);
+  });
+});
