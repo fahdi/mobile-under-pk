@@ -189,8 +189,8 @@ describe('year page', () => {
 describe('hub page', () => {
   it('shows the top phones overall, excluding discontinued ones', () => {
     const html = page('');
-    const top = html.split('id="top-phones"')[1].split('</table>')[0];
-    expect((top.match(/<tr data-slug=/g) ?? []).length).toBe(4);
+    const top = html.split('id="top-phones"')[1].split('</section>')[0];
+    expect((top.match(/class="phone-card"/g) ?? []).length).toBe(4);
     expect(top).not.toContain('samsung-galaxy-a15');
   });
 
@@ -199,6 +199,27 @@ describe('hub page', () => {
     expect(html).toMatch(/id="budgets"/);
     expect(html).toMatch(/id="brands"/);
     expect(html).toMatch(/<a [^>]*class="btn btn-primary"[^>]*href="\/mobile-under-pk\/finder\/"|<a [^>]*href="\/mobile-under-pk\/finder\/"[^>]*class="btn btn-primary"/);
+  });
+
+  it('has one photo gallery per budget, best ranked first, without discontinued phones', () => {
+    const html = page('');
+    const galleries = [...html.matchAll(/<section class="gallery" data-ceiling="(\d+)"[\s\S]*?<\/section>/g)];
+    expect(galleries.map((g) => g[1])).toEqual(['50000', '60000']);
+    const fifty = galleries[0][0];
+    expect([...fifty.matchAll(/phones\/([a-z0-9-]+)\/"/g)].map((m) => m[1]).filter((v, i, a) => a.indexOf(v) === i))
+      .toEqual(['xiaomi-redmi-note-14', 'xiaomi-poco-c75', 'samsung-galaxy-a16']);
+    expect(fifty).toContain(`href="${BASE}mobile-under-50000-in-pakistan/"`);
+  });
+
+  it('every homepage image is lazy, fixed-size and served as a small thumbnail', () => {
+    const imgs = page('').match(/<img [^>]*>/g) ?? [];
+    expect(imgs.length).toBeGreaterThan(5);
+    for (const img of imgs) {
+      expect(img).toContain('loading="lazy"');
+      expect(img).toMatch(/width="\d+"/);
+      expect(img).toMatch(/height="\d+"/);
+      expect(img).toMatch(/src="[^"]*\/thumbs\/[a-z0-9-]+-160\.webp"/);
+    }
   });
 
   it('links every brand with phones and carries WebSite JSON-LD', () => {

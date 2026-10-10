@@ -32,7 +32,7 @@ describe('processPhoto', () => {
     const noise = await sharp(Buffer.from(Array.from({ length: 2000 * 2000 * 3 }, () => Math.floor(Math.random() * 256))),
       { raw: { width: 2000, height: 2000, channels: 3 } }).png().toBuffer();
     expect((await processPhoto(noise)).length).toBeLessThan(120_000);
-  });
+  }, 30_000); // CPU-bound encode; slower when the suite runs in parallel
 
   it('rejects input that is not an image', async () => {
     await expect(processPhoto(Buffer.from('<html>not an image</html>'))).rejects.toThrow();

@@ -40,4 +40,9 @@ describe('checkSite', () => {
     const dir = site({ 'index.html': `<a href="${BASE}finder/?max=5">f</a><a href="${BASE}#x">h</a>`, 'finder/index.html': '' });
     expect(checkSite(dir, BASE).problems).toEqual([]);
   });
+
+  it('checks every URL in srcset too', () => {
+    const dir = site({ 'index.html': `<img src="${BASE}a.webp" srcset="${BASE}a.webp 160w, ${BASE}missing-320.webp 320w">`, 'a.webp': 'x' });
+    expect(checkSite(dir, BASE).problems).toEqual(['/index.html: broken link /mobile-under-pk/missing-320.webp']);
+  });
 });

@@ -130,3 +130,20 @@ describe('SpecTable', () => {
     expect(html).toMatch(/NFC<\/th><td>No/);
   });
 });
+
+import PhoneCard from '../src/components/PhoneCard.astro';
+
+describe('PhoneCard', () => {
+  const ranked = { phone: makePhone(), overall: 7.5, price: 120000 };
+
+  it('shows a lazy, fixed-size, responsive thumbnail with the name, price and score', async () => {
+    const html = await render(PhoneCard, { ranked, brands });
+    const img = html.match(/<img [^>]*>/)![0];
+    for (const attr of ['src="/mobile-under-pk/thumbs/samsung-galaxy-a55-160.webp"', 'srcset="/mobile-under-pk/thumbs/samsung-galaxy-a55-160.webp 160w, /mobile-under-pk/thumbs/samsung-galaxy-a55-320.webp 320w"', 'sizes="160px"', 'width="160"', 'height="213"', 'loading="lazy"', 'decoding="async"', 'alt=""']) {
+      expect(img).toContain(attr);
+    }
+    expect(html).toContain('href="/mobile-under-pk/phones/samsung-galaxy-a55/"');
+    expect(html).toContain('Rs 120,000');
+    expect(html).toContain('7.5');
+  });
+});
