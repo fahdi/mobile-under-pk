@@ -1,6 +1,6 @@
 # Handoff - MobileUnder.pk
 
-Last updated: 2026-10-10 11:50 PKT
+Last updated: 2026-10-10 12:41 PKT
 
 ## State
 
@@ -11,7 +11,9 @@ Last updated: 2026-10-10 11:50 PKT
 - Issues #1 to #33 created, issue number = plan task number, labelled by milestone and area.
 - Milestone 1 done (#1 to #6 closed): Astro 7 + TS 6 scaffold, Zod schemas, loader, cross-checks, `npm run validate`, Vitest (29 tests), CI (`verify` job, proven red on bad data via PR #34), Pages deploy. Live at https://fahdi.github.io/mobile-under-pk/ with a placeholder, no console errors.
 - Pipeline hardened (PR #35): one workflow `ci.yml`, `deploy` job `needs: verify` and runs on main only, runners pinned to `ubuntu-24.04`, and `astro build` itself fails on invalid data. `tests/workflows.test.ts` pins these rules. Work TDD: failing test first, every time (Fahad, 2026-10-10).
-- `data/phones/` is empty; validate passes with warnings only (empty brackets, null brand store URLs and warranty notes).
+- Thin slice shipped (PR #36), done ahead of plan order at Fahad's request so something usable is live: 7 phones in the 50,000 bracket, `/mobile-under-50000-in-pakistan/`, `/phones/<slug>/`, hub listing brackets. Closed #7, #18, #19. Partly done: #12 (caveats in its comment), #20 (bracket FAQ copy missing), #21 (brand, year, compare links pending #22 and #24).
+- `tests/e2e/site.test.ts` builds the site against `tests/fixtures/site-data` (`DATA_ROOT` env) and fails on any broken internal link.
+- Local dev: `npx astro dev` daemonises in Astro 7 (`astro dev stop` / `astro dev status`).
 
 ## Read first
 
