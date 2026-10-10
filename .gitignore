@@ -1,5 +1,7 @@
 node_modules/
 dist/
+dist-ci/
 .astro/
-.DS_Store
 public/phones.index.json
+.lighthouseci/
+.DS_Store
