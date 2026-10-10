@@ -81,6 +81,17 @@ npm run add-photo -- <slug> <file or https image URL> "<credit name>" <https pag
 
 This trims the background, fits the phone into a 600x800 transparent WebP at `public/images/phones/<slug>.webp`, and sets `image` and `imageCredit` in the phone's JSON. The credit is shown under the photo on the phone page.
 
+## Monthly price refresh
+
+PKR prices move every week, so every price on the site is refreshed by hand once a month. One pull request per refresh, titled `Price refresh YYYY-MM`.
+
+1. List phones oldest check first: `grep -h priceCheckedAt data/phones/*.json | sort | head`.
+2. For each variant, re-check the sources in the priority order above. Update `pricePkr` (rounded to 500), `priceCheckedAt` and `sources`. Keep the out-of-stock rule: ignore prices on out-of-stock listings and note them.
+3. Flip `status` when stock changes: `available` if two or more retailers have it, `limited` if one or grey market only, `discontinued` if nobody sells it new.
+4. Run `npm run validate`. A phone whose price crossed a bracket ceiling moves bracket automatically; list those phones in the pull request description, along with every status change.
+5. Add new 2024 to 2026 phones that now sell in a bracket, following the rest of this guide, photo included.
+6. Spot-check at least 5 changed prices on the live site after the deploy.
+
 ## Before committing
 
 ```bash
