@@ -63,7 +63,9 @@ export function applyResults(doc: Document, results: Array<{ slug: string; overa
     tbody.append(row);
   }
   const count = doc.getElementById('finder-count');
-  if (count) count.textContent = `Showing ${shown} of ${total} phones`;
+  if (count) {
+    count.textContent = shown ? `Showing ${shown} of ${total} phones` : 'No phones match these filters. Try a higher budget or fewer must-haves.';
+  }
 }
 
 export async function initFinder(doc: Document, win: Window, loadIndex: () => Promise<IndexEntry[]>, presets: Preset[]): Promise<void> {
