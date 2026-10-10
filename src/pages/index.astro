@@ -24,19 +24,28 @@ const brands = brandPaths(data).map((p) => data.brands.find((b) => b.slug === p.
   path="/"
   jsonLd={[websiteLd(Astro.site!)]}
 >
-  <h1>Best mobile phones in Pakistan by budget</h1>
-  <p>Phones released in 2024, 2025 and 2026, up to 150,000 PKR, with PTA status, warranty and checked prices.</p>
-  {checked && <PriceChecked date={checked} />}
+  <section class="hero">
+    <h1>Best mobile phones in Pakistan by budget</h1>
+    <p class="lead">Phones released in 2024 to 2026, up to 150,000 PKR, with PTA prices, official warranty and honest scores. Every price is checked by hand.</p>
+    {checked && <PriceChecked date={checked} />}
+    {brackets.length > 0 && (
+      <div class="cta-row">
+        <a class="btn btn-primary" href={withBase('/finder/')}>Help me decide</a>
+        <a class="btn btn-ghost" href="#budgets">Browse by budget</a>
+      </div>
+    )}
+  </section>
 
   {brackets.length > 0 ? (
     <>
-      <h2>Pick your budget</h2>
-      <ul class="bracket-chips">
-        {brackets.map((c) => (
-          <li><a href={withBase(`/${bracketSlug(c)}/`)}>Under {c.toLocaleString('en-US')}</a> ({phonesInBracket(data, c).length} phones)</li>
-        ))}
-      </ul>
-      <p><a href={withBase('/finder/')}>Help me decide: filter and rank every phone</a></p>
+      <section id="budgets">
+        <h2>Pick your budget</h2>
+        <ul class="bracket-chips">
+          {brackets.map((c) => (
+            <li><a href={withBase(`/${bracketSlug(c)}/`)}>Under {c.toLocaleString('en-US')} <span class="chip-count">{phonesInBracket(data, c).length} phones</span></a></li>
+          ))}
+        </ul>
+      </section>
 
       <section id="top-phones">
         <h2>Top phones right now</h2>
@@ -44,7 +53,7 @@ const brands = brandPaths(data).map((p) => data.brands.find((b) => b.slug === p.
         <PhoneTable rows={top} brands={data.brands} />
       </section>
 
-      <section>
+      <section id="brands">
         <h2>Browse by brand</h2>
         <ul class="bracket-chips">
           {brands.map((b) => <li><a href={withBase(`/brands/${b.slug}/`)}>{b.name}</a></li>)}

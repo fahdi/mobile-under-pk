@@ -194,6 +194,13 @@ describe('hub page', () => {
     expect(top).not.toContain('samsung-galaxy-a15');
   });
 
+  it('has the #budgets and #brands sections the header and footer link to, and a finder call to action', () => {
+    const html = page('');
+    expect(html).toMatch(/id="budgets"/);
+    expect(html).toMatch(/id="brands"/);
+    expect(html).toMatch(/<a [^>]*class="btn btn-primary"[^>]*href="\/mobile-under-pk\/finder\/"|<a [^>]*href="\/mobile-under-pk\/finder\/"[^>]*class="btn btn-primary"/);
+  });
+
   it('links every brand with phones and carries WebSite JSON-LD', () => {
     const html = page('');
     expect(html).toContain(`href="${BASE}brands/samsung/"`);
@@ -284,6 +291,20 @@ describe('Open Graph images', () => {
 
   it('uses the large image card', () => {
     expect(page('phones/xiaomi-redmi-note-14')).toContain('<meta name="twitter:card" content="summary_large_image">');
+  });
+});
+
+describe('theme', () => {
+  it('every page applies a saved theme from <head> before the stylesheet', () => {
+    for (const f of all()) {
+      const html = readFileSync(f, 'utf8');
+      if (html.includes('http-equiv="refresh"')) continue;
+      const head = html.split('</head>')[0];
+      const boot = head.indexOf("localStorage.getItem('theme')");
+      const css = head.search(/<link rel="stylesheet"|<style/);
+      expect(boot, f).toBeGreaterThan(-1);
+      if (css > -1) expect(boot, f).toBeLessThan(css);
+    }
   });
 });
 
