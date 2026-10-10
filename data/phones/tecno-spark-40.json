@@ -1,0 +1,111 @@
+{
+  "slug": "tecno-spark-40",
+  "brand": "tecno",
+  "model": "Spark 40",
+  "releaseDate": "2025-07-02",
+  "status": "limited",
+  "variants": [
+    {
+      "ram": 6,
+      "storage": 128,
+      "pricePkr": 44000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/Tecno_Spark-40"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Helio G81",
+    "display": {
+      "size": 6.67,
+      "type": "IPS LCD",
+      "refreshHz": 120,
+      "resolution": "720x1600"
+    },
+    "battery": {
+      "mah": 5200,
+      "wiredW": 45,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 8
+      },
+      "video": "1440p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": "IP64"
+    },
+    "software": {
+      "os": "Android 15, HiOS 15",
+      "osUpdates": 1,
+      "securityYears": 2
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 188
+  },
+  "scores": {
+    "camera": {
+      "value": 5,
+      "reason": "Single 50MP main camera with PDAF, decent in daylight, no OIS."
+    },
+    "performance": {
+      "value": 4,
+      "reason": "Helio G81 handles daily apps and light games."
+    },
+    "battery": {
+      "value": 7,
+      "reason": "5,200mAh with 45W wired charging, the fastest charging in this bracket."
+    },
+    "display": {
+      "value": 4,
+      "reason": "6.67 inch 120Hz LCD at HD+ resolution."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Slim 7.7mm plastic body with IP64 rating."
+    },
+    "software": {
+      "value": 3,
+      "reason": "Tecno offers about 2 years of patches and at most 1 Android upgrade."
+    },
+    "value": {
+      "value": 6,
+      "reason": "45W charging and 6GB RAM at 44,000 is fair, though the chip is basic."
+    },
+    "availability": {
+      "value": 5,
+      "reason": "Out of stock at PriceOye today; official Tecno warranty where sold."
+    }
+  },
+  "tags": [
+    "fast-charging"
+  ],
+  "rivals": [
+    "xiaomi-redmi-15c",
+    "honor-x6c",
+    "realme-note-70"
+  ],
+  "notes": "Pakistan model is the non NFC Helio G81 version. PriceOye lists it at 49,999 but out of stock on 2026-10-10."
+}

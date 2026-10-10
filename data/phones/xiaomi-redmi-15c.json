@@ -1,0 +1,131 @@
+{
+  "slug": "xiaomi-redmi-15c",
+  "brand": "xiaomi",
+  "model": "Redmi 15C",
+  "releaseDate": "2025-08-01",
+  "status": "available",
+  "variants": [
+    {
+      "ram": 4,
+      "storage": 128,
+      "pricePkr": 43000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/xiaomi/xiaomi-redmi-15c"
+        }
+      ]
+    },
+    {
+      "ram": 6,
+      "storage": 128,
+      "pricePkr": 48000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/xiaomi/xiaomi-redmi-15c"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Helio G81 Ultra",
+    "display": {
+      "size": 6.9,
+      "type": "IPS LCD",
+      "refreshHz": 120,
+      "resolution": "720x1600"
+    },
+    "battery": {
+      "mah": 6000,
+      "wiredW": 33,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": false
+        },
+        {
+          "mp": 2,
+          "type": "depth",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 8
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "glass or eco leather",
+      "front": "Gorilla Glass 3",
+      "ip": "IP64"
+    },
+    "software": {
+      "os": "Android 15, HyperOS 2",
+      "osUpdates": 4,
+      "securityYears": 6
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": true,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 205
+  },
+  "scores": {
+    "camera": {
+      "value": 5,
+      "reason": "50MP main camera handles daylight well but has no OIS and only a filler second lens."
+    },
+    "performance": {
+      "value": 4,
+      "reason": "Helio G81 Ultra is smooth for calls, social apps and light games, not for heavy gaming."
+    },
+    "battery": {
+      "value": 7,
+      "reason": "6,000mAh lasts a full day plus, and 33W charging is quick for this price."
+    },
+    "display": {
+      "value": 4,
+      "reason": "Large 6.9 inch 120Hz LCD, but only HD+ resolution."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Plastic frame with IP64 dust and splash resistance and Gorilla Glass 3 on the front."
+    },
+    "software": {
+      "value": 9,
+      "reason": "Xiaomi lists 4 Android upgrades for the Redmi 15C, rare at this price."
+    },
+    "value": {
+      "value": 8,
+      "reason": "At 43,000 it pairs 33W charging and long update support, better than most rivals here."
+    },
+    "availability": {
+      "value": 7,
+      "reason": "In stock at PriceOye with official Xiaomi warranty."
+    }
+  },
+  "tags": [
+    "long-updates",
+    "big-battery"
+  ],
+  "rivals": [
+    "honor-x6c",
+    "tecno-spark-40",
+    "oppo-a6c"
+  ],
+  "notes": "Pakistan model is the 4G Helio G81 Ultra version, not the Dimensity 6300 Redmi 15C 5G."
+}

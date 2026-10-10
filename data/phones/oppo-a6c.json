@@ -1,0 +1,124 @@
+{
+  "slug": "oppo-a6c",
+  "brand": "oppo",
+  "model": "A6c",
+  "releaseDate": "2026-04-07",
+  "status": "available",
+  "variants": [
+    {
+      "ram": 4,
+      "storage": 64,
+      "pricePkr": 42500,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/oppo/oppo-a6c"
+        }
+      ]
+    },
+    {
+      "ram": 4,
+      "storage": 128,
+      "pricePkr": 52500,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/oppo/oppo-a6c"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Unisoc T7250",
+    "display": {
+      "size": 6.75,
+      "type": "IPS LCD",
+      "refreshHz": 120,
+      "resolution": "720x1570"
+    },
+    "battery": {
+      "mah": 7000,
+      "wiredW": 15,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 13,
+          "type": "wide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 5
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": "IP64"
+    },
+    "software": {
+      "os": "Android 15, ColorOS 15",
+      "osUpdates": 1,
+      "securityYears": 2
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 215
+  },
+  "scores": {
+    "camera": {
+      "value": 3,
+      "reason": "Single 13MP rear camera with no OIS, weak in low light."
+    },
+    "performance": {
+      "value": 3,
+      "reason": "Unisoc T7250 is an entry chip that slows down with heavier apps."
+    },
+    "battery": {
+      "value": 7,
+      "reason": "7,000mAh can stretch toward two days, but 15W charging is very slow to refill it."
+    },
+    "display": {
+      "value": 4,
+      "reason": "6.75 inch 120Hz LCD at HD+ resolution."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Plastic body with IP64 dust and splash resistance."
+    },
+    "software": {
+      "value": 2,
+      "reason": "OPPO has published no update promise for the A6c, so expect little beyond patches."
+    },
+    "value": {
+      "value": 5,
+      "reason": "The 7,000mAh battery is the draw at 42,500, but the camera and chip trail rivals."
+    },
+    "availability": {
+      "value": 7,
+      "reason": "In stock at PriceOye with official OPPO Pakistan warranty."
+    }
+  },
+  "tags": [
+    "big-battery"
+  ],
+  "rivals": [
+    "realme-note-70",
+    "xiaomi-redmi-15c"
+  ],
+  "notes": "Pakistan model is the global Unisoc T7250 version with 7,000mAh battery, not the Snapdragon 685 China model."
+}

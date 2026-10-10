@@ -1,0 +1,117 @@
+{
+  "slug": "honor-x7c",
+  "brand": "honor",
+  "model": "X7c",
+  "releaseDate": "2024-10-18",
+  "status": "limited",
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 256,
+      "pricePkr": 48000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/Honor_X7C"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Snapdragon 685",
+    "display": {
+      "size": 6.77,
+      "type": "TFT LCD",
+      "refreshHz": 120,
+      "resolution": "720x1610"
+    },
+    "battery": {
+      "mah": 6000,
+      "wiredW": 35,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 108,
+          "type": "wide",
+          "ois": false
+        },
+        {
+          "mp": 2,
+          "type": "depth",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 8
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "tempered glass",
+      "ip": "IP64"
+    },
+    "software": {
+      "os": "Android 14, MagicOS 8",
+      "osUpdates": 1,
+      "securityYears": 2
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": true,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 196
+  },
+  "scores": {
+    "camera": {
+      "value": 5,
+      "reason": "108MP main sensor gives detailed daylight shots, but there is no OIS or ultrawide."
+    },
+    "performance": {
+      "value": 5,
+      "reason": "Snapdragon 685 is smoother than the Helio G81 phones here and handles light gaming."
+    },
+    "battery": {
+      "value": 7,
+      "reason": "6,000mAh with 35W wired charging lasts a full day plus."
+    },
+    "display": {
+      "value": 4,
+      "reason": "6.77 inch 120Hz LCD at HD+ resolution."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Plastic body with IP64 dust and splash resistance."
+    },
+    "software": {
+      "value": 3,
+      "reason": "Launched on Android 14 in late 2024, so little OS support remains."
+    },
+    "value": {
+      "value": 7,
+      "reason": "8GB RAM, 256GB storage and a Snapdragon chip at 48,000 beat most rivals on paper."
+    },
+    "availability": {
+      "value": 5,
+      "reason": "Out of stock at PriceOye today; only the WhatMobile official price was confirmed."
+    }
+  },
+  "tags": [
+    "big-battery",
+    "nfc"
+  ],
+  "rivals": [
+    "vivo-y29",
+    "honor-x6c",
+    "xiaomi-redmi-15c"
+  ],
+  "notes": "PriceOye lists the 8GB 256GB at 53,999 but out of stock on 2026-10-10. Pakistan units list a 6,000mAh battery."
+}

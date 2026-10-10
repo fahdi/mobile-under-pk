@@ -1,0 +1,125 @@
+{
+  "slug": "realme-note-70",
+  "brand": "realme",
+  "model": "Note 70",
+  "releaseDate": "2025-08-28",
+  "status": "available",
+  "variants": [
+    {
+      "ram": 4,
+      "storage": 128,
+      "pricePkr": 45000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/Realme_Note-70"
+        }
+      ]
+    },
+    {
+      "ram": 6,
+      "storage": 128,
+      "pricePkr": 47000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/Realme_Note-70-6GB"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Unisoc T7250",
+    "display": {
+      "size": 6.74,
+      "type": "IPS LCD",
+      "refreshHz": 90,
+      "resolution": "720x1600"
+    },
+    "battery": {
+      "mah": 6300,
+      "wiredW": 15,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 13,
+          "type": "wide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 5
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "Panda Glass",
+      "ip": "IP54"
+    },
+    "software": {
+      "os": "Android 15, realme UI",
+      "osUpdates": 1,
+      "securityYears": 3
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 201
+  },
+  "scores": {
+    "camera": {
+      "value": 3,
+      "reason": "Single 13MP rear camera with no OIS."
+    },
+    "performance": {
+      "value": 3,
+      "reason": "Unisoc T7250 entry chip struggles beyond basic apps."
+    },
+    "battery": {
+      "value": 6,
+      "reason": "6,300mAh lasts a full day plus, but 15W charging is slow."
+    },
+    "display": {
+      "value": 3,
+      "reason": "HD+ LCD limited to 90Hz, behind the 120Hz panels in this bracket."
+    },
+    "build": {
+      "value": 4,
+      "reason": "Plastic body with IP54 and MIL-STD-810H drop rating."
+    },
+    "software": {
+      "value": 3,
+      "reason": "realme only pledges 3 years of security patches; 1 Android upgrade expected."
+    },
+    "value": {
+      "value": 4,
+      "reason": "At 45,000 it has the weakest chip and camera in the bracket."
+    },
+    "availability": {
+      "value": 7,
+      "reason": "6GB model in stock at PriceOye with official realme warranty."
+    }
+  },
+  "tags": [
+    "big-battery"
+  ],
+  "rivals": [
+    "oppo-a6c",
+    "xiaomi-redmi-15c",
+    "tecno-spark-40"
+  ],
+  "notes": "PriceOye shows the 4GB 128GB at 41,599 but out of stock, and the 6GB 128GB in stock at 47,499 on 2026-10-10."
+}
