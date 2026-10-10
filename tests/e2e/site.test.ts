@@ -167,6 +167,20 @@ describe('hub page', () => {
   });
 });
 
+describe('finder index', () => {
+  it('is built from the data with one compact entry per phone', () => {
+    const raw = readFileSync(join(out, 'phones.index.json'), 'utf8');
+    const entries = JSON.parse(raw);
+    expect(entries.map((e: { slug: string }) => e.slug).sort()).toEqual([
+      'samsung-galaxy-a15', 'samsung-galaxy-a16', 'samsung-galaxy-a26', 'xiaomi-redmi-note-14',
+    ]);
+    expect(entries.find((e: { slug: string }) => e.slug === 'xiaomi-redmi-note-14')).toMatchObject({
+      name: 'Xiaomi Redmi Note 14', ptaPrice: 49000, officialWarranty: false,
+    });
+    expect(raw).not.toContain('\n');
+  });
+});
+
 describe('whole site', () => {
   it('every JSON-LD block parses', () => {
     for (const f of all()) expect(() => jsonLd(readFileSync(f, 'utf8'))).not.toThrow();
