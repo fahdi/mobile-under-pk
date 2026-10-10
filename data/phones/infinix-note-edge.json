@@ -1,0 +1,121 @@
+{
+  "slug": "infinix-note-edge",
+  "brand": "infinix",
+  "model": "NOTE Edge",
+  "releaseDate": "2026-01-31",
+  "status": "available",
+  "image": "/images/phones/infinix-note-edge.webp",
+  "imageCredit": {
+    "name": "Infinix Pakistan",
+    "url": "https://pk.infinixmobility.com/specs/note-edge"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 256,
+      "pricePkr": 95500,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/infinix/infinix-note-60-edge-5g"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Dimensity 7100",
+    "display": {
+      "size": 6.78,
+      "type": "AMOLED",
+      "refreshHz": 120,
+      "resolution": "1208x2644",
+      "peakNits": 4500
+    },
+    "battery": {
+      "mah": 6500,
+      "wiredW": 45,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 13
+      },
+      "video": "1440p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "Gorilla Glass 7i",
+      "ip": "IP65"
+    },
+    "software": {
+      "os": "Android 16, XOS 16",
+      "osUpdates": 3,
+      "securityYears": 5
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 190
+  },
+  "scores": {
+    "camera": {
+      "value": 4,
+      "reason": "Single 50MP main camera with no OIS and no ultrawide."
+    },
+    "performance": {
+      "value": 7,
+      "reason": "Dimensity 7100 5G handles most games at medium settings."
+    },
+    "battery": {
+      "value": 8,
+      "reason": "6,500mAh with 45W charging in a 7.2mm body lasts a full day plus."
+    },
+    "display": {
+      "value": 8,
+      "reason": "1.5K curved AMOLED at 120Hz with 1,600 nits HBM."
+    },
+    "build": {
+      "value": 6,
+      "reason": "Gorilla Glass 7i front with a plastic frame and IP65."
+    },
+    "software": {
+      "value": 8,
+      "reason": "Infinix Pakistan promises 3 OS updates and 5 years of security patches."
+    },
+    "value": {
+      "value": 7,
+      "reason": "Fastest chip and only 5G phone in the 80k bracket, but the single rear camera is weak."
+    },
+    "availability": {
+      "value": 7,
+      "reason": "In stock at PriceOye with official Infinix warranty and Carlcare service."
+    }
+  },
+  "tags": [
+    "amoled",
+    "big-battery",
+    "fast-charging",
+    "nfc",
+    "long-updates"
+  ],
+  "rivals": [
+    "xiaomi-redmi-note-15-pro",
+    "samsung-galaxy-a17-5g",
+    "tecno-camon-50"
+  ],
+  "notes": "PriceOye lists it as Note 60 Edge 5G; Infinix Pakistan sells it as NOTE Edge (X6887). A 128GB version appears on the Infinix Pakistan spec page but no Pakistani price was found. Only PriceOye was checked for stock."
+}

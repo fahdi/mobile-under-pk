@@ -1,0 +1,138 @@
+{
+  "slug": "vivo-v80-lite-5g",
+  "brand": "vivo",
+  "model": "V80 Lite 5G",
+  "releaseDate": "2026-08-26",
+  "status": "available",
+  "image": "/images/phones/vivo-v80-lite-5g.webp",
+  "imageCredit": {
+    "name": "vivo Pakistan",
+    "url": "https://www.vivo.com/pk/products/param/v80-lite-5g"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 128,
+      "pricePkr": 111000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/vivo/vivo-v80-lite-5g"
+        }
+      ]
+    },
+    {
+      "ram": 8,
+      "storage": 256,
+      "pricePkr": 130500,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/vivo/vivo-v80-lite-5g"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Dimensity 7360 Turbo",
+    "display": {
+      "size": 6.83,
+      "type": "AMOLED",
+      "refreshHz": 120,
+      "resolution": "1260x2800",
+      "peakNits": 3000
+    },
+    "battery": {
+      "mah": 7050,
+      "wiredW": 44,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": false
+        },
+        {
+          "mp": 2,
+          "type": "depth",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 32
+      },
+      "video": "4K@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": "IP68/IP69"
+    },
+    "software": {
+      "os": "Android 16, OriginOS 6",
+      "osUpdates": 3,
+      "securityYears": 4
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": false,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 197
+  },
+  "scores": {
+    "camera": {
+      "value": 5,
+      "reason": "50MP main camera without OIS and a 2MP helper, but 4K video front and back."
+    },
+    "performance": {
+      "value": 7,
+      "reason": "Dimensity 7360 Turbo on 4nm handles most games at medium settings."
+    },
+    "battery": {
+      "value": 8,
+      "reason": "7,050mAh with 44W charging lasts well beyond a day."
+    },
+    "display": {
+      "value": 9,
+      "reason": "1.5K 120Hz AMOLED with 2,000 nits HBM and 3,000 nits peak."
+    },
+    "build": {
+      "value": 6,
+      "reason": "Plastic frame and back, but rated IP68 and IP69."
+    },
+    "software": {
+      "value": 8,
+      "reason": "GSMArena lists up to 3 major Android upgrades."
+    },
+    "value": {
+      "value": 6,
+      "reason": "Big battery and bright screen, but no OIS and no NFC at 111,000 for only 128GB."
+    },
+    "availability": {
+      "value": 8,
+      "reason": "Listed on vivo Pakistan and in stock at PriceOye with official vivo warranty."
+    }
+  },
+  "tags": [
+    "amoled",
+    "big-battery",
+    "fast-charging"
+  ],
+  "rivals": [
+    "realme-16-5g",
+    "samsung-galaxy-a36",
+    "oppo-a6s-pro"
+  ],
+  "notes": "vivo Pakistan lists 124,999 for 8GB 128GB and 145,999 for 8GB 256GB on 2026-10-10; PriceOye sells both in stock for less. vivo Pakistan states NFC is not supported. Security patch years are an assumption. Only PriceOye was checked for stock."
+}

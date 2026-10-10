@@ -1,0 +1,123 @@
+{
+  "slug": "xiaomi-redmi-15",
+  "brand": "xiaomi",
+  "model": "Redmi 15",
+  "releaseDate": "2025-08-01",
+  "status": "available",
+  "image": "/images/phones/xiaomi-redmi-15.webp",
+  "imageCredit": {
+    "name": "Xiaomi Pakistan",
+    "url": "https://www.mi.com/pk/product/redmi-15/specs/"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 128,
+      "pricePkr": 53500,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/xiaomi/xiaomi-redmi-15"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Snapdragon 685",
+    "display": {
+      "size": 6.9,
+      "type": "IPS LCD",
+      "refreshHz": 144,
+      "resolution": "1080x2340",
+      "peakNits": 850
+    },
+    "battery": {
+      "mah": 7000,
+      "wiredW": 33,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": false
+        },
+        {
+          "mp": 2,
+          "type": "depth",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 8
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": "IP64"
+    },
+    "software": {
+      "os": "Android 15, HyperOS 2",
+      "osUpdates": 2,
+      "securityYears": 4
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 214
+  },
+  "scores": {
+    "camera": {
+      "value": 5,
+      "reason": "50MP f/1.8 main camera is decent in daylight, with no OIS and only an auxiliary second lens."
+    },
+    "performance": {
+      "value": 5,
+      "reason": "Snapdragon 685 is smooth in daily use and handles light gaming."
+    },
+    "battery": {
+      "value": 8,
+      "reason": "7,000mAh silicon-carbon battery with 33W charging lasts well past a full day."
+    },
+    "display": {
+      "value": 6,
+      "reason": "6.9 inch FHD+ LCD at 144Hz, sharp and smooth but only 850 nits peak."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Plastic body with IP64 dust and splash resistance."
+    },
+    "software": {
+      "value": 5,
+      "reason": "Reported 2 Android upgrades and 4 years of security patches."
+    },
+    "value": {
+      "value": 7,
+      "reason": "Biggest battery and only FHD+ 144Hz screen among the cheaper phones here."
+    },
+    "availability": {
+      "value": 8,
+      "reason": "In stock at PriceOye and Shophive with official Xiaomi warranty."
+    }
+  },
+  "tags": [
+    "big-battery",
+    "fast-charging"
+  ],
+  "rivals": [
+    "infinix-hot-60i",
+    "vivo-y11d",
+    "samsung-galaxy-a16"
+  ],
+  "notes": "Pakistan model is the 4G Snapdragon 685 version (WhatMobile wrongly lists Snapdragon 6s Gen 3). WhatMobile lists 58,999 and Shophive sells it at 58,999 in stock. The 2 OS updates and 4 years of patches come from a fan site, not an official Xiaomi page."
+}

@@ -1,0 +1,125 @@
+{
+  "slug": "oppo-a6s-pro",
+  "brand": "oppo",
+  "model": "A6s Pro",
+  "releaseDate": "2026-03-03",
+  "status": "available",
+  "image": "/images/phones/oppo-a6s-pro.webp",
+  "imageCredit": {
+    "name": "OPPO Pakistan",
+    "url": "https://www.oppo.com/pk/smartphones/series-a/a6s-pro/specs/"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 256,
+      "pricePkr": 105000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/oppo/oppo-a6s-pro"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Helio G100 Max",
+    "display": {
+      "size": 6.57,
+      "type": "AMOLED",
+      "refreshHz": 120,
+      "resolution": "1080x2372",
+      "peakNits": 1400
+    },
+    "battery": {
+      "mah": 7000,
+      "wiredW": 80,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": false
+        },
+        {
+          "mp": 2,
+          "type": "mono",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 50
+      },
+      "video": "1080p@60fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "AGC DT-Star D+",
+      "ip": "IP68/IP69K"
+    },
+    "software": {
+      "os": "Android 16, ColorOS 16",
+      "osUpdates": 2,
+      "securityYears": 3
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": true,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 194
+  },
+  "scores": {
+    "camera": {
+      "value": 4,
+      "reason": "50MP main camera without OIS and a 2MP mono helper; 50MP selfie camera."
+    },
+    "performance": {
+      "value": 5,
+      "reason": "Helio G100 Max is smooth for daily use and light gaming."
+    },
+    "battery": {
+      "value": 9,
+      "reason": "7,000mAh with 80W SUPERVOOC charging."
+    },
+    "display": {
+      "value": 7,
+      "reason": "FHD+ 120Hz AMOLED at 1,400 nits HBM."
+    },
+    "build": {
+      "value": 6,
+      "reason": "Plastic body but rated IP68 with IP69K jet resistance."
+    },
+    "software": {
+      "value": 5,
+      "reason": "OPPO publishes no update promise for this model; 2 OS upgrades assumed."
+    },
+    "value": {
+      "value": 5,
+      "reason": "Best charging in the 100k bracket, but a 4G Helio chip and no OIS at 105,000 trail the 5G rivals."
+    },
+    "availability": {
+      "value": 7,
+      "reason": "In stock at PriceOye with official OPPO warranty and service centres."
+    }
+  },
+  "tags": [
+    "amoled",
+    "big-battery",
+    "fast-charging",
+    "nfc"
+  ],
+  "rivals": [
+    "realme-16-5g",
+    "vivo-v80-lite-5g",
+    "infinix-note-60"
+  ],
+  "notes": "Pakistan model is the 4G Helio G100 Max version. IP68 and IP69K per WhatMobile; the OPPO Pakistan spec page does not list it. Update policy is an assumption. WhatMobile shows 119,999. Only PriceOye was checked for stock."
+}

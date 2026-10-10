@@ -1,0 +1,137 @@
+{
+  "slug": "vivo-y11d",
+  "brand": "vivo",
+  "model": "Y11d",
+  "releaseDate": "2026-03-09",
+  "status": "available",
+  "image": "/images/phones/vivo-y11d.webp",
+  "imageCredit": {
+    "name": "vivo Pakistan",
+    "url": "https://www.vivo.com/pk/products/param/y11d"
+  },
+  "variants": [
+    {
+      "ram": 4,
+      "storage": 128,
+      "pricePkr": 53000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/Vivo_Y11d"
+        }
+      ]
+    },
+    {
+      "ram": 6,
+      "storage": 128,
+      "pricePkr": 61000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/vivo/vivo-y11d"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Unisoc T7225",
+    "display": {
+      "size": 6.74,
+      "type": "IPS LCD",
+      "refreshHz": 120,
+      "resolution": "720x1600",
+      "peakNits": 1200
+    },
+    "battery": {
+      "mah": 6500,
+      "wiredW": 44,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": false
+        },
+        {
+          "mp": 0.08,
+          "type": "depth",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 5
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": "IP65"
+    },
+    "software": {
+      "os": "Android 16, OriginOS 6",
+      "osUpdates": 1,
+      "securityYears": 2
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 209
+  },
+  "scores": {
+    "camera": {
+      "value": 4,
+      "reason": "50MP f/1.8 main camera with a 0.08MP auxiliary sensor, no OIS."
+    },
+    "performance": {
+      "value": 3,
+      "reason": "Unisoc T7225 is a 12nm entry chip paired with eMMC storage, so apps open slowly."
+    },
+    "battery": {
+      "value": 8,
+      "reason": "6,500mAh with 44W charging lasts a full day plus and refills fast."
+    },
+    "display": {
+      "value": 5,
+      "reason": "HD+ 720p LCD at 120Hz with 1,200 nits in high brightness mode."
+    },
+    "build": {
+      "value": 6,
+      "reason": "Plastic body with IP65 dust and water jet resistance."
+    },
+    "software": {
+      "value": 3,
+      "reason": "Ships with Android 16, but vivo publishes no upgrade count for the Y11d."
+    },
+    "value": {
+      "value": 4,
+      "reason": "Weakest chip in the bracket at 53,000, when the Hot 60i and Redmi 15 cost about the same."
+    },
+    "availability": {
+      "value": 7,
+      "reason": "6GB 128GB in stock at PriceOye and Shophive with official vivo warranty; the 4GB model is out of stock."
+    }
+  },
+  "tags": [
+    "big-battery",
+    "fast-charging"
+  ],
+  "rivals": [
+    "xiaomi-redmi-15",
+    "infinix-hot-60i",
+    "tecno-spark-50"
+  ],
+  "notes": "The 4GB 128GB price is the WhatMobile official figure; PriceOye lists it at 49,399 but out of stock on 2026-10-10. Shophive has the 6GB 128GB in stock at 62,999. Release date is PriceOye's 2026-03-09; sources disagree. Update policy is assumed."
+}

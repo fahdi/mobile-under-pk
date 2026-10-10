@@ -1,0 +1,129 @@
+{
+  "slug": "samsung-galaxy-a17-5g",
+  "brand": "samsung",
+  "model": "Galaxy A17 5G",
+  "releaseDate": "2025-08-14",
+  "status": "available",
+  "image": "/images/phones/samsung-galaxy-a17-5g.webp",
+  "imageCredit": {
+    "name": "Samsung Pakistan",
+    "url": "https://www.samsung.com/pk/smartphones/galaxy-a/galaxy-a17-5g-black-256gb-sm-a176bzkgpkd/"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 256,
+      "pricePkr": 92000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/samsung/samsung-galaxy-a17-5g"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Exynos 1330",
+    "display": {
+      "size": 6.7,
+      "type": "Super AMOLED",
+      "refreshHz": 90,
+      "resolution": "1080x2340",
+      "peakNits": 800
+    },
+    "battery": {
+      "mah": 5000,
+      "wiredW": 25,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 5,
+          "type": "ultrawide",
+          "ois": false
+        },
+        {
+          "mp": 2,
+          "type": "macro",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 13
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "glass-fiber reinforced plastic",
+      "front": "Gorilla Glass Victus",
+      "ip": "IP54"
+    },
+    "software": {
+      "os": "Android 15, One UI 7",
+      "osUpdates": 6,
+      "securityYears": 6
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 192
+  },
+  "scores": {
+    "camera": {
+      "value": 6,
+      "reason": "50MP main camera with OIS, but the 5MP ultrawide and 2MP macro add little."
+    },
+    "performance": {
+      "value": 6,
+      "reason": "Exynos 1330 is smooth in daily use and handles light gaming."
+    },
+    "battery": {
+      "value": 6,
+      "reason": "5,000mAh lasts a full day, but 25W charging is slow for this price."
+    },
+    "display": {
+      "value": 6,
+      "reason": "FHD+ Super AMOLED, held back by a 90Hz refresh rate and 800 nits peak."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Plastic frame and back with only IP54 splash resistance."
+    },
+    "software": {
+      "value": 10,
+      "reason": "Samsung promises 6 major Android upgrades and 6 years of security patches."
+    },
+    "value": {
+      "value": 6,
+      "reason": "Longest update promise in the 80k bracket, but weaker camera, screen and charging than the Redmi Note 15 Pro at the same price."
+    },
+    "availability": {
+      "value": 9,
+      "reason": "Sold by the Samsung Pakistan online store and PriceOye with official warranty and Samsung service centres."
+    }
+  },
+  "tags": [
+    "amoled",
+    "long-updates",
+    "nfc"
+  ],
+  "rivals": [
+    "xiaomi-redmi-note-15-pro",
+    "infinix-note-edge",
+    "oppo-a6s"
+  ],
+  "notes": "Samsung Pakistan lists the 8GB 256GB at 99,999 on its own store on 2026-10-10; PriceOye sells it in stock at 91,995. NFC support is market dependent."
+}

@@ -1,0 +1,125 @@
+{
+  "slug": "realme-16-5g",
+  "brand": "realme",
+  "model": "16 5G",
+  "releaseDate": "2026-01-29",
+  "status": "available",
+  "image": "/images/phones/realme-16-5g.webp",
+  "imageCredit": {
+    "name": "realme Pakistan",
+    "url": "https://www.realme.com/pk/realme-16-5g"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 256,
+      "pricePkr": 116000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/realme/realme-16-5g"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Dimensity 6400 Turbo",
+    "display": {
+      "size": 6.57,
+      "type": "AMOLED",
+      "refreshHz": 120,
+      "resolution": "1080x2372",
+      "peakNits": 4200
+    },
+    "battery": {
+      "mah": 7000,
+      "wiredW": 60,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": false
+        },
+        {
+          "mp": 2,
+          "type": "mono",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 50
+      },
+      "video": "1080p@60fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "AGC DT-Star D+",
+      "ip": "IP68/IP69K"
+    },
+    "software": {
+      "os": "Android 16, realme UI 7.0",
+      "osUpdates": 3,
+      "securityYears": 4
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 183
+  },
+  "scores": {
+    "camera": {
+      "value": 4,
+      "reason": "50MP main camera without OIS and a 2MP mono helper; 50MP selfie camera."
+    },
+    "performance": {
+      "value": 6,
+      "reason": "Dimensity 6400 Turbo is smooth in daily use with light to moderate gaming."
+    },
+    "battery": {
+      "value": 9,
+      "reason": "7,000mAh with 60W charging in a 183g body."
+    },
+    "display": {
+      "value": 8,
+      "reason": "FHD+ 120Hz AMOLED with 1,400 nits HBM and 4,200 nits local peak."
+    },
+    "build": {
+      "value": 6,
+      "reason": "Plastic frame and back, rated IP68 with IP69K jet resistance."
+    },
+    "software": {
+      "value": 8,
+      "reason": "Update trackers list a promise of 3 Android upgrades."
+    },
+    "value": {
+      "value": 5,
+      "reason": "Light and long lasting, but a basic chip and no OIS at 116,000 lag the Infinix NOTE 60."
+    },
+    "availability": {
+      "value": 7,
+      "reason": "In stock at PriceOye with official realme warranty and service centres."
+    }
+  },
+  "tags": [
+    "amoled",
+    "big-battery",
+    "fast-charging",
+    "nfc"
+  ],
+  "rivals": [
+    "oppo-a6s-pro",
+    "vivo-v80-lite-5g",
+    "infinix-note-60"
+  ],
+  "notes": "GSMArena shows a 2025 announcement date that conflicts with its Android 16 launch software; January 2026 used. Update promise and security years are unconfirmed by realme. WhatMobile shows 129,999. Only PriceOye was checked for stock."
+}
