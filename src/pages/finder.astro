@@ -1,0 +1,79 @@
+---
+import Base from '../layouts/Base.astro';
+import PhoneTable from '../components/PhoneTable.astro';
+import PriceChecked from '../components/PriceChecked.astro';
+import { getData } from '../lib/data';
+import { latestCheck } from '../lib/format';
+import { rankPhones } from '../lib/scoring';
+import { breadcrumbLd } from '../lib/seo';
+import { withBase } from '../lib/paths';
+import { SCORE_NAMES } from '../lib/compare';
+import { RELEASE_YEARS, SCORE_KEYS } from '../schema/phone';
+
+const data = getData();
+const balanced = data.presets.find((p) => p.slug === 'balanced')!;
+const ranked = rankPhones(data.phones, balanced);
+const brands = data.brands.filter((b) => data.phones.some((p) => p.brand === b.slug));
+const years = RELEASE_YEARS.filter((y) => data.phones.some((p) => p.releaseDate.startsWith(String(y))));
+const checked = latestCheck(data.phones);
+const cap = (s: string) => s[0].toUpperCase() + s.slice(1);
+---
+<Base
+  title="Phone finder: filter and rank phones in Pakistan by budget"
+  description="Filter phones sold in Pakistan by price, brand, PTA status, warranty, 5G and battery, then rank them by what matters to you. Share the result as a link."
+  path="/finder/"
+  jsonLd={[breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Finder', path: '/finder/' }], Astro.site!)]}
+>
+  <nav aria-label="Breadcrumb"><a href={withBase('/')}>Home</a> / Finder</nav>
+  <h1>Find your phone</h1>
+  {checked && <PriceChecked date={checked} />}
+
+  <form id="finder" class="finder" method="get">
+    <fieldset>
+      <legend>Budget (PKR)</legend>
+      <label>From <input name="min" type="number" inputmode="numeric" min="0" step="500" /></label>
+      <label>Up to <input name="max" type="number" inputmode="numeric" min="0" step="500" /></label>
+    </fieldset>
+    <fieldset>
+      <legend>Brand</legend>
+      {brands.map((b) => <label><input type="checkbox" name="brand" value={b.slug} /> {b.name}</label>)}
+    </fieldset>
+    <fieldset>
+      <legend>Released</legend>
+      {years.map((y) => <label><input type="checkbox" name="year" value={y} /> {y}</label>)}
+    </fieldset>
+    <fieldset>
+      <legend>Must have</legend>
+      <label><input type="checkbox" name="pta" value="1" /> PTA price only</label>
+      <label><input type="checkbox" name="official" value="1" /> Official warranty</label>
+      <label><input type="checkbox" name="5g" value="1" /> 5G</label>
+      <label><input type="checkbox" name="nfc" value="1" /> NFC</label>
+      <label><input type="checkbox" name="jack" value="1" /> Headphone jack</label>
+      <label><input type="checkbox" name="status" value="available" /> In stock widely</label>
+      <label>Battery <select name="battery"><option value="">Any</option><option value="5000">5000 mAh+</option><option value="5500">5500 mAh+</option><option value="6000">6000 mAh+</option></select></label>
+      <label>Screen <select name="hz"><option value="">Any</option><option value="90">90Hz+</option><option value="120">120Hz+</option></select></label>
+    </fieldset>
+    <fieldset>
+      <legend>Rank by</legend>
+      <label>Priority <select name="preset">{data.presets.map((p) => <option value={p.slug}>{p.name}</option>)}</select></label>
+      <label>Sort <select name="sort">
+        <option value="overall">Overall score</option>
+        <option value="price">Price, low to high</option>
+        <option value="release">Newest first</option>
+        {SCORE_KEYS.map((k) => <option value={k}>{cap(SCORE_NAMES[k])}</option>)}
+      </select></label>
+      <details>
+        <summary>Advanced: custom weights</summary>
+        <p>Leave blank to use the priority above. 0 ignores a score, 3 makes it count triple.</p>
+        {SCORE_KEYS.map((k) => <label>{cap(SCORE_NAMES[k])} <input name={`w-${k}`} type="number" min="0" max="3" step="0.25" /></label>)}
+      </details>
+    </fieldset>
+  </form>
+
+  <p id="finder-count" aria-live="polite">Showing all {ranked.length} phones</p>
+  <p id="finder-notice" class="notice" hidden></p>
+  <PhoneTable rows={ranked} brands={data.brands} />
+
+  <script type="application/json" id="finder-presets" set:html={JSON.stringify(data.presets).replace(/</g, '\\u003c')} />
+  <script src="../scripts/finder.ts"></script>
+</Base>

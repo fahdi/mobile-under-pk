@@ -19,6 +19,7 @@ const checked = latestCheck(data.phones);
   <h1>Best mobile phones in Pakistan by budget</h1>
   <p>Phones released in 2024, 2025 and 2026, up to 150,000 PKR, with PTA status, warranty and checked prices.</p>
   {checked && <PriceChecked date={checked} />}
+  {brackets.length > 0 && <p><a href={withBase('/finder/')}>Help me decide: filter and rank every phone</a></p>}
   {brackets.length > 0 ? (
     <ul class="bracket-chips">
       {brackets.map((c) => (
