@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { withBase } from '../lib/paths';
+import { ogPath } from '../lib/og';
 
 interface Props {
   title: string;
@@ -11,7 +12,9 @@ interface Props {
   noindex?: boolean;
 }
 
-const { title, description, path, jsonLd = [], ogImage, noindex = false } = Astro.props;
+const { title, description, path, jsonLd = [], noindex = false } = Astro.props;
+// Every indexable page has a share image generated at /og/<path>.png.
+const ogImage = Astro.props.ogImage ?? (noindex ? undefined : ogPath(path));
 const canonical = new URL(withBase(path), Astro.site).href;
 // Escape "<" so a value containing </script> cannot end the JSON-LD block.
 const ld = (o: object) => JSON.stringify(o).replace(/</g, '\\u003c');

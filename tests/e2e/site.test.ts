@@ -4,6 +4,7 @@ import { existsSync, mkdtempSync, readFileSync, readdirSync, statSync } from 'no
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { checkSite } from '../../scripts/lib/check-site';
+import sharp from 'sharp';
 
 // Builds the real site against tests/fixtures/site-data and inspects the HTML.
 const out = mkdtempSync(join(tmpdir(), 'mupk-site-'));
@@ -239,6 +240,24 @@ describe('sitemap and robots', () => {
     expect(robots).toContain('User-agent: *');
     expect(robots).toContain('Allow: /');
     expect(robots).toContain(`Sitemap: https://fahdi.github.io${BASE}sitemap.xml`);
+  });
+});
+
+describe('Open Graph images', () => {
+  it('every indexable page points at a 1200x630 PNG that exists', async () => {
+    const pages = all().map((f) => readFileSync(f, 'utf8')).filter((h) => !h.includes('noindex'));
+    expect(pages.length).toBeGreaterThan(10);
+    for (const html of pages) {
+      const url = html.match(/<meta property="og:image" content="([^"]+)"/)?.[1];
+      expect(url, html.match(/<title>(.*?)<\/title>/)?.[1]).toMatch(new RegExp(`^https://fahdi\\.github\\.io${BASE}og/.+\\.png$`));
+      const file = join(out, url!.slice(`https://fahdi.github.io${BASE}`.length));
+      const meta = await sharp(readFileSync(file)).metadata();
+      expect([meta.format, meta.width, meta.height]).toEqual(['png', 1200, 630]);
+    }
+  });
+
+  it('uses the large image card', () => {
+    expect(page('phones/xiaomi-redmi-note-14')).toContain('<meta name="twitter:card" content="summary_large_image">');
   });
 });
 
