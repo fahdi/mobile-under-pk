@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import { validateData } from './src/integrations/validate-data.ts';
 
 // Custom domain later: set SITE_URL=https://mobileunder.pk BASE_PATH=/
 const site = process.env.SITE_URL ?? 'https://fahdi.github.io';
@@ -9,4 +10,5 @@ export default defineConfig({
   base,
   trailingSlash: 'always',
   build: { format: 'directory' },
+  integrations: [validateData()],
 });

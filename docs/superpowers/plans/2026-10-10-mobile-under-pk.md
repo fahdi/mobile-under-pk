@@ -42,6 +42,7 @@
 | `safe-buy` preset | `requireOfficialWarranty: true` filters to phones with a PTA variant whose warranty is `official`. | Spec 8.2. |
 | Default `balanced` weights | 1.0 for all, 1.25 for `value` and `availability`. | Spec 8.1 "slightly higher". |
 | `image` field | Optional in the schema. Phone images need a licence-clean source; pages render a neutral placeholder without one. | GSMArena images are not ours to rehost. |
+| Deploy pipeline | One workflow, `ci.yml`: `verify` (validate, test, check, build, then upload the Pages artifact on main) and `deploy` (`needs: verify`, main only). No separate `deploy.yml`. Runners pinned to `ubuntu-24.04`. `astro build` also runs the data checks through `src/integrations/validate-data.ts`. `tests/workflows.test.ts` pins these rules. | Changed after M1 shipped: the original separate deploy workflow skipped tests and `astro check`, so a red main could still deploy. |
 | Price rounding to 500 | Warning, not error. | The spec's own example (119,999) is not rounded; the researcher fixes on sight. |
 | Brands list | Seeded in M1 with names and countries; `officialStoreUrl` and `warrantyNote` nullable until the M2 reconcile task fills them (warning while null). | Lets research agents run in parallel without editing a shared file. |
 
@@ -975,7 +976,7 @@ permissions:
 
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -1003,6 +1004,8 @@ Push a commit adding `data/phones/broken.json` with `{}` to the branch, confirm 
 Run: `gh pr merge --squash --delete-branch`
 
 ### Task 6: Pages deploy workflow and live placeholder
+
+> Superseded in part: deploy now lives in `ci.yml` as a `deploy` job gated on `verify` (see the Deploy pipeline row in the decisions table). The steps below are what shipped first.
 
 **Files:**
 
@@ -1034,7 +1037,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -1050,7 +1053,7 @@ jobs:
           path: dist
   deploy:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
