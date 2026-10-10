@@ -1,0 +1,53 @@
+{
+  "slug": "samsung-galaxy-a55",
+  "brand": "samsung",
+  "model": "Galaxy A55",
+  "releaseDate": "2024-03-11",
+  "status": "available",
+  "image": "/images/phones/samsung-galaxy-a55.webp",
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 128,
+      "pricePkr": 120000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        { "name": "Samsung Pakistan", "url": "https://www.samsung.com/pk/smartphones/galaxy-a/galaxy-a55-5g/" },
+        { "name": "PriceOye", "url": "https://priceoye.pk/mobiles/samsung/samsung-galaxy-a55" }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Exynos 1480",
+    "display": { "size": 6.6, "type": "Super AMOLED", "refreshHz": 120, "resolution": "1080x2340", "peakNits": 1000 },
+    "battery": { "mah": 5000, "wiredW": 25, "wirelessW": 0 },
+    "cameras": {
+      "rear": [
+        { "mp": 50, "type": "wide", "ois": true },
+        { "mp": 12, "type": "ultrawide", "ois": false },
+        { "mp": 5, "type": "macro", "ois": false }
+      ],
+      "front": { "mp": 32 },
+      "video": "4K@30fps"
+    },
+    "build": { "frame": "aluminium", "back": "glass", "front": "Gorilla Glass Victus+", "ip": "IP67" },
+    "software": { "os": "Android 14, One UI 6.1", "osUpdates": 4, "securityYears": 5 },
+    "connectivity": { "fiveG": true, "nfc": true, "jack35": false, "esim": false },
+    "weightG": 213
+  },
+  "scores": {
+    "camera": { "value": 7, "reason": "Reliable daylight shots with OIS; weak low light and no telephoto." },
+    "performance": { "value": 6, "reason": "Exynos 1480 handles daily use well; throttles in sustained gaming." },
+    "battery": { "value": 7, "reason": "Full day easily, but 25W charging is slow for this price." },
+    "display": { "value": 8, "reason": "Bright 120Hz AMOLED, one of the best in the bracket." },
+    "build": { "value": 8, "reason": "Glass and aluminium with IP67; feels like a flagship." },
+    "software": { "value": 9, "reason": "4 OS updates and 5 years of patches, class leading." },
+    "value": { "value": 6, "reason": "Pays a premium for brand and updates over Chinese rivals." },
+    "availability": { "value": 9, "reason": "Stocked everywhere, official Samsung Pakistan warranty." }
+  },
+  "tags": ["safe-buy", "long-updates"],
+  "rivals": [],
+  "notes": "Pakistan units ship with 25W charger in the box."
+}

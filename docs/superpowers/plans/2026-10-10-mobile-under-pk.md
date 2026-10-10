@@ -779,17 +779,17 @@ export interface Issue { level: 'error' | 'warning'; file: string; message: stri
 
 const fmt = (e: z.ZodError) => e.issues.map((i) => `${i.path.join('.') || '(root)'}: ${i.message}`).join('; ');
 
-function readJson(path: string, issues: Issue[]): unknown {
+function readJson(path: string, file: string, issues: Issue[]): unknown {
   try {
     return JSON.parse(readFileSync(path, 'utf8'));
   } catch (err) {
-    issues.push({ level: 'error', file: path, message: `cannot read JSON: ${(err as Error).message}` });
+    issues.push({ level: 'error', file, message: `cannot read JSON: ${(err as Error).message}` });
     return undefined;
   }
 }
 
 function parseFile<T>(root: string, rel: string, schema: z.ZodType<T>, fallback: T, issues: Issue[]): T {
-  const raw = readJson(join(root, rel), issues);
+  const raw = readJson(join(root, rel), rel, issues);
   if (raw === undefined) return fallback;
   const r = schema.safeParse(raw);
   if (!r.success) { issues.push({ level: 'error', file: rel, message: fmt(r.error) }); return fallback; }
@@ -807,7 +807,7 @@ export function loadData(root: string): { data: DataSet; issues: Issue[] } {
   const phones: Phone[] = [];
   for (const f of files) {
     const rel = `data/phones/${f}`;
-    const raw = readJson(join(dir, f), issues);
+    const raw = readJson(join(dir, f), rel, issues);
     if (raw === undefined) continue;
     const r = PhoneSchema.safeParse(raw);
     if (!r.success) { issues.push({ level: 'error', file: rel, message: fmt(r.error) }); continue; }
