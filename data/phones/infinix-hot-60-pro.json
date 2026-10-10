@@ -1,0 +1,120 @@
+{
+  "slug": "infinix-hot-60-pro",
+  "brand": "infinix",
+  "model": "Hot 60 Pro",
+  "releaseDate": "2025-07-10",
+  "status": "available",
+  "image": "/images/phones/infinix-hot-60-pro.webp",
+  "imageCredit": {
+    "name": "Infinix Nigeria",
+    "url": "https://ng.infinixmobility.com/hot-60-pro"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 128,
+      "pricePkr": 66500,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/infinix/infinix-hot-60-pro"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "MediaTek Helio G200",
+    "display": {
+      "size": 6.78,
+      "type": "AMOLED",
+      "refreshHz": 144,
+      "resolution": "1224x2720",
+      "peakNits": 4500
+    },
+    "battery": {
+      "mah": 5160,
+      "wiredW": 45,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 13
+      },
+      "video": "1440p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "Gorilla Glass 7i",
+      "ip": "IP64"
+    },
+    "software": {
+      "os": "Android 15, XOS 15.1",
+      "osUpdates": 3,
+      "securityYears": 5
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": true,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 170
+  },
+  "scores": {
+    "camera": {
+      "value": 5,
+      "reason": "Single 50MP f/1.6 main camera with no OIS and no ultrawide."
+    },
+    "performance": {
+      "value": 6,
+      "reason": "Helio G200 is smooth in daily use and handles casual gaming."
+    },
+    "battery": {
+      "value": 7,
+      "reason": "5,160mAh with 45W charging gets to 50% in about 22 minutes."
+    },
+    "display": {
+      "value": 9,
+      "reason": "6.78 inch 1.5K AMOLED at 144Hz with 1,600 nits in high brightness mode."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Very slim 6.6mm plastic body with a Gorilla Glass 7i front and IP64."
+    },
+    "software": {
+      "value": 7,
+      "reason": "Infinix promises 3 major Android upgrades and 5 years of security patches."
+    },
+    "value": {
+      "value": 8,
+      "reason": "The sharpest and fastest refreshing screen in the bracket at 66,500, with a 3.5mm jack and NFC."
+    },
+    "availability": {
+      "value": 7,
+      "reason": "In stock at PriceOye (Titanium Silver only) and Mega.pk, with official Infinix warranty."
+    }
+  },
+  "tags": [
+    "amoled",
+    "fast-charging",
+    "nfc",
+    "compact"
+  ],
+  "rivals": [
+    "xiaomi-redmi-note-15",
+    "samsung-galaxy-a17",
+    "tecno-spark-50-pro"
+  ],
+  "notes": "On 2026-10-10 PriceOye had only the Titanium Silver colour in stock; other colours were sold out. Mega.pk lists it at 73,999 and WhatMobile shows the official price as 77,999."
+}

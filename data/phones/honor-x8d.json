@@ -1,0 +1,125 @@
+{
+  "slug": "honor-x8d",
+  "brand": "honor",
+  "model": "X8d",
+  "releaseDate": "2025-12-12",
+  "status": "available",
+  "image": "/images/phones/honor-x8d.webp",
+  "imageCredit": {
+    "name": "HONOR Pakistan",
+    "url": "https://www.honor.com/pk/phones/honor-x8d/"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 256,
+      "pricePkr": 78000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/honor/honor-x8d"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Snapdragon 6s 4G Gen 2",
+    "display": {
+      "size": 6.77,
+      "type": "AMOLED",
+      "refreshHz": 120,
+      "resolution": "1080x2392",
+      "peakNits": 3000
+    },
+    "battery": {
+      "mah": 7000,
+      "wiredW": 45,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 108,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 5,
+          "type": "ultrawide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 16
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": "IP65"
+    },
+    "software": {
+      "os": "Android 16, MagicOS 10",
+      "osUpdates": 2,
+      "securityYears": 3
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": true,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 188
+  },
+  "scores": {
+    "camera": {
+      "value": 7,
+      "reason": "108MP main camera with OIS plus a 5MP ultrawide."
+    },
+    "performance": {
+      "value": 5,
+      "reason": "Snapdragon 6s 4G Gen 2 is smooth in daily use and light gaming."
+    },
+    "battery": {
+      "value": 9,
+      "reason": "7,000mAh with 45W charging lasts close to two days."
+    },
+    "display": {
+      "value": 8,
+      "reason": "6.77 inch FHD+ AMOLED at 120Hz with 1,300 nits high brightness and a 3,000 nit peak."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Plastic frame and back with IP65 and a 2m drop rating."
+    },
+    "software": {
+      "value": 5,
+      "reason": "HONOR has not published an X8d policy; 2 Android upgrades is an assumption."
+    },
+    "value": {
+      "value": 6,
+      "reason": "Combines AMOLED, an OIS camera and 7,000mAh, but at 78,000 for 256GB it sits at the top of the bracket."
+    },
+    "availability": {
+      "value": 7,
+      "reason": "In stock in three colours at PriceOye with official HONOR warranty."
+    }
+  },
+  "tags": [
+    "amoled",
+    "big-battery",
+    "fast-charging",
+    "nfc"
+  ],
+  "rivals": [
+    "xiaomi-redmi-note-15",
+    "samsung-galaxy-a17",
+    "vivo-y31d"
+  ],
+  "notes": "Pakistan sells only the 8GB 256GB. WhatMobile shows the official price as 84,999; PriceOye sells it at 77,999. First listed in December 2025; most official launches were in 2026. Only PriceOye was checked for stock. Update policy assumed."
+}

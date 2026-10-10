@@ -1,0 +1,120 @@
+{
+  "slug": "infinix-hot-70",
+  "brand": "infinix",
+  "model": "Hot 70",
+  "releaseDate": "2026-05-25",
+  "status": "available",
+  "image": "/images/phones/infinix-hot-70.webp",
+  "imageCredit": {
+    "name": "Infinix Nigeria",
+    "url": "https://ng.infinixmobility.com/hot-70"
+  },
+  "variants": [
+    {
+      "ram": 6,
+      "storage": 128,
+      "pricePkr": 63000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/infinix/infinix-hot-70"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "MediaTek Helio G100 Ultimate",
+    "display": {
+      "size": 6.78,
+      "type": "IPS LCD",
+      "refreshHz": 120,
+      "resolution": "720x1576",
+      "peakNits": 700
+    },
+    "battery": {
+      "mah": 6000,
+      "wiredW": 45,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 8
+      },
+      "video": "1440p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": "IP65"
+    },
+    "software": {
+      "os": "Android 16, XOS 16",
+      "osUpdates": 3,
+      "securityYears": 3
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": true,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 195
+  },
+  "scores": {
+    "camera": {
+      "value": 4,
+      "reason": "Single 50MP main camera without OIS and an 8MP selfie camera."
+    },
+    "performance": {
+      "value": 6,
+      "reason": "Helio G100 Ultimate is smooth in daily use and light gaming."
+    },
+    "battery": {
+      "value": 8,
+      "reason": "6,000mAh with 45W charging lasts a full day plus and reaches 50% in about 25 minutes."
+    },
+    "display": {
+      "value": 4,
+      "reason": "HD+ IPS LCD at 120Hz with only 700 nits in high brightness mode."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Plastic body with IP65 water jet resistance and a 1.5m drop rating."
+    },
+    "software": {
+      "value": 7,
+      "reason": "GSMArena and WhatMobile list up to 3 major Android upgrades from Android 16."
+    },
+    "value": {
+      "value": 6,
+      "reason": "Cheapest phone in the bracket at 63,000 with a big battery, NFC and a jack, but the HD+ LCD lags AMOLED rivals."
+    },
+    "availability": {
+      "value": 7,
+      "reason": "In stock in four colours at PriceOye with official Infinix warranty."
+    }
+  },
+  "tags": [
+    "big-battery",
+    "fast-charging",
+    "nfc",
+    "budget"
+  ],
+  "rivals": [
+    "tecno-spark-50-pro",
+    "realme-c100x",
+    "vivo-y31d"
+  ],
+  "notes": "Pakistan sells the 6GB 128GB only. Only PriceOye was checked for stock. Security patch years are not published for the Hot 70; 3 years is an assumption."
+}

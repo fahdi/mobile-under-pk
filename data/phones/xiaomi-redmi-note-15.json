@@ -1,0 +1,135 @@
+{
+  "slug": "xiaomi-redmi-note-15",
+  "brand": "xiaomi",
+  "model": "Redmi Note 15",
+  "releaseDate": "2025-12-18",
+  "status": "available",
+  "image": "/images/phones/xiaomi-redmi-note-15.webp",
+  "imageCredit": {
+    "name": "Xiaomi Global",
+    "url": "https://www.mi.com/global/product/redmi-note-15/"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 128,
+      "pricePkr": 68000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/xiaomi/xiaomi-redmi-note-15"
+        }
+      ]
+    },
+    {
+      "ram": 8,
+      "storage": 256,
+      "pricePkr": 73000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/xiaomi/xiaomi-redmi-note-15"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "MediaTek Helio G100 Ultra",
+    "display": {
+      "size": 6.77,
+      "type": "AMOLED",
+      "refreshHz": 120,
+      "resolution": "1080x2392",
+      "peakNits": 3200
+    },
+    "battery": {
+      "mah": 6000,
+      "wiredW": 33,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 108,
+          "type": "wide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 20
+      },
+      "video": "1080p@60fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": "IP64"
+    },
+    "software": {
+      "os": "Android 15, HyperOS 2",
+      "osUpdates": 4,
+      "securityYears": 6
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": true,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 183.7
+  },
+  "scores": {
+    "camera": {
+      "value": 6,
+      "reason": "108MP main camera is detailed in daylight but has no OIS and no ultrawide."
+    },
+    "performance": {
+      "value": 6,
+      "reason": "Helio G100 Ultra handles daily use and casual gaming smoothly."
+    },
+    "battery": {
+      "value": 8,
+      "reason": "6,000mAh with 33W charging lasts a full day plus."
+    },
+    "display": {
+      "value": 8,
+      "reason": "6.77 inch FHD+ AMOLED at 120Hz with a 3,200 nit peak."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Plastic frame and back with IP64 dust and splash resistance."
+    },
+    "software": {
+      "value": 9,
+      "reason": "GSMArena lists up to 4 major Android upgrades."
+    },
+    "value": {
+      "value": 8,
+      "reason": "FHD+ 120Hz AMOLED, 108MP camera and 6,000mAh at 68,000 is one of the strongest packages in the bracket."
+    },
+    "availability": {
+      "value": 8,
+      "reason": "In stock at PriceOye and Mega.pk with official Xiaomi warranty."
+    }
+  },
+  "tags": [
+    "amoled",
+    "big-battery",
+    "fast-charging",
+    "long-updates",
+    "nfc"
+  ],
+  "rivals": [
+    "samsung-galaxy-a17",
+    "infinix-hot-60-pro",
+    "honor-x8d"
+  ],
+  "notes": "Pakistan model is the 4G Helio G100 Ultra version, not the Redmi Note 15 5G. Mega.pk lists the 8GB 128GB at 65,999 on 2026-10-10; WhatMobile lists the official price as 75,999. Security update years assumed from the Redmi Note 14 4G policy; Xiaomi has not published a Note 15 4G figure."
+}

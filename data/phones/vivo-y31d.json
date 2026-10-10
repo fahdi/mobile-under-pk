@@ -1,0 +1,151 @@
+{
+  "slug": "vivo-y31d",
+  "brand": "vivo",
+  "model": "Y31d",
+  "releaseDate": "2026-01-16",
+  "status": "available",
+  "image": "/images/phones/vivo-y31d.webp",
+  "imageCredit": {
+    "name": "vivo Pakistan",
+    "url": "https://www.vivo.com/pk/products/y31d"
+  },
+  "variants": [
+    {
+      "ram": 6,
+      "storage": 128,
+      "pricePkr": 67500,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/vivo/vivo-y31d"
+        }
+      ]
+    },
+    {
+      "ram": 8,
+      "storage": 128,
+      "pricePkr": 75000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/vivo/vivo-y31d"
+        }
+      ]
+    },
+    {
+      "ram": 8,
+      "storage": 256,
+      "pricePkr": 86000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/vivo/vivo-y31d"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Snapdragon 6s 4G Gen 2",
+    "display": {
+      "size": 6.75,
+      "type": "IPS LCD",
+      "refreshHz": 120,
+      "resolution": "720x1570",
+      "peakNits": 1250
+    },
+    "battery": {
+      "mah": 7200,
+      "wiredW": 44,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": false
+        },
+        {
+          "mp": 2,
+          "type": "depth",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 8
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": "IP68/IP69"
+    },
+    "software": {
+      "os": "Android 16, OriginOS 6",
+      "osUpdates": 2,
+      "securityYears": 3
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 219
+  },
+  "scores": {
+    "camera": {
+      "value": 4,
+      "reason": "50MP f/2.0 main camera with a 2MP helper, no OIS and no ultrawide."
+    },
+    "performance": {
+      "value": 5,
+      "reason": "Snapdragon 6s 4G Gen 2 is smooth in daily use and light gaming."
+    },
+    "battery": {
+      "value": 9,
+      "reason": "7,200mAh with 44W charging lasts close to two days."
+    },
+    "display": {
+      "value": 4,
+      "reason": "HD+ IPS LCD at 120Hz with 1,250 nits in high brightness mode."
+    },
+    "build": {
+      "value": 6,
+      "reason": "Plastic body but rated IP68 and IP69 against dust and high pressure water."
+    },
+    "software": {
+      "value": 5,
+      "reason": "vivo commits to 3 years of security updates; 2 Android upgrades is an assumption."
+    },
+    "value": {
+      "value": 5,
+      "reason": "Big battery and IP69 at 67,500, but an HD+ LCD and no NFC trail the AMOLED rivals."
+    },
+    "availability": {
+      "value": 6,
+      "reason": "Only a few Starlight Gray units of the 6GB 128GB in stock at PriceOye; 8GB versions are better stocked."
+    }
+  },
+  "tags": [
+    "big-battery",
+    "fast-charging"
+  ],
+  "rivals": [
+    "realme-c100x",
+    "tecno-spark-50-pro",
+    "infinix-hot-70"
+  ],
+  "notes": "On 2026-10-10 PriceOye had the 6GB 128GB in stock only in grey (5 units). WhatMobile shows the official price as 72,999. Only PriceOye was checked for stock. Update policy and 3.5mm jack absence are not confirmed by vivo."
+}

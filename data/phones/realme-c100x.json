@@ -1,0 +1,132 @@
+{
+  "slug": "realme-c100x",
+  "brand": "realme",
+  "model": "C100x",
+  "releaseDate": "2026-05-07",
+  "status": "available",
+  "image": "/images/phones/realme-c100x.webp",
+  "imageCredit": {
+    "name": "realme Pakistan",
+    "url": "https://www.realme.com/pk/realme-c100x"
+  },
+  "variants": [
+    {
+      "ram": 6,
+      "storage": 128,
+      "pricePkr": 67500,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/realme/realme-c100x"
+        }
+      ]
+    },
+    {
+      "ram": 8,
+      "storage": 128,
+      "pricePkr": 69000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/realme/realme-c100x"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Unisoc T7250",
+    "display": {
+      "size": 6.8,
+      "type": "IPS LCD",
+      "refreshHz": 120,
+      "resolution": "720x1570",
+      "peakNits": 900
+    },
+    "battery": {
+      "mah": 8000,
+      "wiredW": 45,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 5
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "ArmorShell glass",
+      "ip": "IP64"
+    },
+    "software": {
+      "os": "Android 16, realme UI",
+      "osUpdates": 2,
+      "securityYears": 3
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 219
+  },
+  "scores": {
+    "camera": {
+      "value": 4,
+      "reason": "Single 50MP main camera without OIS and a weak 5MP selfie camera."
+    },
+    "performance": {
+      "value": 4,
+      "reason": "Unisoc T7250 with eMMC 5.1 storage is the slowest chip in the bracket."
+    },
+    "battery": {
+      "value": 9,
+      "reason": "8,000mAh with 45W charging, the biggest battery in the bracket, lasts two days."
+    },
+    "display": {
+      "value": 4,
+      "reason": "HD+ IPS LCD at 120Hz with 900 nits in high brightness mode."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Plastic body with IP64, a 2m drop rating and MIL-STD-810H claims."
+    },
+    "software": {
+      "value": 5,
+      "reason": "realme has not published a C100x policy; 2 OS updates and 3 years of patches assumed from realme's minimum."
+    },
+    "value": {
+      "value": 4,
+      "reason": "The 8,000mAh battery is the only standout; an entry chip, HD+ LCD and no NFC at 67,500 lose to most rivals."
+    },
+    "availability": {
+      "value": 7,
+      "reason": "In stock at PriceOye in both colours with official realme warranty."
+    }
+  },
+  "tags": [
+    "big-battery",
+    "fast-charging"
+  ],
+  "rivals": [
+    "vivo-y31d",
+    "infinix-hot-70",
+    "tecno-spark-50-pro"
+  ],
+  "notes": "Only PriceOye was checked for stock; the 8GB 128GB was in stock only in Deepblue Tides. WhatMobile shows the official price as 69,999. Pakistan units lack NFC per WhatMobile. The update policy is assumed."
+}
