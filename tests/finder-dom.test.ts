@@ -54,6 +54,14 @@ describe('applyResults', () => {
   });
 });
 
+describe('applyResults with no matches', () => {
+  it('hides every row and says how to widen the search', () => {
+    applyResults(document, [], 3);
+    expect(visible()).toEqual([]);
+    expect(document.getElementById('finder-count')!.textContent).toBe('No phones match these filters. Try a higher budget or fewer must-haves.');
+  });
+});
+
 describe('readForm and writeForm', () => {
   it('round-trip a full state', () => {
     const s = { ...DEFAULT_STATE, min: 20000, max: 50000, brands: ['xiaomi'], years: [2025], statuses: ['available' as const],
