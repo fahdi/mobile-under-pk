@@ -7,7 +7,7 @@ interface Job { 'runs-on': string; needs?: string | string[]; if?: string; permi
 const ci = parse(readFileSync('.github/workflows/ci.yml', 'utf8')) as {
   on: Record<string, unknown>; permissions: Record<string, string>; jobs: Record<string, Job>;
 };
-const { verify, deploy } = ci.jobs;
+const { verify, deploy, lighthouse } = ci.jobs;
 
 describe('CI and deploy workflow', () => {
   it('pins every job to a fixed runner image', () => {
@@ -22,6 +22,11 @@ describe('CI and deploy workflow', () => {
   it('takes the Node version from .nvmrc', () => {
     const node = verify.steps!.find((s) => s.uses?.startsWith('actions/setup-node@'));
     expect(node?.with?.['node-version-file']).toBe('.nvmrc');
+  });
+
+  it('runs Lighthouse on a fresh build and blocks deploy on it', () => {
+    expect(lighthouse?.steps?.flatMap((s) => (s.run ? [s.run] : []))).toEqual(['npm ci', 'npm run build', 'npm run ci:lhci']);
+    expect([deploy.needs].flat()).toContain('lighthouse');
   });
 
   it('deploys only after verify passes, and only from main', () => {

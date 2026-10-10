@@ -1,0 +1,40 @@
+{
+  "ci": {
+    "collect": {
+      "staticDistDir": "./dist-ci",
+      "url": [
+        "http://localhost/mobile-under-pk/",
+        "http://localhost/mobile-under-pk/mobile-under-50000-in-pakistan/",
+        "http://localhost/mobile-under-pk/phones/xiaomi-redmi-15c/",
+        "http://localhost/mobile-under-pk/finder/"
+      ],
+      "numberOfRuns": 1
+    },
+    "assert": {
+      "assertions": {
+        "categories:seo": [
+          "error",
+          {
+            "minScore": 1
+          }
+        ],
+        "categories:performance": [
+          "error",
+          {
+            "minScore": 0.95
+          }
+        ],
+        "categories:accessibility": [
+          "error",
+          {
+            "minScore": 0.95
+          }
+        ]
+      }
+    },
+    "upload": {
+      "target": "filesystem",
+      "outputDir": "./.lighthouseci"
+    }
+  }
+}
