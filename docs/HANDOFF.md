@@ -1,25 +1,28 @@
 # Handoff - MobileUnder.pk
 
-Last updated: 2026-10-10 12:41 PKT
+Last updated: 2026-10-10 14:20 PKT
 
 ## State
 
-- Spec approved by Fahad on 2026-10-10. Do not re-litigate decisions in it.
-- Repo created and pushed: https://github.com/fahdi/mobile-under-pk (public, `main`).
-- Local path: `/Users/isupercoder/Code/mobile-phone-under` (folder name differs from repo name, that is fine).
-- Plan written: `docs/superpowers/plans/2026-10-10-mobile-under-pk.md` (33 tasks, six milestones, plus a table of implementation choices it made).
-- Issues #1 to #33 created, issue number = plan task number, labelled by milestone and area.
-- Milestone 1 done (#1 to #6 closed): Astro 7 + TS 6 scaffold, Zod schemas, loader, cross-checks, `npm run validate`, Vitest (29 tests), CI (`verify` job, proven red on bad data via PR #34), Pages deploy. Live at https://fahdi.github.io/mobile-under-pk/ with a placeholder, no console errors.
-- Pipeline hardened (PR #35): one workflow `ci.yml`, `deploy` job `needs: verify` and runs on main only, runners pinned to `ubuntu-24.04`, and `astro build` itself fails on invalid data. `tests/workflows.test.ts` pins these rules. Work TDD: failing test first, every time (Fahad, 2026-10-10).
-- Thin slice shipped (PR #36), done ahead of plan order at Fahad's request so something usable is live: 7 phones in the 50,000 bracket, `/mobile-under-50000-in-pakistan/`, `/phones/<slug>/`, hub listing brackets. Closed #7, #18, #19. Partly done: #12 (caveats in its comment), #20 (bracket FAQ copy missing), #21 (brand, year, compare links pending #22 and #24).
-- `tests/e2e/site.test.ts` builds the site against `tests/fixtures/site-data` (`DATA_ROOT` env) and fails on any broken internal link.
-- Local dev: `npx astro dev` daemonises in Astro 7 (`astro dev stop` / `astro dev status`).
+- Spec approved 2026-10-10. Plan: `docs/superpowers/plans/2026-10-10-mobile-under-pk.md` (deviations noted inline in the plan).
+- All six milestones built and live at https://fahdi.github.io/mobile-under-pk/ (2026-10-10, about 14:15 PKT): 56 phones across all ten brackets, each with an official photo; bracket, phone, brand, year, compare, intent and finder pages; sitemap, robots, JSON-LD and an OG image per page.
+- CI (`ci.yml`): validate, ~197 tests (unit, Astro components, end-to-end build on `tests/fixtures/site-data`), astro check, build, `check:site`, Lighthouse mobile (median of 3; SEO 100, perf and a11y 95+). `deploy` needs `verify` and `lighthouse`, main only.
+- Open issues: #8, #10, #13 (brackets short of target, held-back phones listed there), #32 (first price refresh, due about 2026-11-10), #33 (Rich Results Test and Search Console need Fahad).
+- Held-back phone files (doubtful prices) live only in the session scratchpad, not the repo; details on #10 and #13.
+
+## Working rules learned this session
+
+- Work TDD: failing test first, every time, including workflow and config changes (Fahad, 2026-10-10).
+- Merge only after `gh pr checks --watch` succeeds; one PR was merged with a failed Lighthouse check before the gate moved to median of 3.
+- Push with `GIT_SSH_COMMAND="ssh -o BatchMode=yes"` and a timeout; a plain push hung on a prompt once.
+- Verify research agents' output yourself: look at every processed photo, re-check doubtful prices, hold back phones whose only in-bracket price is a list price contradicted by retailers.
+- In zsh, put multiple paths in an array (`F=(a b)`, `"${F[@]}"`); `$F` does not split.
 
 ## Read first
 
 - `docs/superpowers/specs/2026-10-10-mobile-under-pk-design.md` - the PRD. Sections 5 (decisions), 6 (data model), 12 (repo layout), 14 (milestones) are the ones implementation depends on.
 
-## Next steps, in order
+## Next steps, in order (original list, all done except where the State section says otherwise)
 
 Steps 1 to 3 are done. Continue from step 4, starting with plan Task 7 (#7, `docs/RESEARCH.md`) before fanning out.
 
