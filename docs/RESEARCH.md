@@ -21,13 +21,14 @@ Every variant needs at least one source URL that shows the price you recorded. L
 ## Prices
 
 - Record the lowest price from an official or PTA approved listing for that exact RAM and storage.
+- Ignore a price shown on an out-of-stock listing; it is often stale. Use the next in-stock or official listing instead, and record the ignored figure in `notes`.
 - Round to the nearest 500 PKR (119,999 becomes 120,000). Unrounded prices raise a validation warning.
 - `priceCheckedAt` is the date you looked, as an ISO date in PKT. The validator compares against the UTC date, so a check made after 19:00 PKT can read as "in the future" until UTC midnight; use the UTC date if that happens.
 - A non-PTA (grey market) listing may be recorded as its own variant with `"pta": false` and `"warranty": "none"`. Brackets and headline prices always use the cheapest PTA variant.
 
 ## Status
 
-- `available`: two or more mainstream retailers list it in stock.
+- `available`: two or more mainstream retailers list it in stock. If only one retailer can be checked (Daraz often blocks automated checks), say so in `notes`.
 - `limited`: only one retailer, or only grey market stock.
 - `discontinued`: the brand lists it as discontinued, or no Pakistani retailer stocks it.
 
