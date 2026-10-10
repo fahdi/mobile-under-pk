@@ -7,6 +7,7 @@ import { getData } from '../../lib/data';
 import { assignBracket, bracketSlug, cheapestPtaVariant } from '../../lib/brackets';
 import { formatDate, formatPkr, latestCheck, phoneName } from '../../lib/format';
 import { overallScore } from '../../lib/scoring';
+import { canonicalPair, pairSlug } from '../../lib/compare';
 import { absUrl, breadcrumbLd, productLd } from '../../lib/seo';
 import { withBase } from '../../lib/paths';
 import type { Phone } from '../../schema/phone';
@@ -88,7 +89,7 @@ const description = `${name} price in Pakistan from ${formatPkr(cheapest.pricePk
   {rivals.length > 0 && (
     <section>
       <h2>Alternatives to consider</h2>
-      <ul>{rivals.map((r) => <li><a href={withBase(`/phones/${r.slug}/`)}>{phoneName(r, data.brands)}</a></li>)}</ul>
+      <ul>{rivals.map((r) => <li><a href={withBase(`/compare/${pairSlug(...canonicalPair(phone.slug, r.slug))}/`)}>{name} vs {phoneName(r, data.brands)}</a></li>)}</ul>
     </section>
   )}
 

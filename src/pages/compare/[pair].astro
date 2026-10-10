@@ -1,0 +1,80 @@
+---
+import Base from '../../layouts/Base.astro';
+import Redirect from '../../layouts/Redirect.astro';
+import PriceChecked from '../../components/PriceChecked.astro';
+import { getData } from '../../lib/data';
+import { cheapestPtaVariant } from '../../lib/brackets';
+import { comparePaths, pairSlug, SCORE_NAMES, verdict, type CompareProps } from '../../lib/compare';
+import { formatPkr, latestCheck, phoneName } from '../../lib/format';
+import { overallScore } from '../../lib/scoring';
+import { absUrl, breadcrumbLd, itemListLd } from '../../lib/seo';
+import { withBase } from '../../lib/paths';
+import { SCORE_KEYS, type Phone } from '../../schema/phone';
+
+export function getStaticPaths() {
+  return comparePaths(getData().phones);
+}
+
+const props = Astro.props as CompareProps;
+const data = getData();
+const find = (slug: string) => data.phones.find((p) => p.slug === slug)!;
+const balanced = data.presets.find((p) => p.slug === 'balanced')!;
+
+const pair = props.kind === 'page' ? [find(props.a), find(props.b)] as const : undefined;
+const names = pair?.map((p) => phoneName(p, data.brands)) ?? [];
+const path = props.kind === 'page' ? `/compare/${pairSlug(props.a, props.b)}/` : '';
+const cls = (mine: number, theirs: number, lowerWins = false) => ((lowerWins ? mine < theirs : mine > theirs) ? 'win' : undefined);
+const price = (p: Phone) => cheapestPtaVariant(p)!.pricePkr;
+const overall = (p: Phone) => overallScore(p.scores, balanced.weights);
+const specRows: Array<[string, (p: Phone) => string]> = [
+  ['Chipset', (p) => p.specs.chipset],
+  ['Display', (p) => `${p.specs.display.size} inch ${p.specs.display.type}, ${p.specs.display.refreshHz}Hz`],
+  ['Battery', (p) => `${p.specs.battery.mah} mAh, ${p.specs.battery.wiredW}W`],
+  ['Main camera', (p) => `${p.specs.cameras.rear[0].mp} MP${p.specs.cameras.rear[0].ois ? ' with OIS' : ''}`],
+  ['Updates', (p) => `${p.specs.software.osUpdates} OS, ${p.specs.software.securityYears} years security`],
+  ['IP rating', (p) => p.specs.build.ip ?? 'None'],
+  ['5G', (p) => (p.specs.connectivity.fiveG ? 'Yes' : 'No')],
+  ['Weight', (p) => `${p.specs.weightG} g`],
+];
+---
+{props.kind === 'redirect' ? (
+  <Redirect to={`/compare/${props.to}/`} />
+) : (
+  <Base
+    title={`${names[0]} vs ${names[1]}: price in Pakistan and specs`}
+    description={`${names[0]} (${formatPkr(price(pair![0]))}) vs ${names[1]} (${formatPkr(price(pair![1]))}) compared on PTA price, camera, battery, display and software updates. ${verdict(names[0], pair![0].scores, names[1], pair![1].scores)}`}
+    path={path}
+    jsonLd={[
+      itemListLd(pair!.map((p, i) => ({ name: names[i], url: absUrl(`/phones/${p.slug}/`, Astro.site!) }))),
+      breadcrumbLd([{ name: 'Home', path: '/' }, { name: `${names[0]} vs ${names[1]}`, path }], Astro.site!),
+    ]}
+  >
+    <nav aria-label="Breadcrumb"><a href={withBase('/')}>Home</a> / Compare</nav>
+    <h1>{names[0]} vs {names[1]}</h1>
+    <p class="verdict">{verdict(names[0], pair![0].scores, names[1], pair![1].scores)}</p>
+    <PriceChecked date={latestCheck([...pair!])!} />
+    <div class="table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            {pair!.map((p, i) => (
+              <th scope="col">
+                <img src={withBase(p.image)} alt={names[i]} width="600" height="800" loading={i === 0 ? undefined : 'lazy'} decoding="async" />
+                <a href={withBase(`/phones/${p.slug}/`)}>{names[i]}</a>
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">PTA price</th>{pair!.map((p, i) => <td class={cls(price(p), price(pair![1 - i]), true)}>{formatPkr(price(p))}</td>)}</tr>
+          <tr><th scope="row">Overall</th>{pair!.map((p, i) => <td class={cls(overall(p), overall(pair![1 - i]))}>{overall(p).toFixed(1)}/10</td>)}</tr>
+          {SCORE_KEYS.map((k) => (
+            <tr><th scope="row">{SCORE_NAMES[k][0].toUpperCase() + SCORE_NAMES[k].slice(1)}</th>{pair!.map((p, i) => <td class={cls(p.scores[k].value, pair![1 - i].scores[k].value)}>{p.scores[k].value}/10</td>)}</tr>
+          ))}
+          {specRows.map(([label, f]) => <tr><th scope="row">{label}</th>{pair!.map((p) => <td>{f(p)}</td>)}</tr>)}
+        </tbody>
+      </table>
+    </div>
+  </Base>
+)}

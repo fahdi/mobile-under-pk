@@ -103,6 +103,35 @@ describe('phone page', () => {
   });
 });
 
+describe('compare pages', () => {
+  const pair = 'samsung-galaxy-a16-vs-xiaomi-redmi-note-14';
+
+  it('builds the canonical pair with both phones, a verdict and JSON-LD', () => {
+    const html = page(`compare/${pair}`);
+    expect(html).toContain('<title>Samsung Galaxy A16 vs Xiaomi Redmi Note 14: price in Pakistan and specs</title>');
+    expect(html).toContain('class="verdict"');
+    expect(html).toContain('Pick Xiaomi Redmi Note 14 for camera');
+    expect(count(html, /<img [^>]*images\/phones\//g)).toBe(2);
+    expect(html).toMatch(/<td class="win">8\/10<\/td>/);
+    expect(jsonLd(html).map((o) => o['@type']).sort()).toEqual(['BreadcrumbList', 'ItemList']);
+  });
+
+  it('redirects the reverse order to the canonical page and keeps it out of the index', () => {
+    const html = page('compare/xiaomi-redmi-note-14-vs-samsung-galaxy-a16');
+    expect(html).toContain(`<meta http-equiv="refresh" content="0; url=${BASE}compare/${pair}/">`);
+    expect(html).toContain('<meta name="robots" content="noindex">');
+    expect(html).toContain(`<link rel="canonical" href="https://fahdi.github.io${BASE}compare/${pair}/">`);
+  });
+
+  it('builds no compare page for phones that are not declared rivals', () => {
+    expect(existsSync(join(out, 'compare/samsung-galaxy-a15-vs-samsung-galaxy-a16'))).toBe(false);
+  });
+
+  it('is linked from each rival phone page', () => {
+    expect(page('phones/xiaomi-redmi-note-14')).toContain(`href="${BASE}compare/${pair}/"`);
+  });
+});
+
 describe('brand page', () => {
   const html = () => page('brands/samsung');
 
