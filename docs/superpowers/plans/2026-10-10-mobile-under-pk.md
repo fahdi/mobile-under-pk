@@ -1595,6 +1595,8 @@ describe('url state', () => {
 
 ### Task 28: Sitemap and robots
 
+> Changed in implementation: `src/pages/sitemap.xml.ts` built from the same path functions as the pages (`src/lib/sitemap.ts`) instead of `@astrojs/sitemap` with a filter. Redirect pages are excluded by construction and there is no extra dependency. The URL is `sitemap.xml`, not `sitemap-index.xml`.
+
 **Files:**
 
 - Create: `src/pages/robots.txt.ts`
