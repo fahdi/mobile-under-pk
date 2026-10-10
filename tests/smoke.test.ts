@@ -7,4 +7,8 @@ describe('astro config', () => {
     expect(config.site).toBe('https://fahdi.github.io');
     expect(config.trailingSlash).toBe('always');
   });
+
+  it('registers the build-time data validation', () => {
+    expect(config.integrations?.map((i) => (i as { name: string }).name)).toContain('validate-data');
+  });
 });
