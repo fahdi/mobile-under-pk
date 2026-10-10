@@ -4,6 +4,11 @@
   "model": "Redmi Note 14",
   "releaseDate": "2024-03-11",
   "status": "available",
+  "image": "/images/phones/xiaomi-redmi-note-14.webp",
+  "imageCredit": {
+    "name": "Samsung Newsroom",
+    "url": "https://news.samsung.com/global/"
+  },
   "variants": [
     {
       "ram": 8,

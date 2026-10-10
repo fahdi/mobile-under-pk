@@ -81,7 +81,8 @@ export const PhoneSchema = z.strictObject({
     'release year must be 2024, 2025 or 2026',
   ),
   status: z.enum(STATUSES),
-  image: z.string().regex(/^\/images\/phones\/[a-z0-9-]+\.webp$/).optional(),
+  image: z.string().regex(/^\/images\/phones\/[a-z0-9-]+\.webp$/),
+  imageCredit: SourceSchema,
   variants: z.array(VariantSchema).min(1),
   specs: SpecsSchema,
   scores: z.strictObject(

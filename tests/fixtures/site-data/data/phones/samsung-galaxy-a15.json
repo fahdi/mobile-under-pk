@@ -4,6 +4,11 @@
   "model": "Galaxy A15",
   "releaseDate": "2024-03-11",
   "status": "discontinued",
+  "image": "/images/phones/samsung-galaxy-a15.webp",
+  "imageCredit": {
+    "name": "Samsung Newsroom",
+    "url": "https://news.samsung.com/global/"
+  },
   "variants": [
     {
       "ram": 8,

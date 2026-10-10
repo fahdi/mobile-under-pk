@@ -44,6 +44,10 @@ const description = `${name} price in Pakistan from ${formatPkr(cheapest.pricePk
 <Base title={`${name} price in Pakistan (${month} ${year})`} description={description} path={path} jsonLd={jsonLd}>
   <nav aria-label="Breadcrumb"><a href={withBase('/')}>Home</a> / <a href={withBase(bracketPath)}>Under {money}</a> / {name}</nav>
   <h1>{name} price in Pakistan</h1>
+  <figure class="phone-photo">
+    <img src={withBase(phone.image)} alt={name} width="600" height="800" fetchpriority="high" decoding="async" />
+    <figcaption>Photo: <a href={phone.imageCredit.url} rel="nofollow noopener">{phone.imageCredit.name}</a></figcaption>
+  </figure>
   {phone.status !== 'available' && <p class="notice">{STATUS_NOTE[phone.status]}</p>}
   <p>From <strong>{formatPkr(cheapest.pricePkr)}</strong> PTA approved. Overall score <strong>{overall.toFixed(1)}/10</strong>.</p>
   <PriceChecked date={checked} />

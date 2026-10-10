@@ -22,6 +22,8 @@ export function makePhone(overrides: Partial<Phone> = {}): Phone {
     model: 'Galaxy A55',
     releaseDate: '2024-03-11',
     status: 'available',
+    image: '/images/phones/samsung-galaxy-a55.webp',
+    imageCredit: { name: 'Samsung Newsroom', url: 'https://news.samsung.com/global/' },
     variants: [makeVariant()],
     specs: {
       chipset: 'Exynos 1480',

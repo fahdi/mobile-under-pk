@@ -6,10 +6,17 @@ import { withBase } from '../lib/paths';
 
 interface Props { ranked: Ranked; brands: Brand[]; rank: number; reason: string }
 const { ranked, brands, rank, reason } = Astro.props;
+const name = phoneName(ranked.phone, brands);
+const href = withBase(`/phones/${ranked.phone.slug}/`);
+// The first pick is usually the largest image above the fold.
+const loading = rank === 1 ? { fetchpriority: 'high' as const } : { loading: 'lazy' as const };
 ---
 <li class="pick">
+  <a href={href} class="pick-photo" tabindex="-1" aria-hidden="true">
+    <img src={withBase(ranked.phone.image)} alt="" width="600" height="800" decoding="async" {...loading} />
+  </a>
   <p class="pick-rank">#{rank}</p>
-  <h3><a href={withBase(`/phones/${ranked.phone.slug}/`)}>{phoneName(ranked.phone, brands)}</a></h3>
+  <h3><a href={href}>{name}</a></h3>
   <p><strong>{formatPkr(ranked.price)}</strong> PTA, score {ranked.overall.toFixed(1)}/10</p>
   <p>{reason}</p>
 </li>

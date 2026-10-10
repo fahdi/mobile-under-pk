@@ -64,8 +64,21 @@ Never store an `overall` score. It is computed.
 
 - Path: `data/phones/<brand>-<model-kebab>.json`, for example `data/phones/samsung-galaxy-a55.json`.
 - `slug` equals the filename without `.json`. `brand` must be a slug in `data/brands.json`.
-- Leave `image` out unless you have a licence-clean image.
 - Specs: `ip` and `build.front` are `null` when the phone has none. `peakNits` may be omitted when unknown.
+
+## Official photo (required)
+
+Every phone needs one official product photo. Validation fails without it.
+
+- Source, in order: the brand's Pakistan website, the brand's global website, the brand's newsroom or press kit. Never a retailer, review site or search engine thumbnail.
+- A clean studio shot on a plain or transparent background, front view (or front and back), at least 800 px tall. No lifestyle shots or banners with text.
+- Add it with:
+
+```bash
+npm run add-photo -- <slug> <file or https image URL> "<credit name>" <https page the image appears on>
+```
+
+This trims the background, fits the phone into a 600x800 transparent WebP at `public/images/phones/<slug>.webp`, and sets `image` and `imageCredit` in the phone's JSON. The credit is shown under the photo on the phone page.
 
 ## Before committing
 

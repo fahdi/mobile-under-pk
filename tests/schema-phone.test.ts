@@ -52,4 +52,13 @@ describe('PhoneSchema', () => {
     expect(parse(makePhone({ variants: [makeVariant({ pricePkr: 0 })] })).success).toBe(false);
     expect(parse(makePhone({ variants: [makeVariant({ pricePkr: 1000.5 })] })).success).toBe(false);
   });
+
+  it('requires an image path and a credit for the official photo', () => {
+    const { image: _i, ...noImage } = makePhone();
+    expect(parse(noImage).success).toBe(false);
+    const { imageCredit: _c, ...noCredit } = makePhone();
+    expect(parse(noCredit).success).toBe(false);
+    expect(parse(makePhone({ image: '/images/phones/x.png' })).success).toBe(false);
+    expect(parse(makePhone({ imageCredit: { name: '', url: 'https://www.samsung.com/pk/' } })).success).toBe(false);
+  });
 });

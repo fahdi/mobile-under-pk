@@ -28,3 +28,8 @@ h1 { line-height: 1.2; }
 .spec-table { border-collapse: collapse; width: 100%; }
 .spec-table th, .spec-table td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
 .spec-table th { width: 40%; font-weight: 600; }
+img { max-width: 100%; height: auto; }
+.phone-photo { margin: 16px 0; max-width: 18rem; }
+.phone-photo img, .pick-photo img { display: block; background: #fff; border-radius: 8px; }
+.phone-photo figcaption { color: var(--muted); font-size: .8rem; margin-top: 4px; }
+.pick-photo img { max-height: 14rem; width: auto; margin: 0 auto 8px; }

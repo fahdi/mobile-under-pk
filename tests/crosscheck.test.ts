@@ -39,4 +39,14 @@ describe('crossCheck', () => {
     expect(w).toContain('fewer than 3 phones');
     expect(w).toContain('warrantyNote');
   });
+
+  it('flags a phone whose image file is missing', () => {
+    const issues = crossCheck(ds(), '2026-10-10', { imageExists: () => false });
+    expect(issues.filter((i) => i.level === 'error').map((i) => i.message)).toEqual([
+      expect.stringContaining('image file public/images/phones/samsung-galaxy-a55.webp is missing'),
+    ]);
+  });
+  it('passes when the image file exists', () => {
+    expect(crossCheck(ds(), '2026-10-10', { imageExists: () => true }).filter((i) => i.level === 'error')).toEqual([]);
+  });
 });

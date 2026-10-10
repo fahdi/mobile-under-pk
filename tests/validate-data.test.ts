@@ -27,6 +27,12 @@ describe('getData', () => {
   });
 });
 
+describe('image files on disk', () => {
+  it('fails the build when a referenced photo is missing', () => {
+    expect(() => getData('tests/fixtures/data-noimage')).toThrow(/samsung-galaxy-a55\.webp is missing/);
+  });
+});
+
 describe('DATA_ROOT', () => {
   it('points getData at another data tree when no root is passed', () => {
     const prev = process.env.DATA_ROOT;

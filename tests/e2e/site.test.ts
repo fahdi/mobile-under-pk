@@ -35,6 +35,15 @@ describe('bracket page', () => {
     expect(html()).not.toContain('data-slug="samsung-galaxy-a26"');
   });
 
+  it('shows a photo on each top pick, lazily loaded below the first', () => {
+    const picks = html().split('class="picks"')[1].split('</ul>')[0];
+    const imgs = picks.match(/<img [^>]*>/g) ?? [];
+    expect(imgs).toHaveLength(2);
+    expect(imgs.every((i) => /src="\/mobile-under-pk\/images\/phones\/[a-z0-9-]+\.webp"/.test(i))).toBe(true);
+    expect(imgs[0]).toContain('fetchpriority="high"');
+    expect(imgs[1]).toContain('loading="lazy"');
+  });
+
   it('keeps discontinued phones out of the top picks but in the table', () => {
     const picks = html().split('class="picks"')[1].split('</ul>')[0];
     expect(count(picks, /class="pick"/g)).toBe(2);
@@ -77,6 +86,15 @@ describe('phone page', () => {
     expect(html()).toContain(`href="${BASE}mobile-under-50000-in-pakistan/"`);
   });
 
+  it('shows the official photo at a fixed size with alt text and a credit link', () => {
+    expect(html()).toMatch(/<img [^>]*src="\/mobile-under-pk\/images\/phones\/xiaomi-redmi-note-14\.webp"[^>]*>/);
+    const img = html().match(/<img [^>]*images\/phones\/xiaomi-redmi-note-14[^>]*>/)![0];
+    expect(img).toContain('alt="Xiaomi Redmi Note 14"');
+    expect(img).toContain('width="600"');
+    expect(img).toContain('height="800"');
+    expect(html()).toMatch(/Photo: <a href="https:\/\/news\.samsung\.com\/global\/" rel="nofollow noopener">Samsung Newsroom<\/a>/);
+  });
+
   it('warns on a discontinued phone', () => {
     expect(page('phones/samsung-galaxy-a15')).toContain('class="notice"');
     expect(html()).not.toContain('class="notice"');
@@ -97,10 +115,10 @@ describe('whole site', () => {
     for (const f of all()) expect(() => jsonLd(readFileSync(f, 'utf8'))).not.toThrow();
   });
 
-  it('every internal link resolves to a built file', () => {
+  it('every internal link and image resolves to a built file', () => {
     const broken: string[] = [];
     for (const f of all()) {
-      for (const [, href] of readFileSync(f, 'utf8').matchAll(/href="(\/[^"#?]*)/g)) {
+      for (const [, href] of readFileSync(f, 'utf8').matchAll(/(?:href|src)="(\/[^"#?]*)/g)) {
         expect(href.startsWith(BASE), `${href} in ${f} lacks the base path`).toBe(true);
         const rel = href.slice(BASE.length);
         const target = rel === '' || rel.endsWith('/') ? join(out, rel, 'index.html') : join(out, rel);
