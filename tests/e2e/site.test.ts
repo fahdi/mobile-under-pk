@@ -167,6 +167,48 @@ describe('hub page', () => {
   });
 });
 
+describe('finder page', () => {
+  const html = () => page('finder');
+
+  it('server-renders every phone under the default preset, so it works without JavaScript', () => {
+    expect(html()).toContain('<title>Phone finder: filter and rank phones in Pakistan by budget</title>');
+    expect(count(html(), /<tr data-slug=/g)).toBe(4);
+    expect(html()).toContain('id="finder-count"');
+  });
+
+  it('offers every filter, the presets and custom weights', () => {
+    for (const name of ['min', 'max', 'brand', 'year', 'status', 'pta', 'official', '5g', 'nfc', 'jack', 'battery', 'hz', 'sort', 'preset', 'w-camera', 'w-availability']) {
+      expect(html(), name).toContain(`name="${name}"`);
+    }
+    expect(html()).toContain('value="xiaomi"');
+    expect(html()).toContain('<option value="safe-buy">');
+  });
+
+  it('embeds the presets as JSON and loads the island script', () => {
+    const presets = JSON.parse(html().match(/<script type="application\/json" id="finder-presets">(.*?)<\/script>/s)![1]);
+    expect(presets.map((p: { slug: string }) => p.slug)).toContain('balanced');
+    expect(html()).toMatch(/<script type="module" src="[^"]+"><\/script>|<script type="module">/);
+  });
+
+  it('is linked from the hub', () => {
+    expect(page('')).toContain(`href="${BASE}finder/"`);
+  });
+});
+
+describe('finder index', () => {
+  it('is built from the data with one compact entry per phone', () => {
+    const raw = readFileSync(join(out, 'phones.index.json'), 'utf8');
+    const entries = JSON.parse(raw);
+    expect(entries.map((e: { slug: string }) => e.slug).sort()).toEqual([
+      'samsung-galaxy-a15', 'samsung-galaxy-a16', 'samsung-galaxy-a26', 'xiaomi-redmi-note-14',
+    ]);
+    expect(entries.find((e: { slug: string }) => e.slug === 'xiaomi-redmi-note-14')).toMatchObject({
+      name: 'Xiaomi Redmi Note 14', ptaPrice: 49000, officialWarranty: false,
+    });
+    expect(raw).not.toContain('\n');
+  });
+});
+
 describe('whole site', () => {
   it('every JSON-LD block parses', () => {
     for (const f of all()) expect(() => jsonLd(readFileSync(f, 'utf8'))).not.toThrow();

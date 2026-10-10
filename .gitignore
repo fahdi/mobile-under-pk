@@ -2,7 +2,6 @@ node_modules/
 dist/
 dist-ci/
 .astro/
-public/phones.index.json
 .lighthouseci/
 .DS_Store
 .playwright-mcp/

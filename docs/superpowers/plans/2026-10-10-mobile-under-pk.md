@@ -1450,6 +1450,8 @@ export function comparePairs(phones: Phone[]): Array<[string, string]> {
 
 ### Task 25: Finder index, filters and URL state
 
+> Changed in implementation: the index is an Astro static endpoint `src/pages/phones.index.json.ts`, not `scripts/build-index.ts` writing into `public/`. Same data, same build, cannot go stale, no prebuild step.
+
 **Files:**
 
 - Create: `src/lib/index-entry.ts`, `src/lib/filters.ts`, `src/lib/url-state.ts`, `scripts/build-index.ts`, `tests/index-entry.test.ts`, `tests/filters.test.ts`, `tests/url-state.test.ts`

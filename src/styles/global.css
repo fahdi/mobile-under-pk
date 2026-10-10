@@ -38,3 +38,9 @@ img { max-width: 100%; height: auto; }
 .compare-table th, .compare-table td { text-align: left; padding: 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
 .compare-table thead img { display: block; max-height: 10rem; width: auto; background: #fff; border-radius: 8px; margin-bottom: 6px; }
 .compare-table td.win { font-weight: 700; color: var(--accent); }
+.finder { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); margin: 16px 0; }
+.finder fieldset { border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; display: flex; flex-wrap: wrap; gap: 6px 14px; }
+.finder label { display: inline-flex; align-items: center; gap: 6px; }
+.finder input[type=number] { width: 7rem; }
+.finder details { width: 100%; }
+tr[hidden] { display: none; }
