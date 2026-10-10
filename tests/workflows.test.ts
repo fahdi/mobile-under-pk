@@ -16,7 +16,7 @@ describe('CI and deploy workflow', () => {
 
   it('runs every gate, in order, before anything ships', () => {
     const runs = verify.steps!.flatMap((s) => (s.run ? [s.run] : []));
-    expect(runs).toEqual(['npm ci', 'npm run validate', 'npm test', 'npm run check', 'npm run build']);
+    expect(runs).toEqual(['npm ci', 'npm run validate', 'npm test', 'npm run check', 'npm run build', 'npm run check:site']);
   });
 
   it('takes the Node version from .nvmrc', () => {

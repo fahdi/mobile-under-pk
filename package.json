@@ -12,7 +12,8 @@
     "check": "astro check",
     "test": "vitest run",
     "validate": "tsx scripts/validate.ts",
-    "add-photo": "tsx scripts/add-photo.ts"
+    "add-photo": "tsx scripts/add-photo.ts",
+    "check:site": "tsx scripts/check-site.ts"
   },
   "dependencies": {
     "astro": "^7.3.8",
