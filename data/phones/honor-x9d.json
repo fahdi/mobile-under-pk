@@ -1,0 +1,129 @@
+{
+  "slug": "honor-x9d",
+  "brand": "honor",
+  "model": "X9d",
+  "releaseDate": "2025-09-24",
+  "status": "available",
+  "image": "/images/phones/honor-x9d.webp",
+  "imageCredit": {
+    "name": "HONOR UAE",
+    "url": "https://www.honor.com/ae-en/phones/honor-x9d/buy/"
+  },
+  "variants": [
+    {
+      "ram": 12,
+      "storage": 256,
+      "pricePkr": 139000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/honor/honor-x9d"
+        },
+        {
+          "name": "EEZEPC",
+          "url": "https://eezepc.com/product/honor-x9d-5g-price-in-pakistan/"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Snapdragon 6 Gen 4",
+    "display": {
+      "size": 6.79,
+      "type": "AMOLED",
+      "refreshHz": 120,
+      "resolution": "1200x2640",
+      "peakNits": 6000
+    },
+    "battery": {
+      "mah": 8300,
+      "wiredW": 66,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 108,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 5,
+          "type": "ultrawide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 16
+      },
+      "video": "4K@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "aluminosilicate glass",
+      "ip": "IP68/IP69K"
+    },
+    "software": {
+      "os": "Android 15, MagicOS 9.0",
+      "osUpdates": 2,
+      "securityYears": 3
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 193
+  },
+  "scores": {
+    "camera": {
+      "value": 6,
+      "reason": "108MP OIS main camera is good, but the 5MP ultrawide is weak."
+    },
+    "performance": {
+      "value": 7,
+      "reason": "Snapdragon 6 Gen 4 runs most games at medium settings."
+    },
+    "battery": {
+      "value": 10,
+      "reason": "8,300mAh silicon carbon battery lasts two days and refills at 66W."
+    },
+    "display": {
+      "value": 9,
+      "reason": "6.79 inch 1.5K AMOLED at 120Hz with 1,800 nits HBM and 6,000 nits peak."
+    },
+    "build": {
+      "value": 7,
+      "reason": "Plastic frame and back, but rated IP68 and IP69K with 2.5m drop resistance."
+    },
+    "software": {
+      "value": 5,
+      "reason": "Honor has committed to only 2 Android upgrades and 3 years of patches."
+    },
+    "value": {
+      "value": 7,
+      "reason": "At 139,000 it has the biggest battery and a 1.5K screen, but the weakest update promise here."
+    },
+    "availability": {
+      "value": 7,
+      "reason": "In stock at PriceOye and EEZEPC with official Honor warranty."
+    }
+  },
+  "tags": [
+    "amoled",
+    "big-battery",
+    "fast-charging",
+    "nfc"
+  ],
+  "rivals": [
+    "oppo-reno-16f",
+    "samsung-galaxy-a37",
+    "vivo-v60"
+  ],
+  "notes": "Only the 12GB 256GB is priced in Pakistan. PriceOye sells it at 138,999 on 2026-10-10 with two of four colours in stock; EEZEPC lists 144,990 and WhatMobile 154,999. Update policy (2 OS upgrades, 3 years of patches) is from GSMArena and a review, not an Honor page. Official photo is from HONOR UAE because HONOR Pakistan only shows small images. IP rating is IP68 plus IP69K."
+}

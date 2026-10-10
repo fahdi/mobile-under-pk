@@ -1,0 +1,115 @@
+{
+  "slug": "infinix-smart-10-hd",
+  "brand": "infinix",
+  "model": "Smart 10 HD",
+  "releaseDate": "2025-06-16",
+  "status": "limited",
+  "image": "/images/phones/infinix-smart-10-hd.webp",
+  "imageCredit": {
+    "name": "Infinix Kenya",
+    "url": "https://ke.infinixmobility.com/specs/smart-10-hd"
+  },
+  "variants": [
+    {
+      "ram": 2,
+      "storage": 64,
+      "pricePkr": 23500,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/Infinix_Smart-10-HD"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Unisoc octa-core (2x Cortex-A75 1.6GHz, Mali-G57 MC1)",
+    "display": {
+      "size": 6.6,
+      "type": "IPS LCD",
+      "refreshHz": 90,
+      "resolution": "720x1612",
+      "peakNits": 500
+    },
+    "battery": {
+      "mah": 5000,
+      "wiredW": 10,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 13,
+          "type": "wide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 8
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": null
+    },
+    "software": {
+      "os": "Android 14 (Go edition), XOS",
+      "osUpdates": 0,
+      "securityYears": 0
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 184
+  },
+  "scores": {
+    "camera": {
+      "value": 3,
+      "reason": "13MP f/1.85 main camera with an auxiliary lens, no OIS."
+    },
+    "performance": {
+      "value": 2,
+      "reason": "Entry Unisoc chip with only 2GB RAM will lag in daily use."
+    },
+    "battery": {
+      "value": 4,
+      "reason": "5,000mAh lasts a full day, but 10W charging is slow to refill."
+    },
+    "display": {
+      "value": 4,
+      "reason": "6.6 inch HD+ LCD at 90Hz with 500 nits peak."
+    },
+    "build": {
+      "value": 3,
+      "reason": "Plastic back and frame with no IP rating."
+    },
+    "software": {
+      "value": 1,
+      "reason": "Android 14 Go edition with no published OS update commitment."
+    },
+    "value": {
+      "value": 3,
+      "reason": "At 23,500 it costs more than the Smart 9 HD and Spark Go 1 yet has half their RAM."
+    },
+    "availability": {
+      "value": 4,
+      "reason": "Out of stock at PriceOye today and not listed on Infinix Pakistan's site; official warranty where sold."
+    }
+  },
+  "tags": [],
+  "rivals": [
+    "infinix-smart-9-hd",
+    "tecno-spark-go-1",
+    "honor-play-10"
+  ],
+  "notes": "Price is the WhatMobile official price (23,499). PriceOye lists the 2GB 64GB at 22,499 but out of stock on 2026-10-10. Infinix's own spec sheet (Kenya) lists a 3GB 64GB model; the Pakistan listings are 2GB 64GB. The chipset is not named by Infinix or GSMArena; Infinix lists 2x A75 at 1.6GHz with Mali-G57 MC1. Infinix Pakistan's site does not list this phone, so the photo is from Infinix Kenya. No published update policy."
+}

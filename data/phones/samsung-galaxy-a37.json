@@ -1,0 +1,137 @@
+{
+  "slug": "samsung-galaxy-a37",
+  "brand": "samsung",
+  "model": "Galaxy A37 5G",
+  "releaseDate": "2026-03-25",
+  "status": "available",
+  "image": "/images/phones/samsung-galaxy-a37.webp",
+  "imageCredit": {
+    "name": "Samsung Pakistan",
+    "url": "https://www.samsung.com/pk/smartphones/galaxy-a/galaxy-a37-5g-awesome-graygreen-256gb-sm-a376bdgvpkd/"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 256,
+      "pricePkr": 131000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/samsung/samsung-galaxy-a37-5g"
+        },
+        {
+          "name": "EEZEPC",
+          "url": "https://eezepc.com/product/samsung-galaxy-a37-price-in-pakistan/"
+        },
+        {
+          "name": "Samsung Pakistan",
+          "url": "https://www.samsung.com/pk/smartphones/galaxy-a/galaxy-a37-5g-awesome-graygreen-256gb-sm-a376bdgvpkd/"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Exynos 1480",
+    "display": {
+      "size": 6.7,
+      "type": "Super AMOLED",
+      "refreshHz": 120,
+      "resolution": "1080x2340",
+      "peakNits": 1900
+    },
+    "battery": {
+      "mah": 5000,
+      "wiredW": 45,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 8,
+          "type": "ultrawide",
+          "ois": false
+        },
+        {
+          "mp": 5,
+          "type": "macro",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 12
+      },
+      "video": "4K@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "Gorilla Glass Victus+",
+      "front": "Gorilla Glass Victus+",
+      "ip": "IP68"
+    },
+    "software": {
+      "os": "Android 16, One UI 8.5",
+      "osUpdates": 6,
+      "securityYears": 6
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": true
+    },
+    "weightG": 196
+  },
+  "scores": {
+    "camera": {
+      "value": 7,
+      "reason": "50MP OIS main camera with an 8MP ultrawide and 4K video; the 5MP macro adds little."
+    },
+    "performance": {
+      "value": 7,
+      "reason": "Exynos 1480 handles most games at medium settings and stays smooth in daily use."
+    },
+    "battery": {
+      "value": 7,
+      "reason": "5,000mAh lasts a full day plus, but 45W charging is slower than rivals here."
+    },
+    "display": {
+      "value": 8,
+      "reason": "6.7 inch FHD+ Super AMOLED at 120Hz with 1,200 nits HBM and 1,900 nits peak."
+    },
+    "build": {
+      "value": 8,
+      "reason": "Gorilla Glass Victus+ front and back with IP68, but the frame is plastic."
+    },
+    "software": {
+      "value": 10,
+      "reason": "Samsung promises 6 Android upgrades and 6 years of security patches."
+    },
+    "value": {
+      "value": 7,
+      "reason": "At 131,000 it is the cheapest way into six years of updates and IP68, though rivals offer bigger batteries."
+    },
+    "availability": {
+      "value": 9,
+      "reason": "In stock at PriceOye, EEZEPC and Samsung Pakistan with Samsung service centres nationwide."
+    }
+  },
+  "tags": [
+    "amoled",
+    "nfc",
+    "long-updates"
+  ],
+  "rivals": [
+    "oppo-reno-16f",
+    "honor-x9d",
+    "samsung-galaxy-a57"
+  ],
+  "notes": "PriceOye sells the 8GB 256GB at 131,195 with official warranty on 2026-10-10. EEZEPC lists it at 136,990 and Samsung Pakistan at 164,999, both in stock. eSIM support is from WhatMobile and was not confirmed on a Pakistan unit."
+}

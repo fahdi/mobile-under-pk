@@ -1,0 +1,129 @@
+{
+  "slug": "realme-note-60",
+  "brand": "realme",
+  "model": "Note 60",
+  "releaseDate": "2024-08-30",
+  "status": "limited",
+  "image": "/images/phones/realme-note-60.webp",
+  "imageCredit": {
+    "name": "realme Pakistan",
+    "url": "https://www.realme.com/pk/realme-note60/specs"
+  },
+  "variants": [
+    {
+      "ram": 4,
+      "storage": 64,
+      "pricePkr": 25000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/Realme_Note-60"
+        }
+      ]
+    },
+    {
+      "ram": 4,
+      "storage": 128,
+      "pricePkr": 29000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/Realme_Note-60-128GB"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Unisoc T612",
+    "display": {
+      "size": 6.74,
+      "type": "IPS LCD",
+      "refreshHz": 90,
+      "resolution": "720x1600",
+      "peakNits": 560
+    },
+    "battery": {
+      "mah": 5000,
+      "wiredW": 10,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 32,
+          "type": "wide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 5
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": "IP64"
+    },
+    "software": {
+      "os": "Android 14, realme UI",
+      "osUpdates": 0,
+      "securityYears": 0
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 187
+  },
+  "scores": {
+    "camera": {
+      "value": 4,
+      "reason": "32MP f/1.8 PDAF main camera, the highest resolution in the bracket, no OIS."
+    },
+    "performance": {
+      "value": 3,
+      "reason": "Unisoc T612 with 4GB RAM handles basic apps but struggles with games."
+    },
+    "battery": {
+      "value": 4,
+      "reason": "5,000mAh lasts a full day, but 10W charging is slow to refill."
+    },
+    "display": {
+      "value": 4,
+      "reason": "6.74 inch HD+ LCD at 90Hz with 560 nits peak."
+    },
+    "build": {
+      "value": 6,
+      "reason": "IP64 dust tight rating and a die cast aluminium inner chassis in a plastic shell."
+    },
+    "software": {
+      "value": 2,
+      "reason": "Full Android 14 realme UI, but no published OS update commitment."
+    },
+    "value": {
+      "value": 6,
+      "reason": "Best build and camera in the bracket, but at 25,000 it is the priciest with 10W charging."
+    },
+    "availability": {
+      "value": 5,
+      "reason": "Out of stock at PriceOye today; listed on realme Pakistan's site with official warranty."
+    }
+  },
+  "tags": [],
+  "rivals": [
+    "tecno-spark-go-1",
+    "honor-play-10",
+    "infinix-smart-9-hd"
+  ],
+  "notes": "Prices are WhatMobile official prices (24,999 and 28,999). PriceOye lists the 4GB 64GB at 24,499 and the 4GB 128GB at 26,799, both out of stock on 2026-10-10. realme lists a 48 month fluency claim, which is not an update policy, so osUpdates and securityYears are 0."
+}

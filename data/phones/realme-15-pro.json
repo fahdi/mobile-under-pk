@@ -1,0 +1,129 @@
+{
+  "slug": "realme-15-pro",
+  "brand": "realme",
+  "model": "15 Pro 5G",
+  "releaseDate": "2025-07-24",
+  "status": "available",
+  "image": "/images/phones/realme-15-pro.webp",
+  "imageCredit": {
+    "name": "realme Pakistan",
+    "url": "https://www.realme.com/pk/realme-15-pro-5g/specs"
+  },
+  "variants": [
+    {
+      "ram": 12,
+      "storage": 512,
+      "pricePkr": 146000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/realme/realme-15-pro"
+        },
+        {
+          "name": "EEZEPC",
+          "url": "https://eezepc.com/product/realme-15-pro-price-in-pakistan/"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Snapdragon 7 Gen 4",
+    "display": {
+      "size": 6.8,
+      "type": "AMOLED",
+      "refreshHz": 144,
+      "resolution": "1280x2800",
+      "peakNits": 6500
+    },
+    "battery": {
+      "mah": 7000,
+      "wiredW": 80,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 50,
+          "type": "ultrawide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 50
+      },
+      "video": "4K@60fps"
+    },
+    "build": {
+      "frame": "aluminium",
+      "back": "fiberglass or eco leather",
+      "front": "Gorilla Glass 7i",
+      "ip": "IP68/IP69"
+    },
+    "software": {
+      "os": "Android 15, realme UI 6.0",
+      "osUpdates": 3,
+      "securityYears": 4
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 187
+  },
+  "scores": {
+    "camera": {
+      "value": 8,
+      "reason": "50MP Sony OIS main with a 50MP ultrawide and 4K 60fps video on all cameras."
+    },
+    "performance": {
+      "value": 8,
+      "reason": "Snapdragon 7 Gen 4 handles most games at high settings."
+    },
+    "battery": {
+      "value": 9,
+      "reason": "7,000mAh with 80W charging lasts well over a day and refills fast."
+    },
+    "display": {
+      "value": 9,
+      "reason": "6.8 inch 1.5K AMOLED at 144Hz with 1,800 nits HBM and 6,500 nits peak."
+    },
+    "build": {
+      "value": 8,
+      "reason": "Aluminium frame with Gorilla Glass 7i and IP68 and IP69, but a fiberglass back."
+    },
+    "software": {
+      "value": 7,
+      "reason": "realme promises 3 Android upgrades and 4 years of security patches."
+    },
+    "value": {
+      "value": 8,
+      "reason": "At 146,000 it pairs the fastest chip here with 12GB and 512GB storage."
+    },
+    "availability": {
+      "value": 7,
+      "reason": "In stock at PriceOye and EEZEPC with official realme warranty."
+    }
+  },
+  "tags": [
+    "amoled",
+    "big-battery",
+    "fast-charging",
+    "nfc"
+  ],
+  "rivals": [
+    "samsung-galaxy-a57",
+    "vivo-v60",
+    "honor-x9d"
+  ],
+  "notes": "Only the 12GB 512GB is sold at PriceOye (145,999 in stock on 2026-10-10). EEZEPC lists from 149,990 and Mega.pk 148,999 but out of stock. WhatMobile lists a 3.5mm jack, but other spec listings omit it; recorded as absent, unverified. Update policy is from realme announcement coverage (August 2025)."
+}

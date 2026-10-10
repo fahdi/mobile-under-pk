@@ -1,0 +1,128 @@
+{
+  "slug": "tecno-spark-go-1",
+  "brand": "tecno",
+  "model": "Spark Go 1",
+  "releaseDate": "2024-08-19",
+  "status": "limited",
+  "image": "/images/phones/tecno-spark-go-1.webp",
+  "imageCredit": {
+    "name": "TECNO Pakistan",
+    "url": "https://www.tecno-mobile.com/pak/phones/tech-specs/techspecs/spark-go-1/"
+  },
+  "variants": [
+    {
+      "ram": 4,
+      "storage": 64,
+      "pricePkr": 23000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/Tecno_Spark-Go-1"
+        }
+      ]
+    },
+    {
+      "ram": 4,
+      "storage": 128,
+      "pricePkr": 26500,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/Tecno_Spark-Go-1-128GB"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Unisoc T615",
+    "display": {
+      "size": 6.67,
+      "type": "IPS LCD",
+      "refreshHz": 120,
+      "resolution": "720x1600"
+    },
+    "battery": {
+      "mah": 5000,
+      "wiredW": 15,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 13,
+          "type": "wide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 8
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": "IP54"
+    },
+    "software": {
+      "os": "Android 14 (Go edition), HiOS 14",
+      "osUpdates": 0,
+      "securityYears": 0
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 189
+  },
+  "scores": {
+    "camera": {
+      "value": 3,
+      "reason": "13MP f/1.8 PDAF main camera with dual LED flash, no OIS."
+    },
+    "performance": {
+      "value": 3,
+      "reason": "Unisoc T615 with 4GB RAM is fine for calls and social apps, weak for games."
+    },
+    "battery": {
+      "value": 5,
+      "reason": "5,000mAh lasts a full day and 15W is the fastest charging in the bracket."
+    },
+    "display": {
+      "value": 5,
+      "reason": "6.67 inch HD+ LCD at 120Hz, the smoothest panel in the bracket."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Plastic body with an IP54 splash and dust rating."
+    },
+    "software": {
+      "value": 1,
+      "reason": "Android 14 Go edition with no published OS update commitment."
+    },
+    "value": {
+      "value": 8,
+      "reason": "120Hz, 15W charging and IP54 at 23,000 undercut the realme Note 60."
+    },
+    "availability": {
+      "value": 5,
+      "reason": "Out of stock at PriceOye today; listed on TECNO Pakistan's site with official warranty."
+    }
+  },
+  "tags": [],
+  "rivals": [
+    "infinix-smart-9-hd",
+    "honor-play-10",
+    "realme-note-60"
+  ],
+  "notes": "Prices are WhatMobile official prices (22,999 and 26,499). PriceOye lists the 4GB 64GB at 21,499 and the 4GB 128GB at 24,499, all out of stock on 2026-10-10. TECNO Pakistan also lists a 3GB 64GB model sold only on Daraz, not checked. Weight of 189g is from a single third party listing; GSMArena and TECNO do not state it. No published update policy."
+}

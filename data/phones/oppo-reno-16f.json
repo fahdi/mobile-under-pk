@@ -1,0 +1,135 @@
+{
+  "slug": "oppo-reno-16f",
+  "brand": "oppo",
+  "model": "Reno16 F 5G",
+  "releaseDate": "2026-07-02",
+  "status": "available",
+  "image": "/images/phones/oppo-reno-16f.webp",
+  "imageCredit": {
+    "name": "OPPO Pakistan",
+    "url": "https://www.oppo.com/pk/smartphones/series-reno/reno16-f/specs/"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 256,
+      "pricePkr": 131500,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/oppo/oppo-reno-16f-5g"
+        },
+        {
+          "name": "EEZEPC",
+          "url": "https://eezepc.com/product/oppo-reno-16f-price-in-pakistan/"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Dimensity 7300-Energy",
+    "display": {
+      "size": 6.57,
+      "type": "AMOLED",
+      "refreshHz": 120,
+      "resolution": "1080x2372",
+      "peakNits": 1400
+    },
+    "battery": {
+      "mah": 7000,
+      "wiredW": 80,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 50,
+          "type": "telephoto",
+          "ois": true
+        },
+        {
+          "mp": 8,
+          "type": "ultrawide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 50
+      },
+      "video": "4K@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "glass or composite plastic, by colour",
+      "front": "Crystal Guard glass",
+      "ip": "IP68/IP69K"
+    },
+    "software": {
+      "os": "Android 16, ColorOS 16",
+      "osUpdates": 5,
+      "securityYears": 6
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 195
+  },
+  "scores": {
+    "camera": {
+      "value": 8,
+      "reason": "50MP OIS main plus a 50MP 3.5x OIS telephoto and 50MP selfie camera."
+    },
+    "performance": {
+      "value": 6,
+      "reason": "Dimensity 7300 class chip is smooth daily and fine for light to medium gaming."
+    },
+    "battery": {
+      "value": 9,
+      "reason": "7,000mAh with 80W SUPERVOOC lasts well over a day and refills fast."
+    },
+    "display": {
+      "value": 8,
+      "reason": "6.57 inch FHD+ AMOLED at 120Hz with 1,400 nits HBM."
+    },
+    "build": {
+      "value": 7,
+      "reason": "Plastic frame with IP68 and IP69K water and dust resistance."
+    },
+    "software": {
+      "value": 9,
+      "reason": "Reno16 series is reported to get 5 Android upgrades and 6 years of patches."
+    },
+    "value": {
+      "value": 8,
+      "reason": "At 131,500 it is the cheapest phone here with an OIS telephoto and a 7,000mAh battery."
+    },
+    "availability": {
+      "value": 8,
+      "reason": "In stock at PriceOye and EEZEPC with official OPPO warranty and service centres."
+    }
+  },
+  "tags": [
+    "amoled",
+    "big-battery",
+    "fast-charging",
+    "nfc",
+    "long-updates"
+  ],
+  "rivals": [
+    "samsung-galaxy-a37",
+    "honor-x9d",
+    "vivo-v60"
+  ],
+  "notes": "PriceOye sells the 8GB 256GB at 131,499 on 2026-10-10; EEZEPC lists 143,990 and the Pakistan launch price was 149,999. eSIM is unsupported per OPPO Pakistan specs. Update policy is from a Reno16 series review and an update tracker, not an OPPO Reno16 F page. Global release date is approximate (first sales early July 2026). Official photo is a 720 px tall OPPO Pakistan spec render, below the 800 px guide."
+}

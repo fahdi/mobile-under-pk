@@ -59,7 +59,7 @@ const SpecsSchema = z.strictObject({
     frame: z.string().min(1),
     back: z.string().min(1),
     front: z.string().min(1).nullable(),
-    ip: z.string().regex(/^IP\d[\dX]$/).nullable(),
+    ip: z.string().regex(/^IP\d[\dX]K?(\/IP\d[\dX]K?)*$/).nullable(),
   }),
   software: z.strictObject({
     os: z.string().min(1),

@@ -1,0 +1,135 @@
+{
+  "slug": "vivo-v60",
+  "brand": "vivo",
+  "model": "V60",
+  "releaseDate": "2025-08-12",
+  "status": "limited",
+  "image": "/images/phones/vivo-v60.webp",
+  "imageCredit": {
+    "name": "vivo Pakistan",
+    "url": "https://www.vivo.com/pk/products/param/v60"
+  },
+  "variants": [
+    {
+      "ram": 12,
+      "storage": 256,
+      "pricePkr": 137000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/vivo/vivo-v60"
+        },
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/Vivo_V60"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Snapdragon 7 Gen 4",
+    "display": {
+      "size": 6.77,
+      "type": "AMOLED",
+      "refreshHz": 120,
+      "resolution": "1080x2392",
+      "peakNits": 5000
+    },
+    "battery": {
+      "mah": 6500,
+      "wiredW": 90,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 50,
+          "type": "periscope",
+          "ois": true
+        },
+        {
+          "mp": 8,
+          "type": "ultrawide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 50
+      },
+      "video": "4K@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "glass (Gold) or plastic (Gray)",
+      "front": "Schott Xensation Core",
+      "ip": "IP68/IP69"
+    },
+    "software": {
+      "os": "Android 15, Funtouch OS 15",
+      "osUpdates": 4,
+      "securityYears": 6
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 192
+  },
+  "scores": {
+    "camera": {
+      "value": 8,
+      "reason": "ZEISS 50MP OIS main plus a 50MP 3x OIS periscope telephoto and 50MP selfie camera."
+    },
+    "performance": {
+      "value": 8,
+      "reason": "Snapdragon 7 Gen 4 handles most games at high settings."
+    },
+    "battery": {
+      "value": 9,
+      "reason": "6,500mAh with 90W charging lasts well over a day and refills fast."
+    },
+    "display": {
+      "value": 9,
+      "reason": "6.77 inch FHD+ AMOLED at 120Hz with 1,500 nits HBM and 5,000 nits peak."
+    },
+    "build": {
+      "value": 7,
+      "reason": "IP68 and IP69 rated; glass back only on the Gold colour."
+    },
+    "software": {
+      "value": 9,
+      "reason": "WhatMobile lists up to 4 Android upgrades for the V60."
+    },
+    "value": {
+      "value": 9,
+      "reason": "At 137,000 it is the only phone here with a periscope telephoto and Snapdragon 7 Gen 4."
+    },
+    "availability": {
+      "value": 5,
+      "reason": "Only one colour of the 12GB 256GB is in stock at PriceOye; no second retailer found."
+    }
+  },
+  "tags": [
+    "amoled",
+    "big-battery",
+    "fast-charging",
+    "nfc",
+    "long-updates"
+  ],
+  "rivals": [
+    "oppo-reno-16f",
+    "realme-15-pro",
+    "honor-x9d"
+  ],
+  "notes": "PriceOye sells the 12GB 256GB at 136,999 in Desert Gold only on 2026-10-10; the 12GB 512GB (145,999) and other colours are out of stock. WhatMobile lists 149,999. No second retailer stock was confirmed. Security patch years (6) are assumed from vivo V series policy; frame material is not stated by vivo. Official photo is a 640 px vivo Pakistan render, below the 800 px guide."
+}
