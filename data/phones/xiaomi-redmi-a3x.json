@@ -1,0 +1,114 @@
+{
+  "slug": "xiaomi-redmi-a3x",
+  "brand": "xiaomi",
+  "model": "Redmi A3x",
+  "releaseDate": "2024-05-24",
+  "status": "limited",
+  "image": "/images/phones/xiaomi-redmi-a3x.webp",
+  "imageCredit": {
+    "name": "Xiaomi",
+    "url": "https://www.mi.com/global/product/redmi-a3x/specs/"
+  },
+  "variants": [
+    {
+      "ram": 3,
+      "storage": 64,
+      "pricePkr": 19000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/Xiaomi_Redmi-A3x"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Unisoc T603",
+    "display": {
+      "size": 6.71,
+      "type": "IPS LCD",
+      "refreshHz": 90,
+      "resolution": "720x1650",
+      "peakNits": 500
+    },
+    "battery": {
+      "mah": 5000,
+      "wiredW": 10,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 8,
+          "type": "wide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 5
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "glass",
+      "front": "Gorilla Glass 3",
+      "ip": null
+    },
+    "software": {
+      "os": "Android 14",
+      "osUpdates": 2,
+      "securityYears": 3
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 193
+  },
+  "scores": {
+    "camera": {
+      "value": 3,
+      "reason": "8MP f/2.0 main camera with only a QVGA auxiliary lens, no OIS."
+    },
+    "performance": {
+      "value": 2,
+      "reason": "Unisoc T603 with 3GB RAM is an entry chip that lags in daily use."
+    },
+    "battery": {
+      "value": 4,
+      "reason": "5,000mAh lasts a full day, but 10W charging is slow."
+    },
+    "display": {
+      "value": 4,
+      "reason": "6.71 inch HD+ LCD at 90Hz with 500 nits."
+    },
+    "build": {
+      "value": 4,
+      "reason": "Glass back and Gorilla Glass 3 front on a plastic frame, but no IP rating."
+    },
+    "software": {
+      "value": 5,
+      "reason": "Xiaomi promises 2 Android upgrades and 3 years of security patches."
+    },
+    "value": {
+      "value": 7,
+      "reason": "Only phone in the bracket with a 2 upgrade promise and a glass back, at 19,000."
+    },
+    "availability": {
+      "value": 4,
+      "reason": "Out of stock at PriceOye; only third-party Daraz sellers had stock on 2026-10-10."
+    }
+  },
+  "tags": [],
+  "rivals": [
+    "itel-a90",
+    "itel-a50"
+  ],
+  "notes": "Price is WhatMobile's official listing (18,999). PriceOye lists 3GB 64GB at 19,899 but out of stock, so ignored. Third-party Daraz sellers (not official stores) list it at 19,499 and 20,999. Xiaomi Pakistan no longer has a product page for it. The rear auxiliary lens (0.08MP) is omitted from cameras because it is not a usable camera. Weight from WhatMobile."
+}

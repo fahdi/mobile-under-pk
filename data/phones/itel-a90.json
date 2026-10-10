@@ -1,0 +1,127 @@
+{
+  "slug": "itel-a90",
+  "brand": "itel",
+  "model": "A90",
+  "releaseDate": "2025-04-20",
+  "status": "limited",
+  "image": "/images/phones/itel-a90.webp",
+  "imageCredit": {
+    "name": "itel",
+    "url": "https://www.itel-life.com/products/phone/a-series/a90/spec"
+  },
+  "variants": [
+    {
+      "ram": 4,
+      "storage": 64,
+      "pricePkr": 20000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "Daraz itel Official store",
+          "url": "https://www.daraz.pk/products/90-656-90-128-64-12-48-5000mah-15w-13mp-54-i877139562.html"
+        }
+      ]
+    },
+    {
+      "ram": 4,
+      "storage": 128,
+      "pricePkr": 21000,
+      "priceCheckedAt": "2026-10-10",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/itel_A90"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Unisoc T7100",
+    "display": {
+      "size": 6.6,
+      "type": "IPS LCD",
+      "refreshHz": 90,
+      "resolution": "720x1612"
+    },
+    "battery": {
+      "mah": 5000,
+      "wiredW": 15,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 13,
+          "type": "wide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 5
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "Panda Glass",
+      "ip": "IP54"
+    },
+    "software": {
+      "os": "Android 14 (Go edition), itel OS 14",
+      "osUpdates": 0,
+      "securityYears": 0
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": false,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 187
+  },
+  "scores": {
+    "camera": {
+      "value": 3,
+      "reason": "Single 13MP main camera plus a light sensor, no OIS, 1080p video."
+    },
+    "performance": {
+      "value": 3,
+      "reason": "Unisoc T7100 on Android Go with 4GB RAM is an entry chip that lags under load."
+    },
+    "battery": {
+      "value": 5,
+      "reason": "5,000mAh lasts a full day; 15W charging is slow to refill."
+    },
+    "display": {
+      "value": 4,
+      "reason": "6.6 inch HD+ LCD at 90Hz, smoother than 60Hz rivals but low resolution."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Plastic body with IP54 dust and splash resistance."
+    },
+    "software": {
+      "value": 2,
+      "reason": "Android 14 Go edition and itel publishes no Android upgrade or security patch commitment."
+    },
+    "value": {
+      "value": 7,
+      "reason": "IP54, 90Hz and 15W charging at 20,000 beat the 60Hz, 10W itel A50 for a small premium."
+    },
+    "availability": {
+      "value": 6,
+      "reason": "In stock at the itel Official store on Daraz with official warranty; out of stock at PriceOye."
+    }
+  },
+  "tags": [],
+  "rivals": [
+    "xiaomi-redmi-a3x",
+    "itel-a50"
+  ],
+  "notes": "4GB 64GB price is the itel Official Daraz store listing (19,999, purchasable on 2026-10-10). PriceOye lists 4GB 64GB at 21,499 and 4GB 128GB at 22,999, both out of stock and marked no warranty, so ignored. Only one retailer had stock. itel publishes no update policy, so osUpdates and securityYears are 0. Weight (187 g) is from third-party spec listings; GSMArena was unreachable. 3.5mm jack read from the official product render, not a spec sheet."
+}
