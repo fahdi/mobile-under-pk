@@ -92,5 +92,9 @@ const description = `${name} price in Pakistan from ${formatPkr(cheapest.pricePk
     </section>
   )}
 
-  <p><a href={withBase(bracketPath)}>All phones under {money}</a></p>
+  <p>
+    <a href={withBase(bracketPath)}>All phones under {money}</a> ·
+    <a href={withBase(`/brands/${phone.brand}/`)}>More {brandName} phones</a> ·
+    <a href={withBase(`/year/${phone.releaseDate.slice(0, 4)}/`)}>Phones released in {phone.releaseDate.slice(0, 4)}</a>
+  </p>
 </Base>

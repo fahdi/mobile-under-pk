@@ -80,10 +80,12 @@ describe('phone page', () => {
     expect(html()).toContain('<time datetime="2026-10-10">10 Oct 2026</time>');
   });
 
-  it('shows all eight scores, the specs and links back to its bracket', () => {
+  it('shows all eight scores, the specs and links back to its bracket, brand and year', () => {
     expect(count(html(), /class="score-label"/g)).toBe(8);
     expect(html()).toContain('Exynos 1480');
     expect(html()).toContain(`href="${BASE}mobile-under-50000-in-pakistan/"`);
+    expect(html()).toContain(`href="${BASE}brands/xiaomi/"`);
+    expect(html()).toContain(`href="${BASE}year/2024/"`);
   });
 
   it('shows the official photo at a fixed size with alt text and a credit link', () => {
@@ -98,6 +100,32 @@ describe('phone page', () => {
   it('warns on a discontinued phone', () => {
     expect(page('phones/samsung-galaxy-a15')).toContain('class="notice"');
     expect(html()).not.toContain('class="notice"');
+  });
+});
+
+describe('brand page', () => {
+  const html = () => page('brands/samsung');
+
+  it('lists the brand phones cheapest first with the warranty note', () => {
+    expect(html()).toContain('<title>Samsung mobile prices in Pakistan (Oct 2026)</title>');
+    const slugs = [...html().matchAll(/<tr data-slug="([^"]+)"/g)].map((m) => m[1]);
+    expect(slugs).toEqual(['samsung-galaxy-a15', 'samsung-galaxy-a16', 'samsung-galaxy-a26']);
+    expect(html()).toContain('Official 1 year warranty.');
+    expect(html()).toMatch(/<meta name="description" content="[^"]*Prices checked 10 Oct 2026."/);
+    expect(jsonLd(html()).map((o) => o['@type']).sort()).toEqual(['BreadcrumbList', 'ItemList']);
+  });
+
+  it('is not built for a brand with no phones', () => {
+    expect(existsSync(join(out, 'brands/apple'))).toBe(false);
+  });
+});
+
+describe('year page', () => {
+  it('lists phones released that year', () => {
+    const html = page('year/2024');
+    expect(html).toContain('<title>Mobile phones released in 2024: Pakistan prices and scores</title>');
+    expect((html.match(/<tr data-slug=/g) ?? []).length).toBe(4);
+    expect(existsSync(join(out, 'year/2026'))).toBe(false);
   });
 });
 
