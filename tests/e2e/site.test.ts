@@ -223,6 +223,24 @@ describe('finder index', () => {
   });
 });
 
+describe('sitemap and robots', () => {
+  it('sitemap lists every built page except redirects', () => {
+    const xml = readFileSync(join(out, 'sitemap.xml'), 'utf8');
+    const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+    const built = all().map((f) => `https://fahdi.github.io${BASE}${f.slice(out.length + 1).replace(/index\.html$/, '')}`)
+      .filter((u) => !readFileSync(join(out, u.slice(`https://fahdi.github.io${BASE}`.length), 'index.html'), 'utf8').includes('noindex'));
+    expect(locs.sort()).toEqual(built.sort());
+    expect(xml).not.toContain('xiaomi-redmi-note-14-vs-samsung-galaxy-a16');
+  });
+
+  it('robots.txt allows crawling and points at the sitemap', () => {
+    const robots = readFileSync(join(out, 'robots.txt'), 'utf8');
+    expect(robots).toContain('User-agent: *');
+    expect(robots).toContain('Allow: /');
+    expect(robots).toContain(`Sitemap: https://fahdi.github.io${BASE}sitemap.xml`);
+  });
+});
+
 describe('whole site', () => {
   it('every JSON-LD block parses', () => {
     for (const f of all()) expect(() => jsonLd(readFileSync(f, 'utf8'))).not.toThrow();
