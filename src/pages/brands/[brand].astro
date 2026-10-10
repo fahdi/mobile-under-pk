@@ -1,0 +1,36 @@
+---
+import Base from '../../layouts/Base.astro';
+import PhoneTable from '../../components/PhoneTable.astro';
+import PriceChecked from '../../components/PriceChecked.astro';
+import { getData } from '../../lib/data';
+import { formatDate, latestCheck, phoneName } from '../../lib/format';
+import { brandPaths, brandTitle, phonesByBrand } from '../../lib/listing';
+import { toRows } from '../../lib/rows';
+import { absUrl, breadcrumbLd, itemListLd } from '../../lib/seo';
+import { withBase } from '../../lib/paths';
+
+export function getStaticPaths() {
+  return brandPaths(getData());
+}
+
+const data = getData();
+const { brand: slug } = Astro.params;
+const brand = data.brands.find((b) => b.slug === slug)!;
+const phones = phonesByBrand(data, slug!);
+const rows = toRows(phones, data.presets.find((p) => p.slug === 'balanced')!);
+const checked = latestCheck(phones)!;
+const path = `/brands/${slug}/`;
+const jsonLd = [
+  itemListLd(phones.map((p) => ({ name: phoneName(p, data.brands), url: absUrl(`/phones/${p.slug}/`, Astro.site!) }))),
+  breadcrumbLd([{ name: 'Home', path: '/' }, { name: brand.name, path }], Astro.site!),
+];
+const description = `${phones.length} ${brand.name} phones sold in Pakistan, cheapest PTA price first, with warranty details and scores. Prices checked ${formatDate(checked)}.`;
+---
+<Base title={brandTitle(brand.name, checked)} description={description} path={path} jsonLd={jsonLd}>
+  <nav aria-label="Breadcrumb"><a href={withBase('/')}>Home</a> / {brand.name}</nav>
+  <h1>{brand.name} mobile prices in Pakistan</h1>
+  <PriceChecked date={checked} />
+  {brand.warrantyNote && <p>{brand.warrantyNote}</p>}
+  {brand.officialStoreUrl && <p><a href={brand.officialStoreUrl} rel="nofollow noopener">Official {brand.name} Pakistan store</a></p>}
+  <PhoneTable rows={rows} brands={data.brands} />
+</Base>

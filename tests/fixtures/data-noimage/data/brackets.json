@@ -1,0 +1,12 @@
+[
+  {
+    "ceiling": 50000,
+    "intro": "Intro text.",
+    "faq": []
+  },
+  {
+    "ceiling": 150000,
+    "intro": "Intro text.",
+    "faq": []
+  }
+]

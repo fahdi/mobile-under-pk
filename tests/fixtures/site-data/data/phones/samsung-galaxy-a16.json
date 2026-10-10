@@ -4,6 +4,11 @@
   "model": "Galaxy A16",
   "releaseDate": "2024-03-11",
   "status": "available",
+  "image": "/images/phones/samsung-galaxy-a16.webp",
+  "imageCredit": {
+    "name": "Samsung Newsroom",
+    "url": "https://news.samsung.com/global/"
+  },
   "variants": [
     {
       "ram": 8,

@@ -4,6 +4,11 @@
   "model": "Y29",
   "releaseDate": "2025-02-19",
   "status": "limited",
+  "image": "/images/phones/vivo-y29.webp",
+  "imageCredit": {
+    "name": "vivo Pakistan",
+    "url": "https://www.vivo.com/pk/products/y29-4g"
+  },
   "variants": [
     {
       "ram": 8,

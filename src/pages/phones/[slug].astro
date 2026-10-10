@@ -7,6 +7,7 @@ import { getData } from '../../lib/data';
 import { assignBracket, bracketSlug, cheapestPtaVariant } from '../../lib/brackets';
 import { formatDate, formatPkr, latestCheck, phoneName } from '../../lib/format';
 import { overallScore } from '../../lib/scoring';
+import { canonicalPair, pairSlug } from '../../lib/compare';
 import { absUrl, breadcrumbLd, productLd } from '../../lib/seo';
 import { withBase } from '../../lib/paths';
 import type { Phone } from '../../schema/phone';
@@ -44,6 +45,10 @@ const description = `${name} price in Pakistan from ${formatPkr(cheapest.pricePk
 <Base title={`${name} price in Pakistan (${month} ${year})`} description={description} path={path} jsonLd={jsonLd}>
   <nav aria-label="Breadcrumb"><a href={withBase('/')}>Home</a> / <a href={withBase(bracketPath)}>Under {money}</a> / {name}</nav>
   <h1>{name} price in Pakistan</h1>
+  <figure class="phone-photo">
+    <img src={withBase(phone.image)} alt={name} width="600" height="800" fetchpriority="high" decoding="async" />
+    <figcaption>Photo: <a href={phone.imageCredit.url} rel="nofollow noopener">{phone.imageCredit.name}</a></figcaption>
+  </figure>
   {phone.status !== 'available' && <p class="notice">{STATUS_NOTE[phone.status]}</p>}
   <p>From <strong>{formatPkr(cheapest.pricePkr)}</strong> PTA approved. Overall score <strong>{overall.toFixed(1)}/10</strong>.</p>
   <PriceChecked date={checked} />
@@ -84,9 +89,13 @@ const description = `${name} price in Pakistan from ${formatPkr(cheapest.pricePk
   {rivals.length > 0 && (
     <section>
       <h2>Alternatives to consider</h2>
-      <ul>{rivals.map((r) => <li><a href={withBase(`/phones/${r.slug}/`)}>{phoneName(r, data.brands)}</a></li>)}</ul>
+      <ul>{rivals.map((r) => <li><a href={withBase(`/compare/${pairSlug(...canonicalPair(phone.slug, r.slug))}/`)}>{name} vs {phoneName(r, data.brands)}</a></li>)}</ul>
     </section>
   )}
 
-  <p><a href={withBase(bracketPath)}>All phones under {money}</a></p>
+  <p>
+    <a href={withBase(bracketPath)}>All phones under {money}</a> ·
+    <a href={withBase(`/brands/${phone.brand}/`)}>More {brandName} phones</a> ·
+    <a href={withBase(`/year/${phone.releaseDate.slice(0, 4)}/`)}>Phones released in {phone.releaseDate.slice(0, 4)}</a>
+  </p>
 </Base>

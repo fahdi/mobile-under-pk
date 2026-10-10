@@ -21,13 +21,14 @@ Every variant needs at least one source URL that shows the price you recorded. L
 ## Prices
 
 - Record the lowest price from an official or PTA approved listing for that exact RAM and storage.
+- Ignore a price shown on an out-of-stock listing; it is often stale. Use the next in-stock or official listing instead, and record the ignored figure in `notes`.
 - Round to the nearest 500 PKR (119,999 becomes 120,000). Unrounded prices raise a validation warning.
 - `priceCheckedAt` is the date you looked, as an ISO date in PKT. The validator compares against the UTC date, so a check made after 19:00 PKT can read as "in the future" until UTC midnight; use the UTC date if that happens.
 - A non-PTA (grey market) listing may be recorded as its own variant with `"pta": false` and `"warranty": "none"`. Brackets and headline prices always use the cheapest PTA variant.
 
 ## Status
 
-- `available`: two or more mainstream retailers list it in stock.
+- `available`: two or more mainstream retailers list it in stock. If only one retailer can be checked (Daraz often blocks automated checks), say so in `notes`.
 - `limited`: only one retailer, or only grey market stock.
 - `discontinued`: the brand lists it as discontinued, or no Pakistani retailer stocks it.
 
@@ -64,8 +65,21 @@ Never store an `overall` score. It is computed.
 
 - Path: `data/phones/<brand>-<model-kebab>.json`, for example `data/phones/samsung-galaxy-a55.json`.
 - `slug` equals the filename without `.json`. `brand` must be a slug in `data/brands.json`.
-- Leave `image` out unless you have a licence-clean image.
 - Specs: `ip` and `build.front` are `null` when the phone has none. `peakNits` may be omitted when unknown.
+
+## Official photo (required)
+
+Every phone needs one official product photo. Validation fails without it.
+
+- Source, in order: the brand's Pakistan website, the brand's global website, the brand's newsroom or press kit. Never a retailer, review site or search engine thumbnail.
+- A clean studio shot on a plain or transparent background, front view (or front and back), at least 800 px tall. No lifestyle shots or banners with text.
+- Add it with:
+
+```bash
+npm run add-photo -- <slug> <file or https image URL> "<credit name>" <https page the image appears on>
+```
+
+This trims the background, fits the phone into a 600x800 transparent WebP at `public/images/phones/<slug>.webp`, and sets `image` and `imageCredit` in the phone's JSON. The credit is shown under the photo on the phone page.
 
 ## Before committing
 

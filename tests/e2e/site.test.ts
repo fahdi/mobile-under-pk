@@ -35,6 +35,15 @@ describe('bracket page', () => {
     expect(html()).not.toContain('data-slug="samsung-galaxy-a26"');
   });
 
+  it('shows a photo on each top pick, lazily loaded below the first', () => {
+    const picks = html().split('class="picks"')[1].split('</ul>')[0];
+    const imgs = picks.match(/<img [^>]*>/g) ?? [];
+    expect(imgs).toHaveLength(2);
+    expect(imgs.every((i) => /src="\/mobile-under-pk\/images\/phones\/[a-z0-9-]+\.webp"/.test(i))).toBe(true);
+    expect(imgs[0]).toContain('fetchpriority="high"');
+    expect(imgs[1]).toContain('loading="lazy"');
+  });
+
   it('keeps discontinued phones out of the top picks but in the table', () => {
     const picks = html().split('class="picks"')[1].split('</ul>')[0];
     expect(count(picks, /class="pick"/g)).toBe(2);
@@ -71,15 +80,81 @@ describe('phone page', () => {
     expect(html()).toContain('<time datetime="2026-10-10">10 Oct 2026</time>');
   });
 
-  it('shows all eight scores, the specs and links back to its bracket', () => {
+  it('shows all eight scores, the specs and links back to its bracket, brand and year', () => {
     expect(count(html(), /class="score-label"/g)).toBe(8);
     expect(html()).toContain('Exynos 1480');
     expect(html()).toContain(`href="${BASE}mobile-under-50000-in-pakistan/"`);
+    expect(html()).toContain(`href="${BASE}brands/xiaomi/"`);
+    expect(html()).toContain(`href="${BASE}year/2024/"`);
+  });
+
+  it('shows the official photo at a fixed size with alt text and a credit link', () => {
+    expect(html()).toMatch(/<img [^>]*src="\/mobile-under-pk\/images\/phones\/xiaomi-redmi-note-14\.webp"[^>]*>/);
+    const img = html().match(/<img [^>]*images\/phones\/xiaomi-redmi-note-14[^>]*>/)![0];
+    expect(img).toContain('alt="Xiaomi Redmi Note 14"');
+    expect(img).toContain('width="600"');
+    expect(img).toContain('height="800"');
+    expect(html()).toMatch(/Photo: <a href="https:\/\/news\.samsung\.com\/global\/" rel="nofollow noopener">Samsung Newsroom<\/a>/);
   });
 
   it('warns on a discontinued phone', () => {
     expect(page('phones/samsung-galaxy-a15')).toContain('class="notice"');
     expect(html()).not.toContain('class="notice"');
+  });
+});
+
+describe('compare pages', () => {
+  const pair = 'samsung-galaxy-a16-vs-xiaomi-redmi-note-14';
+
+  it('builds the canonical pair with both phones, a verdict and JSON-LD', () => {
+    const html = page(`compare/${pair}`);
+    expect(html).toContain('<title>Samsung Galaxy A16 vs Xiaomi Redmi Note 14: price in Pakistan and specs</title>');
+    expect(html).toContain('class="verdict"');
+    expect(html).toContain('Pick Xiaomi Redmi Note 14 for camera');
+    expect(count(html, /<img [^>]*images\/phones\//g)).toBe(2);
+    expect(html).toMatch(/<td class="win">8\/10<\/td>/);
+    expect(jsonLd(html).map((o) => o['@type']).sort()).toEqual(['BreadcrumbList', 'ItemList']);
+  });
+
+  it('redirects the reverse order to the canonical page and keeps it out of the index', () => {
+    const html = page('compare/xiaomi-redmi-note-14-vs-samsung-galaxy-a16');
+    expect(html).toContain(`<meta http-equiv="refresh" content="0; url=${BASE}compare/${pair}/">`);
+    expect(html).toContain('<meta name="robots" content="noindex">');
+    expect(html).toContain(`<link rel="canonical" href="https://fahdi.github.io${BASE}compare/${pair}/">`);
+  });
+
+  it('builds no compare page for phones that are not declared rivals', () => {
+    expect(existsSync(join(out, 'compare/samsung-galaxy-a15-vs-samsung-galaxy-a16'))).toBe(false);
+  });
+
+  it('is linked from each rival phone page', () => {
+    expect(page('phones/xiaomi-redmi-note-14')).toContain(`href="${BASE}compare/${pair}/"`);
+  });
+});
+
+describe('brand page', () => {
+  const html = () => page('brands/samsung');
+
+  it('lists the brand phones cheapest first with the warranty note', () => {
+    expect(html()).toContain('<title>Samsung mobile prices in Pakistan (Oct 2026)</title>');
+    const slugs = [...html().matchAll(/<tr data-slug="([^"]+)"/g)].map((m) => m[1]);
+    expect(slugs).toEqual(['samsung-galaxy-a15', 'samsung-galaxy-a16', 'samsung-galaxy-a26']);
+    expect(html()).toContain('Official 1 year warranty.');
+    expect(html()).toMatch(/<meta name="description" content="[^"]*Prices checked 10 Oct 2026."/);
+    expect(jsonLd(html()).map((o) => o['@type']).sort()).toEqual(['BreadcrumbList', 'ItemList']);
+  });
+
+  it('is not built for a brand with no phones', () => {
+    expect(existsSync(join(out, 'brands/apple'))).toBe(false);
+  });
+});
+
+describe('year page', () => {
+  it('lists phones released that year', () => {
+    const html = page('year/2024');
+    expect(html).toContain('<title>Mobile phones released in 2024: Pakistan prices and scores</title>');
+    expect((html.match(/<tr data-slug=/g) ?? []).length).toBe(4);
+    expect(existsSync(join(out, 'year/2026'))).toBe(false);
   });
 });
 
@@ -97,10 +172,10 @@ describe('whole site', () => {
     for (const f of all()) expect(() => jsonLd(readFileSync(f, 'utf8'))).not.toThrow();
   });
 
-  it('every internal link resolves to a built file', () => {
+  it('every internal link and image resolves to a built file', () => {
     const broken: string[] = [];
     for (const f of all()) {
-      for (const [, href] of readFileSync(f, 'utf8').matchAll(/href="(\/[^"#?]*)/g)) {
+      for (const [, href] of readFileSync(f, 'utf8').matchAll(/(?:href|src)="(\/[^"#?]*)/g)) {
         expect(href.startsWith(BASE), `${href} in ${f} lacks the base path`).toBe(true);
         const rel = href.slice(BASE.length);
         const target = rel === '' || rel.endsWith('/') ? join(out, rel, 'index.html') : join(out, rel);

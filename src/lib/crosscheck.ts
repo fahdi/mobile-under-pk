@@ -1,7 +1,12 @@
 import { assignBracket, cheapestPtaVariant } from './brackets';
 import type { DataSet, Issue } from './load';
 
-export function crossCheck(data: DataSet, today: string): Issue[] {
+export interface CrossCheckOptions {
+  // Given a public path like /images/phones/x.webp, says whether the file exists.
+  imageExists?: (publicPath: string) => boolean;
+}
+
+export function crossCheck(data: DataSet, today: string, opts: CrossCheckOptions = {}): Issue[] {
   const issues: Issue[] = [];
   const err = (file: string, message: string) => issues.push({ level: 'error', file, message });
   const warn = (file: string, message: string) => issues.push({ level: 'warning', file, message });
@@ -19,6 +24,7 @@ export function crossCheck(data: DataSet, today: string): Issue[] {
   for (const p of data.phones) {
     const f = `data/phones/${p.slug}.json`;
     if (!brandSlugs.has(p.brand)) err(f, `unknown brand "${p.brand}" (add it to data/brands.json)`);
+    if (opts.imageExists && !opts.imageExists(p.image)) err(f, `image file public${p.image} is missing`);
     for (const r of p.rivals) {
       if (r === p.slug) err(f, 'lists itself as a rival');
       else if (!slugs.has(r)) err(f, `rival "${r}" does not exist`);

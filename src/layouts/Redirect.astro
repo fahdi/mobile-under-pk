@@ -1,0 +1,20 @@
+---
+import { withBase } from '../lib/paths';
+
+interface Props { to: string }
+const target = withBase(Astro.props.to);
+const canonical = new URL(target, Astro.site).href;
+---
+<!doctype html>
+<html lang="en-PK">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting</title>
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href={canonical} />
+  </head>
+  <body>
+    <p><a href={target}>Continue to the comparison</a></p>
+  </body>
+</html>

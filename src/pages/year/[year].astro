@@ -1,0 +1,32 @@
+---
+import Base from '../../layouts/Base.astro';
+import PhoneTable from '../../components/PhoneTable.astro';
+import PriceChecked from '../../components/PriceChecked.astro';
+import { getData } from '../../lib/data';
+import { latestCheck, phoneName } from '../../lib/format';
+import { phonesByYear, yearPaths, yearTitle } from '../../lib/listing';
+import { toRows } from '../../lib/rows';
+import { absUrl, breadcrumbLd, itemListLd } from '../../lib/seo';
+import { withBase } from '../../lib/paths';
+
+export function getStaticPaths() {
+  return yearPaths(getData());
+}
+
+const data = getData();
+const year = Number(Astro.params.year);
+const phones = phonesByYear(data, year);
+const rows = toRows(phones, data.presets.find((p) => p.slug === 'balanced')!);
+const checked = latestCheck(phones)!;
+const path = `/year/${year}/`;
+const jsonLd = [
+  itemListLd(phones.map((p) => ({ name: phoneName(p, data.brands), url: absUrl(`/phones/${p.slug}/`, Astro.site!) }))),
+  breadcrumbLd([{ name: 'Home', path: '/' }, { name: String(year), path }], Astro.site!),
+];
+---
+<Base title={yearTitle(year)} description={`${phones.length} phones released in ${year} and sold in Pakistan, newest first, with PTA prices and scores.`} path={path} jsonLd={jsonLd}>
+  <nav aria-label="Breadcrumb"><a href={withBase('/')}>Home</a> / {year}</nav>
+  <h1>Mobile phones released in {year}</h1>
+  <PriceChecked date={checked} />
+  <PhoneTable rows={rows} brands={data.brands} />
+</Base>
