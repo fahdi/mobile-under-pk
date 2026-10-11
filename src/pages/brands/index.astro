@@ -1,0 +1,39 @@
+---
+import Base from '../../layouts/Base.astro';
+import PriceChecked from '../../components/PriceChecked.astro';
+import { getData } from '../../lib/data';
+import { formatPkrRange, latestCheck } from '../../lib/format';
+import { brandIndexTitle, brandSummaries } from '../../lib/listing';
+import { absUrl, breadcrumbLd, itemListLd } from '../../lib/seo';
+import { withBase } from '../../lib/paths';
+import { thumbSrc, thumbSrcset } from '../../lib/thumbs';
+
+const data = getData();
+const brands = brandSummaries(data);
+const checked = latestCheck(data.phones)!;
+const jsonLd = [
+  itemListLd(brands.map((b) => ({ name: b.brand.name, url: absUrl(`/brands/${b.brand.slug}/`, Astro.site!) }))),
+  breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Brands', path: '/brands/' }], Astro.site!),
+];
+const description = `Compare ${brands.length} phone brands sold in Pakistan by PTA price range, warranty and number of models: ${brands.map((b) => b.brand.name).join(', ')}.`;
+---
+<Base title={brandIndexTitle(checked)} description={description} path="/brands/" jsonLd={jsonLd}>
+  <nav aria-label="Breadcrumb"><a href={withBase('/')}>Home</a> / Brands</nav>
+  <h1>Phone brands in Pakistan</h1>
+  <p class="lead">Every brand we track, with its PTA approved price range and official warranty. Pick a brand to see all its phones.</p>
+  <PriceChecked date={checked} />
+  <ul class="brand-grid">
+    {brands.map((b) => (
+      <li class="brand-card">
+        <a href={withBase(`/brands/${b.brand.slug}/`)}>
+          <img src={withBase(thumbSrc(b.top.image, 160))} srcset={thumbSrcset(b.top.image)} sizes="96px" width="96" height="128" loading="lazy" decoding="async" alt="" />
+          <span class="brand-card-body">
+            <span class="brand-card-name">{b.brand.name}</span>
+            <span class="brand-card-meta">{b.count} {b.count === 1 ? 'phone' : 'phones'}</span>
+            <span class="brand-card-meta">{formatPkrRange(b.minPrice, b.maxPrice)}</span>
+          </span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</Base>

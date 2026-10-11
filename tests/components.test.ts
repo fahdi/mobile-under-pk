@@ -36,13 +36,20 @@ describe('Base layout', () => {
     expect(html).toMatch(/<a [^>]*class="skip-link"[^>]*href="#main"/);
     expect(html).toContain('<main id="main"');
     expect(html).toMatch(/<nav [^>]*aria-label="Main"/);
-    for (const href of ['/mobile-under-pk/#budgets', '/mobile-under-pk/finder/', '/mobile-under-pk/#brands']) expect(html).toContain(`href="${href}"`);
+    for (const href of ['/mobile-under-pk/#budgets', '/mobile-under-pk/finder/', '/mobile-under-pk/brands/']) expect(html).toContain(`href="${href}"`);
     expect(html).toMatch(/<button [^>]*id="theme-toggle"[^>]*type="button"|<button [^>]*type="button"[^>]*id="theme-toggle"/);
   });
 
   it('marks the current section in the nav', async () => {
     const html = await render(Base, { ...props, path: '/finder/' });
     expect(html).toMatch(/<a [^>]*href="\/mobile-under-pk\/finder\/"[^>]*aria-current="page"|<a [^>]*aria-current="page"[^>]*href="\/mobile-under-pk\/finder\/"/);
+  });
+
+  it('marks Brands as current on the brand index and on every brand page', async () => {
+    for (const path of ['/brands/', '/brands/samsung/']) {
+      const html = await render(Base, { ...props, path });
+      expect(html, path).toMatch(/<a [^>]*href="\/mobile-under-pk\/brands\/"[^>]*aria-current="page"|<a [^>]*aria-current="page"[^>]*href="\/mobile-under-pk\/brands\/"/);
+    }
   });
 
   it('runs the theme boot script inside <head> so a saved theme applies before paint', async () => {

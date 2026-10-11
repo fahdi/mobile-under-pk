@@ -37,3 +37,12 @@ describe('phoneName', () => {
     expect(phoneName(makePhone({ model: 'Samsung Galaxy A55' }), brands)).toBe('Samsung Galaxy A55');
   });
 });
+
+import { formatPkrRange } from '../src/lib/format';
+
+describe('formatPkrRange', () => {
+  it('shows a range, or a single price when both ends match', () => {
+    expect(formatPkrRange(17000, 59500)).toBe('Rs 17,000 to Rs 59,500');
+    expect(formatPkrRange(27000, 27000)).toBe('Rs 27,000');
+  });
+});

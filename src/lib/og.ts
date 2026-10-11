@@ -3,7 +3,7 @@ import { bracketSlug, cheapestPtaVariant } from './brackets';
 import { comparePaths } from './compare';
 import { formatDate, formatPkr, latestCheck, phoneName } from './format';
 import { landingPaths, phonesInBracket } from './landing';
-import { phonesByBrand, phonesByYear } from './listing';
+import { brandSummaries, phonesByBrand, phonesByYear } from './listing';
 import { topPicks } from './scoring';
 
 export interface OgContent { title: string; subtitle: string; price?: string; images: string[] }
@@ -21,6 +21,10 @@ export function ogContent(data: DataSet, path: string): OgContent {
 
   if (path === '/') {
     return { title: 'Best mobile phones in Pakistan by budget', subtitle: `${data.phones.length} phones up to 150,000 PKR with PTA prices`, images: topPicks(data.phones, balanced, 3).map((r) => r.phone.image) };
+  }
+  if (path === '/brands/') {
+    const summaries = brandSummaries(data);
+    return { title: 'Phone brands in Pakistan', subtitle: `${summaries.length} brands, prices by brand with PTA status`, images: summaries.slice(0, 3).map((s) => s.top.image) };
   }
   if (path === '/finder/') {
     return { title: 'Find your phone', subtitle: 'Filter and rank every phone by what matters to you', images: [] };

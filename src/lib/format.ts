@@ -22,3 +22,7 @@ export function phoneName(p: Phone, brands: Brand[]): string {
   const brand = brands.find((b) => b.slug === p.brand)?.name ?? p.brand;
   return p.model.toLowerCase().startsWith(brand.toLowerCase()) ? p.model : `${brand} ${p.model}`;
 }
+
+export function formatPkrRange(min: number, max: number): string {
+  return min === max ? formatPkr(min) : `${formatPkr(min)} to ${formatPkr(max)}`;
+}

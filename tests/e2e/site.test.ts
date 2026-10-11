@@ -160,8 +160,35 @@ describe('compare pages', () => {
   });
 });
 
+describe('brand index page', () => {
+  const html = () => page('brands');
+
+  it('is a standalone SEO page listing every brand with phones', () => {
+    expect(html()).toContain('<title>Mobile phone brands in Pakistan: prices by brand (Oct 2026)</title>');
+    expect(html()).toMatch(/<h1>Phone brands in Pakistan<\/h1>/);
+    const links = [...html().matchAll(/class="brand-card"[\s\S]*?href="([^"]+)"/g)].map((m) => m[1]);
+    expect(links).toEqual([`${BASE}brands/samsung/`, `${BASE}brands/xiaomi/`]);
+    expect(html()).toContain('Rs 42,000 to Rs 58,000');
+    expect(jsonLd(html()).map((o) => o['@type']).sort()).toEqual(['BreadcrumbList', 'ItemList']);
+  });
+
+  it('is in the sitemap and linked from the header and footer', () => {
+    expect(readFileSync(join(out, 'sitemap.xml'), 'utf8')).toContain(`<loc>https://fahdi.github.io${BASE}brands/</loc>`);
+    expect((page('').match(new RegExp(`href="${BASE}brands/"`, 'g')) ?? []).length).toBeGreaterThanOrEqual(2);
+  });
+});
+
 describe('brand page', () => {
   const html = () => page('brands/samsung');
+
+  it('lists every phone of the brand as photo cards with a price range summary and budget links', () => {
+    const cards = html().split('id="brand-phones"')[1].split('</section>')[0];
+    expect((cards.match(/class="phone-card"/g) ?? []).length).toBe(3);
+    expect(html()).toContain('3 phones from Rs 42,000 to Rs 58,000');
+    expect(html()).toContain(`href="${BASE}mobile-under-50000-in-pakistan/"`);
+    expect(html()).toContain(`href="${BASE}mobile-under-60000-in-pakistan/"`);
+    expect(html()).toContain(`href="${BASE}brands/"`);
+  });
 
   it('lists the brand phones cheapest first with the warranty note', () => {
     expect(html()).toContain('<title>Samsung mobile prices in Pakistan (Oct 2026)</title>');

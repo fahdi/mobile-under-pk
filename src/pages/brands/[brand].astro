@@ -1,10 +1,12 @@
 ---
 import Base from '../../layouts/Base.astro';
 import PhoneTable from '../../components/PhoneTable.astro';
+import PhoneCard from '../../components/PhoneCard.astro';
+import { bracketSlug } from '../../lib/brackets';
 import PriceChecked from '../../components/PriceChecked.astro';
 import { getData } from '../../lib/data';
-import { formatDate, latestCheck, phoneName } from '../../lib/format';
-import { brandPaths, brandTitle, phonesByBrand } from '../../lib/listing';
+import { formatDate, formatPkrRange, latestCheck, phoneName } from '../../lib/format';
+import { brandBrackets, brandPaths, brandSummaries, brandTitle, phonesByBrand } from '../../lib/listing';
 import { toRows } from '../../lib/rows';
 import { absUrl, breadcrumbLd, itemListLd } from '../../lib/seo';
 import { withBase } from '../../lib/paths';
@@ -19,18 +21,39 @@ const brand = data.brands.find((b) => b.slug === slug)!;
 const phones = phonesByBrand(data, slug!);
 const rows = toRows(phones, data.presets.find((p) => p.slug === 'balanced')!);
 const checked = latestCheck(phones)!;
+const summary = brandSummaries(data).find((b) => b.brand.slug === slug)!;
+const budgets = brandBrackets(data, slug!);
 const path = `/brands/${slug}/`;
 const jsonLd = [
   itemListLd(phones.map((p) => ({ name: phoneName(p, data.brands), url: absUrl(`/phones/${p.slug}/`, Astro.site!) }))),
-  breadcrumbLd([{ name: 'Home', path: '/' }, { name: brand.name, path }], Astro.site!),
+  breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Brands', path: '/brands/' }, { name: brand.name, path }], Astro.site!),
 ];
 const description = `${phones.length} ${brand.name} phones sold in Pakistan, cheapest PTA price first, with warranty details and scores. Prices checked ${formatDate(checked)}.`;
 ---
 <Base title={brandTitle(brand.name, checked)} description={description} path={path} jsonLd={jsonLd}>
-  <nav aria-label="Breadcrumb"><a href={withBase('/')}>Home</a> / {brand.name}</nav>
+  <nav aria-label="Breadcrumb"><a href={withBase('/')}>Home</a> / <a href={withBase('/brands/')}>Brands</a> / {brand.name}</nav>
   <h1>{brand.name} mobile prices in Pakistan</h1>
+  <p class="lead">{summary.count} {summary.count === 1 ? 'phone' : 'phones'} {summary.count === 1 ? 'at' : 'from'} {formatPkrRange(summary.minPrice, summary.maxPrice)}, PTA approved prices, cheapest first.</p>
   <PriceChecked date={checked} />
-  {brand.warrantyNote && <p>{brand.warrantyNote}</p>}
-  {brand.officialStoreUrl && <p><a href={brand.officialStoreUrl} rel="nofollow noopener">Official {brand.name} Pakistan store</a></p>}
-  <PhoneTable rows={rows} brands={data.brands} />
+  {budgets.length > 0 && (
+    <p>{brand.name} by budget: {budgets.map((c, i) => (<>{i > 0 && ', '}<a href={withBase(`/${bracketSlug(c)}/`)}>under {c.toLocaleString('en-US')}</a></>))}.</p>
+  )}
+
+  <section id="brand-phones">
+    <h2>All {brand.name} phones</h2>
+    <ul class="card-grid">
+      {rows.map((r) => <PhoneCard ranked={r} brands={data.brands} />)}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Warranty and where to buy</h2>
+    {brand.warrantyNote && <p>{brand.warrantyNote}</p>}
+    {brand.officialStoreUrl && <p><a href={brand.officialStoreUrl} rel="nofollow noopener">Official {brand.name} Pakistan store</a></p>}
+  </section>
+
+  <section>
+    <h2>{brand.name} phones compared</h2>
+    <PhoneTable rows={rows} brands={data.brands} />
+  </section>
 </Base>
