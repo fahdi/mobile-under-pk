@@ -17,7 +17,7 @@ const data: DataSet = {
 describe('sitemapPaths', () => {
   it('lists every canonical page once and nothing else', () => {
     expect(sitemapPaths(data).sort()).toEqual([
-      '/', '/brands/', '/brands/samsung/', '/compare/a-vs-b/', '/finder/', '/mobile-under-50000-in-pakistan/',
+      '/', '/battery/', '/brands/', '/brands/samsung/', '/compare/a-vs-b/', '/finder/', '/mobile-under-50000-in-pakistan/',
       '/phones/a/', '/phones/b/', '/processors/', '/processors/samsung-exynos-1480/', '/processors/smooth-everyday/', '/year/2024/', '/year/2025/',
     ]);
   });

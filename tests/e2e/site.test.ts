@@ -192,6 +192,32 @@ describe('processor pages', () => {
   });
 });
 
+describe('battery pages', () => {
+  it('hub ranks every phone by battery life and links the band pages', () => {
+    const html = page('battery');
+    expect(html).toContain('<title>Longest battery life phones in Pakistan (Oct 2026)</title>');
+    expect(html).toMatch(/<h1>Longest battery life phones in Pakistan<\/h1>/);
+    const order = [...html.matchAll(/class="phone-card"[\s\S]*?phones\/([a-z0-9-]+)\//g)].map((m) => m[1]);
+    expect(order[0]).toBe('xiaomi-poco-c75');
+    expect(order).toHaveLength(5);
+    expect(html).toContain(`href="${BASE}battery/5000-mah/"`);
+    expect(html).not.toContain(`href="${BASE}battery/7000-mah/"`);
+    expect(jsonLd(html).map((o) => o['@type']).sort()).toEqual(['BreadcrumbList', 'ItemList']);
+  });
+
+  it('builds band pages only for bands with 3 or more phones', () => {
+    const html = page('battery/5000-mah');
+    expect(html).toContain('<title>Phones with 5000 mAh battery in Pakistan (Oct 2026)</title>');
+    expect((html.match(/class="phone-card"/g) ?? []).length).toBe(5);
+    expect(existsSync(join(out, 'battery/7000-mah'))).toBe(false);
+  });
+
+  it('links phone pages to their band and the footer to the hub', () => {
+    expect(page('phones/xiaomi-redmi-note-14')).toContain(`href="${BASE}battery/5000-mah/"`);
+    expect(page('')).toContain(`href="${BASE}battery/"`);
+  });
+});
+
 describe('brand index page', () => {
   const html = () => page('brands');
 

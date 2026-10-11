@@ -5,6 +5,7 @@ import { formatDate, formatPkr, latestCheck, phoneName } from './format';
 import { landingPaths, phonesInBracket } from './landing';
 import { brandSummaries, phonesByBrand, phonesByYear } from './listing';
 import { chipPaths, processorTiers, tierPaths } from './processors';
+import { bandPaths, phonesInBand, rankByBattery } from './battery';
 import { topPicks } from './scoring';
 
 export interface OgContent { title: string; subtitle: string; price?: string; images: string[] }
@@ -38,6 +39,13 @@ export function ogContent(data: DataSet, path: string): OgContent {
     }
     const chip = chipPaths(data).find((c) => c.params.slug === parts[1]);
     if (chip) return { title: `Phones with ${chip.props.chip.name}`, subtitle: `${chip.props.chip.count} phones in Pakistan, ${chip.props.chip.tier.name.toLowerCase()} processor`, images: photos(chip.props.chip.phones) };
+  }
+  if (path === '/battery/') {
+    return { title: 'Longest battery life phones', subtitle: `${data.phones.length} phones ranked by battery life`, images: photos(rankByBattery(data.phones)) };
+  }
+  if (parts[0] === 'battery' && parts.length === 2) {
+    const band = bandPaths(data).find((b) => b.params.band === parts[1]);
+    if (band) return { title: band.props.band.heading, subtitle: 'Longest-lasting first, PTA prices', images: photos(phonesInBand(data, band.props.band)) };
   }
   if (path === '/finder/') {
     return { title: 'Find your phone', subtitle: 'Filter and rank every phone by what matters to you', images: [] };

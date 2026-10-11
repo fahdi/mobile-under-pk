@@ -1,0 +1,35 @@
+---
+import Base from '../../layouts/Base.astro';
+import PhoneCard from '../../components/PhoneCard.astro';
+import PriceChecked from '../../components/PriceChecked.astro';
+import { getData } from '../../lib/data';
+import { latestCheck, phoneName } from '../../lib/format';
+import { bandPaths, bandTitle, phonesInBand, type Band } from '../../lib/battery';
+import { toRows } from '../../lib/rows';
+import { absUrl, breadcrumbLd, itemListLd } from '../../lib/seo';
+import { withBase } from '../../lib/paths';
+
+export function getStaticPaths() {
+  return bandPaths(getData());
+}
+
+const { band } = Astro.props as { band: Band };
+const data = getData();
+const phones = phonesInBand(data, band);
+const rows = toRows(phones, data.presets.find((p) => p.slug === 'balanced')!);
+const checked = latestCheck(phones)!;
+const path = `/battery/${band.slug}/`;
+const jsonLd = [
+  itemListLd(phones.map((p) => ({ name: phoneName(p, data.brands), url: absUrl(`/phones/${p.slug}/`, Astro.site!) }))),
+  breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Battery life', path: '/battery/' }, { name: band.name, path }], Astro.site!),
+];
+---
+<Base title={bandTitle(band, checked)} description={`${phones.length} phones in Pakistan with ${band.name.toLowerCase()} batteries, longest-lasting first, with PTA prices.`} path={path} jsonLd={jsonLd}>
+  <nav aria-label="Breadcrumb"><a href={withBase('/')}>Home</a> / <a href={withBase('/battery/')}>Battery life</a> / {band.name}</nav>
+  <h1>{band.heading} in Pakistan</h1>
+  <p class="lead">{phones.length} phones, longest-lasting first. See <a href={withBase('/battery/')}>every phone ranked by battery life</a>.</p>
+  <PriceChecked date={checked} />
+  <ul class="card-grid">
+    {rows.map((r) => <PhoneCard ranked={r} brands={data.brands} />)}
+  </ul>
+</Base>

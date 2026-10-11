@@ -9,6 +9,7 @@ import { formatDate, formatPkr, latestCheck, phoneName } from '../../lib/format'
 import { overallScore } from '../../lib/scoring';
 import { canonicalPair, pairSlug } from '../../lib/compare';
 import { chipFamily, chipPaths, powerTier } from '../../lib/processors';
+import { bandPaths, batteryBand } from '../../lib/battery';
 import { absUrl, breadcrumbLd, productLd } from '../../lib/seo';
 import { withBase } from '../../lib/paths';
 import type { Phone } from '../../schema/phone';
@@ -33,6 +34,8 @@ const money = bracket.ceiling.toLocaleString('en-US');
 const chip = chipFamily(phone.specs.chipset);
 const chipPage = chip && chipPaths(data).some((c) => c.params.slug === chip.slug);
 const tier = powerTier(phone.scores.performance.value);
+const band = batteryBand(phone.specs.battery.mah);
+const bandPage = bandPaths(data).some((b) => b.params.band === band.slug);
 const rivals = phone.rivals.map((s) => data.phones.find((p) => p.slug === s)!).filter(Boolean);
 const WARRANTY = { official: 'Official warranty', 'local-shop': 'Shop warranty', none: 'No warranty' } as const;
 const STATUS_NOTE = {
@@ -84,6 +87,7 @@ const description = `${name} price in Pakistan from ${formatPkr(cheapest.pricePk
   </section>
 
   <p class="processor-line">Processor: {chipPage ? <a href={withBase(`/processors/${chip!.slug}/`)}>{chip!.name}</a> : (chip?.name ?? phone.specs.chipset)}, <a href={withBase(`/processors/${tier.slug}/`)}>{tier.name.toLowerCase()}</a> performance.</p>
+  <p class="battery-line">Battery: {phone.specs.battery.mah} mAh, {phone.specs.battery.wiredW}W charging{bandPage && <>. See <a href={withBase(`/battery/${band.slug}/`)}>{band.heading.toLowerCase()}</a></>}.</p>
 
   <section>
     <h2>Specifications</h2>
