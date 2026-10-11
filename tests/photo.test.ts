@@ -24,7 +24,11 @@ describe('processPhoto', () => {
     const { data } = await sharp(out).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
     const [r, g, b, a] = rgba(data, 600, 300, 400); // centre: phone
     expect(r).toBeGreaterThan(180); expect(g).toBeLessThan(40); expect(b).toBeLessThan(40); expect(a).toBe(255);
-    expect(rgba(data, 600, 300, 5)[0]).toBeGreaterThan(180); // phone fills the height: red at the top edge
+    // A transparent margin keeps the phone off the frame edge, so rounded UI corners can never clip it.
+    const opaqueRows = Array.from({ length: 800 }, (_, y) => y).filter((y) => rgba(data, 600, 300, y)[3] > 16);
+    expect(opaqueRows[0]).toBeGreaterThanOrEqual(24);
+    expect(opaqueRows.at(-1)).toBeLessThanOrEqual(800 - 24);
+    expect(rgba(data, 600, 300, 60)[0]).toBeGreaterThan(180); // still large: red near the top inside the margin
     expect(rgba(data, 600, 20, 400)[3]).toBe(0); // side padding is transparent, not white
   });
 

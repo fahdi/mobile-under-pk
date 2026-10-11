@@ -1,6 +1,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { processPhoto } from './photo';
+import { checkPhoto } from './photo-quality';
 
 export interface Credit { name: string; url: string }
 
@@ -11,6 +12,8 @@ export async function addPhoto({ root, slug, input, credit }: { root: string; sl
   if (!credit.name || !/^https:\/\//.test(credit.url)) throw new Error('credit needs a name and an https URL');
 
   const webp = await processPhoto(input);
+  const problems = await checkPhoto(webp);
+  if (problems.length) throw new Error(`photo rejected: ${problems.join('; ')}`);
   const image = `/images/phones/${slug}.webp`;
   mkdirSync(join(root, 'public/images/phones'), { recursive: true });
   writeFileSync(join(root, 'public', image), webp);
