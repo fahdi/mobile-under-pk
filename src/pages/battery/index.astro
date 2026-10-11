@@ -1,0 +1,35 @@
+---
+import Base from '../../layouts/Base.astro';
+import PhoneCard from '../../components/PhoneCard.astro';
+import PriceChecked from '../../components/PriceChecked.astro';
+import { getData } from '../../lib/data';
+import { latestCheck, phoneName } from '../../lib/format';
+import { bandPaths, batteryTitle, phonesInBand, rankByBattery } from '../../lib/battery';
+import { toRows } from '../../lib/rows';
+import { absUrl, breadcrumbLd, itemListLd } from '../../lib/seo';
+import { withBase } from '../../lib/paths';
+
+const data = getData();
+const ranked = rankByBattery(data.phones);
+const rows = toRows(ranked, data.presets.find((p) => p.slug === 'balanced')!);
+const bands = bandPaths(data).map((b) => ({ band: b.props.band, count: phonesInBand(data, b.props.band).length }));
+const checked = latestCheck(data.phones)!;
+const jsonLd = [
+  itemListLd(ranked.map((p) => ({ name: phoneName(p, data.brands), url: absUrl(`/phones/${p.slug}/`, Astro.site!) }))),
+  breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Battery life', path: '/battery/' }], Astro.site!),
+];
+---
+<Base title={batteryTitle(checked)} description={`Every phone sold in Pakistan ranked by battery life: endurance, capacity and charging speed, with PTA prices. Best: ${phoneName(ranked[0], data.brands)}.`} path="/battery/" jsonLd={jsonLd}>
+  <nav aria-label="Breadcrumb"><a href={withBase('/')}>Home</a> / Battery life</nav>
+  <h1>Longest battery life phones in Pakistan</h1>
+  <p class="lead">Ranked by our battery score, which weighs real endurance and charging speed, then by capacity, then by price.</p>
+  <PriceChecked date={checked} />
+  {bands.length > 0 && (
+    <ul class="bracket-chips">
+      {bands.map((b) => <li><a href={withBase(`/battery/${b.band.slug}/`)}>{b.band.name} <span class="chip-count">{b.count} phones</span></a></li>)}
+    </ul>
+  )}
+  <ul class="card-grid">
+    {rows.map((r) => <PhoneCard ranked={r} brands={data.brands} />)}
+  </ul>
+</Base>

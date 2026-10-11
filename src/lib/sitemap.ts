@@ -4,6 +4,7 @@ import { landingPaths } from './landing';
 import { brandPaths, yearPaths } from './listing';
 import { withBase } from './paths';
 import { chipPaths, tierPaths } from './processors';
+import { bandPaths } from './battery';
 
 // Canonical pages only: built from the same path functions as the pages, so redirects never appear.
 export function sitemapPaths(data: DataSet): string[] {
@@ -17,6 +18,8 @@ export function sitemapPaths(data: DataSet): string[] {
     ...yearPaths(data).map((p) => `/year/${p.params.year}/`),
     ...(data.phones.length ? ['/processors/'] : []),
     ...[...tierPaths(data), ...chipPaths(data)].map((p) => `/processors/${p.params.slug}/`),
+    ...(data.phones.length ? ['/battery/'] : []),
+    ...bandPaths(data).map((p) => `/battery/${p.params.band}/`),
     ...comparePaths(data.phones).filter((p) => p.props.kind === 'page').map((p) => `/compare/${p.params.pair}/`),
   ];
 }
