@@ -32,4 +32,16 @@ describe('checkPhoto', () => {
     const landscape = `<rect x="20" y="300" width="360" height="200" rx="40" fill="#223344"/>`;
     expect((await checkPhoto(await processed(landscape))).join()).toMatch(/not a single upright phone/);
   });
+
+  it('rejects a glow or drop shadow (semi-transparent haze) around the phone', async () => {
+    const haze = `<defs><filter id="g" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="28"/></filter></defs>
+      <rect x="60" y="100" width="300" height="620" rx="44" fill="#ff8800" opacity="0.6" filter="url(#g)"/>` + phone(50);
+    // Straight to WebP: processPhoto now strips haze, but the checker must still catch it in any image.
+    const raw = await sharp(Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800">${haze}</svg>`)).webp().toBuffer();
+    expect((await checkPhoto(raw)).join()).toMatch(/glow or shadow/);
+  });
+
+  it('still accepts normal anti-aliased edges', async () => {
+    expect(await checkPhoto(await processed(phone(50)))).toEqual([]);
+  });
 });

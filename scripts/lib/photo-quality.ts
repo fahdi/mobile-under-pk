@@ -22,5 +22,16 @@ export async function checkPhoto(webp: Buffer): Promise<string[]> {
   const corners = [[x0 + inset, y0 + inset], [x1 - inset, y0 + inset], [x0 + inset, y1 - inset], [x1 - inset, y1 - inset]];
   const opaque = corners.filter(([x, y]) => alpha(x, y) > 32).length;
   if (opaque > 0) problems.push(`background is not transparent or the phone is cut off (${opaque} of 4 corners opaque)`);
+  // Glow or drop shadow: a lot of semi-transparent haze compared with the solid phone.
+  let semi = 0;
+  let solid = 0;
+  for (let i = 3; i < data.length; i += 4) {
+    if (data[i] > 200) solid++;
+    else if (data[i] > 8) semi++;
+  }
+  const haze = semi / Math.max(solid, 1);
+  if (haze > MAX_HAZE) problems.push(`glow or shadow around the phone (${(haze * 100).toFixed(1)}% semi-transparent, max ${MAX_HAZE * 100}%)`);
   return problems;
 }
+
+export const MAX_HAZE = 0.05;

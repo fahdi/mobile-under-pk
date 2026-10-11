@@ -41,4 +41,16 @@ describe('processPhoto', () => {
   it('rejects input that is not an image', async () => {
     await expect(processPhoto(Buffer.from('<html>not an image</html>'))).rejects.toThrow();
   });
+
+  it('strips a glow or drop shadow but keeps the phone and its soft edge', async () => {
+    const { checkPhoto } = await import('../scripts/lib/photo-quality');
+    const glowing = await sharp(Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="400" height="800">
+      <defs><filter id="g" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="28"/></filter></defs>
+      <rect x="60" y="100" width="300" height="620" rx="44" fill="#ff8800" opacity="0.6" filter="url(#g)"/>
+      <rect x="50" y="90" width="300" height="620" rx="44" fill="#223344"/></svg>`)).png().toBuffer();
+    const out = await processPhoto(glowing);
+    expect(await checkPhoto(out)).toEqual([]);
+    const { data } = await sharp(out).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+    expect(rgba(data, 600, 300, 400)[3]).toBe(255); // phone centre untouched
+  });
 });
