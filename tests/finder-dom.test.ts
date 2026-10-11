@@ -101,3 +101,68 @@ describe('initFinder', () => {
     expect(document.getElementById('finder-notice')!.hidden).toBe(false);
   });
 });
+
+import { initFilterDrawer } from '../src/scripts/finder-dom';
+
+describe('initFilterDrawer', () => {
+  const mount = () => {
+    document.body.innerHTML = `
+      <form id="finder" class="finder-layout">
+        <aside class="finder-filters" id="finder-filters" aria-label="Filters">
+          <button type="button" class="drawer-close" aria-label="Close filters">x</button>
+          <input type="checkbox" name="brand" value="samsung"><input type="checkbox" name="5g" value="1"><input name="max" type="number">
+          <button type="button" class="drawer-apply">Show phones</button>
+        </aside>
+        <div class="drawer-backdrop"></div>
+        <button type="button" class="filters-toggle" aria-controls="finder-filters" aria-expanded="false">Filters</button>
+        <p id="finder-count">Showing 7 of 80 phones</p>
+      </form>`;
+    initFilterDrawer(document);
+    return {
+      form: document.getElementById('finder')!, toggle: document.querySelector<HTMLButtonElement>('.filters-toggle')!,
+      apply: document.querySelector<HTMLButtonElement>('.drawer-apply')!,
+    };
+  };
+
+  it('marks the page as JS-enhanced so phones get the drawer instead of inline filters', () => {
+    const { form } = mount();
+    expect(form.classList.contains('has-drawer')).toBe(true);
+  });
+
+  it('opens from the Filters button and closes from close, backdrop, apply and Escape', () => {
+    const { form, toggle, apply } = mount();
+    for (const close of [
+      () => document.querySelector<HTMLButtonElement>('.drawer-close')!.click(),
+      () => document.querySelector<HTMLElement>('.drawer-backdrop')!.click(),
+      () => apply.click(),
+      () => document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape' })),
+    ]) {
+      toggle.click();
+      expect(form.classList.contains('drawer-open')).toBe(true);
+      expect(toggle.getAttribute('aria-expanded')).toBe('true');
+      expect(document.body.classList.contains('no-scroll')).toBe(true);
+      close();
+      expect(form.classList.contains('drawer-open')).toBe(false);
+      expect(toggle.getAttribute('aria-expanded')).toBe('false');
+      expect(document.body.classList.contains('no-scroll')).toBe(false);
+    }
+  });
+
+  it('moves focus into the drawer once it is shown, and back to the button when it closes', async () => {
+    const { toggle } = mount();
+    toggle.click();
+    await new Promise((r) => requestAnimationFrame(() => r(null)));
+    expect(document.activeElement?.className).toBe('drawer-close');
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape' }));
+    expect(document.activeElement).toBe(toggle);
+  });
+
+  it('shows the active filter count on the button and the live result count on the apply button', () => {
+    const { form, toggle, apply } = mount();
+    (form.querySelector('[value="samsung"]') as HTMLInputElement).checked = true;
+    (form.querySelector('[name="max"]') as HTMLInputElement).value = '50000';
+    form.dispatchEvent(new Event('input', { bubbles: true }));
+    expect(toggle.textContent).toBe('Filters · 2');
+    expect(apply.textContent).toBe('Show 7 phones');
+  });
+});

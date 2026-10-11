@@ -99,3 +99,41 @@ export async function initFinder(doc: Document, win: Window, loadIndex: () => Pr
   });
   update();
 }
+
+// Phones: filters live in a drawer that slides in from the left. Desktop CSS ignores all of this.
+export function initFilterDrawer(doc: Document): void {
+  const form = doc.getElementById('finder') as HTMLFormElement | null;
+  const toggle = form?.querySelector<HTMLButtonElement>('.filters-toggle');
+  const panel = form?.querySelector<HTMLElement>('.finder-filters');
+  if (!form || !toggle || !panel) return;
+  const apply = form.querySelector<HTMLButtonElement>('.drawer-apply');
+  form.classList.add('has-drawer');
+
+  const set = (open: boolean) => {
+    form.classList.toggle('drawer-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    doc.body.classList.toggle('no-scroll', open);
+    if (open) panel.querySelector<HTMLElement>('.drawer-close')?.focus();
+    else if (doc.activeElement && panel.contains(doc.activeElement)) toggle.focus();
+  };
+  toggle.addEventListener('click', () => set(true));
+  form.querySelector('.drawer-close')?.addEventListener('click', () => set(false));
+  form.querySelector('.drawer-backdrop')?.addEventListener('click', () => set(false));
+  apply?.addEventListener('click', () => set(false));
+  doc.addEventListener('keydown', (e) => { if ((e as KeyboardEvent).key === 'Escape' && form.classList.contains('drawer-open')) set(false); });
+
+  const showCount = () => {
+    const n = doc.getElementById('finder-count')?.textContent?.match(/(\d+)(?: of \d+)? phones/)?.[1];
+    if (apply) apply.textContent = n ? `Show ${n} phones` : 'Show phones';
+  };
+  const refresh = () => {
+    const active = [...panel.querySelectorAll<HTMLInputElement | HTMLSelectElement>('input, select')]
+      .filter((el) => (el instanceof HTMLInputElement && el.type === 'checkbox' ? el.checked : el.value !== '')).length;
+    toggle.textContent = active ? `Filters · ${active}` : 'Filters';
+    showCount();
+  };
+  form.addEventListener('input', refresh);
+  const count = doc.getElementById('finder-count');
+  if (count && typeof MutationObserver !== 'undefined') new MutationObserver(showCount).observe(count, { childList: true, characterData: true, subtree: true });
+  refresh();
+}
