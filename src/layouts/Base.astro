@@ -23,6 +23,7 @@ const nav = [
   { label: 'Budgets', href: withBase('/') + '#budgets', current: false },
   { label: 'Finder', href: withBase('/finder/'), current: path === '/finder/' },
   { label: 'Brands', href: withBase('/brands/'), current: path.startsWith('/brands/') },
+  { label: 'Blog', href: withBase('/blog/'), current: path.startsWith('/blog/') },
 ];
 ---
 <!doctype html>
@@ -79,6 +80,7 @@ const nav = [
           <ul>
             <li><a href={withBase('/') + '#budgets'}>Phones by budget</a></li>
             <li><a href={withBase('/finder/')}>Phone finder</a></li>
+            <li><a href={withBase('/blog/')}>Blog</a></li>
             <li><a href={withBase('/brands/')}>Phones by brand</a></li>
             <li><a href={withBase('/processors/')}>Phones by processor</a></li>
             <li><a href={withBase('/battery/')}>Longest battery life</a></li>

@@ -24,6 +24,7 @@ Every variant needs at least one source URL that shows the price you recorded. L
 - Ignore a price shown on an out-of-stock listing; it is often stale. Use the next in-stock or official listing instead, and record the ignored figure in `notes`.
 - Round to the nearest 500 PKR (119,999 becomes 120,000). Unrounded prices raise a validation warning.
 - `priceCheckedAt` is the date you looked, as an ISO date in PKT. The validator compares against the UTC date, so a check made after 19:00 PKT can read as "in the future" until UTC midnight; use the UTC date if that happens.
+- Never record a JV listing (a phone locked to a foreign carrier and made to work with a chip or other workaround), however cheap. See the blog post on JV phones for why.
 - A non-PTA (grey market) listing may be recorded as its own variant with `"pta": false` and `"warranty": "none"`. Brackets and headline prices always use the cheapest PTA variant.
 
 ## Status

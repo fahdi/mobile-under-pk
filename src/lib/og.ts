@@ -1,4 +1,5 @@
 import type { DataSet } from './load';
+import type { BlogPost } from './blog';
 import { bracketSlug, cheapestPtaVariant } from './brackets';
 import { comparePaths } from './compare';
 import { formatDate, formatPkr, latestCheck, phoneName } from './format';
@@ -15,7 +16,7 @@ export function ogPath(pagePath: string): string {
 }
 
 // What the share image for each page says and shows.
-export function ogContent(data: DataSet, path: string): OgContent {
+export function ogContent(data: DataSet, path: string, posts: BlogPost[] = []): OgContent {
   const balanced = data.presets.find((p) => p.slug === 'balanced') ?? data.presets[0];
   const name = (slug: string) => phoneName(data.phones.find((p) => p.slug === slug)!, data.brands);
   const photos = (phones: DataSet['phones']) => phones.slice(0, 3).map((p) => p.image);
@@ -47,6 +48,11 @@ export function ogContent(data: DataSet, path: string): OgContent {
     const band = bandPaths(data).find((b) => b.params.band === parts[1]);
     if (band) return { title: band.props.band.heading, subtitle: 'Longest-lasting first, PTA prices', images: photos(phonesInBand(data, band.props.band)) };
   }
+  if (path === '/blog/') {
+    return { title: 'MobileUnder.pk blog', subtitle: 'Phone buying advice for Pakistan', images: [] };
+  }
+  const post = posts.find((p) => path === `/blog/${p.slug}/`);
+  if (post) return { title: post.frontmatter.title, subtitle: 'MobileUnder.pk blog', images: [] };
   if (path === '/finder/') {
     return { title: 'Find your phone', subtitle: 'Filter and rank every phone by what matters to you', images: [] };
   }
