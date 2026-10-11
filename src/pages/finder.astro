@@ -29,7 +29,9 @@ const presets = [50000, 100000, 150000];
   <h1>Find your phone</h1>
   {checked && <PriceChecked date={checked} />}
 
-  <form id="finder" class="finder-layout" method="get">
+  <!-- Drawer mode is in the markup so the phone layout is final at first paint (no layout shift). -->
+  <noscript><style is:inline>@media (max-width: 760px) { .has-drawer .finder-filters { position: static; transform: none; visibility: visible; width: auto; box-shadow: none; border-radius: 12px; padding: 4px 16px 16px; } .has-drawer .filters-toggle, .has-drawer .drawer-close, .has-drawer .drawer-apply { display: none; } }</style></noscript>
+  <form id="finder" class="finder-layout has-drawer" method="get">
     <aside class="finder-filters" id="finder-filters" aria-label="Filters">
         <div class="finder-filters-head">
           <h2>Filters</h2>

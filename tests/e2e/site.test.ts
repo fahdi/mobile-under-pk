@@ -384,6 +384,12 @@ describe('finder page', () => {
     expect(results).toContain('id="finder-count"');
   });
 
+  it('ships in drawer mode so nothing shifts when the script runs, with an inline fallback without JavaScript', () => {
+    const html = page('finder');
+    expect(html).toMatch(/<form id="finder" class="finder-layout has-drawer"/);
+    expect(html).toMatch(/<noscript><style>[^<]*\.has-drawer[^<]*<\/style><\/noscript>/);
+  });
+
   it('shows brand, year and must-have options as chips that are still real checkboxes', () => {
     const html = page('finder');
     expect(html).toMatch(/<label class="chip"><input type="checkbox" name="brand" value="samsung"/);
