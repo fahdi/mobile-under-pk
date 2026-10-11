@@ -72,7 +72,10 @@ const brands = brandPaths(data).map((p) => data.brands.find((b) => b.slug === p.
       ))}
 
       <section id="brands">
-        <h2>Browse by brand</h2>
+        <div class="gallery-head">
+          <h2>Browse by brand</h2>
+          <a href={withBase('/brands/')}>All brands</a>
+        </div>
         <ul class="bracket-chips">
           {brands.map((b) => <li><a href={withBase(`/brands/${b.slug}/`)}>{b.name}</a></li>)}
         </ul>

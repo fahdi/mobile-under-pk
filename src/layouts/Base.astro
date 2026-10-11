@@ -22,7 +22,7 @@ const ld = (o: object) => JSON.stringify(o).replace(/</g, '\\u003c');
 const nav = [
   { label: 'Budgets', href: withBase('/') + '#budgets', current: false },
   { label: 'Finder', href: withBase('/finder/'), current: path === '/finder/' },
-  { label: 'Brands', href: withBase('/') + '#brands', current: path.startsWith('/brands/') },
+  { label: 'Brands', href: withBase('/brands/'), current: path.startsWith('/brands/') },
 ];
 ---
 <!doctype html>
@@ -79,7 +79,7 @@ const nav = [
           <ul>
             <li><a href={withBase('/') + '#budgets'}>Phones by budget</a></li>
             <li><a href={withBase('/finder/')}>Phone finder</a></li>
-            <li><a href={withBase('/') + '#brands'}>Phones by brand</a></li>
+            <li><a href={withBase('/brands/')}>Phones by brand</a></li>
           </ul>
         </div>
         <div>

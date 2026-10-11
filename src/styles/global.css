@@ -140,3 +140,14 @@ tr[hidden] { display: none; }
 .gallery-head a { font-weight: 600; white-space: nowrap; text-decoration: none; }
 /* Keep anchored sections clear of the sticky header. */
 [id] { scroll-margin-top: 84px; }
+
+/* Brand index */
+.lead { font-size: 1.1rem; color: var(--muted); max-width: 44rem; }
+.brand-grid { list-style: none; padding: 0; display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); }
+.brand-card a { display: flex; align-items: center; gap: 14px; padding: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); text-decoration: none; color: var(--fg); }
+.brand-card a:hover { border-color: var(--accent); }
+.brand-card img { width: 72px; height: 96px; object-fit: contain; background: #fff; border-radius: var(--radius-sm); flex: none; }
+.brand-card-body { display: flex; flex-direction: column; gap: 2px; }
+.brand-card-name { font-weight: 800; font-size: 1.15rem; }
+.brand-card a:hover .brand-card-name { color: var(--accent); }
+.brand-card-meta { color: var(--muted); font-size: .92rem; }

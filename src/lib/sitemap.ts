@@ -11,6 +11,7 @@ export function sitemapPaths(data: DataSet): string[] {
     '/finder/',
     ...landingPaths(data).map((p) => `/${p.params.landing}/`),
     ...data.phones.map((p) => `/phones/${p.slug}/`),
+    ...(brandPaths(data).length ? ['/brands/'] : []),
     ...brandPaths(data).map((p) => `/brands/${p.params.brand}/`),
     ...yearPaths(data).map((p) => `/year/${p.params.year}/`),
     ...comparePaths(data.phones).filter((p) => p.props.kind === 'page').map((p) => `/compare/${p.params.pair}/`),
