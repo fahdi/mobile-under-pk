@@ -75,5 +75,12 @@
     "country": "United States",
     "officialStoreUrl": null,
     "warrantyNote": "Apple has no store in Pakistan; PTA approved iPhones come through authorised distributors such as Mercantile and GNEXT, which offer a 2 year warranty serviced at authorised Apple service centres. Non-PTA units usually carry only the seller's own warranty."
+  },
+  {
+    "slug": "poco",
+    "name": "POCO",
+    "country": "China",
+    "officialStoreUrl": "https://www.mi.com/pk/",
+    "warrantyNote": "POCO is Xiaomi's sub-brand, so official units get Xiaomi Pakistan's warranty: 1 year on the phone and 6 months on the bundled battery, charger and accessories, serviced by Xiaomi or its authorised service centres."
   }
 ]

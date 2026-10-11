@@ -1,0 +1,129 @@
+{
+  "slug": "poco-x6-pro",
+  "brand": "poco",
+  "model": "POCO X6 Pro",
+  "releaseDate": "2024-01-11",
+  "status": "discontinued",
+  "image": "/images/phones/poco-x6-pro.webp",
+  "imageCredit": {
+    "name": "Xiaomi UK",
+    "url": "https://www.mi.com/uk/product/poco-x6-pro/buy/"
+  },
+  "variants": [
+    {
+      "ram": 12,
+      "storage": 512,
+      "pricePkr": 130000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/Xiaomi_Poco-X6-Pro"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Dimensity 8300 Ultra",
+    "display": {
+      "size": 6.67,
+      "type": "AMOLED",
+      "refreshHz": 120,
+      "resolution": "1220x2712",
+      "peakNits": 1800
+    },
+    "battery": {
+      "mah": 5000,
+      "wiredW": 67,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 64,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 8,
+          "type": "ultrawide",
+          "ois": false
+        },
+        {
+          "mp": 2,
+          "type": "macro",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 16
+      },
+      "video": "4K@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic or vegan leather",
+      "front": "Gorilla Glass 5",
+      "ip": "IP54"
+    },
+    "software": {
+      "os": "Android 14, HyperOS",
+      "osUpdates": 3,
+      "securityYears": 4
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 186
+  },
+  "scores": {
+    "camera": {
+      "value": 7,
+      "reason": "64MP main camera with OIS and an 8MP ultrawide; the 2MP macro adds little."
+    },
+    "performance": {
+      "value": 9,
+      "reason": "Dimensity 8300 Ultra is a near-flagship chip that handles demanding games at high settings."
+    },
+    "battery": {
+      "value": 8,
+      "reason": "5,000mAh lasts a full day, and 67W charging fills it in about 45 minutes."
+    },
+    "display": {
+      "value": 9,
+      "reason": "6.67 inch 1.5K AMOLED at 120Hz with an 1,800 nit peak."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Plastic frame and back with IP54 splash resistance."
+    },
+    "software": {
+      "value": 8,
+      "reason": "Xiaomi promised 3 Android upgrades and 4 years of security updates."
+    },
+    "value": {
+      "value": 7,
+      "reason": "Its last official price of 130,000 bought Dimensity 8300 Ultra speed that most rivals in the bracket still cannot match."
+    },
+    "availability": {
+      "value": 1,
+      "reason": "No Pakistani retailer had a new unit in stock on 2026-10-11."
+    }
+  },
+  "tags": [
+    "amoled",
+    "fast-charging",
+    "nfc"
+  ],
+  "rivals": [
+    "samsung-galaxy-a37",
+    "oppo-reno-16f",
+    "poco-x7-pro"
+  ],
+  "notes": "Discontinued: no longer sold new in Pakistan. PriceOye marks it discontinued with a last out-of-stock price of 122,099 (12GB 512GB), and no Daraz official store listing has it, so the price is the last WhatMobile official price (129,999, 12GB 512GB). Xiaomi Pakistan's spec page also lists an 8GB 256GB model, but no Pakistani price for it was found. Update and security figures are from Xiaomi's launch promise; miuirom.org lists support until January 2028. The photo is Xiaomi UK's back and front pair render; the front phone was cut out along its own outline, with the hidden left edge mirrored from its visible right edge."
+}

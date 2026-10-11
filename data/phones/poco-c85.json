@@ -1,0 +1,127 @@
+{
+  "slug": "poco-c85",
+  "brand": "poco",
+  "model": "POCO C85",
+  "releaseDate": "2025-09-01",
+  "status": "available",
+  "image": "/images/phones/poco-c85.webp",
+  "imageCredit": {
+    "name": "Xiaomi Nederland",
+    "url": "https://www.mi.com/nl/product/poco-c85/buy/"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 256,
+      "pricePkr": 51000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/xiaomi/xiaomi-poco-c85"
+        },
+        {
+          "name": "Daraz (Xiaomi Flagship Store)",
+          "url": "https://www.daraz.pk/products/xiaomi-poco-c85-i1949186689.html"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Helio G81 Ultra",
+    "display": {
+      "size": 6.9,
+      "type": "IPS LCD",
+      "refreshHz": 120,
+      "resolution": "720x1600",
+      "peakNits": 810
+    },
+    "battery": {
+      "mah": 6000,
+      "wiredW": 33,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": false
+        },
+        {
+          "mp": 2,
+          "type": "depth",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 8
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "glass",
+      "ip": "IP64"
+    },
+    "software": {
+      "os": "Android 15, HyperOS 2",
+      "osUpdates": 4,
+      "securityYears": 6
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": true,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 205
+  },
+  "scores": {
+    "camera": {
+      "value": 5,
+      "reason": "50MP main camera is fine in daylight but has no OIS and the second lens is only a helper."
+    },
+    "performance": {
+      "value": 4,
+      "reason": "Helio G81 Ultra handles calls, social apps and light games, but heavy games stutter."
+    },
+    "battery": {
+      "value": 7,
+      "reason": "6,000mAh lasts a full day plus, with 33W charging reaching 50% in about 31 minutes."
+    },
+    "display": {
+      "value": 4,
+      "reason": "Large 6.9 inch 120Hz LCD, but only HD+ resolution and an 810 nit peak."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Plastic frame and back with IP64 dust and splash resistance."
+    },
+    "software": {
+      "value": 9,
+      "reason": "Same hardware as the Redmi 15C, which gets 4 Android upgrades and support listed to August 2031."
+    },
+    "value": {
+      "value": 7,
+      "reason": "At 51,000 it is the cheapest 8GB 256GB phone in the bracket and has 4 Android upgrades, though the Redmi 15 adds an FHD+ screen and Snapdragon 685 for 2,500 more."
+    },
+    "availability": {
+      "value": 8,
+      "reason": "In stock at PriceOye, the Xiaomi Flagship Store on Daraz, iShopping and Shophive with official Xiaomi warranty."
+    }
+  },
+  "tags": [
+    "long-updates",
+    "big-battery"
+  ],
+  "rivals": [
+    "xiaomi-redmi-15",
+    "infinix-hot-60i",
+    "vivo-y11d"
+  ],
+  "notes": "Pakistan model is the 4G Helio G81 Ultra version in a single 8GB 256GB variant, not the Dimensity 6300 POCO C85 5G. PriceOye lists it in stock at 51,199 (only 1 left) on 2026-10-11 and the Xiaomi Flagship Store on Daraz at 51,499; iShopping lists 52,020 and Shophive 53,499. The Xiaomi Pakistan Official store on Daraz shows 40,999, but that listing is out of stock, so it is ignored. WhatMobile lists 47,999 and the October 2025 launch price was about 37,799. Xiaomi has not published a POCO C85 upgrade count; update figures follow its twin, the Redmi 15C, and miuirom.org lists support until August 2031. NFC is market dependent; WhatMobile lists it for Pakistan."
+}

@@ -1,0 +1,123 @@
+{
+  "slug": "poco-c75",
+  "brand": "poco",
+  "model": "POCO C75",
+  "releaseDate": "2024-10-26",
+  "status": "discontinued",
+  "image": "/images/phones/poco-c75.webp",
+  "imageCredit": {
+    "name": "Xiaomi Nederland",
+    "url": "https://www.mi.com/nl/product/poco-c75/buy/"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 256,
+      "pricePkr": 32000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/Xiaomi_Poco-C75"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Helio G81 Ultra",
+    "display": {
+      "size": 6.88,
+      "type": "IPS LCD",
+      "refreshHz": 120,
+      "resolution": "720x1640",
+      "peakNits": 600
+    },
+    "battery": {
+      "mah": 5160,
+      "wiredW": 18,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": false
+        },
+        {
+          "mp": 2,
+          "type": "depth",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 13
+      },
+      "video": "1080p@30fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "glass",
+      "front": "glass",
+      "ip": null
+    },
+    "software": {
+      "os": "Android 14, HyperOS",
+      "osUpdates": 2,
+      "securityYears": 4
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": true,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 204
+  },
+  "scores": {
+    "camera": {
+      "value": 5,
+      "reason": "50MP main camera is fine in daylight but has no OIS and the second lens is only a helper."
+    },
+    "performance": {
+      "value": 4,
+      "reason": "Helio G81 Ultra handles calls, social apps and light games, but heavy games stutter."
+    },
+    "battery": {
+      "value": 6,
+      "reason": "5,160mAh lasts a full day, but 18W charging is slow."
+    },
+    "display": {
+      "value": 4,
+      "reason": "Large 6.88 inch 120Hz LCD, but only HD+ resolution and a 600 nit peak."
+    },
+    "build": {
+      "value": 4,
+      "reason": "Glass back on a plastic frame, with no IP rating."
+    },
+    "software": {
+      "value": 6,
+      "reason": "Got 2 Android upgrades, from Android 14 to Android 16 with HyperOS 3."
+    },
+    "value": {
+      "value": 8,
+      "reason": "Its last official price of 32,000 bought 8GB RAM and 256GB storage, while every other phone in the bracket starts at 4GB RAM."
+    },
+    "availability": {
+      "value": 1,
+      "reason": "No Pakistani retailer had a new unit in stock on 2026-10-11."
+    }
+  },
+  "tags": [
+    "big-battery",
+    "nfc"
+  ],
+  "rivals": [
+    "xiaomi-redmi-a5",
+    "honor-x5c-plus",
+    "realme-c100i"
+  ],
+  "notes": "Discontinued: no longer sold new in Pakistan; its successor is the POCO C85. PriceOye marks it discontinued with a last out-of-stock price of 39,999 (8GB 256GB), and the Xiaomi Pakistan Official store on Daraz lists it at 32,750 but out of stock, so the price is the last WhatMobile official price (31,999, 8GB 256GB). It is a rebadged Redmi 14C. Security years are an assumption from reports that it gets updates until 2028; the second rear lens is listed only as auxiliary."
+}
