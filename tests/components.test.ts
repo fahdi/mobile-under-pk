@@ -81,10 +81,21 @@ describe('PhoneTable', () => {
     expect(html).toContain('7.5');
   });
 
+  it('shows a tiny lazy thumbnail in each row, decorative because the name is next to it', async () => {
+    const html = await render(PhoneTable, { rows, brands });
+    const imgs = html.match(/<img [^>]*>/g) ?? [];
+    expect(imgs).toHaveLength(2);
+    for (const attr of ['src="/mobile-under-pk/thumbs/samsung-galaxy-a55-160.webp"', 'width="48"', 'height="64"', 'loading="lazy"', 'decoding="async"', 'alt=""']) {
+      expect(imgs[0]).toContain(attr);
+    }
+  });
+
   it('flags discontinued phones and shop-only warranty', async () => {
     const html = await render(PhoneTable, { rows, brands });
     expect(html).toContain('Discontinued');
     expect(html).toContain('Shop warranty');
+    expect(html).toMatch(/<td class="col-warranty">/);
+    expect(html).toMatch(/<td class="col-rank" data-rank>1<\/td>/);
   });
 });
 

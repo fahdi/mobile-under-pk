@@ -4,6 +4,7 @@ import type { Ranked } from '../lib/scoring';
 import { cheapestPtaVariant } from '../lib/brackets';
 import { formatPkr, phoneName } from '../lib/format';
 import { withBase } from '../lib/paths';
+import { thumbSrc } from '../lib/thumbs';
 
 interface Props { rows: Ranked[]; brands: Brand[] }
 const { rows, brands } = Astro.props;
@@ -14,21 +15,22 @@ const STATUS = { available: '', limited: 'Limited stock', discontinued: 'Discont
 <div class="table-wrap">
   <table class="phone-table">
     <thead>
-      <tr><th scope="col">#</th><th scope="col">Phone</th><th scope="col">PTA price</th><th scope="col">Score</th><th scope="col">Warranty</th></tr>
+      <tr><th scope="col" class="col-rank">#</th><th scope="col"><span class="visually-hidden">Photo</span></th><th scope="col">Phone</th><th scope="col">PTA price</th><th scope="col">Score</th><th scope="col" class="col-warranty">Warranty</th></tr>
     </thead>
     <tbody>
       {rows.map((r, i) => {
         const v = cheapestPtaVariant(r.phone);
         return (
           <tr data-slug={r.phone.slug}>
-            <td data-rank>{i + 1}</td>
+            <td class="col-rank" data-rank>{i + 1}</td>
+            <td class="thumb-cell"><img src={withBase(thumbSrc(r.phone.image, 160))} width="48" height="64" loading="lazy" decoding="async" alt="" /></td>
             <td>
               <a href={withBase(`/phones/${r.phone.slug}/`)}>{phoneName(r.phone, brands)}</a>
               {STATUS[r.phone.status] && <span class={`badge badge-${r.phone.status}`}>{STATUS[r.phone.status]}</span>}
             </td>
             <td>{formatPkr(r.price)}</td>
             <td><span data-overall>{r.overall.toFixed(1)}</span></td>
-            <td>{v ? WARRANTY[v.warranty] : ''}</td>
+            <td class="col-warranty">{v ? WARRANTY[v.warranty] : ''}</td>
           </tr>
         );
       })}

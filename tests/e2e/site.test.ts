@@ -372,6 +372,36 @@ describe('finder page', () => {
     expect(html()).toContain('<option value="safe-buy">');
   });
 
+  it('lays out filters in a sidebar and sorting in a bar above the results', () => {
+    const html = page('finder');
+    const filters = html.split('class="finder-filters"')[1]?.split('</aside>')[0] ?? '';
+    const results = html.split('class="finder-results"')[1] ?? '';
+    for (const name of ['min', 'max', 'brand', 'year', 'pta', 'battery', 'hz']) expect(filters, name).toContain(`name="${name}"`);
+    expect(html).toMatch(/<button type="button" class="filters-toggle" aria-controls="finder-filters" aria-expanded="false"/);
+    const sortbar = results.split('class="finder-sortbar"')[1]?.split('</div>')[0] ?? '';
+    expect(sortbar).toContain('name="preset"');
+    expect(sortbar).toContain('name="sort"');
+    expect(results).toContain('id="finder-count"');
+  });
+
+  it('ships in drawer mode so nothing shifts when the script runs, with an inline fallback without JavaScript', () => {
+    const html = page('finder');
+    expect(html).toMatch(/<form id="finder" class="finder-layout has-drawer"/);
+    expect(html).toMatch(/<noscript><style>[^<]*\.has-drawer[^<]*<\/style><\/noscript>/);
+  });
+
+  it('shows brand, year and must-have options as chips that are still real checkboxes', () => {
+    const html = page('finder');
+    expect(html).toMatch(/<label class="chip"><input type="checkbox" name="brand" value="samsung"/);
+    expect(html).toMatch(/<label class="chip"><input type="checkbox" name="year" value="2024"/);
+    expect(html).toMatch(/<label class="chip"><input type="checkbox" name="5g" value="1"/);
+  });
+
+  it('offers quick budget presets as shareable links', () => {
+    const html = page('finder');
+    for (const max of [50000, 100000, 150000]) expect(html).toContain(`href="?max=${max}"`);
+  });
+
   it('embeds the presets as JSON and loads the island script', () => {
     const presets = JSON.parse(html().match(/<script type="application\/json" id="finder-presets">(.*?)<\/script>/s)![1]);
     expect(presets.map((p: { slug: string }) => p.slug)).toContain('balanced');
