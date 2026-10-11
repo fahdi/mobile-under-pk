@@ -1,0 +1,139 @@
+{
+  "slug": "apple-iphone-16",
+  "brand": "apple",
+  "model": "iPhone 16",
+  "releaseDate": "2024-09-20",
+  "status": "available",
+  "image": "/images/phones/apple-iphone-16.webp",
+  "imageCredit": {
+    "name": "Apple",
+    "url": "https://www.apple.com/shop/buy-iphone/iphone-16"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 128,
+      "pricePkr": 310000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "Daraz Apple Flagship Store",
+          "url": "https://www.daraz.pk/products/apple-iphone-16-128gb-i1958148618.html"
+        }
+      ]
+    },
+    {
+      "ram": 8,
+      "storage": 256,
+      "pricePkr": 361000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/Apple_iPhone-16-256GB"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Apple A18",
+    "display": {
+      "size": 6.1,
+      "type": "Super Retina XDR OLED",
+      "refreshHz": 60,
+      "resolution": "1179x2556",
+      "peakNits": 2000
+    },
+    "battery": {
+      "mah": 3561,
+      "wiredW": 20,
+      "wirelessW": 25
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 48,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 12,
+          "type": "ultrawide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 12
+      },
+      "video": "4K@60fps"
+    },
+    "build": {
+      "frame": "aluminium",
+      "back": "glass",
+      "front": "Ceramic Shield",
+      "ip": "IP68"
+    },
+    "software": {
+      "os": "iOS 18, upgradable to iOS 27",
+      "osUpdates": 5,
+      "securityYears": 5
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": true
+    },
+    "weightG": 170
+  },
+  "scores": {
+    "camera": {
+      "value": 8,
+      "reason": "48MP sensor-shift OIS main with a 12MP ultrawide and Dolby Vision 4K60 video, but no telephoto."
+    },
+    "performance": {
+      "value": 9,
+      "reason": "Apple A18 on 3nm runs every current game at high settings with room to spare."
+    },
+    "battery": {
+      "value": 6,
+      "reason": "3,561mAh lasts a full day, but Apple quotes 50% in 30 minutes only with a 20W adapter."
+    },
+    "display": {
+      "value": 7,
+      "reason": "6.1 inch OLED reaching 2,000 nits outdoors, held back by a 60Hz refresh rate."
+    },
+    "build": {
+      "value": 9,
+      "reason": "Aluminium frame with Ceramic Shield glass front and back and IP68 at 6 metres."
+    },
+    "software": {
+      "value": 9,
+      "reason": "Apple commits to at least 5 years of security updates (UK PSTI statement) and has historically shipped about 6 major iOS upgrades."
+    },
+    "value": {
+      "value": 6,
+      "reason": "At 310,000 it is the cheapest current iPhone with an ultrawide, but iPhone 17 adds 120Hz and 256GB for about 85,000 more."
+    },
+    "availability": {
+      "value": 8,
+      "reason": "In stock at Daraz's Apple Flagship Store, PriceOye, Shophive and Mega.pk with authorised distributor warranty."
+    }
+  },
+  "tags": [
+    "amoled",
+    "nfc",
+    "long-updates",
+    "compact"
+  ],
+  "rivals": [
+    "apple-iphone-17e",
+    "apple-iphone-17",
+    "apple-iphone-16-plus"
+  ],
+  "notes": "8GB 128GB: Daraz Apple Flagship Store 309,899 (almost sold out but buyable on 2026-10-11); PriceOye 321,999, Shophive 319,999 and Mega.pk 329,999 also in stock. 8GB 256GB is out of stock at PriceOye (361,500) and Mega.pk (364,999), so the WhatMobile official price (360,999) is used. The 512GB is only listed out of stock (PriceOye 439,000), so it is left out. Mega.pk lists non-PTA 128GB units (219,999 single SIM, 231,999 dual SIM) only on order, so no non-PTA variant is recorded. osUpdates is an assumption: Apple publishes no iOS upgrade count. RAM (8GB) is from GSMArena; Apple does not publish it. Wired charging is the 20W adapter Apple quotes for 50% in 30 minutes."
+}

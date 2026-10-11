@@ -1,0 +1,144 @@
+{
+  "slug": "samsung-galaxy-s26-fe",
+  "brand": "samsung",
+  "model": "Galaxy S26 FE",
+  "releaseDate": "2026-09-04",
+  "status": "available",
+  "image": "/images/phones/samsung-galaxy-s26-fe.webp",
+  "imageCredit": {
+    "name": "Samsung Pakistan",
+    "url": "https://www.samsung.com/pk/smartphones/galaxy-s/galaxy-s26-fe-pistachio-256gb-sm-s741blggpkd/"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 256,
+      "pricePkr": 232500,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/samsung/samsung-galaxy-s26-fe"
+        }
+      ]
+    },
+    {
+      "ram": 8,
+      "storage": 512,
+      "pricePkr": 295500,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/samsung/samsung-galaxy-s26-fe"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Samsung Exynos 2500",
+    "display": {
+      "size": 6.7,
+      "type": "Dynamic AMOLED 2X",
+      "refreshHz": 120,
+      "resolution": "1080x2340",
+      "peakNits": 1900
+    },
+    "battery": {
+      "mah": 4900,
+      "wiredW": 45,
+      "wirelessW": 15
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 8,
+          "type": "telephoto",
+          "ois": true
+        },
+        {
+          "mp": 12,
+          "type": "ultrawide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 12
+      },
+      "video": "8K@30fps"
+    },
+    "build": {
+      "frame": "aluminium",
+      "back": "Gorilla Glass Victus+",
+      "front": "Gorilla Glass Victus+",
+      "ip": "IP68"
+    },
+    "software": {
+      "os": "Android 17, One UI 9",
+      "osUpdates": 7,
+      "securityYears": 7
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": true
+    },
+    "weightG": 193
+  },
+  "scores": {
+    "camera": {
+      "value": 8,
+      "reason": "50MP OIS main plus an 8MP 3x telephoto with OIS, though the small telephoto sensor is weak in low light."
+    },
+    "performance": {
+      "value": 9,
+      "reason": "Exynos 2500 on a 3nm process is near flagship and sustains demanding games."
+    },
+    "battery": {
+      "value": 7,
+      "reason": "4,900mAh lasts a full day plus with 45W wired and 15W wireless charging."
+    },
+    "display": {
+      "value": 9,
+      "reason": "6.7 inch FHD+ Dynamic AMOLED 2X at 120Hz with 1,900 nits peak."
+    },
+    "build": {
+      "value": 9,
+      "reason": "Gorilla Glass Victus+ on both sides, an aluminium frame and IP68."
+    },
+    "software": {
+      "value": 10,
+      "reason": "Samsung promises 7 major Android upgrades."
+    },
+    "value": {
+      "value": 8,
+      "reason": "At 232,500 it is the cheapest way into a Samsung S series with a telephoto and 7 years of upgrades."
+    },
+    "availability": {
+      "value": 8,
+      "reason": "In stock at PriceOye and sold by Samsung Pakistan, with official Samsung service centres."
+    }
+  },
+  "tags": [
+    "amoled",
+    "nfc",
+    "long-updates",
+    "fast-charging"
+  ],
+  "rivals": [
+    "xiaomi-17t-pro",
+    "vivo-x300-fe",
+    "oppo-reno-15-pro"
+  ],
+  "notes": "PriceOye lists 8GB 256GB at 232,495 (only 2 left) and 8GB 512GB at 295,495, both in stock on 2026-10-11. Samsung Pakistan lists the phone at 249,999 and WhatMobile shows the same official price. securityYears is assumed to match the 7 upgrade promise."
+}

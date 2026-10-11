@@ -1,0 +1,131 @@
+{
+  "slug": "xiaomi-17t-pro",
+  "brand": "xiaomi",
+  "model": "Xiaomi 17T Pro",
+  "releaseDate": "2026-05-28",
+  "status": "limited",
+  "image": "/images/phones/xiaomi-17t-pro.webp",
+  "imageCredit": {
+    "name": "Xiaomi Pakistan",
+    "url": "https://www.mi.com/pk/product/xiaomi-17t-pro/"
+  },
+  "variants": [
+    {
+      "ram": 12,
+      "storage": 512,
+      "pricePkr": 269000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/xiaomi/xiaomi-17t-pro"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "MediaTek Dimensity 9500",
+    "display": {
+      "size": 6.83,
+      "type": "AMOLED",
+      "refreshHz": 144,
+      "resolution": "1280x2772",
+      "peakNits": 3500
+    },
+    "battery": {
+      "mah": 7000,
+      "wiredW": 100,
+      "wirelessW": 50
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 50,
+          "type": "periscope",
+          "ois": true
+        },
+        {
+          "mp": 12,
+          "type": "ultrawide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 32
+      },
+      "video": "8K@30fps"
+    },
+    "build": {
+      "frame": "aluminium",
+      "back": "Gorilla Glass 7i",
+      "front": "Gorilla Glass 7i",
+      "ip": "IP68"
+    },
+    "software": {
+      "os": "Android 16, HyperOS 3",
+      "osUpdates": 5,
+      "securityYears": 6
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": true
+    },
+    "weightG": 219
+  },
+  "scores": {
+    "camera": {
+      "value": 9,
+      "reason": "Large 1/1.31 inch 50MP OIS main and a 50MP 5x periscope with OIS."
+    },
+    "performance": {
+      "value": 10,
+      "reason": "Dimensity 9500 is a current flagship chip."
+    },
+    "battery": {
+      "value": 10,
+      "reason": "7,000mAh lasts two days and charges at 100W wired and 50W wireless."
+    },
+    "display": {
+      "value": 9,
+      "reason": "6.83 inch AMOLED at 144Hz with 3,500 nits peak."
+    },
+    "build": {
+      "value": 9,
+      "reason": "Gorilla Glass 7i front and back, aluminium frame and IP68."
+    },
+    "software": {
+      "value": 9,
+      "reason": "Xiaomi T series phones get 5 Android upgrades (assumed for the 17T Pro)."
+    },
+    "value": {
+      "value": 9,
+      "reason": "At 269,000 it brings a flagship chip, 7,000mAh battery and 5x periscope for about 50,000 less than the Galaxy S26."
+    },
+    "availability": {
+      "value": 6,
+      "reason": "Only PriceOye had it in stock; Xiaomi Pakistan lists it but shows no stock."
+    }
+  },
+  "tags": [
+    "amoled",
+    "big-battery",
+    "fast-charging",
+    "nfc",
+    "long-updates"
+  ],
+  "rivals": [
+    "vivo-x300-fe",
+    "samsung-galaxy-s26-fe",
+    "xiaomi-17t"
+  ],
+  "notes": "PriceOye lists the 12GB 512GB at 268,999 in stock on 2026-10-11; WhatMobile shows an official price of 289,999. No other retailer we could check had it in stock. The update policy (5 Android upgrades, 6 years of patches) follows Xiaomi T series practice and is an assumption."
+}

@@ -1,0 +1,120 @@
+{
+  "slug": "apple-iphone-17e",
+  "brand": "apple",
+  "model": "iPhone 17e",
+  "releaseDate": "2026-03-11",
+  "status": "available",
+  "image": "/images/phones/apple-iphone-17e.webp",
+  "imageCredit": {
+    "name": "Apple",
+    "url": "https://www.apple.com/shop/buy-iphone/iphone-17e"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 512,
+      "pricePkr": 350000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/apple/apple-iphone-17e"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Apple A19",
+    "display": {
+      "size": 6.1,
+      "type": "Super Retina XDR OLED",
+      "refreshHz": 60,
+      "resolution": "1170x2532",
+      "peakNits": 1200
+    },
+    "battery": {
+      "mah": 4005,
+      "wiredW": 20,
+      "wirelessW": 15
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 48,
+          "type": "wide",
+          "ois": true
+        }
+      ],
+      "front": {
+        "mp": 12
+      },
+      "video": "4K@60fps"
+    },
+    "build": {
+      "frame": "aluminium",
+      "back": "glass",
+      "front": "Ceramic Shield 2",
+      "ip": "IP68"
+    },
+    "software": {
+      "os": "iOS 26.3, upgradable to iOS 27",
+      "osUpdates": 5,
+      "securityYears": 5
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": true
+    },
+    "weightG": 169
+  },
+  "scores": {
+    "camera": {
+      "value": 6,
+      "reason": "A single 48MP OIS main camera; no ultrawide or telephoto."
+    },
+    "performance": {
+      "value": 9,
+      "reason": "Apple A19 with a 4-core GPU runs current games at high settings."
+    },
+    "battery": {
+      "value": 6,
+      "reason": "4,005mAh lasts a full day, with about 20W wired and 15W MagSafe charging."
+    },
+    "display": {
+      "value": 6,
+      "reason": "6.1 inch OLED with a notch, 60Hz and 1,200 nits peak."
+    },
+    "build": {
+      "value": 9,
+      "reason": "Aluminium frame, Ceramic Shield 2 front, glass back and IP68 at 6 metres."
+    },
+    "software": {
+      "value": 9,
+      "reason": "Apple commits to at least 5 years of security updates (UK PSTI statement) and has historically shipped about 6 major iOS upgrades."
+    },
+    "value": {
+      "value": 4,
+      "reason": "Only the 512GB is in stock at 350,000, close to iPhone 16 with an ultrawide and iPhone 17 with 120Hz."
+    },
+    "availability": {
+      "value": 6,
+      "reason": "Only the 512GB is in stock, at PriceOye and Shophive; the 256GB is sold out or coming soon everywhere checked."
+    }
+  },
+  "tags": [
+    "amoled",
+    "nfc",
+    "long-updates",
+    "compact"
+  ],
+  "rivals": [
+    "apple-iphone-16",
+    "apple-iphone-17",
+    "apple-iphone-16e"
+  ],
+  "notes": "8GB 512GB: PriceOye 349,999 in stock (all colours), Shophive 359,999 in stock. The 8GB 256GB is out of stock at PriceOye (284,999) and coming soon at Shophive, and WhatMobile shows no official price, so it is not recorded; once it is back in stock the cheapest PTA price will drop to about 285,000. No non-PTA unit found. RAM (8GB) is from GSMArena. osUpdates is an assumption."
+}

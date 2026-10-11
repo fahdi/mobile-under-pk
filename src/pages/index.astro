@@ -15,6 +15,7 @@ const data = getData();
 const brackets = landingPaths(data).filter((p) => p.props.kind === 'bracket').map((p) => p.props.ceiling);
 const checked = latestCheck(data.phones);
 const balanced = data.presets.find((p) => p.slug === 'balanced')!;
+const topCeiling = data.brackets.at(-1)!.ceiling;
 const top = topPicks(data.phones, balanced, 6);
 // One gallery per budget: buyable phones only, best ranked first.
 const galleries = brackets
@@ -30,7 +31,7 @@ const brands = brandPaths(data).map((p) => data.brands.find((b) => b.slug === p.
 >
   <section class="hero">
     <h1>Best mobile phones in Pakistan by budget</h1>
-    <p class="lead">Phones released in 2024 to 2026, up to 150,000 PKR, with PTA prices, official warranty and honest scores. Every price is checked by hand.</p>
+    <p class="lead">Phones released in 2024 to 2026, up to {topCeiling.toLocaleString('en-US')} PKR, with PTA prices, official warranty and honest scores. Every price is checked by hand.</p>
     {checked && <PriceChecked date={checked} />}
     {brackets.length > 0 && (
       <div class="cta-row">

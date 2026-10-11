@@ -5,7 +5,7 @@ How to add or update a phone in `data/phones/`. Every record must pass `npm run 
 ## Scope
 
 - Released in 2024, 2025 or 2026 (`releaseDate`, ISO `YYYY-MM-DD`; use the global launch date).
-- Cheapest PTA approved variant at or below 150,000 PKR.
+- Cheapest PTA approved variant at or below the top price bracket in `data/brackets.json` (650,000 PKR since October 2026).
 - Sold in Pakistan. Discontinued phones are included with `"status": "discontinued"`.
 
 ## Sources, in priority order
@@ -43,7 +43,7 @@ Every variant needs at least one source URL that shows the price you recorded. L
 
 Eight scores, each an integer 1 to 10 with a one-sentence reason. The reason must name the fact that drove the score ("120Hz AMOLED at 1,800 nits", not "great screen").
 
-All scores except `value` are absolute across the whole 20k to 150k range, so a 9 means excellent for any phone on this site. `value` is relative to the phone's own bracket.
+All scores except `value` are absolute across the whole site, from the cheapest phone to the most expensive flagship, so a 9 means excellent for any phone on this site. `value` is relative to the phone's own bracket.
 
 | Score | 1 to 3 | 4 to 6 | 7 to 8 | 9 to 10 |
 | --- | --- | --- | --- | --- |

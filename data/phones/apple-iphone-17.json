@@ -1,0 +1,138 @@
+{
+  "slug": "apple-iphone-17",
+  "brand": "apple",
+  "model": "iPhone 17",
+  "releaseDate": "2025-09-19",
+  "status": "available",
+  "image": "/images/phones/apple-iphone-17.webp",
+  "imageCredit": {
+    "name": "Apple",
+    "url": "https://www.apple.com/shop/buy-iphone/iphone-17"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 256,
+      "pricePkr": 395000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "Mega.pk",
+          "url": "https://www.mega.pk/mobiles_products/26844/Apple-iPhone-17-256GB-Storage-PTA-Approved.html"
+        }
+      ]
+    },
+    {
+      "ram": 8,
+      "storage": 512,
+      "pricePkr": 482500,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "Shophive",
+          "url": "https://www.shophive.com/apple-iphone-17-512gb-pta-approved/"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Apple A19",
+    "display": {
+      "size": 6.3,
+      "type": "LTPO Super Retina XDR OLED",
+      "refreshHz": 120,
+      "resolution": "1206x2622",
+      "peakNits": 3000
+    },
+    "battery": {
+      "mah": 3692,
+      "wiredW": 40,
+      "wirelessW": 25
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 48,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 48,
+          "type": "ultrawide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 18
+      },
+      "video": "4K@60fps"
+    },
+    "build": {
+      "frame": "aluminium",
+      "back": "glass",
+      "front": "Ceramic Shield 2",
+      "ip": "IP68"
+    },
+    "software": {
+      "os": "iOS 26, upgradable to iOS 27",
+      "osUpdates": 5,
+      "securityYears": 5
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": true
+    },
+    "weightG": 177
+  },
+  "scores": {
+    "camera": {
+      "value": 8,
+      "reason": "48MP sensor-shift OIS main plus a 48MP ultrawide and an 18MP Center Stage selfie camera; no telephoto."
+    },
+    "performance": {
+      "value": 10,
+      "reason": "Apple A19 on 3nm handles every game at high settings with sustained performance."
+    },
+    "battery": {
+      "value": 7,
+      "reason": "3,692mAh lasts a full day plus and reaches 50% in 20 minutes with a 40W adapter."
+    },
+    "display": {
+      "value": 10,
+      "reason": "6.3 inch LTPO OLED at 1 to 120Hz with 3,000 nits outdoor peak."
+    },
+    "build": {
+      "value": 9,
+      "reason": "Aluminium frame, Ceramic Shield 2 front, glass back and IP68 at 6 metres."
+    },
+    "software": {
+      "value": 9,
+      "reason": "Apple commits to at least 5 years of security updates (UK PSTI statement) and has historically shipped about 6 major iOS upgrades."
+    },
+    "value": {
+      "value": 8,
+      "reason": "At 395,000 with 256GB, 120Hz and two 48MP cameras it undercuts older Pro models and costs the same as iPhone Air."
+    },
+    "availability": {
+      "value": 8,
+      "reason": "In stock at Mega.pk and PriceOye with authorised distributor warranty; Daraz's flagship store was out of stock."
+    }
+  },
+  "tags": [
+    "amoled",
+    "nfc",
+    "long-updates"
+  ],
+  "rivals": [
+    "apple-iphone-air",
+    "apple-iphone-17-pro",
+    "apple-iphone-16"
+  ],
+  "notes": "8GB 256GB: Mega.pk 394,999 (available) and PriceOye 406,899 (lavender and sage in stock); Daraz Apple Flagship Store 398,999 is out of stock; WhatMobile official 398,999. 8GB 512GB: Shophive 482,499 in stock (PriceOye 482,500 out of stock). No non-PTA iPhone 17 was in stock (Mega.pk's listing is coming soon). RAM (8GB) is from GSMArena. osUpdates is an assumption."
+}

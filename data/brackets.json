@@ -199,7 +199,7 @@
   },
   {
     "ceiling": 150000,
-    "intro": "Up to 150,000 PKR is the top of this site's range: near-flagship performance, telephoto cameras on some models and premium builds.",
+    "intro": "Up to 150,000 PKR you get near-flagship performance, telephoto cameras on some models and premium builds, at a fraction of flagship prices.",
     "faq": [
       {
         "q": "Is it worth spending up to 150,000 PKR on a phone?",
@@ -216,6 +216,72 @@
       {
         "q": "How current are these prices?",
         "a": "Every price is checked by hand on official brand stores and major Pakistani retailers, rounded to the nearest 500 PKR, and shown with the date it was checked. Prices move often, so confirm with the seller before you pay."
+      }
+    ]
+  },
+  {
+    "ceiling": 350000,
+    "intro": "Between 150,000 and 350,000 PKR you reach flagship territory: the best cameras, the fastest chips and the longest software support, including some iPhones and Galaxy S models.",
+    "faq": [
+      {
+        "q": "Is a flagship worth it over a phone under 150,000 PKR?",
+        "a": "If you keep phones for four years or more, value long software support, or want the best camera, often yes. For everyday use, the 100,000 to 150,000 brackets give most of the experience for far less."
+      },
+      {
+        "q": "Should I buy a PTA approved phone at this price?",
+        "a": "Yes. A phone that is not PTA approved works on a Pakistani SIM only for a limited time and is then blocked unless the PTA tax is paid, which at this price can be a large sum. Every headline price on this site is for a PTA approved unit; non-PTA prices are shown separately and clearly labelled."
+      },
+      {
+        "q": "Are JV phones a cheaper way to get a flagship?",
+        "a": "We do not list JV phones. They are locked to a foreign carrier and made to work with a SIM chip or similar workaround, can stop working, may carry a blacklisted IMEI and have no warranty. Our blog post on JV phones explains the risks and how to check a phone before you pay."
+      },
+      {
+        "q": "How current are these prices?",
+        "a": "Every price is checked by hand on official stores, authorised distributors and major Pakistani retailers, rounded to the nearest 500 PKR, and shown with the date it was checked. Flagship prices move often, so confirm with the seller before you pay."
+      }
+    ]
+  },
+  {
+    "ceiling": 450000,
+    "intro": "Up to 450,000 PKR covers current flagships and recent Pro models, where the differences are mostly camera hardware, display and build materials.",
+    "faq": [
+      {
+        "q": "Should I buy last year's Pro model or this year's standard model?",
+        "a": "Last year's Pro often has the better camera and display, while this year's standard model has the newer chip and a longer update runway. Compare the camera and software scores on each phone page."
+      },
+      {
+        "q": "Should I buy a PTA approved phone at this price?",
+        "a": "Yes. A phone that is not PTA approved works on a Pakistani SIM only for a limited time and is then blocked unless the PTA tax is paid, which at this price can be a large sum. Every headline price on this site is for a PTA approved unit; non-PTA prices are shown separately and clearly labelled."
+      },
+      {
+        "q": "Are JV phones a cheaper way to get a flagship?",
+        "a": "We do not list JV phones. They are locked to a foreign carrier and made to work with a SIM chip or similar workaround, can stop working, may carry a blacklisted IMEI and have no warranty. Our blog post on JV phones explains the risks and how to check a phone before you pay."
+      },
+      {
+        "q": "How current are these prices?",
+        "a": "Every price is checked by hand on official stores, authorised distributors and major Pakistani retailers, rounded to the nearest 500 PKR, and shown with the date it was checked. Flagship prices move often, so confirm with the seller before you pay."
+      }
+    ]
+  },
+  {
+    "ceiling": 650000,
+    "intro": "Up to 650,000 PKR is where the biggest, most capable flagships sit: Pro Max and Ultra models with the best cameras and batteries.",
+    "faq": [
+      {
+        "q": "Is the most expensive model the best buy?",
+        "a": "Rarely for value. Pro Max and Ultra models add camera zoom, larger batteries and screens, but a standard flagship does most things just as well for much less. Check the value score on each phone."
+      },
+      {
+        "q": "Should I buy a PTA approved phone at this price?",
+        "a": "Yes. A phone that is not PTA approved works on a Pakistani SIM only for a limited time and is then blocked unless the PTA tax is paid, which at this price can be a large sum. Every headline price on this site is for a PTA approved unit; non-PTA prices are shown separately and clearly labelled."
+      },
+      {
+        "q": "Are JV phones a cheaper way to get a flagship?",
+        "a": "We do not list JV phones. They are locked to a foreign carrier and made to work with a SIM chip or similar workaround, can stop working, may carry a blacklisted IMEI and have no warranty. Our blog post on JV phones explains the risks and how to check a phone before you pay."
+      },
+      {
+        "q": "How current are these prices?",
+        "a": "Every price is checked by hand on official stores, authorised distributors and major Pakistani retailers, rounded to the nearest 500 PKR, and shown with the date it was checked. Flagship prices move often, so confirm with the seller before you pay."
       }
     ]
   }

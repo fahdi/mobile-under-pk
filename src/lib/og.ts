@@ -23,7 +23,7 @@ export function ogContent(data: DataSet, path: string, posts: BlogPost[] = []): 
   const parts = path.split('/').filter(Boolean);
 
   if (path === '/') {
-    return { title: 'Best mobile phones in Pakistan by budget', subtitle: `${data.phones.length} phones up to 150,000 PKR with PTA prices`, images: topPicks(data.phones, balanced, 3).map((r) => r.phone.image) };
+    return { title: 'Best mobile phones in Pakistan by budget', subtitle: `${data.phones.length} phones up to ${(data.brackets.at(-1)?.ceiling ?? 0).toLocaleString('en-US')} PKR with PTA prices`, images: topPicks(data.phones, balanced, 3).map((r) => r.phone.image) };
   }
   if (path === '/brands/') {
     const summaries = brandSummaries(data);

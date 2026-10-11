@@ -1,0 +1,148 @@
+{
+  "slug": "samsung-galaxy-s26",
+  "brand": "samsung",
+  "model": "Galaxy S26",
+  "releaseDate": "2026-03-06",
+  "status": "available",
+  "image": "/images/phones/samsung-galaxy-s26.webp",
+  "imageCredit": {
+    "name": "Samsung Pakistan",
+    "url": "https://www.samsung.com/pk/smartphones/galaxy-s26/buy/"
+  },
+  "variants": [
+    {
+      "ram": 12,
+      "storage": 256,
+      "pricePkr": 318000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "Mega.pk",
+          "url": "https://www.mega.pk/mobiles_products/26974/Samsung-Galaxy-S26-12GB-RAM-256GB-Storage-PTA-Approved.html"
+        }
+      ]
+    },
+    {
+      "ram": 12,
+      "storage": 512,
+      "pricePkr": 327000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/samsung/samsung-galaxy-s26"
+        },
+        {
+          "name": "Daraz Samsung Flagship Store",
+          "url": "https://www.daraz.pk/products/samsung-galaxy-512-gb-i1947949298.html"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Samsung Exynos 2600",
+    "display": {
+      "size": 6.3,
+      "type": "Dynamic LTPO AMOLED 2X",
+      "refreshHz": 120,
+      "resolution": "1080x2340",
+      "peakNits": 2600
+    },
+    "battery": {
+      "mah": 4300,
+      "wiredW": 25,
+      "wirelessW": 15
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 10,
+          "type": "telephoto",
+          "ois": true
+        },
+        {
+          "mp": 12,
+          "type": "ultrawide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 12
+      },
+      "video": "8K@30fps"
+    },
+    "build": {
+      "frame": "aluminium",
+      "back": "Gorilla Glass Victus 2",
+      "front": "Gorilla Glass Victus 2",
+      "ip": "IP68"
+    },
+    "software": {
+      "os": "Android 16, One UI 8.5, upgradable to Android 17",
+      "osUpdates": 7,
+      "securityYears": 7
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": true
+    },
+    "weightG": 167
+  },
+  "scores": {
+    "camera": {
+      "value": 9,
+      "reason": "50MP OIS main and a 10MP 3x telephoto with OIS, shooting 8K video."
+    },
+    "performance": {
+      "value": 10,
+      "reason": "The 2nm Exynos 2600 is a current flagship chip."
+    },
+    "battery": {
+      "value": 6,
+      "reason": "4,300mAh gets through a full day but charges at only 25W."
+    },
+    "display": {
+      "value": 9,
+      "reason": "6.3 inch LTPO AMOLED at 1 to 120Hz with 2,600 nits peak."
+    },
+    "build": {
+      "value": 10,
+      "reason": "Gorilla Glass Victus 2 on both sides, an aluminium frame and IP68 at 167g."
+    },
+    "software": {
+      "value": 10,
+      "reason": "Samsung promises 7 major Android upgrades."
+    },
+    "value": {
+      "value": 7,
+      "reason": "A compact flagship at 318,000, but the S26+ adds a QHD+ screen and bigger battery for about 12,500 more."
+    },
+    "availability": {
+      "value": 9,
+      "reason": "In stock at Mega.pk, PriceOye and the Samsung Flagship Store on Daraz, with official Samsung service centres."
+    }
+  },
+  "tags": [
+    "amoled",
+    "nfc",
+    "long-updates",
+    "compact"
+  ],
+  "rivals": [
+    "samsung-galaxy-s26-plus",
+    "samsung-galaxy-s26-fe",
+    "vivo-x300-pro"
+  ],
+  "notes": "12GB 256GB: Mega.pk 317,999 in stock; PriceOye lists it at 284,500 but out of stock, so that price is ignored, and a Daraz third party listing at 294,999 is also out of stock. 12GB 512GB: PriceOye 326,995 in stock, Samsung Flagship Store on Daraz 327,999, Mega.pk 378,999. WhatMobile lists 319,999. securityYears is assumed to match the 7 upgrade promise."
+}

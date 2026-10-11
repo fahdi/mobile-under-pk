@@ -1,0 +1,136 @@
+{
+  "slug": "vivo-x300-fe",
+  "brand": "vivo",
+  "model": "vivo X300 FE",
+  "releaseDate": "2026-04-29",
+  "status": "available",
+  "image": "/images/phones/vivo-x300-fe.webp",
+  "imageCredit": {
+    "name": "vivo Pakistan",
+    "url": "https://shop.vivo.com/pk/product/2015?skuId=8050"
+  },
+  "variants": [
+    {
+      "ram": 12,
+      "storage": 256,
+      "pricePkr": 252000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/vivo/vivo-x300-fe"
+        },
+        {
+          "name": "vivo Pakistan",
+          "url": "https://www.vivo.com/pk/products/x300-fe"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Qualcomm Snapdragon 8 Gen 5",
+    "display": {
+      "size": 6.31,
+      "type": "LTPO AMOLED",
+      "refreshHz": 120,
+      "resolution": "1216x2640",
+      "peakNits": 5000
+    },
+    "battery": {
+      "mah": 6500,
+      "wiredW": 90,
+      "wirelessW": 40
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 50,
+          "type": "periscope",
+          "ois": true
+        },
+        {
+          "mp": 8,
+          "type": "ultrawide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 50
+      },
+      "video": "8K@30fps"
+    },
+    "build": {
+      "frame": "aluminium",
+      "back": "glass",
+      "front": "glass",
+      "ip": "IP68/IP69"
+    },
+    "software": {
+      "os": "Android 16, OriginOS 6",
+      "osUpdates": 5,
+      "securityYears": 7
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 190
+  },
+  "scores": {
+    "camera": {
+      "value": 8,
+      "reason": "50MP OIS main and a ZEISS 50MP 3x periscope with OIS, held back by an 8MP ultrawide."
+    },
+    "performance": {
+      "value": 9,
+      "reason": "Snapdragon 8 Gen 5 is a near flagship chip on a 3nm process."
+    },
+    "battery": {
+      "value": 10,
+      "reason": "6,500mAh in a compact body lasts well over a day with 90W wired and 40W wireless charging."
+    },
+    "display": {
+      "value": 9,
+      "reason": "6.31 inch LTPO AMOLED at 120Hz with 5,000 nits peak."
+    },
+    "build": {
+      "value": 9,
+      "reason": "Glass back, aluminium frame and IP68/IP69."
+    },
+    "software": {
+      "value": 9,
+      "reason": "vivo promises 5 major Android upgrades."
+    },
+    "value": {
+      "value": 8,
+      "reason": "At 252,000 it is the most compact phone here with a periscope camera and a 6,500mAh battery."
+    },
+    "availability": {
+      "value": 8,
+      "reason": "In stock at PriceOye and the vivo e-store, with vivo Pakistan service centres."
+    }
+  },
+  "tags": [
+    "amoled",
+    "big-battery",
+    "fast-charging",
+    "nfc",
+    "long-updates",
+    "compact"
+  ],
+  "rivals": [
+    "samsung-galaxy-s26-fe",
+    "xiaomi-17t-pro",
+    "oppo-reno-15-pro"
+  ],
+  "notes": "PriceOye lists the 12GB 256GB at 251,999 in stock on 2026-10-11. vivo Pakistan sells it at 279,999 on its e-store, and a Daraz seller lists it at 269,998. securityYears is an assumption. eSIM support on Pakistan units is not confirmed."
+}

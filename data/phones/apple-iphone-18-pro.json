@@ -1,0 +1,157 @@
+{
+  "slug": "apple-iphone-18-pro",
+  "brand": "apple",
+  "model": "iPhone 18 Pro",
+  "releaseDate": "2026-09-18",
+  "status": "available",
+  "image": "/images/phones/apple-iphone-18-pro.webp",
+  "imageCredit": {
+    "name": "Apple",
+    "url": "https://www.apple.com/shop/buy-iphone/iphone-18-pro"
+  },
+  "variants": [
+    {
+      "ram": 12,
+      "storage": 256,
+      "pricePkr": 564000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "Daraz Apple Flagship Store",
+          "url": "https://www.daraz.pk/products/apple-iphone-18-pro-256gb-i1975112142.html"
+        }
+      ]
+    },
+    {
+      "ram": 12,
+      "storage": 512,
+      "pricePkr": 648000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "Daraz Apple Flagship Store",
+          "url": "https://www.daraz.pk/products/apple-iphone-18-pro-512gb-i1974353835.html"
+        }
+      ]
+    },
+    {
+      "ram": 12,
+      "storage": 2048,
+      "pricePkr": 1091000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/apple/apple-iphone-18-pro"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Apple A20 Pro",
+    "display": {
+      "size": 6.3,
+      "type": "LTPO Super Retina XDR OLED",
+      "refreshHz": 120,
+      "resolution": "1206x2622",
+      "peakNits": 3000
+    },
+    "battery": {
+      "mah": 4056,
+      "wiredW": 60,
+      "wirelessW": 25
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 48,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 48,
+          "type": "ultrawide",
+          "ois": false
+        },
+        {
+          "mp": 48,
+          "type": "periscope",
+          "ois": true
+        }
+      ],
+      "front": {
+        "mp": 18
+      },
+      "video": "4K@120fps"
+    },
+    "build": {
+      "frame": "aluminium",
+      "back": "aluminium with Ceramic Shield glass panel",
+      "front": "Ceramic Shield 2",
+      "ip": "IP68"
+    },
+    "software": {
+      "os": "iOS 27",
+      "osUpdates": 5,
+      "securityYears": 5
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": true
+    },
+    "weightG": 211
+  },
+  "scores": {
+    "camera": {
+      "value": 10,
+      "reason": "Three 48MP cameras with a variable f/1.5 to f/4.0 main and a 4x periscope telephoto, plus 4K120 ProRes RAW."
+    },
+    "performance": {
+      "value": 10,
+      "reason": "Apple A20 Pro on 2nm is the fastest phone chip on this site."
+    },
+    "battery": {
+      "value": 8,
+      "reason": "4,056mAh gives a full day plus and reaches 50% in about 15 minutes with a 60W-capable adapter."
+    },
+    "display": {
+      "value": 10,
+      "reason": "6.3 inch LTPO OLED at 1 to 120Hz with 3,000 nits outdoor peak."
+    },
+    "build": {
+      "value": 10,
+      "reason": "Aluminium unibody, Ceramic Shield 2 front and Ceramic Shield back panel, IP68 at 6 metres."
+    },
+    "software": {
+      "value": 9,
+      "reason": "Apple commits to at least 5 years of security updates (UK PSTI statement) and has historically shipped about 6 major iOS upgrades."
+    },
+    "value": {
+      "value": 6,
+      "reason": "564,000 is about 140,000 more than iPhone 17 Pro for a variable aperture camera and faster charging."
+    },
+    "availability": {
+      "value": 8,
+      "reason": "In stock at Daraz's Apple Flagship Store, Shophive and PriceOye, launched officially by Mercantile with a 2 year warranty."
+    }
+  },
+  "tags": [
+    "amoled",
+    "nfc",
+    "long-updates",
+    "fast-charging"
+  ],
+  "rivals": [
+    "apple-iphone-18-pro-max",
+    "apple-iphone-17-pro-max"
+  ],
+  "notes": "12GB 256GB: Daraz Apple Flagship Store 563,998 (almost sold out, 2 years brand warranty); Shophive 574,999 and PriceOye 580,499 also in stock; Mercantile's launch price was 565,000 (ProPakistani, 25 Sep 2026). 512GB: Daraz 647,998 (PriceOye 669,999). 2TB: PriceOye 1,090,999 in stock. 1TB is out of stock at Daraz (818,999) and PriceOye (859,999) and coming soon at Shophive, so it is not recorded. WhatMobile still shows it as coming soon. No non-PTA unit found. Wired charging is Apple's quoted 60W-capable adapter for 50% in about 15 minutes; actual peak draw is not published. The photo is Apple's own iPhone 18 Pro comparison render (front phone cut from the front and back pair); the source phone is only about 330 px tall. osUpdates is an assumption."
+}

@@ -53,5 +53,10 @@
     "ceiling": 150000,
     "intro": "Up to 150,000 PKR is the top of this site's range: near-flagship performance, telephoto cameras on some models and premium builds.",
     "faq": []
+  },
+  {
+    "ceiling": 350000,
+    "intro": "Fixture top bracket.",
+    "faq": []
   }
 ]

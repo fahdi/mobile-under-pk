@@ -68,5 +68,12 @@
     "country": "China",
     "officialStoreUrl": null,
     "warrantyNote": "We could not find an official ZTE Pakistan website or published Pakistan warranty policy, so confirm the warranty length and who honours it with the seller before buying."
+  },
+  {
+    "slug": "apple",
+    "name": "Apple",
+    "country": "United States",
+    "officialStoreUrl": null,
+    "warrantyNote": "Apple has no store in Pakistan; PTA approved iPhones come through authorised distributors such as Mercantile and GNEXT, which offer a 2 year warranty serviced at authorised Apple service centres. Non-PTA units usually carry only the seller's own warranty."
   }
 ]
