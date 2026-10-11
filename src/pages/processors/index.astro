@@ -1,0 +1,42 @@
+---
+import Base from '../../layouts/Base.astro';
+import PriceChecked from '../../components/PriceChecked.astro';
+import { getData } from '../../lib/data';
+import { cheapestPtaVariant } from '../../lib/brackets';
+import { formatPkrRange, latestCheck } from '../../lib/format';
+import { chipPaths, processorsTitle, processorTiers } from '../../lib/processors';
+import { absUrl, breadcrumbLd, itemListLd } from '../../lib/seo';
+import { withBase } from '../../lib/paths';
+
+const data = getData();
+const tiers = processorTiers(data).filter((t) => t.phones.length > 0);
+const chipPages = new Set(chipPaths(data).map((c) => c.params.slug));
+const checked = latestCheck(data.phones)!;
+const range = (phones: typeof data.phones) => { const ps = phones.map((p) => cheapestPtaVariant(p)!.pricePkr); return formatPkrRange(Math.min(...ps), Math.max(...ps)); };
+const jsonLd = [
+  itemListLd(tiers.map((t) => ({ name: `${t.tier.name} processor phones`, url: absUrl(`/processors/${t.tier.slug}/`, Astro.site!) }))),
+  breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Processors', path: '/processors/' }], Astro.site!),
+];
+---
+<Base title={processorsTitle(checked)} description="Phones sold in Pakistan grouped by processor power: gaming-ready, smooth everyday and basic chips, with the phones that use each and their PTA prices." path="/processors/" jsonLd={jsonLd}>
+  <nav aria-label="Breadcrumb"><a href={withBase('/')}>Home</a> / Processors</nav>
+  <h1>Phones by processor power</h1>
+  <p class="lead">The chip decides how fast a phone feels and how well it games. Tiers come from our performance score, which is based on the chip and how it holds up in sustained use.</p>
+  <PriceChecked date={checked} />
+  {tiers.map((t) => (
+    <section class="tier">
+      <div class="gallery-head">
+        <h2>{t.tier.name}</h2>
+        <a href={withBase(`/processors/${t.tier.slug}/`)}>See all {t.phones.length} phones</a>
+      </div>
+      <p>{t.tier.blurb} {range(t.phones)}.</p>
+      <ul class="bracket-chips">
+        {t.chips.map((c) => (
+          <li>{chipPages.has(c.slug)
+            ? <a href={withBase(`/processors/${c.slug}/`)}>{c.name} <span class="chip-count">{c.count} phones</span></a>
+            : <a href={withBase(`/phones/${c.phones[0].slug}/`)}>{c.name} <span class="chip-count">1 phone</span></a>}</li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</Base>

@@ -160,6 +160,38 @@ describe('compare pages', () => {
   });
 });
 
+describe('processor pages', () => {
+  it('hub lists each non-empty power tier with its chips', () => {
+    const html = page('processors');
+    expect(html).toContain('<title>Phones by processor in Pakistan: performance tiers (Oct 2026)</title>');
+    expect(html).toMatch(/<h1>Phones by processor power<\/h1>/);
+    expect(html).toContain(`href="${BASE}processors/smooth-everyday/"`);
+    expect(html).toContain(`href="${BASE}processors/samsung-exynos-1480/"`);
+    expect(html).not.toContain(`href="${BASE}processors/gaming-ready/"`);
+    expect(jsonLd(html).map((o) => o['@type']).sort()).toEqual(['BreadcrumbList', 'ItemList']);
+  });
+
+  it('builds tier pages only for tiers with phones', () => {
+    const html = page('processors/smooth-everyday');
+    expect(html).toContain('<title>Smooth everyday processor phones in Pakistan (Oct 2026)</title>');
+    expect((html.match(/class="phone-card"/g) ?? []).length).toBe(5);
+    expect(existsSync(join(out, 'processors/gaming-ready'))).toBe(false);
+    expect(existsSync(join(out, 'processors/basic'))).toBe(false);
+  });
+
+  it('builds a chip page with every phone that uses it', () => {
+    const html = page('processors/samsung-exynos-1480');
+    expect(html).toContain('<title>Phones with Samsung Exynos 1480 in Pakistan (Oct 2026)</title>');
+    expect((html.match(/class="phone-card"/g) ?? []).length).toBe(5);
+    expect(html).toContain(`href="${BASE}processors/smooth-everyday/"`);
+  });
+
+  it('links phone pages to their chip page and the footer to the hub', () => {
+    expect(page('phones/xiaomi-redmi-note-14')).toContain(`href="${BASE}processors/samsung-exynos-1480/"`);
+    expect(page('')).toContain(`href="${BASE}processors/"`);
+  });
+});
+
 describe('brand index page', () => {
   const html = () => page('brands');
 

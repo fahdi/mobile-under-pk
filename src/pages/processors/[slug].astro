@@ -1,0 +1,57 @@
+---
+import Base from '../../layouts/Base.astro';
+import PhoneCard from '../../components/PhoneCard.astro';
+import PriceChecked from '../../components/PriceChecked.astro';
+import { getData } from '../../lib/data';
+import { latestCheck, phoneName } from '../../lib/format';
+import { chipPaths, chipTitle, tierPaths, tierTitle, type ChipGroup, type Tier, processorTiers } from '../../lib/processors';
+import { toRows } from '../../lib/rows';
+import { absUrl, breadcrumbLd, itemListLd } from '../../lib/seo';
+import { withBase } from '../../lib/paths';
+
+// One route for tier pages and chip pages; their slugs never overlap (tested).
+export function getStaticPaths() {
+  const data = getData();
+  return [
+    ...tierPaths(data).map((t) => ({ params: t.params, props: { kind: 'tier' as const, tier: t.props.tier } })),
+    ...chipPaths(data).map((c) => ({ params: c.params, props: { kind: 'chip' as const, chip: c.props.chip } })),
+  ];
+}
+
+type Props = { kind: 'tier'; tier: Tier } | { kind: 'chip'; chip: ChipGroup };
+const props = Astro.props as Props;
+const data = getData();
+const balanced = data.presets.find((p) => p.slug === 'balanced')!;
+const phones = props.kind === 'tier' ? processorTiers(data).find((t) => t.tier.slug === props.tier.slug)!.phones : props.chip.phones;
+const rows = toRows(phones, balanced);
+const checked = latestCheck(phones)!;
+const slug = props.kind === 'tier' ? props.tier.slug : props.chip.slug;
+const path = `/processors/${slug}/`;
+const name = props.kind === 'tier' ? `${props.tier.name} processors` : props.chip.name;
+const title = props.kind === 'tier' ? tierTitle(props.tier, checked) : chipTitle(props.chip, checked);
+const description = props.kind === 'tier'
+  ? `${phones.length} phones with ${props.tier.name.toLowerCase()} processors in Pakistan, fastest first. ${props.tier.blurb}`
+  : `${phones.length} phones in Pakistan use the ${props.chip.name}, a ${props.chip.tier.name.toLowerCase()} processor. Compare their PTA prices and scores.`;
+const jsonLd = [
+  itemListLd(phones.map((p) => ({ name: phoneName(p, data.brands), url: absUrl(`/phones/${p.slug}/`, Astro.site!) }))),
+  breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Processors', path: '/processors/' }, { name, path }], Astro.site!),
+];
+---
+<Base title={title} description={description} path={path} jsonLd={jsonLd}>
+  <nav aria-label="Breadcrumb"><a href={withBase('/')}>Home</a> / <a href={withBase('/processors/')}>Processors</a> / {name}</nav>
+  {props.kind === 'tier' ? (
+    <>
+      <h1>{props.tier.name} processor phones in Pakistan</h1>
+      <p class="lead">{props.tier.blurb} {phones.length} phones, fastest first, then cheapest.</p>
+    </>
+  ) : (
+    <>
+      <h1>Phones with {props.chip.name} in Pakistan</h1>
+      <p class="lead">{phones.length} phones use the {props.chip.name}, a <a href={withBase(`/processors/${props.chip.tier.slug}/`)}>{props.chip.tier.name.toLowerCase()}</a> processor. {props.chip.tier.blurb}</p>
+    </>
+  )}
+  <PriceChecked date={checked} />
+  <ul class="card-grid">
+    {rows.map((r) => <PhoneCard ranked={r} brands={data.brands} />)}
+  </ul>
+</Base>

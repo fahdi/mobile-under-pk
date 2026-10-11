@@ -3,6 +3,7 @@ import { comparePaths } from './compare';
 import { landingPaths } from './landing';
 import { brandPaths, yearPaths } from './listing';
 import { withBase } from './paths';
+import { chipPaths, tierPaths } from './processors';
 
 // Canonical pages only: built from the same path functions as the pages, so redirects never appear.
 export function sitemapPaths(data: DataSet): string[] {
@@ -14,6 +15,8 @@ export function sitemapPaths(data: DataSet): string[] {
     ...(brandPaths(data).length ? ['/brands/'] : []),
     ...brandPaths(data).map((p) => `/brands/${p.params.brand}/`),
     ...yearPaths(data).map((p) => `/year/${p.params.year}/`),
+    ...(data.phones.length ? ['/processors/'] : []),
+    ...[...tierPaths(data), ...chipPaths(data)].map((p) => `/processors/${p.params.slug}/`),
     ...comparePaths(data.phones).filter((p) => p.props.kind === 'page').map((p) => `/compare/${p.params.pair}/`),
   ];
 }
