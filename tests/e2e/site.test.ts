@@ -336,6 +336,10 @@ describe('hub page', () => {
     }
   });
 
+  it('states the price range from the data, not a hard-coded ceiling', () => {
+    expect(page('').replace(/<[^>]+>/g, '')).toContain('up to 350,000 PKR');
+  });
+
   it('links every brand with phones and carries WebSite JSON-LD', () => {
     const html = page('');
     expect(html).toContain(`href="${BASE}brands/samsung/"`);

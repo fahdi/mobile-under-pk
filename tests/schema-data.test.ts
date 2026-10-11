@@ -9,9 +9,9 @@ describe('seed data files', () => {
   it('brands.json parses', () => {
     expect(z.array(BrandSchema).safeParse(read('data/brands.json')).success).toBe(true);
   });
-  it('brackets.json has the ten v1 ceilings in ascending order', () => {
+  it('brackets.json has every price bracket in ascending order', () => {
     const b = BracketsFileSchema.parse(read('data/brackets.json'));
-    expect(b.map((x) => x.ceiling)).toEqual([20000, 25000, 30000, 40000, 50000, 60000, 80000, 100000, 120000, 150000]);
+    expect(b.map((x) => x.ceiling)).toEqual([20000, 25000, 30000, 40000, 50000, 60000, 80000, 100000, 120000, 150000, 350000, 450000, 650000]);
   });
   it('every bracket has 3 or 4 FAQs, with no em or en dashes', () => {
     for (const b of BracketsFileSchema.parse(read('data/brackets.json'))) {

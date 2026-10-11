@@ -1,0 +1,152 @@
+{
+  "slug": "apple-iphone-16-plus",
+  "brand": "apple",
+  "model": "iPhone 16 Plus",
+  "releaseDate": "2024-09-20",
+  "status": "limited",
+  "image": "/images/phones/apple-iphone-16-plus.webp",
+  "imageCredit": {
+    "name": "Apple",
+    "url": "https://www.apple.com/shop/buy-iphone/iphone-16"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 128,
+      "pricePkr": 362000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/Apple_iPhone-16-Plus"
+        }
+      ]
+    },
+    {
+      "ram": 8,
+      "storage": 256,
+      "pricePkr": 402000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/Apple_iPhone-16-Plus-256GB"
+        }
+      ]
+    },
+    {
+      "ram": 8,
+      "storage": 128,
+      "pricePkr": 242000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": false,
+      "warranty": "local-shop",
+      "sources": [
+        {
+          "name": "Mega.pk",
+          "url": "https://www.mega.pk/mobiles_products/27073/Apple-iPhone-16-Plus-128GB-Non-PTA.html"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Apple A18",
+    "display": {
+      "size": 6.7,
+      "type": "Super Retina XDR OLED",
+      "refreshHz": 60,
+      "resolution": "1290x2796",
+      "peakNits": 2000
+    },
+    "battery": {
+      "mah": 4674,
+      "wiredW": 20,
+      "wirelessW": 25
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 48,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 12,
+          "type": "ultrawide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 12
+      },
+      "video": "4K@60fps"
+    },
+    "build": {
+      "frame": "aluminium",
+      "back": "glass",
+      "front": "Ceramic Shield",
+      "ip": "IP68"
+    },
+    "software": {
+      "os": "iOS 18, upgradable to iOS 27",
+      "osUpdates": 5,
+      "securityYears": 5
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": true
+    },
+    "weightG": 199
+  },
+  "scores": {
+    "camera": {
+      "value": 8,
+      "reason": "48MP sensor-shift OIS main with a 12MP ultrawide and Dolby Vision 4K60 video, but no telephoto."
+    },
+    "performance": {
+      "value": 9,
+      "reason": "Apple A18 on 3nm runs every current game at high settings with room to spare."
+    },
+    "battery": {
+      "value": 7,
+      "reason": "4,674mAh in an efficient phone easily lasts a full day plus, though charging tops out around 20W wired."
+    },
+    "display": {
+      "value": 7,
+      "reason": "Large 6.7 inch OLED reaching 2,000 nits outdoors, held back by a 60Hz refresh rate."
+    },
+    "build": {
+      "value": 9,
+      "reason": "Aluminium frame with Ceramic Shield glass front and back and IP68 at 6 metres."
+    },
+    "software": {
+      "value": 9,
+      "reason": "Apple commits to at least 5 years of security updates (UK PSTI statement) and has historically shipped about 6 major iOS upgrades."
+    },
+    "value": {
+      "value": 4,
+      "reason": "The 362,000 official PTA price is within reach of iPhone 17, which adds 120Hz, a 48MP ultrawide and 256GB."
+    },
+    "availability": {
+      "value": 2,
+      "reason": "No PTA approved unit was in stock on 2026-10-11; only Mega.pk's non-PTA stock was buyable."
+    }
+  },
+  "tags": [
+    "amoled",
+    "nfc",
+    "long-updates"
+  ],
+  "rivals": [
+    "apple-iphone-16",
+    "apple-iphone-17",
+    "apple-iphone-air"
+  ],
+  "notes": "PTA prices are WhatMobile official prices (361,999 and 401,999); Shophive's PTA 128GB listing is out of stock and PriceOye does not list the 16 Plus. The only in-stock unit found was Mega.pk's non-PTA 128GB at 241,999 (shop warranty). Apple still sells the 16 Plus in other markets. osUpdates is an assumption: Apple publishes no iOS upgrade count. RAM (8GB) is from GSMArena."
+}

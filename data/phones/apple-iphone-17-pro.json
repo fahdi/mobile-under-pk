@@ -1,0 +1,158 @@
+{
+  "slug": "apple-iphone-17-pro",
+  "brand": "apple",
+  "model": "iPhone 17 Pro",
+  "releaseDate": "2025-09-19",
+  "status": "available",
+  "image": "/images/phones/apple-iphone-17-pro.webp",
+  "imageCredit": {
+    "name": "Apple",
+    "url": "https://www.apple.com/iphone/compare/"
+  },
+  "variants": [
+    {
+      "ram": 12,
+      "storage": 256,
+      "pricePkr": 422000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "Daraz Apple Flagship Store",
+          "url": "https://www.daraz.pk/products/apple-iphone-17-pro-256gb-i1957827007.html"
+        }
+      ]
+    },
+    {
+      "ram": 12,
+      "storage": 512,
+      "pricePkr": 510500,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "Daraz Apple Flagship Store",
+          "url": "https://www.daraz.pk/products/apple-iphone-17-pro-512gb-i1957827008.html"
+        }
+      ]
+    },
+    {
+      "ram": 12,
+      "storage": 1024,
+      "pricePkr": 650000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "Mega.pk",
+          "url": "https://www.mega.pk/mobiles_products/26828/Apple-iPhone-17-Pro-1TB-Storage-PTA-Approved.html"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Apple A19 Pro",
+    "display": {
+      "size": 6.3,
+      "type": "LTPO Super Retina XDR OLED",
+      "refreshHz": 120,
+      "resolution": "1206x2622",
+      "peakNits": 3000
+    },
+    "battery": {
+      "mah": 3998,
+      "wiredW": 40,
+      "wirelessW": 25
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 48,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 48,
+          "type": "ultrawide",
+          "ois": false
+        },
+        {
+          "mp": 48,
+          "type": "periscope",
+          "ois": true
+        }
+      ],
+      "front": {
+        "mp": 18
+      },
+      "video": "4K@120fps"
+    },
+    "build": {
+      "frame": "aluminium",
+      "back": "aluminium with Ceramic Shield glass panel",
+      "front": "Ceramic Shield 2",
+      "ip": "IP68"
+    },
+    "software": {
+      "os": "iOS 26, upgradable to iOS 27",
+      "osUpdates": 5,
+      "securityYears": 5
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": true
+    },
+    "weightG": 206
+  },
+  "scores": {
+    "camera": {
+      "value": 9,
+      "reason": "Three 48MP cameras including a 4x periscope telephoto, with 4K120 Dolby Vision and ProRes RAW video."
+    },
+    "performance": {
+      "value": 10,
+      "reason": "Apple A19 Pro with vapour chamber cooling sustains the heaviest games."
+    },
+    "battery": {
+      "value": 7,
+      "reason": "3,998mAh gives a full day plus and reaches 50% in 20 minutes with a 40W adapter."
+    },
+    "display": {
+      "value": 10,
+      "reason": "6.3 inch LTPO OLED at 1 to 120Hz with 3,000 nits outdoor peak."
+    },
+    "build": {
+      "value": 10,
+      "reason": "Aluminium unibody, Ceramic Shield 2 front and Ceramic Shield back panel, IP68 at 6 metres."
+    },
+    "software": {
+      "value": 9,
+      "reason": "Apple commits to at least 5 years of security updates (UK PSTI statement) and has historically shipped about 6 major iOS upgrades."
+    },
+    "value": {
+      "value": 8,
+      "reason": "At 422,000 it is only about 27,000 more than iPhone 17 and adds a 4x telephoto, 12GB RAM and vapour cooling."
+    },
+    "availability": {
+      "value": 8,
+      "reason": "In stock at Daraz's Apple Flagship Store, Shophive, Mega.pk and PriceOye with authorised distributor warranty."
+    }
+  },
+  "tags": [
+    "amoled",
+    "nfc",
+    "long-updates",
+    "fast-charging"
+  ],
+  "rivals": [
+    "apple-iphone-17",
+    "apple-iphone-17-pro-max",
+    "apple-iphone-air"
+  ],
+  "notes": "12GB 256GB: Daraz Apple Flagship Store 421,999 (almost sold out, 2 years brand warranty); Shophive 434,999, Mega.pk 459,999 and PriceOye 463,999 also in stock; WhatMobile official 519,499. 512GB: Daraz 510,499 (the Daraz search page showed 504,999); Shophive 524,999. 1TB: Mega.pk 649,999 (Shophive 650,499). Mega.pk's non-PTA 256GB (374,999) and 512GB (414,999) are coming soon, so no non-PTA variant is recorded. Battery is the nano SIM model. The photo is Apple's iPhone 17 Pro comparison render; the front phone was cut from the front and back pair. osUpdates is an assumption."
+}

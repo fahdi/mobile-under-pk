@@ -1,0 +1,146 @@
+{
+  "slug": "apple-iphone-air",
+  "brand": "apple",
+  "model": "iPhone Air",
+  "releaseDate": "2025-09-19",
+  "status": "available",
+  "image": "/images/phones/apple-iphone-air.webp",
+  "imageCredit": {
+    "name": "Apple",
+    "url": "https://www.apple.com/shop/buy-iphone/iphone-air"
+  },
+  "variants": [
+    {
+      "ram": 12,
+      "storage": 256,
+      "pricePkr": 394000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "Daraz Apple Flagship Store",
+          "url": "https://www.daraz.pk/products/iphone-air-256gb-i1957763410.html"
+        }
+      ]
+    },
+    {
+      "ram": 12,
+      "storage": 512,
+      "pricePkr": 508500,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "Shophive",
+          "url": "https://www.shophive.com/apple-iphone-17-air-512gb-pta-approved/"
+        }
+      ]
+    },
+    {
+      "ram": 12,
+      "storage": 1024,
+      "pricePkr": 588500,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "Shophive",
+          "url": "https://www.shophive.com/apple-iphone-17-air-1tb-pta-approved/"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Apple A19 Pro",
+    "display": {
+      "size": 6.5,
+      "type": "LTPO Super Retina XDR OLED",
+      "refreshHz": 120,
+      "resolution": "1260x2736",
+      "peakNits": 3000
+    },
+    "battery": {
+      "mah": 3149,
+      "wiredW": 20,
+      "wirelessW": 20
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 48,
+          "type": "wide",
+          "ois": true
+        }
+      ],
+      "front": {
+        "mp": 18
+      },
+      "video": "4K@60fps"
+    },
+    "build": {
+      "frame": "titanium",
+      "back": "Ceramic Shield",
+      "front": "Ceramic Shield 2",
+      "ip": "IP68"
+    },
+    "software": {
+      "os": "iOS 26, upgradable to iOS 27",
+      "osUpdates": 5,
+      "securityYears": 5
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": true
+    },
+    "weightG": 165
+  },
+  "scores": {
+    "camera": {
+      "value": 7,
+      "reason": "One 48MP sensor-shift OIS main camera with 2x crop zoom; no ultrawide or telephoto."
+    },
+    "performance": {
+      "value": 10,
+      "reason": "Apple A19 Pro, the same chip family as the 17 Pro, runs every game at high settings."
+    },
+    "battery": {
+      "value": 5,
+      "reason": "3,149mAh in a 5.6mm body lasts a day for most, and charging is about 20W wired."
+    },
+    "display": {
+      "value": 10,
+      "reason": "6.5 inch LTPO OLED at 1 to 120Hz with 3,000 nits outdoor peak."
+    },
+    "build": {
+      "value": 10,
+      "reason": "Grade 5 titanium frame with Ceramic Shield on both sides and IP68, at 5.6mm and 165g."
+    },
+    "software": {
+      "value": 9,
+      "reason": "Apple commits to at least 5 years of security updates (UK PSTI statement) and has historically shipped about 6 major iOS upgrades."
+    },
+    "value": {
+      "value": 6,
+      "reason": "394,000 buys the thinnest iPhone, but iPhone 17 costs the same with an ultrawide and a bigger battery."
+    },
+    "availability": {
+      "value": 8,
+      "reason": "In stock at Daraz's Apple Flagship Store, PriceOye and Shophive with authorised distributor warranty."
+    }
+  },
+  "tags": [
+    "amoled",
+    "nfc",
+    "long-updates"
+  ],
+  "rivals": [
+    "apple-iphone-17",
+    "apple-iphone-17-pro"
+  ],
+  "notes": "Sold in Pakistan as iPhone 17 Air by some retailers. 12GB 256GB: Daraz Apple Flagship Store 393,999 (in stock, 2 years brand warranty); PriceOye 401,999 and Shophive 416,999 also in stock; Mega.pk 424,999 out of stock. 512GB and 1TB are Shophive's in-stock prices (508,499 and 588,499). eSIM only, no physical SIM tray. RAM is 12GB per GSMArena; PriceOye labels it 8GB. Mega.pk's unlabeled 'Apple iPhone Air' listing at 274,999 does not say PTA or non-PTA, so it is not used. No clearly labeled non-PTA unit was found. osUpdates is an assumption."
+}

@@ -1,0 +1,119 @@
+{
+  "slug": "apple-iphone-16e",
+  "brand": "apple",
+  "model": "iPhone 16e",
+  "releaseDate": "2025-02-28",
+  "status": "discontinued",
+  "image": "/images/phones/apple-iphone-16e.webp",
+  "imageCredit": {
+    "name": "Apple",
+    "url": "https://www.apple.com/iphone/compare/"
+  },
+  "variants": [
+    {
+      "ram": 8,
+      "storage": 128,
+      "pricePkr": 290000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/Apple_iPhone-16E"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Apple A18",
+    "display": {
+      "size": 6.1,
+      "type": "Super Retina XDR OLED",
+      "refreshHz": 60,
+      "resolution": "1170x2532",
+      "peakNits": 1200
+    },
+    "battery": {
+      "mah": 4005,
+      "wiredW": 20,
+      "wirelessW": 7.5
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 48,
+          "type": "wide",
+          "ois": true
+        }
+      ],
+      "front": {
+        "mp": 12
+      },
+      "video": "4K@60fps"
+    },
+    "build": {
+      "frame": "aluminium",
+      "back": "glass",
+      "front": "Ceramic Shield",
+      "ip": "IP68"
+    },
+    "software": {
+      "os": "iOS 18.3, upgradable to iOS 27",
+      "osUpdates": 5,
+      "securityYears": 5
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": true
+    },
+    "weightG": 167
+  },
+  "scores": {
+    "camera": {
+      "value": 6,
+      "reason": "A single 48MP OIS main camera; no ultrawide or telephoto."
+    },
+    "performance": {
+      "value": 9,
+      "reason": "Apple A18 with a 4-core GPU runs current games at high settings."
+    },
+    "battery": {
+      "value": 6,
+      "reason": "4,005mAh lasts a full day, but charging is about 20W wired and 7.5W wireless with no MagSafe."
+    },
+    "display": {
+      "value": 6,
+      "reason": "6.1 inch OLED with a notch, 60Hz and 1,200 nits peak."
+    },
+    "build": {
+      "value": 9,
+      "reason": "Aluminium frame, Ceramic Shield front, glass back and IP68 at 6 metres."
+    },
+    "software": {
+      "value": 9,
+      "reason": "Apple commits to at least 5 years of security updates (UK PSTI statement) and has historically shipped about 6 major iOS upgrades."
+    },
+    "value": {
+      "value": 5,
+      "reason": "The last official price of 290,000 bought a single-camera, 60Hz phone; iPhone 16 adds an ultrawide for a little more."
+    },
+    "availability": {
+      "value": 1,
+      "reason": "Replaced by iPhone 17e in March 2026; no Pakistani retailer had a buyable unit on 2026-10-11."
+    }
+  },
+  "tags": [
+    "amoled",
+    "nfc",
+    "long-updates",
+    "compact"
+  ],
+  "rivals": [
+    "apple-iphone-17e",
+    "apple-iphone-16"
+  ],
+  "notes": "Discontinued: Apple replaced it with iPhone 17e in March 2026 and no longer sells it. Shophive still lists PTA 128GB and 256GB pages but with no price and no add to cart; Mega.pk's non-PTA 128GB (154,999) is on order only; PriceOye does not list it. Price is the last WhatMobile official price (289,999, 128GB). osUpdates is an assumption."
+}
