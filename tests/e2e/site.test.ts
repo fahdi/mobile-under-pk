@@ -218,6 +218,35 @@ describe('battery pages', () => {
   });
 });
 
+describe('blog', () => {
+  it('index lists posts newest first with their dates', () => {
+    const html = page('blog');
+    expect(html).toContain('<title>MobileUnder.pk blog: phone buying advice for Pakistan</title>');
+    expect(html).toMatch(/<h1>Blog<\/h1>/);
+    expect(html).toContain(`href="${BASE}blog/fixture-post/"`);
+    expect(html).toContain('<time datetime="2026-10-11">11 Oct 2026</time>');
+  });
+
+  it('post page renders the Markdown, its sources and BlogPosting JSON-LD', () => {
+    const html = page('blog/fixture-post');
+    expect(html).toContain('<title>A fixture post about buying phones in Pakistan</title>');
+    expect(html).toMatch(/<h1>A fixture post about buying phones in Pakistan<\/h1>/);
+    expect(html).toMatch(/<h2[^>]*>Why this exists<\/h2>/);
+    expect(html).toMatch(/<a [^>]*href="https:\/\/www\.pta\.gov\.pk\/"[^>]*rel="nofollow noopener"[^>]*>Pakistan Telecommunication Authority<\/a>/);
+    const post = jsonLd(html).find((o) => o['@type'] === 'BlogPosting');
+    expect(post).toMatchObject({ headline: 'A fixture post about buying phones in Pakistan', datePublished: '2026-10-11', inLanguage: 'en-PK' });
+    expect(jsonLd(html).map((o) => o['@type']).sort()).toEqual(['BlogPosting', 'BreadcrumbList']);
+    expect(html.replace(/<[^>]+>/g, '')).toMatch(/11 Oct 2026 · 1 min read/);
+  });
+
+  it('is linked from the header and listed in the sitemap', () => {
+    expect(page('')).toMatch(/<nav [^>]*aria-label="Main"[\s\S]*?href="\/mobile-under-pk\/blog\/"/);
+    const xml = readFileSync(join(out, 'sitemap.xml'), 'utf8');
+    expect(xml).toContain(`<loc>https://fahdi.github.io${BASE}blog/</loc>`);
+    expect(xml).toContain(`<loc>https://fahdi.github.io${BASE}blog/fixture-post/</loc>`);
+  });
+});
+
 describe('brand index page', () => {
   const html = () => page('brands');
 

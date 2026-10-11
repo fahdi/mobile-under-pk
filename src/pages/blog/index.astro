@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { formatDate } from '../../lib/format';
+import { absUrl, breadcrumbLd, itemListLd } from '../../lib/seo';
+import { withBase } from '../../lib/paths';
+
+const posts = (await getCollection('blog')).sort((a, b) => b.data.publishedAt.localeCompare(a.data.publishedAt) || a.id.localeCompare(b.id));
+const jsonLd = [
+  itemListLd(posts.map((p) => ({ name: p.data.title, url: absUrl(`/blog/${p.id}/`, Astro.site!) }))),
+  breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Blog', path: '/blog/' }], Astro.site!),
+];
+---
+<Base title="MobileUnder.pk blog: phone buying advice for Pakistan" description="Practical, sourced advice for buying a phone in Pakistan: PTA approval, warranty, grey market risks and how to get the most for your budget." path="/blog/" jsonLd={jsonLd}>
+  <nav aria-label="Breadcrumb"><a href={withBase('/')}>Home</a> / Blog</nav>
+  <h1>Blog</h1>
+  <p class="lead">Practical, sourced advice for buying a phone in Pakistan.</p>
+  <ul class="post-list">
+    {posts.map((p) => (
+      <li class="post-item">
+        <h2><a href={withBase(`/blog/${p.id}/`)}>{p.data.title}</a></h2>
+        <p class="post-meta"><time datetime={p.data.publishedAt}>{formatDate(p.data.publishedAt)}</time></p>
+        <p>{p.data.description}</p>
+      </li>
+    ))}
+  </ul>
+</Base>

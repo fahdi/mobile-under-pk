@@ -152,3 +152,18 @@ tr[hidden] { display: none; }
 .brand-card-name { font-weight: 800; font-size: 1.15rem; }
 .brand-card a:hover .brand-card-name { color: var(--accent); }
 .brand-card-meta { color: var(--muted); font-size: .92rem; }
+
+/* Blog */
+.post-list { list-style: none; padding: 0; display: grid; gap: 16px; }
+.post-item { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; box-shadow: var(--shadow); }
+.post-item h2 { margin: 0 0 4px; font-size: 1.25rem; }
+.post-item h2 a { text-decoration: none; }
+.post-meta { color: var(--muted); font-size: .9rem; margin: 0 0 8px; }
+.post { max-width: 46rem; }
+.post-body { font-size: 1.05rem; line-height: 1.75; }
+.post-body h2 { margin-top: 36px; }
+.post-body li { margin: 6px 0; }
+.post-sources { margin-top: 40px; border-top: 1px solid var(--line); padding-top: 8px; font-size: .92rem; }
+.post-body table { display: block; overflow-x: auto; border-collapse: collapse; margin: 20px 0; font-size: .95rem; line-height: 1.45; }
+.post-body th, .post-body td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); min-width: 7rem; }
+.post-body thead th { background: var(--surface-2); font-weight: 700; }

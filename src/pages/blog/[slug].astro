@@ -1,0 +1,41 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { formatDate } from '../../lib/format';
+import { readingMinutes } from '../../lib/blog';
+import { absUrl, breadcrumbLd } from '../../lib/seo';
+import { withBase } from '../../lib/paths';
+
+export async function getStaticPaths() {
+  return (await getCollection('blog')).map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const path = `/blog/${post.id}/`;
+const url = absUrl(path, Astro.site!);
+const jsonLd = [
+  {
+    '@context': 'https://schema.org', '@type': 'BlogPosting', headline: post.data.title, description: post.data.description,
+    datePublished: post.data.publishedAt, dateModified: post.data.updatedAt ?? post.data.publishedAt, inLanguage: 'en-PK',
+    mainEntityOfPage: url, author: { '@type': 'Organization', name: 'MobileUnder.pk' }, publisher: { '@type': 'Organization', name: 'MobileUnder.pk' },
+  },
+  breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Blog', path: '/blog/' }, { name: post.data.title, path }], Astro.site!),
+];
+---
+<Base title={post.data.title} description={post.data.description} path={path} jsonLd={jsonLd}>
+  <nav aria-label="Breadcrumb"><a href={withBase('/')}>Home</a> / <a href={withBase('/blog/')}>Blog</a></nav>
+  <article class="post">
+    <h1>{post.data.title}</h1>
+    <p class="post-meta">
+      <time datetime={post.data.publishedAt}>{formatDate(post.data.publishedAt)}</time>
+      {post.data.updatedAt && <>{' · updated '}<time datetime={post.data.updatedAt}>{formatDate(post.data.updatedAt)}</time></>}
+      {` · ${readingMinutes(post.body ?? '')} min read`}
+    </p>
+    <div class="post-body"><Content /></div>
+    <section class="post-sources">
+      <h2>Sources</h2>
+      <ol>{post.data.sources.map((s) => <li><a href={s.url} rel="nofollow noopener">{s.name}</a></li>)}</ol>
+    </section>
+  </article>
+</Base>
