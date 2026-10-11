@@ -4,6 +4,7 @@ import { comparePaths } from './compare';
 import { formatDate, formatPkr, latestCheck, phoneName } from './format';
 import { landingPaths, phonesInBracket } from './landing';
 import { brandSummaries, phonesByBrand, phonesByYear } from './listing';
+import { chipPaths, processorTiers, tierPaths } from './processors';
 import { topPicks } from './scoring';
 
 export interface OgContent { title: string; subtitle: string; price?: string; images: string[] }
@@ -25,6 +26,18 @@ export function ogContent(data: DataSet, path: string): OgContent {
   if (path === '/brands/') {
     const summaries = brandSummaries(data);
     return { title: 'Phone brands in Pakistan', subtitle: `${summaries.length} brands, prices by brand with PTA status`, images: summaries.slice(0, 3).map((s) => s.top.image) };
+  }
+  if (path === '/processors/') {
+    return { title: 'Phones by processor power', subtitle: 'Gaming-ready, smooth everyday and basic chips', images: processorTiers(data).flatMap((t) => t.phones.slice(0, 1)).map((p) => p.image) };
+  }
+  if (parts[0] === 'processors' && parts.length === 2) {
+    const tier = tierPaths(data).find((t) => t.params.slug === parts[1]);
+    if (tier) {
+      const phones = processorTiers(data).find((t) => t.tier.slug === parts[1])!.phones;
+      return { title: `${tier.props.tier.name} processor phones`, subtitle: `${phones.length} phones in Pakistan, fastest first`, images: photos(phones) };
+    }
+    const chip = chipPaths(data).find((c) => c.params.slug === parts[1]);
+    if (chip) return { title: `Phones with ${chip.props.chip.name}`, subtitle: `${chip.props.chip.count} phones in Pakistan, ${chip.props.chip.tier.name.toLowerCase()} processor`, images: photos(chip.props.chip.phones) };
   }
   if (path === '/finder/') {
     return { title: 'Find your phone', subtitle: 'Filter and rank every phone by what matters to you', images: [] };
