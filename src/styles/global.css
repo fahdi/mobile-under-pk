@@ -164,3 +164,6 @@ tr[hidden] { display: none; }
 .post-body h2 { margin-top: 36px; }
 .post-body li { margin: 6px 0; }
 .post-sources { margin-top: 40px; border-top: 1px solid var(--line); padding-top: 8px; font-size: .92rem; }
+.post-body table { display: block; overflow-x: auto; border-collapse: collapse; margin: 20px 0; font-size: .95rem; line-height: 1.45; }
+.post-body th, .post-body td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); min-width: 7rem; }
+.post-body thead th { background: var(--surface-2); font-weight: 700; }

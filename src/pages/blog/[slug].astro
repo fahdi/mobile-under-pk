@@ -29,8 +29,8 @@ const jsonLd = [
     <h1>{post.data.title}</h1>
     <p class="post-meta">
       <time datetime={post.data.publishedAt}>{formatDate(post.data.publishedAt)}</time>
-      {post.data.updatedAt && <> · updated <time datetime={post.data.updatedAt}>{formatDate(post.data.updatedAt)}</time></>}
-      · {readingMinutes(post.body ?? '')} min read
+      {post.data.updatedAt && <>{' · updated '}<time datetime={post.data.updatedAt}>{formatDate(post.data.updatedAt)}</time></>}
+      {` · ${readingMinutes(post.body ?? '')} min read`}
     </p>
     <div class="post-body"><Content /></div>
     <section class="post-sources">

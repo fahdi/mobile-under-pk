@@ -236,6 +236,7 @@ describe('blog', () => {
     const post = jsonLd(html).find((o) => o['@type'] === 'BlogPosting');
     expect(post).toMatchObject({ headline: 'A fixture post about buying phones in Pakistan', datePublished: '2026-10-11', inLanguage: 'en-PK' });
     expect(jsonLd(html).map((o) => o['@type']).sort()).toEqual(['BlogPosting', 'BreadcrumbList']);
+    expect(html.replace(/<[^>]+>/g, '')).toMatch(/11 Oct 2026 · 1 min read/);
   });
 
   it('is linked from the header and listed in the sitemap', () => {
