@@ -1,0 +1,129 @@
+{
+  "slug": "poco-m6-pro",
+  "brand": "poco",
+  "model": "POCO M6 Pro",
+  "releaseDate": "2024-01-11",
+  "status": "discontinued",
+  "image": "/images/phones/poco-m6-pro.webp",
+  "imageCredit": {
+    "name": "Xiaomi UK",
+    "url": "https://www.mi.com/uk/product/poco-m6-pro/buy/"
+  },
+  "variants": [
+    {
+      "ram": 12,
+      "storage": 512,
+      "pricePkr": 90000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/Xiaomi_Poco-M6-Pro"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Helio G99 Ultra",
+    "display": {
+      "size": 6.67,
+      "type": "AMOLED",
+      "refreshHz": 120,
+      "resolution": "1080x2400",
+      "peakNits": 1300
+    },
+    "battery": {
+      "mah": 5000,
+      "wiredW": 67,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 64,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 8,
+          "type": "ultrawide",
+          "ois": false
+        },
+        {
+          "mp": 2,
+          "type": "macro",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 16
+      },
+      "video": "1080p@60fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "not specified",
+      "front": "Gorilla Glass 5",
+      "ip": "IP54"
+    },
+    "software": {
+      "os": "Android 13, MIUI 14",
+      "osUpdates": 3,
+      "securityYears": 4
+    },
+    "connectivity": {
+      "fiveG": false,
+      "nfc": true,
+      "jack35": true,
+      "esim": false
+    },
+    "weightG": 179
+  },
+  "scores": {
+    "camera": {
+      "value": 7,
+      "reason": "64MP main camera with OIS and an 8MP ultrawide, but video tops out at 1080p."
+    },
+    "performance": {
+      "value": 6,
+      "reason": "Helio G99 Ultra is smooth in daily use and handles light gaming."
+    },
+    "battery": {
+      "value": 8,
+      "reason": "5,000mAh lasts a full day, and 67W charging fills it in about 44 minutes."
+    },
+    "display": {
+      "value": 8,
+      "reason": "6.67 inch FHD+ AMOLED at 120Hz with a 1,300 nit peak."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Plastic frame with IP54 splash resistance and Gorilla Glass 5 on the front."
+    },
+    "software": {
+      "value": 8,
+      "reason": "Got 3 Android upgrades, from Android 13 to Android 16 with HyperOS 3."
+    },
+    "value": {
+      "value": 4,
+      "reason": "Its last official price of 90,000 bought a 4G Helio G99 phone, while the Camon 50 and Redmi Note 15 Pro offer a faster Helio G200 for about the same."
+    },
+    "availability": {
+      "value": 1,
+      "reason": "No Pakistani retailer had a new unit in stock on 2026-10-11."
+    }
+  },
+  "tags": [
+    "amoled",
+    "fast-charging",
+    "nfc"
+  ],
+  "rivals": [
+    "tecno-camon-50",
+    "xiaomi-redmi-note-15-pro",
+    "samsung-galaxy-a17-5g"
+  ],
+  "notes": "Discontinued: no longer sold new in Pakistan. PriceOye marks it discontinued with a last out-of-stock price of 83,999 (12GB 512GB), and no Daraz official store listing has it, so the price is the last WhatMobile official price (89,999, 12GB 512GB). This is the global 4G model, not the India-only POCO M6 Pro 5G. Xiaomi does not state the back material. Security years are an assumption from miuirom.org, which lists support until January 2028. The photo is Xiaomi UK's back and front pair render; the front phone was cut out along its own outline, with the hidden left edge mirrored from its visible right edge."
+}

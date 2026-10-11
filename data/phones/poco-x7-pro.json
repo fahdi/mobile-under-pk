@@ -1,0 +1,125 @@
+{
+  "slug": "poco-x7-pro",
+  "brand": "poco",
+  "model": "POCO X7 Pro",
+  "releaseDate": "2025-01-09",
+  "status": "discontinued",
+  "image": "/images/phones/poco-x7-pro.webp",
+  "imageCredit": {
+    "name": "Xiaomi United Arab Emirates",
+    "url": "https://www.mi.com/ae/product/poco-x7-pro/buy/"
+  },
+  "variants": [
+    {
+      "ram": 12,
+      "storage": 512,
+      "pricePkr": 140000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/Xiaomi_Poco-X7-Pro"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Dimensity 8400 Ultra",
+    "display": {
+      "size": 6.67,
+      "type": "AMOLED",
+      "refreshHz": 120,
+      "resolution": "1220x2712",
+      "peakNits": 3200
+    },
+    "battery": {
+      "mah": 6000,
+      "wiredW": 90,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 8,
+          "type": "ultrawide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 20
+      },
+      "video": "4K@60fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic or eco leather",
+      "front": "Gorilla Glass 7i",
+      "ip": "IP68"
+    },
+    "software": {
+      "os": "Android 15, HyperOS 2",
+      "osUpdates": 3,
+      "securityYears": 4
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 195
+  },
+  "scores": {
+    "camera": {
+      "value": 7,
+      "reason": "50MP main camera with OIS plus an 8MP ultrawide, but no telephoto."
+    },
+    "performance": {
+      "value": 9,
+      "reason": "Dimensity 8400 Ultra is a near-flagship chip that sustains demanding games."
+    },
+    "battery": {
+      "value": 9,
+      "reason": "6,000mAh lasts a full day plus, and 90W charging fills it in about 42 minutes."
+    },
+    "display": {
+      "value": 9,
+      "reason": "6.67 inch 1.5K AMOLED at 120Hz with a 3,200 nit peak."
+    },
+    "build": {
+      "value": 6,
+      "reason": "Plastic frame and back, but rated IP68 against dust and water."
+    },
+    "software": {
+      "value": 8,
+      "reason": "Xiaomi promised 3 Android upgrades and 4 years of security updates."
+    },
+    "value": {
+      "value": 7,
+      "reason": "At its last official price of 140,000 it paired a Dimensity 8400 Ultra with 6,000mAh, 90W and IP68, a stronger all-round package than most of the bracket."
+    },
+    "availability": {
+      "value": 1,
+      "reason": "No Pakistani retailer had a new unit in stock on 2026-10-11."
+    }
+  },
+  "tags": [
+    "amoled",
+    "big-battery",
+    "fast-charging",
+    "nfc"
+  ],
+  "rivals": [
+    "realme-15-pro",
+    "honor-x9d",
+    "poco-f6"
+  ],
+  "notes": "Discontinued: no longer sold new in Pakistan. PriceOye lists the 12GB 512GB at 137,999 but out of stock, and no Daraz official store, Mega.pk, iShopping or Shophive listing has it, so the price is the last WhatMobile official price (139,999, 12GB 512GB). Xiaomi Pakistan's site has no page for it. Frame material is from Xiaomi's weight split (plastic or PU back); GSMArena does not state the frame."
+}

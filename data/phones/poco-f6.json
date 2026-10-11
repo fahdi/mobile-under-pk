@@ -1,0 +1,124 @@
+{
+  "slug": "poco-f6",
+  "brand": "poco",
+  "model": "POCO F6",
+  "releaseDate": "2024-05-23",
+  "status": "discontinued",
+  "image": "/images/phones/poco-f6.webp",
+  "imageCredit": {
+    "name": "Xiaomi UK",
+    "url": "https://www.mi.com/uk/product/poco-f6/buy/"
+  },
+  "variants": [
+    {
+      "ram": 12,
+      "storage": 512,
+      "pricePkr": 135000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "WhatMobile",
+          "url": "https://www.whatmobile.com.pk/Xiaomi_Poco-F6"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Snapdragon 8s Gen 3",
+    "display": {
+      "size": 6.67,
+      "type": "AMOLED",
+      "refreshHz": 120,
+      "resolution": "1220x2712",
+      "peakNits": 2400
+    },
+    "battery": {
+      "mah": 5000,
+      "wiredW": 90,
+      "wirelessW": 0
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 8,
+          "type": "ultrawide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 20
+      },
+      "video": "4K@60fps"
+    },
+    "build": {
+      "frame": "plastic",
+      "back": "plastic",
+      "front": "Gorilla Glass Victus",
+      "ip": "IP64"
+    },
+    "software": {
+      "os": "Android 14, HyperOS",
+      "osUpdates": 3,
+      "securityYears": 4
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": false
+    },
+    "weightG": 179
+  },
+  "scores": {
+    "camera": {
+      "value": 7,
+      "reason": "50MP Sony IMX882 main camera with OIS plus an 8MP ultrawide, but no telephoto."
+    },
+    "performance": {
+      "value": 9,
+      "reason": "Snapdragon 8s Gen 3 is a near-flagship chip that sustains demanding games."
+    },
+    "battery": {
+      "value": 8,
+      "reason": "5,000mAh lasts a full day, and 90W charging fills it in about 35 minutes."
+    },
+    "display": {
+      "value": 9,
+      "reason": "6.67 inch 1.5K AMOLED at 120Hz with a 2,400 nit peak."
+    },
+    "build": {
+      "value": 5,
+      "reason": "Plastic frame and back with IP64 dust and splash resistance and Gorilla Glass Victus on the front."
+    },
+    "software": {
+      "value": 8,
+      "reason": "Xiaomi promised 3 Android upgrades and 4 years of security updates."
+    },
+    "value": {
+      "value": 8,
+      "reason": "At its last official price of 135,000 its Snapdragon 8s Gen 3 was the fastest chip in the bracket."
+    },
+    "availability": {
+      "value": 1,
+      "reason": "No Pakistani retailer had a new unit in stock on 2026-10-11."
+    }
+  },
+  "tags": [
+    "amoled",
+    "fast-charging",
+    "nfc"
+  ],
+  "rivals": [
+    "poco-x7-pro",
+    "realme-15-pro",
+    "vivo-v60"
+  ],
+  "notes": "Discontinued: no longer sold new in Pakistan. PriceOye marks it discontinued with a last out-of-stock price of 131,999 (12GB 512GB), and no Daraz official store listing has it, so the price is the last WhatMobile official price (134,999). WhatMobile lists 8GB 256GB and 12GB 512GB memory but one price; it is recorded against the 12GB 512GB, the only variant PriceOye listed, so treat the variant as uncertain. Update and security figures are from Xiaomi's launch promise; miuirom.org lists support until May 2028. The photo is Xiaomi UK's back and front pair render; the front phone was cut out along its own outline, with the hidden left edge mirrored from its visible right edge."
+}
