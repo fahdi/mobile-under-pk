@@ -1,0 +1,177 @@
+{
+  "slug": "samsung-galaxy-s26-ultra",
+  "brand": "samsung",
+  "model": "Galaxy S26 Ultra",
+  "releaseDate": "2026-03-06",
+  "status": "available",
+  "image": "/images/phones/samsung-galaxy-s26-ultra.webp",
+  "imageCredit": {
+    "name": "Samsung Pakistan",
+    "url": "https://www.samsung.com/pk/smartphones/galaxy-s26-ultra/buy/"
+  },
+  "variants": [
+    {
+      "ram": 12,
+      "storage": 256,
+      "pricePkr": 387000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/samsung/samsung-galaxy-s26-ultra"
+        }
+      ]
+    },
+    {
+      "ram": 12,
+      "storage": 512,
+      "pricePkr": 447000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/samsung/samsung-galaxy-s26-ultra"
+        }
+      ]
+    },
+    {
+      "ram": 12,
+      "storage": 256,
+      "pricePkr": 272000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": false,
+      "warranty": "none",
+      "sources": [
+        {
+          "name": "Mega.pk",
+          "url": "https://www.mega.pk/mobiles_products/26997/Samsung-Galaxy-S26-Ultra-12GB-RAM-256GB-Storage-NON-PTA.html"
+        }
+      ]
+    },
+    {
+      "ram": 12,
+      "storage": 512,
+      "pricePkr": 315000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": false,
+      "warranty": "none",
+      "sources": [
+        {
+          "name": "Mega.pk",
+          "url": "https://www.mega.pk/mobiles_products/26996/Samsung-Galaxy-S26-Ultra-12GB-RAM-512GB-Storage-NON-PTA.html"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Qualcomm Snapdragon 8 Elite Gen 5 for Galaxy",
+    "display": {
+      "size": 6.9,
+      "type": "Dynamic LTPO AMOLED 2X",
+      "refreshHz": 120,
+      "resolution": "1440x3120",
+      "peakNits": 2600
+    },
+    "battery": {
+      "mah": 5000,
+      "wiredW": 60,
+      "wirelessW": 25
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 200,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 10,
+          "type": "telephoto",
+          "ois": true
+        },
+        {
+          "mp": 50,
+          "type": "periscope",
+          "ois": true
+        },
+        {
+          "mp": 50,
+          "type": "ultrawide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 12
+      },
+      "video": "8K@30fps"
+    },
+    "build": {
+      "frame": "aluminium",
+      "back": "Gorilla Glass Victus 2",
+      "front": "Gorilla Armor 2",
+      "ip": "IP68"
+    },
+    "software": {
+      "os": "Android 16, One UI 8.5, upgradable to Android 17",
+      "osUpdates": 7,
+      "securityYears": 7
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": true
+    },
+    "weightG": 214
+  },
+  "scores": {
+    "camera": {
+      "value": 10,
+      "reason": "200MP OIS main, 3x and 5x telephotos with OIS and a 50MP ultrawide, with 8K video."
+    },
+    "performance": {
+      "value": 10,
+      "reason": "Snapdragon 8 Elite Gen 5 for Galaxy is a top flagship chip that sustains heavy gaming."
+    },
+    "battery": {
+      "value": 8,
+      "reason": "5,000mAh lasts a full day plus and charges at 60W wired and 25W wireless."
+    },
+    "display": {
+      "value": 10,
+      "reason": "6.9 inch QHD+ LTPO AMOLED with 2,600 nits peak and an anti-reflective Gorilla Armor 2 front."
+    },
+    "build": {
+      "value": 10,
+      "reason": "Gorilla Armor 2 front, Victus 2 back, aluminium frame and IP68, with a built-in S Pen."
+    },
+    "software": {
+      "value": 10,
+      "reason": "Samsung promises 7 major Android upgrades."
+    },
+    "value": {
+      "value": 9,
+      "reason": "At 387,000 it undercuts iPhone 17 and adds a 5x periscope, a 200MP main camera and the S Pen."
+    },
+    "availability": {
+      "value": 9,
+      "reason": "In stock at PriceOye, Mega.pk and the Samsung Flagship Store on Daraz, with official Samsung service centres."
+    }
+  },
+  "tags": [
+    "amoled",
+    "nfc",
+    "long-updates",
+    "fast-charging"
+  ],
+  "rivals": [
+    "apple-iphone-17",
+    "apple-iphone-17-pro",
+    "apple-iphone-16-pro-max"
+  ],
+  "notes": "PTA 12GB 256GB: PriceOye 386,995 in stock; Samsung Flagship Store on Daraz 419,999 (almost sold out); Mega.pk 447,999. PTA 12GB 512GB: PriceOye 446,995; Mega.pk 517,999. Samsung Pakistan and WhatMobile list higher official prices (WhatMobile 449,999). Non-PTA units are Mega.pk listings at 271,999 and 314,999 with no warranty. securityYears is assumed to match the 7 upgrade promise."
+}

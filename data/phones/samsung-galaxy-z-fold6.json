@@ -1,0 +1,128 @@
+{
+  "slug": "samsung-galaxy-z-fold6",
+  "brand": "samsung",
+  "model": "Galaxy Z Fold6",
+  "releaseDate": "2024-07-24",
+  "status": "available",
+  "image": "/images/phones/samsung-galaxy-z-fold6.webp",
+  "imageCredit": {
+    "name": "Samsung Pakistan",
+    "url": "https://www.samsung.com/pk/smartphones/galaxy-z-fold6/buy/"
+  },
+  "variants": [
+    {
+      "ram": 12,
+      "storage": 512,
+      "pricePkr": 470000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/samsung/samsung-galaxy-z-fold-6"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Qualcomm Snapdragon 8 Gen 3 for Galaxy",
+    "display": {
+      "size": 7.6,
+      "type": "Foldable Dynamic LTPO AMOLED 2X",
+      "refreshHz": 120,
+      "resolution": "1856x2160",
+      "peakNits": 2600
+    },
+    "battery": {
+      "mah": 4400,
+      "wiredW": 25,
+      "wirelessW": 15
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 10,
+          "type": "telephoto",
+          "ois": true
+        },
+        {
+          "mp": 12,
+          "type": "ultrawide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 10
+      },
+      "video": "8K@30fps"
+    },
+    "build": {
+      "frame": "aluminium",
+      "back": "Gorilla Glass Victus 2",
+      "front": "plastic (inner screen), Gorilla Glass Victus 2 (6.3 inch cover screen)",
+      "ip": "IP48"
+    },
+    "software": {
+      "os": "Android 14, One UI 6.1.1, upgradable to Android 17",
+      "osUpdates": 7,
+      "securityYears": 7
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": true
+    },
+    "weightG": 239
+  },
+  "scores": {
+    "camera": {
+      "value": 8,
+      "reason": "50MP OIS main and a 10MP 3x telephoto with OIS, plus a 12MP ultrawide."
+    },
+    "performance": {
+      "value": 9,
+      "reason": "Snapdragon 8 Gen 3 for Galaxy is a previous generation flagship chip that still runs every game smoothly."
+    },
+    "battery": {
+      "value": 6,
+      "reason": "4,400mAh gives a full day of use but charges at only 25W."
+    },
+    "display": {
+      "value": 9,
+      "reason": "7.6 inch foldable LTPO AMOLED at 2,600 nits plus a 6.3 inch 120Hz cover screen."
+    },
+    "build": {
+      "value": 7,
+      "reason": "Aluminium frame and Victus 2 glass, but the inner screen is plastic and IP48 offers little dust protection."
+    },
+    "software": {
+      "value": 10,
+      "reason": "Samsung promises 7 major Android upgrades."
+    },
+    "value": {
+      "value": 7,
+      "reason": "At 470,000 it is the cheapest PTA book style foldable in stock, though its 2024 cameras and battery trail the Xiaomi 17 Ultra at a similar price."
+    },
+    "availability": {
+      "value": 8,
+      "reason": "In stock at PriceOye and sold by Samsung Pakistan, with official Samsung service centres."
+    }
+  },
+  "tags": [
+    "amoled",
+    "nfc",
+    "long-updates"
+  ],
+  "rivals": [
+    "xiaomi-17-ultra",
+    "apple-iphone-17-pro-max"
+  ],
+  "notes": "PriceOye lists the 12GB 512GB at 469,999 in stock on 2026-10-11. Samsung Pakistan sells the Fold6 but its page did not show a price to our checker; WhatMobile lists 604,999. The display figures are for the inner screen. The front camera is the 10MP cover screen camera; the inner screen has a 4MP under display camera. Galaxy Z Fold7 and Fold8 are only listed non-PTA in Pakistan, so they are not on the site."
+}

@@ -1,0 +1,123 @@
+{
+  "slug": "samsung-galaxy-z-flip6",
+  "brand": "samsung",
+  "model": "Galaxy Z Flip6",
+  "releaseDate": "2024-07-24",
+  "status": "available",
+  "image": "/images/phones/samsung-galaxy-z-flip6.webp",
+  "imageCredit": {
+    "name": "Samsung Pakistan",
+    "url": "https://www.samsung.com/pk/smartphones/galaxy-z-flip6/buy/"
+  },
+  "variants": [
+    {
+      "ram": 12,
+      "storage": 512,
+      "pricePkr": 305000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/samsung/z-flip-6"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Qualcomm Snapdragon 8 Gen 3 for Galaxy",
+    "display": {
+      "size": 6.7,
+      "type": "Foldable Dynamic LTPO AMOLED 2X",
+      "refreshHz": 120,
+      "resolution": "1080x2640",
+      "peakNits": 2600
+    },
+    "battery": {
+      "mah": 4000,
+      "wiredW": 25,
+      "wirelessW": 15
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 12,
+          "type": "ultrawide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 10
+      },
+      "video": "4K@60fps"
+    },
+    "build": {
+      "frame": "aluminium",
+      "back": "Gorilla Glass Victus 2",
+      "front": "plastic (inner screen), Gorilla Glass Victus 2 (3.4 inch cover screen)",
+      "ip": "IP48"
+    },
+    "software": {
+      "os": "Android 14, One UI 6.1.1, upgradable to Android 17",
+      "osUpdates": 7,
+      "securityYears": 7
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": true
+    },
+    "weightG": 187
+  },
+  "scores": {
+    "camera": {
+      "value": 7,
+      "reason": "50MP OIS main and a 12MP ultrawide, with no telephoto."
+    },
+    "performance": {
+      "value": 9,
+      "reason": "Snapdragon 8 Gen 3 for Galaxy is a previous generation flagship chip that still runs every game smoothly."
+    },
+    "battery": {
+      "value": 5,
+      "reason": "4,000mAh gets through a day only with moderate use and charges at 25W."
+    },
+    "display": {
+      "value": 9,
+      "reason": "6.7 inch foldable LTPO AMOLED at 2,600 nits plus a 3.4 inch cover screen."
+    },
+    "build": {
+      "value": 7,
+      "reason": "Aluminium frame and Victus 2 back, but the inner screen is plastic and IP48 offers little dust protection."
+    },
+    "software": {
+      "value": 10,
+      "reason": "Samsung promises 7 major Android upgrades."
+    },
+    "value": {
+      "value": 6,
+      "reason": "The cheapest PTA flip phone at 305,000, but S26 phones give a better camera and battery for similar money."
+    },
+    "availability": {
+      "value": 8,
+      "reason": "In stock at PriceOye and sold by Samsung Pakistan, with official Samsung service centres."
+    }
+  },
+  "tags": [
+    "amoled",
+    "nfc",
+    "long-updates"
+  ],
+  "rivals": [
+    "samsung-galaxy-s26",
+    "samsung-galaxy-s26-plus"
+  ],
+  "notes": "PriceOye lists the 12GB 512GB at 304,999 in stock on 2026-10-11. Samsung Pakistan lists the Flip6 at 384,999 (WhatMobile shows the same). The display figures are for the inner screen; the cover screen is a 3.4 inch 60Hz Super AMOLED. Galaxy Z Flip7 is not officially sold in Pakistan and no PTA approved listing was found."
+}

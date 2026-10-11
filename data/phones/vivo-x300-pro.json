@@ -1,0 +1,131 @@
+{
+  "slug": "vivo-x300-pro",
+  "brand": "vivo",
+  "model": "vivo X300 Pro",
+  "releaseDate": "2025-10-17",
+  "status": "available",
+  "image": "/images/phones/vivo-x300-pro.webp",
+  "imageCredit": {
+    "name": "vivo Pakistan",
+    "url": "https://shop.vivo.com/pk/product/2015?skuId=8050"
+  },
+  "variants": [
+    {
+      "ram": 16,
+      "storage": 512,
+      "pricePkr": 350000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "vivo Pakistan e-store",
+          "url": "https://shop.vivo.com/pk/product/2015?skuId=8050"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "MediaTek Dimensity 9500",
+    "display": {
+      "size": 6.78,
+      "type": "LTPO AMOLED",
+      "refreshHz": 120,
+      "resolution": "1260x2800",
+      "peakNits": 4500
+    },
+    "battery": {
+      "mah": 6510,
+      "wiredW": 90,
+      "wirelessW": 40
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 200,
+          "type": "periscope",
+          "ois": true
+        },
+        {
+          "mp": 50,
+          "type": "ultrawide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 50
+      },
+      "video": "8K@30fps"
+    },
+    "build": {
+      "frame": "aluminium",
+      "back": "glass",
+      "front": "Armor Glass",
+      "ip": "IP68/IP69"
+    },
+    "software": {
+      "os": "Android 16, OriginOS 6",
+      "osUpdates": 5,
+      "securityYears": 7
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": true
+    },
+    "weightG": 226
+  },
+  "scores": {
+    "camera": {
+      "value": 10,
+      "reason": "Large 1/1.28 inch 50MP OIS main and a ZEISS 200MP 3.7x periscope with OIS."
+    },
+    "performance": {
+      "value": 10,
+      "reason": "Dimensity 9500 is a current flagship chip."
+    },
+    "battery": {
+      "value": 10,
+      "reason": "6,510mAh lasts well over a day with 90W wired and 40W wireless charging."
+    },
+    "display": {
+      "value": 10,
+      "reason": "6.78 inch LTPO AMOLED with 4,500 nits peak."
+    },
+    "build": {
+      "value": 9,
+      "reason": "Armor Glass front, glass back, aluminium frame and IP68/IP69."
+    },
+    "software": {
+      "value": 9,
+      "reason": "vivo promises 5 major Android upgrades."
+    },
+    "value": {
+      "value": 9,
+      "reason": "At 350,000 it has the strongest camera and battery in its bracket for about the price of a Galaxy S26+."
+    },
+    "availability": {
+      "value": 7,
+      "reason": "Sold by the vivo e-store and Carrefour on Daraz with official warranty, but PriceOye is out of stock."
+    }
+  },
+  "tags": [
+    "amoled",
+    "big-battery",
+    "fast-charging",
+    "nfc",
+    "long-updates"
+  ],
+  "rivals": [
+    "samsung-galaxy-s26-plus",
+    "samsung-galaxy-s26",
+    "xiaomi-17t-pro"
+  ],
+  "notes": "vivo Pakistan e-store lists the 16GB 512GB at 349,999 on 2026-10-11 (stock not shown) and WhatMobile shows the same price. Carrefour on Daraz lists it at 342,999, but it is not a vivo official store, so that price is not used. PriceOye lists 316,999 but out of stock, so that price is ignored. securityYears is an assumption."
+}

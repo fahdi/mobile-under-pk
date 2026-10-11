@@ -1,0 +1,131 @@
+{
+  "slug": "xiaomi-17-ultra",
+  "brand": "xiaomi",
+  "model": "Xiaomi 17 Ultra",
+  "releaseDate": "2026-03-10",
+  "status": "limited",
+  "image": "/images/phones/xiaomi-17-ultra.webp",
+  "imageCredit": {
+    "name": "Xiaomi Pakistan",
+    "url": "https://www.mi.com/pk/product/xiaomi-17-ultra/"
+  },
+  "variants": [
+    {
+      "ram": 16,
+      "storage": 512,
+      "pricePkr": 480000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "Daraz Xiaomi Flagship Store",
+          "url": "https://www.daraz.pk/products/xiaomi-17-ultra-16gb512gb-i1948669824.html"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Qualcomm Snapdragon 8 Elite Gen 5",
+    "display": {
+      "size": 6.9,
+      "type": "LTPO AMOLED",
+      "refreshHz": 120,
+      "resolution": "1200x2608",
+      "peakNits": 3500
+    },
+    "battery": {
+      "mah": 6000,
+      "wiredW": 90,
+      "wirelessW": 50
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 200,
+          "type": "periscope",
+          "ois": true
+        },
+        {
+          "mp": 50,
+          "type": "ultrawide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 50
+      },
+      "video": "8K@30fps"
+    },
+    "build": {
+      "frame": "aluminium",
+      "back": "glass fibre reinforced plastic or eco leather",
+      "front": "Xiaomi Shield Glass",
+      "ip": "IP68/IP69"
+    },
+    "software": {
+      "os": "Android 16, HyperOS 3",
+      "osUpdates": 4,
+      "securityYears": 6
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": true
+    },
+    "weightG": 218
+  },
+  "scores": {
+    "camera": {
+      "value": 10,
+      "reason": "Leica 1 inch type 50MP main and a 200MP 75 to 100mm periscope with OIS and optical zoom."
+    },
+    "performance": {
+      "value": 10,
+      "reason": "Snapdragon 8 Elite Gen 5 is a top flagship chip."
+    },
+    "battery": {
+      "value": 10,
+      "reason": "6,000mAh lasts a full day plus with 90W wired and 50W wireless charging."
+    },
+    "display": {
+      "value": 10,
+      "reason": "6.9 inch LTPO AMOLED at 1 to 120Hz with 3,500 nits peak."
+    },
+    "build": {
+      "value": 9,
+      "reason": "Aluminium frame and IP68/IP69, with a fibre or eco leather back instead of glass."
+    },
+    "software": {
+      "value": 9,
+      "reason": "Xiaomi flagships get 4 Android upgrades and 6 years of patches (assumed for the 17 Ultra)."
+    },
+    "value": {
+      "value": 8,
+      "reason": "At 480,000 it has the best camera in this bracket for about the price of a Galaxy Z Fold6."
+    },
+    "availability": {
+      "value": 6,
+      "reason": "Only the Xiaomi Flagship Store on Daraz had it, almost sold out, with 1 year brand warranty."
+    }
+  },
+  "tags": [
+    "amoled",
+    "big-battery",
+    "fast-charging",
+    "nfc",
+    "long-updates"
+  ],
+  "rivals": [
+    "samsung-galaxy-z-fold6",
+    "apple-iphone-17-pro-max",
+    "apple-iphone-18-pro"
+  ],
+  "notes": "The Xiaomi Flagship Store on Daraz lists the 16GB 512GB at 479,998 (almost sold out) on 2026-10-11, and WhatMobile shows an official price of 479,999. PriceOye lists it at 459,999 but out of stock (marked discontinued), so that price is ignored. Battery is the global 6,000mAh version. The update policy is an assumption based on earlier Xiaomi Ultra phones."
+}

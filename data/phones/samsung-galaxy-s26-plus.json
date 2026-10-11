@@ -1,0 +1,144 @@
+{
+  "slug": "samsung-galaxy-s26-plus",
+  "brand": "samsung",
+  "model": "Galaxy S26+",
+  "releaseDate": "2026-03-06",
+  "status": "available",
+  "image": "/images/phones/samsung-galaxy-s26-plus.webp",
+  "imageCredit": {
+    "name": "Samsung Pakistan",
+    "url": "https://www.samsung.com/pk/smartphones/galaxy-s26/buy/"
+  },
+  "variants": [
+    {
+      "ram": 12,
+      "storage": 256,
+      "pricePkr": 330500,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/samsung/samsung-galaxy-s26-plus"
+        }
+      ]
+    },
+    {
+      "ram": 12,
+      "storage": 512,
+      "pricePkr": 371000,
+      "priceCheckedAt": "2026-10-11",
+      "pta": true,
+      "warranty": "official",
+      "sources": [
+        {
+          "name": "PriceOye",
+          "url": "https://priceoye.pk/mobiles/samsung/samsung-galaxy-s26-plus"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "chipset": "Samsung Exynos 2600",
+    "display": {
+      "size": 6.7,
+      "type": "Dynamic LTPO AMOLED 2X",
+      "refreshHz": 120,
+      "resolution": "1440x3120",
+      "peakNits": 2600
+    },
+    "battery": {
+      "mah": 4900,
+      "wiredW": 45,
+      "wirelessW": 20
+    },
+    "cameras": {
+      "rear": [
+        {
+          "mp": 50,
+          "type": "wide",
+          "ois": true
+        },
+        {
+          "mp": 10,
+          "type": "telephoto",
+          "ois": true
+        },
+        {
+          "mp": 12,
+          "type": "ultrawide",
+          "ois": false
+        }
+      ],
+      "front": {
+        "mp": 12
+      },
+      "video": "8K@30fps"
+    },
+    "build": {
+      "frame": "aluminium",
+      "back": "Gorilla Glass Victus 2",
+      "front": "Gorilla Glass Victus 2",
+      "ip": "IP68"
+    },
+    "software": {
+      "os": "Android 16, One UI 8.5, upgradable to Android 17",
+      "osUpdates": 7,
+      "securityYears": 7
+    },
+    "connectivity": {
+      "fiveG": true,
+      "nfc": true,
+      "jack35": false,
+      "esim": true
+    },
+    "weightG": 190
+  },
+  "scores": {
+    "camera": {
+      "value": 9,
+      "reason": "50MP OIS main and a 10MP 3x telephoto with OIS, shooting 8K video."
+    },
+    "performance": {
+      "value": 10,
+      "reason": "The 2nm Exynos 2600 is a current flagship chip."
+    },
+    "battery": {
+      "value": 7,
+      "reason": "4,900mAh lasts a full day plus with 45W wired and 20W wireless charging."
+    },
+    "display": {
+      "value": 10,
+      "reason": "6.7 inch QHD+ LTPO AMOLED at 1 to 120Hz with 2,600 nits peak."
+    },
+    "build": {
+      "value": 10,
+      "reason": "Gorilla Glass Victus 2 on both sides, an aluminium frame and IP68."
+    },
+    "software": {
+      "value": 10,
+      "reason": "Samsung promises 7 major Android upgrades."
+    },
+    "value": {
+      "value": 8,
+      "reason": "At 330,500 it adds a QHD+ screen, 600mAh more battery and 45W charging over the S26 for about 12,500 more."
+    },
+    "availability": {
+      "value": 8,
+      "reason": "In stock at PriceOye and Mega.pk, with official Samsung service centres."
+    }
+  },
+  "tags": [
+    "amoled",
+    "nfc",
+    "long-updates",
+    "fast-charging"
+  ],
+  "rivals": [
+    "samsung-galaxy-s26",
+    "vivo-x300-pro",
+    "xiaomi-17t-pro"
+  ],
+  "notes": "PriceOye lists 12GB 256GB at 330,495 and 12GB 512GB at 370,995, both in stock on 2026-10-11. Mega.pk has the PTA 12GB 256GB at 382,999 and 12GB 512GB at 442,999. WhatMobile lists 384,999. securityYears is assumed to match the 7 upgrade promise."
+}
